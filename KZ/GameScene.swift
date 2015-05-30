@@ -10,17 +10,26 @@ import SpriteKit
 
 class GameScene: SKScene {
     
+    var worldNode: SKNode!
     var tileMap = JSTileMap(named: "level-1.tmx")
+    var tileMapFrame: CGRect!
     
     
-    
+    func createWorld() {
+        worldNode = SKNode()
+        worldNode.addChild(tileMap)
+        addChild(worldNode)
+        addFloor()
+        tileMapFrame = tileMap.calculateAccumulatedFrame()
+        
+        anchorPoint = CGPointMake(0.5,0.5)
+        //worldNode.position = CGPointMake(0.0,0.0)
+        worldNode.position = CGPointMake(-tileMapFrame.width / 2, -tileMapFrame.height / 2)
+    }
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        self.anchorPoint = CGPoint(x: 0, y: 0)
-        tileMap.position = CGPoint(x: 0, y: 0)
-        addChild(tileMap)
-        addFloor()
+        createWorld()
         
     }
     
@@ -45,5 +54,21 @@ class GameScene: SKScene {
             }
         }
     }
-
+    
+    func centerViewOn(centerOn: CGPoint) {
+        let x = centerOn.x.clamped(size.width / 2, tileMapFrame.width - size.width / 2)
+        let y = centerOn.y.clamped(size.height / 2, tileMapFrame.height - size.height / 2)
+        worldNode.position = CGPoint(x: -x, y: -y)
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        let touch = touches.first as! UITouch
+        //centerViewOn(touch.locationInNode(worldNode))
+    }
+    
+    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        let touch = touches.first as! UITouch
+        centerViewOn(touch.locationInNode(worldNode))
+    }
+    
 }
