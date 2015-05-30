@@ -31,6 +31,8 @@
 		18149CA61B1972BE00522024 /* SKTTimingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149C9A1B1972BE00522024 /* SKTTimingFunctions.swift */; };
 		18149CA71B1972BE00522024 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149C9B1B1972BE00522024 /* Vector3.swift */; };
 		18149CA91B1972E600522024 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18149CA81B1972E600522024 /* libz.dylib */; };
+		18149CB71B197C6E00522024 /* tmx-rpg-bigpack.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18149CB61B197C6E00522024 /* tmx-rpg-bigpack.atlasc */; };
+		18149CBA1B197D5400522024 /* level-1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18149CB91B197D5400522024 /* level-1.tmx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		18149C9B1B1972BE00522024 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		18149CA81B1972E600522024 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		18149CAC1B1974DD00522024 /* KZ-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KZ-Bridging-Header.h"; sourceTree = "<group>"; };
+		18149CB61B197C6E00522024 /* tmx-rpg-bigpack.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "tmx-rpg-bigpack.atlasc"; sourceTree = "<group>"; };
+		18149CB91B197D5400522024 /* level-1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "level-1.tmx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				18149CA81B1972E600522024 /* libz.dylib */,
+				18149CB81B197D3D00522024 /* Levels */,
+				18149CB01B197C1A00522024 /* Art */,
 				18149C5E1B19709F00522024 /* KZ */,
 				18149C781B1970A000522024 /* KZTests */,
 				18149C5D1B19709F00522024 /* Products */,
@@ -199,6 +205,24 @@
 			path = JSTileMap/SKTUtils;
 			sourceTree = "<group>";
 		};
+		18149CB01B197C1A00522024 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				18149CB61B197C6E00522024 /* tmx-rpg-bigpack.atlasc */,
+			);
+			name = Art;
+			path = KZ;
+			sourceTree = "<group>";
+		};
+		18149CB81B197D3D00522024 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				18149CB91B197D5400522024 /* level-1.tmx */,
+			);
+			name = Levels;
+			path = KZ;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,6 +308,8 @@
 				18149C641B19709F00522024 /* GameScene.sks in Resources */,
 				18149C8E1B1972A600522024 /* LICENSE.txt in Resources */,
 				18149C6B1B19709F00522024 /* Main.storyboard in Resources */,
+				18149CB71B197C6E00522024 /* tmx-rpg-bigpack.atlasc in Resources */,
+				18149CBA1B197D5400522024 /* level-1.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +472,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KZ",
+				);
 				INFOPLIST_FILE = KZ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -457,6 +487,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KZ",
+				);
 				INFOPLIST_FILE = KZ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

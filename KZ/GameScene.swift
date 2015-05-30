@@ -9,8 +9,16 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
+    var tileMap = JSTileMap(named: "level-1.tmx")
+    
+    
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
+        self.anchorPoint = CGPoint(x: 0, y: 0)
+        tileMap.position = CGPoint(x: 0, y: 0)
+        addChild(tileMap)
         
     }
     

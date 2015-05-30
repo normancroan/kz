@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>codeandweb</key>
+        <dict>
+            <key>generator</key>
+            <string>TexturePacker 3.7.1 - http://www.codeandweb.com/texturepacker</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:ae13dd7c9151543c7fd9a82a41743ce1:45d674ce37bb27116f541ecc7b09d095:373868cc5f6e990d9f4e70803032460c$</string>
+        </dict>
+        <key>format</key>
+        <string>APPL</string>
+        <key>images</key>
+        <array>
+            <dict>
+                <key>path</key>
+                <string>tmx-rpg-bigpack.1.png</string>
+                <key>size</key>
+                <string>{674,738}</string>
+                <key>subimages</key>
+                <array>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>terrain.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{672,736}</string>
+                        <key>textureRect</key>
+                        <string>{{1,1},{672,736}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                </array>
+            </dict>
+        </array>
+        <key>version</key>
+        <integer>1</integer>
+    </dict>
+</plist>

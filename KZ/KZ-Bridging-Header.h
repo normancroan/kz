@@ -10,5 +10,6 @@
 #define KZ_KZ_Bridging_Header_h
 
 #import "JSTileMap.h"
+#import "LFCGzipUtility.h"
 
 #endif
