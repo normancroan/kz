@@ -16,6 +16,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let player = Player(imageNamed: "knight")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
+    let buttonNorth = SKSpriteNode(imageNamed: "Directional_Button")
     
     var playerSpeedX:CGFloat = 0.0
     var playerSpeedY:CGFloat = 0.0
@@ -45,11 +46,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         centerViewOn(player.position)
         
-        
+        let widthHalf:CGFloat = self.view!.bounds.width / 2
+        let heightHalf:CGFloat = self.view!.bounds.height / 2
+
+        addChild(buttonNorth)
+        buttonNorth.position = CGPoint(x: widthHalf - (buttonNorth.size.width), y: -heightHalf + (buttonWest.size.height * 0.6))
+
         addChild(buttonWest)
-        buttonWest.position = CGPoint(x:0, y: size.height - 50)
+        buttonWest.position = CGPoint(x: -widthHalf + buttonWest.size.width, y: -heightHalf + (buttonWest.size.height * 0.6))
+        
         addChild(buttonEast)
-        buttonEast.position = CGPoint(x:0, y: size.height)
+        buttonEast.position = CGPoint(x: buttonWest.position.x + (buttonWest.size.width * 2), y: buttonWest.position.y)
         buttonEast.xScale = -1
 
     }
