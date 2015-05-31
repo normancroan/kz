@@ -45,11 +45,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         centerViewOn(player.position)
         
-        addChild(buttonWest)
-        buttonWest.position = CGPoint(x: -290, y: -155)
         
+        addChild(buttonWest)
+        buttonWest.position = CGPoint(x:0, y: size.height - 50)
         addChild(buttonEast)
-        buttonEast.position = CGPoint(x: -200, y: -155)
+        buttonEast.position = CGPoint(x:0, y: size.height)
         buttonEast.xScale = -1
 
     }
