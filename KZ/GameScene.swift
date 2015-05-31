@@ -96,13 +96,40 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //MARK: - Touch Handling
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        let touch = touches.first as! UITouch
-        //centerViewOn(touch.locationInNode(worldNode))
+        /* Called when a touch begins */
         
-        player.physicsBody?.applyImpulse(CGVectorMake(0.0, 200.0))
+        
+        for touch in (touches as! Set<UITouch>) {
+            let location = touch.locationInNode(self)
+            
+            
+            
+            if (CGRectContainsPoint(buttonEast.frame, location)) {
+                
+                //currentState = MoveStates.E
+                buttonEast.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
+                
+            }  else if (CGRectContainsPoint(buttonWest.frame, location)) {
+                
+                //currentState = MoveStates.W
+                buttonWest.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
+                
+            } else {
+                buttonNorth.texture = SKTexture(imageNamed: "Directional_Button_Lit")
+                player.physicsBody?.applyImpulse(CGVectorMake(0.0, 200.0))
+            }
+            
+        }
     }
     
+        //player.physicsBody?.applyImpulse(CGVectorMake(0.0, 200.0))
+    
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        buttonNorth.texture = SKTexture(imageNamed: "Directional_Button")
+        buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
+        buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
+
         
     }
 
