@@ -8,14 +8,17 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var worldNode: SKNode!
     var tileMap = JSTileMap(named: "level-2.tmx")
     var tileMapFrame: CGRect!
-    var player = SKSpriteNode(imageNamed: "knight")
-    var playerSpeedX:CGFloat = 0.1
-    var playerSpeedY:CGFloat = 0.1
+    let player = Player(imageNamed: "knight")
+    let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
+    let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
+    
+    var playerSpeedX:CGFloat = 0.0
+    var playerSpeedY:CGFloat = 0.0
     
     
 
@@ -29,6 +32,7 @@ class GameScene: SKScene {
         
         anchorPoint = CGPointMake(0.5,0.5)
         worldNode.position = CGPointMake(-tileMapFrame.width / 2, -tileMapFrame.height / 2)
+        self.physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
     }
     
     override func didMoveToView(view: SKView) {
@@ -36,10 +40,18 @@ class GameScene: SKScene {
         backgroundColor = SKColor.blackColor()
         createWorld()
         worldNode.addChild(player)
-        player.position = CGPointMake(55,135)
+        player.position = CGPointMake(55,235)
         player.setScale(0.5)
         
         centerViewOn(player.position)
+        
+        addChild(buttonWest)
+        buttonWest.position = CGPoint(x: -290, y: -155)
+        
+        addChild(buttonEast)
+        buttonEast.position = CGPoint(x: -200, y: -155)
+        buttonEast.xScale = -1
+
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -79,6 +91,8 @@ class GameScene: SKScene {
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         let touch = touches.first as! UITouch
         //centerViewOn(touch.locationInNode(worldNode))
+        
+        player.physicsBody?.applyImpulse(CGVectorMake(0.0, 200.0))
     }
     
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
