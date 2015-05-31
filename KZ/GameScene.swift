@@ -101,15 +101,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         for touch in (touches as! Set<UITouch>) {
             let location = touch.locationInNode(self)
+            let eastFrame:CGRect = CGRectMake(buttonEast.position.x, buttonEast.position.y, buttonEast.frame.width * 2, buttonEast.frame.height * 2)
+            let eastFrame2:CGRect = CGRectMake(buttonEast.position.x - (eastFrame.size.width / 2), buttonEast.position.y - (eastFrame.size.height / 2), buttonEast.frame.width * 2, buttonEast.frame.height * 2)
+            
+            let westFrame:CGRect = CGRectMake(buttonWest.position.x, buttonWest.position.y, buttonWest.frame.width * 2, buttonWest.frame.height * 2)
+            let westFrame2:CGRect = CGRectMake(buttonWest.position.x - (westFrame.size.width / 2), buttonWest.position.y - (westFrame.size.height / 2), buttonWest.frame.width * 2, buttonWest.frame.height * 2)
             
             
-            
-            if (CGRectContainsPoint(buttonEast.frame, location)) {
+            if (CGRectContainsPoint(eastFrame2, location)) {
                 
                 //currentState = MoveStates.E
                 buttonEast.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
                 
-            }  else if (CGRectContainsPoint(buttonWest.frame, location)) {
+            }  else if (CGRectContainsPoint(westFrame2, location)) {
                 
                 //currentState = MoveStates.W
                 buttonWest.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
