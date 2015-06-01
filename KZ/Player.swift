@@ -59,7 +59,8 @@ class Player: SKSpriteNode {
         var body2:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().width / 2)
         
         //using this circle body for now, perhaps extend by adding another body on top to collide with head
-        var body:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().width / 3, center: CGPointMake(-15, -35))
+//        var body:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().width / 3, center: CGPointMake(-15, -35))
+        var body:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().width / 3, center: CGPointMake(-10, -25))
         
         
         //dynamic required for gravity to work
@@ -72,5 +73,355 @@ class Player: SKSpriteNode {
         body.contactTestBitMask = PhysicsCategory.Floor
         
         self.physicsBody = body
+        
+        setUpAttackAction()
+        setUpIdleAction()
+        setUpJumpAction()
+        setUpWalkAnimation()
+        
+        self.runAction(idleAction)
+    }
+    
+    func update() {
+        
+        
+        self.position = CGPointMake(self.position.x + playerSpeedX + attackAmount, self.position.y + playerSpeedY + jumpAmount)
+        
+        
+        
+        if (self.position.y < -300) {
+            
+            self.position = CGPointMake( 0, 400)
+            
+        }
+        
+        
+    }
+    
+    
+    func setUpWalkAnimation() {
+        
+        let atlas = SKTextureAtlas (named: "Walk")
+        
+        var array = [String]()
+        
+        //or setup an array with exactly the sequential frames start from 0 and going to 23
+        for var i=0; i <= 23; i++ {
+            
+            let nameString = String(format: "Walk%i", i)
+            array.append(nameString)
+            
+        }
+        
+        //create another array this time with SKTexture as the type (textures being the .png images)
+        var atlasTextures:[SKTexture] = []
+        
+        for (var i = 0; i < array.count; i++ ) {
+            
+            let texture:SKTexture = atlas.textureNamed( array[i] )
+            atlasTextures.insert(texture, atIndex:i)
+            
+        }
+        
+        let atlasAnimation = SKAction.animateWithTextures(atlasTextures, timePerFrame: 1.0/60, resize: true , restore:false )
+        walkAction =  SKAction.repeatActionForever(atlasAnimation)
+        
+        let atlasAnimation2 = SKAction.animateWithTextures(atlasTextures, timePerFrame: 1.0/20, resize: true , restore:false )
+        slowWalkAction =  SKAction.repeatActionForever(atlasAnimation2)
+        
+    }
+    func setUpIdleAction() {
+        
+        let atlas = SKTextureAtlas (named: "Idle")
+        
+        // setup an array with frames in any order you want.
+        //let array:[String] = ["Ship1", "Ship2", "Ship3", "Ship4", "Ship5", "Ship6"]
+        
+        var array = [String]()
+        
+        //or setup an array with exactly the sequential frames start from 1 and going to 12
+        for var i=0; i <= 23; i++ {
+            
+            let nameString = String(format: "Idle%i", i)
+            array.append(nameString)
+            
+        }
+        
+        //create another array this time with SKTexture as the type (textures being the .png images)
+        var atlasTextures:[SKTexture] = []
+        
+        for (var i = 0; i < array.count; i++ ) {
+            
+            let texture:SKTexture = atlas.textureNamed( array[i] )
+            atlasTextures.insert(texture, atIndex:i)
+            
+        }
+        
+        let atlasAnimation = SKAction.animateWithTextures(atlasTextures, timePerFrame: 1.0/15, resize: true , restore:false )
+        idleAction =  SKAction.repeatActionForever(atlasAnimation)
+        
+    }
+    
+    func setUpAttackAction() {
+        
+        let atlas = SKTextureAtlas (named: "Attack")
+        
+        // setup an array with frames in any order you want.
+        //let array:[String] = ["Ship1", "Ship2", "Ship3", "Ship4", "Ship5", "Ship6"]
+        
+        var array = [String]()
+        
+        //or setup an array with exactly the sequential frames start from 1 and going to 12
+        for var i=0; i <= 15; i++ {
+            
+            let nameString = String(format: "Attack%i", i)
+            array.append(nameString)
+            
+        }
+        
+        //create another array this time with SKTexture as the type (textures being the .png images)
+        var atlasTextures:[SKTexture] = []
+        
+        for (var i = 0; i < array.count; i++ ) {
+            
+            let texture:SKTexture = atlas.textureNamed( array[i] )
+            atlasTextures.insert(texture, atIndex:i)
+            
+        }
+        
+        let atlasAnimation = SKAction.animateWithTextures(atlasTextures, timePerFrame: 1.0/60, resize: true  , restore:false )
+        let performSelector:SKAction = SKAction.runBlock(self.walkOrStop)
+        attackAction =  SKAction.sequence([atlasAnimation, performSelector])
+        
+    }
+    
+    func setUpJumpAction() {
+        
+        let atlas = SKTextureAtlas (named: "Jump")
+        
+        // setup an array with frames in any order you want.
+        //let array:[String] = ["Ship1", "Ship2", "Ship3", "Ship4", "Ship5", "Ship6"]
+        
+        var array = [String]()
+        
+        //or setup an array with exactly the sequential frames start from 1 and going to 12
+        for var i=0; i <= 23; i++ {
+            
+            let nameString = String(format: "Jump%i", i)
+            array.append(nameString)
+            
+        }
+        
+        //create another array this time with SKTexture as the type (textures being the .png images)
+        var atlasTextures:[SKTexture] = []
+        
+        for (var i = 0; i < array.count; i++ ) {
+            
+            let texture:SKTexture = atlas.textureNamed( array[i] )
+            atlasTextures.insert(texture, atIndex:i)
+            
+        }
+        
+        let atlasAnimation = SKAction.animateWithTextures(atlasTextures, timePerFrame: 1.0/60, resize: true  , restore:false )
+        let performSelector:SKAction = SKAction.runBlock(self.walkOrStop)
+        jumpAction =  SKAction.sequence([atlasAnimation, performSelector])
+        
+    }
+    
+    
+    func adjustXSpeedAndScale () {
+        
+        if (playerSpeedX > maxSpeed) {
+            
+            playerSpeedX = maxSpeed
+        } else if (playerSpeedX < -maxSpeed) {
+            
+            playerSpeedX = -maxSpeed
+        }
+        
+        
+        
+        if ( abs(playerSpeedX) < abs(maxSpeed / 2) && isJumping == false && isAttacking == false && walkingSlow == false ) {
+            
+            walkingSlow = true
+            self.runAction( slowWalkAction)
+            
+        } else if ( abs(playerSpeedX) > abs(maxSpeed / 2) && isJumping == false && isAttacking == false && walkingSlow == true) {
+            
+            walkingSlow = false
+            self.runAction( walkAction)
+            
+        }
+        
+        
+        
+        
+        
+        
+        if ( playerSpeedX > 0 ){
+            
+            self.xScale = 1
+        } else {
+            
+            self.xScale = -1
+        }
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    func walkOrStop() {
+        
+        if ( playerSpeedX != 0) {
+            
+            startWalk()
+        } else {
+            
+            stopWalk()
+        }
+        
+        
+        
+    }
+    
+    func startWalk() {
+        
+        if (abs(playerSpeedX) < abs(maxSpeed / 2) && walkingSlow == false  ) {
+            
+            walkingSlow = true
+            self.runAction(slowWalkAction)
+            
+        } else if (abs(playerSpeedX) > abs(maxSpeed / 2)  && walkingSlow == true ) {
+            
+            walkingSlow = false
+            self.runAction(walkAction)
+            
+        }
+        
+        
+    }
+    func stopWalk() {
+        
+        self.runAction(idleAction)
+        
+    }
+    func attack() {
+        
+        isAttacking = true
+        
+        self.runAction(attackAction)
+        
+        
+        if (self.xScale == 1) {
+            
+            // facing right
+            
+            attackAmount = maxAttack
+            
+        } else {
+            
+            // facing left
+            attackAmount = -maxAttack
+            
+        }
+        
+        
+        let callAgain:SKAction = SKAction.runBlock( taperSpeed)
+        let wait:SKAction = SKAction.waitForDuration(1/60)
+        let seq:SKAction = SKAction.sequence([wait, callAgain])
+        let repeat:SKAction = SKAction.repeatAction(seq, count: 20)
+        let stop:SKAction = SKAction.runBlock( stopAttack)
+        let seq2:SKAction = SKAction.sequence([repeat, stop])
+        
+        self.runAction(seq2)
+        
+        
+    }
+    
+    func taperSpeed() {
+        
+        attackAmount = attackAmount * 0.9
+        
+        
+    }
+    
+    func stopAttack() {
+        
+        println( "attack stopped")
+        
+        isAttacking = false
+        attackAmount = 0
+        
+    }
+    
+    
+    
+    func jump() {
+        
+        
+        if (isJumping == false) {
+            
+            self.runAction(jumpAction)
+            
+            
+            isJumping = true
+            
+            
+            jumpAmount = maxJump
+            
+            let callAgain:SKAction = SKAction.runBlock( taperJump)
+            let wait:SKAction = SKAction.waitForDuration(1/60)
+            let seq:SKAction = SKAction.sequence([wait, callAgain])
+            let repeat:SKAction = SKAction.repeatAction(seq, count: 20)
+            let stop:SKAction = SKAction.runBlock( stopJump)
+            let seq2:SKAction = SKAction.sequence([repeat, stop])
+            
+            self.runAction(seq2)
+            
+        } else if ( isJumping == true && doubleJumpAlreadyUsed == false) {
+            
+            doubleJumpAlreadyUsed = true
+            jumpAmount = maxJump * 1.5
+            
+            
+        }
+        
+        
+    }
+    
+    func taperJump() {
+        
+        jumpAmount = jumpAmount * 0.9
+        
+        
+    }
+    
+    func stopJump() {
+        
+        doubleJumpAlreadyUsed = false
+        isJumping = false
+        jumpAmount = 0
+        
+    }
+    
+    func stopJumpFromPlatform() {
+        
+        
+        if ( isJumping == true) {
+            
+            
+            
+            println( "stopping jump early")
+            stopJump()
+            walkOrStop()
+            
+        }
+        
     }
 }

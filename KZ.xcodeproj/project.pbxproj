@@ -40,6 +40,7 @@
 		18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */; };
 		18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC31B1BEF99004C0E5D /* Walk.atlas */; };
 		18A9FCC61B1BF0AB004C0E5D /* Run.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC51B1BF0AB004C0E5D /* Run.atlas */; };
+		18A9FCC81B1BF448004C0E5D /* Attack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC71B1BF448004C0E5D /* Attack.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Idle.atlas; sourceTree = "<group>"; };
 		18A9FCC31B1BEF99004C0E5D /* Walk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Walk.atlas; sourceTree = "<group>"; };
 		18A9FCC51B1BF0AB004C0E5D /* Run.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Run.atlas; sourceTree = "<group>"; };
+		18A9FCC71B1BF448004C0E5D /* Attack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Attack.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 		18149CB01B197C1A00522024 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				18A9FCC71B1BF448004C0E5D /* Attack.atlas */,
 				18A9FCC51B1BF0AB004C0E5D /* Run.atlas */,
 				18A9FCC31B1BEF99004C0E5D /* Walk.atlas */,
 				18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */,
@@ -329,6 +332,7 @@
 				18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */,
 				18149C701B19709F00522024 /* LaunchScreen.xib in Resources */,
 				18149C6D1B19709F00522024 /* Images.xcassets in Resources */,
+				18A9FCC81B1BF448004C0E5D /* Attack.atlas in Resources */,
 				18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */,
 				18149CCC1B19E24400522024 /* level-2.tmx in Resources */,
 				18149C641B19709F00522024 /* GameScene.sks in Resources */,

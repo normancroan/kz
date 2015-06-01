@@ -14,7 +14,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var tileMap = JSTileMap(named: "level-2.tmx")
     var tileMapFrame: CGRect!
     var moveButtonIsPressed = false
-    let player = Player(imageNamed: "knight")
+    let player = Player(imageNamed: "Walk13")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonNorth = SKSpriteNode(imageNamed: "Directional_Button")
@@ -43,7 +43,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createWorld()
         worldNode.addChild(player)
         player.position = CGPointMake(55,235)
-        player.setScale(0.5)
+        player.setScale(0.7)
         
         centerViewOn(player.position)
         
@@ -148,11 +148,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
 
-        moveButtonIsPressed = false
-        buttonNorth.texture = SKTexture(imageNamed: "Directional_Button")
-        buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
-        buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
+        if moveButtonIsPressed {
+            
+            player.stopWalk()
+            player.playerSpeedX = 0
+            moveButtonIsPressed = false
+            buttonNorth.texture = SKTexture(imageNamed: "Directional_Button")
+            buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
+            buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
+            
+        } else if !moveButtonIsPressed {
+            
+            println("probably a jump")
         
+        }
     }
 
 }
