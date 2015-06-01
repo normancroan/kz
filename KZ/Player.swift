@@ -17,7 +17,7 @@ class Player: SKSpriteNode {
     
     
     var jumpAmount:CGFloat = 0
-    var maxJump:CGFloat = 20//18
+    var maxJump:CGFloat = 12//18
     
     
     var attackAmount:CGFloat = 0
@@ -52,7 +52,7 @@ class Player: SKSpriteNode {
         super.init(texture: imageTexture, color:nil, size: imageTexture.size() )
         
         //resizing the physics rectangle to align with feet
-        var rect:CGRect = CGRectMake(position.x, position.y, imageTexture.size().width / 2.8, imageTexture.size().height * 0.8)
+        var rect:CGRect = CGRectMake(position.x, position.y, imageTexture.size().width / 2.8, imageTexture.size().height * 0.6)
         var anchor:CGPoint = CGPointMake(position.x - 12.5, position.y)
         
         //creating physics body with above values to align with feet
@@ -65,7 +65,7 @@ class Player: SKSpriteNode {
         
         var frontFoot:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().height / 10, center: CGPointMake(0, -45))
         var backFoot:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().height / 6, center: CGPointMake(0, -35))
-        var rectBodyThin:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: rect.size, center: CGPointMake(-12.5, -8))
+        var rectBodyThin:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: rect.size, center: CGPointMake(-12.5, -18))
         
         var body:SKPhysicsBody = SKPhysicsBody(bodies: [frontFoot, rectBodyThin])
         
@@ -382,7 +382,7 @@ class Player: SKSpriteNode {
             println("falling")
         } else {
             isFalling = false
-            println("not falling")
+            //println("not falling")
         }
     }
     

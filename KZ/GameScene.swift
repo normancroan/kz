@@ -34,7 +34,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createBackground() {
-        let background = SKSpriteNode(imageNamed: "Background_1")
+        let background = SKSpriteNode(imageNamed: "background_1")
         self.addChild(background)
         background.zPosition = -100
         background.xScale = 0.4
@@ -72,11 +72,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Called before each frame is rendered */
         centerViewOn(player.position)
         player.update()
-        if player.physicsBody?.velocity.dy >= -10.0{//!= 0.0 {
+        if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 20.0) && (player.physicsBody?.velocity.dy >= -10.0){//!= 0.0 {
             player.setFalling(false)
+            if player.physicsBody?.velocity.dy != 0.0 {
+            //println(player.physicsBody?.velocity.dy)
+            }
         //println(player.physicsBody?.velocity.dy)
         } else {
             player.setFalling(true)
+            //println(player.physicsBody?.velocity.dy)
         }
     }
     
