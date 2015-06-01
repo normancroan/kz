@@ -30,7 +30,7 @@ class Player: SKSpriteNode {
     var attackAction:SKAction?
     var jumpAction:SKAction?
     
-    var maxSpeed:CGFloat = 3
+    var maxSpeed:CGFloat = 3.1
     
     
     var isAttacking:Bool = false
@@ -379,7 +379,7 @@ class Player: SKSpriteNode {
     func setFalling(falling: Bool) {
         if falling {
             isFalling = true
-            println("falling")
+            //println("falling")
         } else {
             isFalling = false
             //println("not falling")

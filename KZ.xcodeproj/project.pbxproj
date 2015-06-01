@@ -302,6 +302,7 @@
 				TargetAttributes = {
 					18149C5B1B19709F00522024 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = LZ6HY3W29L;
 					};
 					18149C741B1970A000522024 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -512,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Norman Croan (LZ6HY3W29L)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KZ",
@@ -527,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Norman Croan (LZ6HY3W29L)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KZ",
