@@ -17,7 +17,7 @@ class Player: SKSpriteNode {
     
     
     var jumpAmount:CGFloat = 0
-    var maxJump:CGFloat = 22
+    var maxJump:CGFloat = 20//18
     
     
     var attackAmount:CGFloat = 0
@@ -30,13 +30,14 @@ class Player: SKSpriteNode {
     var attackAction:SKAction?
     var jumpAction:SKAction?
     
-    var maxSpeed:CGFloat = 2
+    var maxSpeed:CGFloat = 3
     
     
     var isAttacking:Bool = false
     var isJumping:Bool = false
     var doubleJumpAlreadyUsed:Bool = false
     var walkingSlow:Bool = false
+    var isFalling:Bool = false
 
     
     
@@ -75,8 +76,8 @@ class Player: SKSpriteNode {
         body.affectedByGravity = true
         body.allowsRotation = false
         body.categoryBitMask = PhysicsCategory.Player
-        //body.collisionBitMask = PhysicsCategory.Floor
-        body.contactTestBitMask = PhysicsCategory.Floor
+        body.collisionBitMask = PhysicsCategory.Floor | PhysicsCategory.Boundary
+        body.contactTestBitMask = PhysicsCategory.All
         
         self.physicsBody = body
         
@@ -91,13 +92,15 @@ class Player: SKSpriteNode {
     func update() {
         
         
-        self.position = CGPointMake(self.position.x + playerSpeedX + attackAmount, self.position.y + playerSpeedY + jumpAmount)
+//        self.position = CGPointMake(self.position.x + playerSpeedX + attackAmount, self.position.y + playerSpeedY + jumpAmount)
+        
+        self.position = CGPointMake(self.position.x + playerSpeedX + attackAmount, self.position.y + jumpAmount)
         
         
         
         if (self.position.y < -300) {
             
-            self.position = CGPointMake( 0, 400)
+            self.position = CGPointMake( 100, 200)
             
         }
         
@@ -298,16 +301,23 @@ class Player: SKSpriteNode {
     
     func startWalk() {
         
+        
         if (abs(playerSpeedX) < abs(maxSpeed / 2) && walkingSlow == false  ) {
             
             walkingSlow = true
             self.runAction(slowWalkAction)
+            //println("should be walking slow")
             
         } else if (abs(playerSpeedX) > abs(maxSpeed / 2)  && walkingSlow == true ) {
             
             walkingSlow = false
             self.runAction(walkAction)
+            //println("should be walking")
             
+        } else {
+            walkingSlow = false
+            self.runAction(walkAction)
+            //println("should be walking")
         }
         
         
@@ -366,11 +376,20 @@ class Player: SKSpriteNode {
         
     }
     
+    func setFalling(falling: Bool) {
+        if falling {
+            isFalling = true
+            println("falling")
+        } else {
+            isFalling = false
+            println("not falling")
+        }
+    }
     
     
     func jump() {
         
-        
+        if !isFalling {
         if (isJumping == false) {
             
             self.runAction(jumpAction)
@@ -389,16 +408,18 @@ class Player: SKSpriteNode {
             let seq2:SKAction = SKAction.sequence([repeat, stop])
             
             self.runAction(seq2)
-            
-        } else if ( isJumping == true && doubleJumpAlreadyUsed == false) {
-            
-            doubleJumpAlreadyUsed = true
-            jumpAmount = maxJump * 1.5
-            
-            
         }
         
+        //removed double jumping
+//        } else if ( isJumping == true && doubleJumpAlreadyUsed == false) {
+//            
+//            doubleJumpAlreadyUsed = true
+//            jumpAmount = maxJump * 1.5
+//            
+//            
+//        }
         
+        }
     }
     
     func taperJump() {

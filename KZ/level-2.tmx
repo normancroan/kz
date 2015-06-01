@@ -6,14 +6,19 @@
  <tileset firstgid="484" name="valley-tiles-5.1" tilewidth="32" tileheight="32">
   <image source="valley-tiles-5.atlasc/valley-tiles-5.1.png" width="1154" height="1026"/>
  </tileset>
- <layer name="Tile Layer 1" width="64" height="128">
+ <layer name="background" width="64" height="128">
   <data encoding="base64" compression="zlib">
-   eJzt1klKA0EYhuFOyMp5uIdmcLiHZjB6WYeraJz1Cn67ZOHChm4F63ngpSgoqPx0LVJVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtOG6V1U36Tbd9f761/y++8z8kBbpscD5f8o7Keed9DPfIA3T6J/P+p1xZp6kaZoVOH8pvPMy3rnvXMZ3htItOvl/2lmuT+k5vaTXBvd1z7V171t6Tx/pM611q2q9u1w30mbaStsN7uuea+venbSb9tJ+OkiHK2s/DdIwjRrc1z3X1r1H6TidpNN0ls5X1nGapGmaNbive66tey/SPF2mq/QFZup1XQ==
+   eJzt1klKA0EYhuFOyMp5uIdmcLiHZjB6NcGrOFxF46xX8NslCxc2dBuxnwdeioKCyp/UIkUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAHa47RXGTbtNdZ9mf5vfdZ+aHNEuPDZz/p7yT5ryTbubrpX4a/PNZvzPMzKM0TpMGzt8U3nkz3rnfeXm/82Xuu2rAd744ZxNn5m+YtfL/tDVfn9JzekmvFe7Lnqvr3rf0nj7SZ1ppF8Vqe76upfW0kTYr3Jc9V9e9W2k77aTdtJf2F9Zu6qV+GlS4L3uurnsP0mE6SsfpJJ0urMM0SuM0qXBf9lxd956laTpPF+kLNqF6aQ==
+  </data>
+ </layer>
+ <layer name="background2" width="64" height="128">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgJD+r+4ICgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYgAAAAQ==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="64" height="128">
   <data encoding="base64" compression="zlib">
-   eJzt3TEKQCEMRMHv0b252MnH1urNQA4QdkmbOb6sGd4dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgtf0z7hy40ZMOWVOg5w1yBgr+t642tC0vISut
+   eJzt3TEKwDAMBEHn6f55SGeM25DAzoAecOhQq3mNrBnODgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8LbnZ9w6cKInHXZNgZ43fLnnSrfWnMXM8Af7rasNbTeYny+9
   </data>
  </layer>
 </map>

@@ -14,16 +14,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var tileMap = JSTileMap(named: "level-2.tmx")
     var tileMapFrame: CGRect!
     var moveButtonIsPressed = false
+    var jumpButtonIsPressed = false
     let player = Player(imageNamed: "Walk13")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonNorth = SKSpriteNode(imageNamed: "Directional_Button")
     
-    
-    var xVelocity: CGFloat = 0
-    
-    
-
     
     func createWorld() {
         worldNode = SKNode()
@@ -37,9 +33,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
     }
     
+    func createBackground() {
+        let background = SKSpriteNode(imageNamed: "Background_1")
+        self.addChild(background)
+        background.zPosition = -100
+        background.xScale = 0.4
+        background.yScale = background.xScale
+        background.position = CGPointMake(0, -80)
+    }
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        backgroundColor = SKColor.blackColor()
+        //backgroundColor = SKColor.blackColor()
+        createBackground()
         createWorld()
         worldNode.addChild(player)
         player.position = CGPointMake(55,235)
@@ -66,19 +72,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Called before each frame is rendered */
         centerViewOn(player.position)
         player.update()
-        if moveButtonIsPressed {
-        //applyVelocityX()
-            player.update()
+        if player.physicsBody?.velocity.dy >= -10.0{//!= 0.0 {
+            player.setFalling(false)
+        //println(player.physicsBody?.velocity.dy)
+        } else {
+            player.setFalling(true)
         }
     }
-    
-    func applyVelocityX() {
-        let rate: CGFloat = 0.5 //controls rate of motion where 1.0 is instant and 0.0 is none
-        let relativeVelocity: CGVector = CGVector(dx: xVelocity - (player.physicsBody!.velocity.dx), dy: 0)
-        
-        player.physicsBody?.velocity.dx = (player.physicsBody!.velocity.dx + relativeVelocity.dx) * rate
-    }
-    
     
     
     func addFloor() {
@@ -95,6 +95,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     node.physicsBody?.restitution = 0
                     node.physicsBody?.friction
                     node.alpha = 0
+                    node.physicsBody?.categoryBitMask = PhysicsCategory.Floor
+                    node.physicsBody?.contactTestBitMask = PhysicsCategory.Player
                     //println("added physics")
                     //You now have a physics body on your floor tiles! :)
                 }
@@ -131,9 +133,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //currentState = MoveStates.E
                 buttonEast.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
                 moveButtonIsPressed = true
-                //xVelocity = 200
                 player.playerSpeedX = player.maxSpeed
                 player.adjustXSpeedAndScale()
+                player.startWalk()
                 
             //touched left
             }  else if (CGRectContainsPoint(westFrame2, location)) {
@@ -141,35 +143,39 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //currentState = MoveStates.W
                 buttonWest.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
                 moveButtonIsPressed = true
-                //xVelocity = -200
                 player.playerSpeedX = -player.maxSpeed
                 player.adjustXSpeedAndScale()
+                player.startWalk()
                 
             //jumped
             } else {
                 buttonNorth.texture = SKTexture(imageNamed: "Directional_Button_Lit")
-                player.physicsBody?.applyImpulse(CGVectorMake(0.0, 15.0))
+                jumpButtonIsPressed = true
+                player.jump()
             }
         }
     }
     
-        //player.physicsBody?.applyImpulse(CGVectorMake(0.0, 200.0))
     
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
 
-        if moveButtonIsPressed {
+        if moveButtonIsPressed && !jumpButtonIsPressed {
             
             player.stopWalk()
             player.playerSpeedX = 0
             moveButtonIsPressed = false
-            buttonNorth.texture = SKTexture(imageNamed: "Directional_Button")
             buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
             buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
             
-        } else if !moveButtonIsPressed {
+        } else if jumpButtonIsPressed && !moveButtonIsPressed {
             
-            println("probably a jump")
+            jumpButtonIsPressed = false
+            buttonNorth.texture = SKTexture(imageNamed: "Directional_Button")
         
+        } else if moveButtonIsPressed && jumpButtonIsPressed {
+            
+            jumpButtonIsPressed = false
+            buttonNorth.texture = SKTexture(imageNamed: "Directional_Button")
         }
     }
 
