@@ -13,13 +13,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var worldNode: SKNode!
     var tileMap = JSTileMap(named: "level-2.tmx")
     var tileMapFrame: CGRect!
+    var moveButtonIsPressed = false
     let player = Player(imageNamed: "knight")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonNorth = SKSpriteNode(imageNamed: "Directional_Button")
     
-    var playerSpeedX:CGFloat = 0.0
-    var playerSpeedY:CGFloat = 0.0
+    
+    var xVelocity: CGFloat = 0
     
     
 
@@ -64,6 +65,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         centerViewOn(player.position)
+        if moveButtonIsPressed {
+        applyVelocityX()
+        }
+    }
+    
+    func applyVelocityX() {
+        let rate: CGFloat = 0.5 //controls rate of motion where 1.0 is instant and 0.0 is none
+        let relativeVelocity: CGVector = CGVector(dx: xVelocity - (player.physicsBody!.velocity.dx), dy: 0)
+        
+        player.physicsBody?.velocity.dx = (player.physicsBody!.velocity.dx + relativeVelocity.dx) * rate
     }
     
     
@@ -79,8 +90,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     let node = layerInfo.layer.tileAtCoord(point) //I fetched a node at that point created by JSTileMap
                     node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
                     node.physicsBody?.dynamic = false
+                    node.physicsBody?.restitution = 0
+                    node.physicsBody?.friction
                     node.alpha = 0
-                    println("added physics")
+                    //println("added physics")
                     //You now have a physics body on your floor tiles! :)
                 }
             }
@@ -99,6 +112,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Called when a touch begins */
         
         
+        //building larger frames for east and west buttons
         for touch in (touches as! Set<UITouch>) {
             let location = touch.locationInNode(self)
             let eastFrame:CGRect = CGRectMake(buttonEast.position.x, buttonEast.position.y, buttonEast.frame.width * 2, buttonEast.frame.height * 2)
@@ -106,34 +120,38 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let westFrame:CGRect = CGRectMake(buttonWest.position.x, buttonWest.position.y, buttonWest.frame.width * 2, buttonWest.frame.height * 2)
             let westFrame2:CGRect = CGRectMake(buttonWest.position.x - (westFrame.size.width / 2), buttonWest.position.y - (westFrame.size.height / 2), buttonWest.frame.width * 2, buttonWest.frame.height * 2)
+        //end building larger frames
             
             
             if (CGRectContainsPoint(eastFrame2, location)) {
                 
                 //currentState = MoveStates.E
                 buttonEast.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
+                moveButtonIsPressed = true
+                xVelocity = 200
                 
             }  else if (CGRectContainsPoint(westFrame2, location)) {
                 
                 //currentState = MoveStates.W
                 buttonWest.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
+                moveButtonIsPressed = true
+                xVelocity = -200
                 
             } else {
                 buttonNorth.texture = SKTexture(imageNamed: "Directional_Button_Lit")
                 player.physicsBody?.applyImpulse(CGVectorMake(0.0, 200.0))
             }
-            
         }
     }
     
         //player.physicsBody?.applyImpulse(CGVectorMake(0.0, 200.0))
     
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
-        
+
+        moveButtonIsPressed = false
         buttonNorth.texture = SKTexture(imageNamed: "Directional_Button")
         buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
         buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
-
         
     }
 

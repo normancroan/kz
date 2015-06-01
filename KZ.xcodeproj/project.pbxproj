@@ -36,6 +36,10 @@
 		18149CCE1B19E2E500522024 /* valley-tiles-5.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18149CCD1B19E2E500522024 /* valley-tiles-5.atlasc */; };
 		18149CD01B1AA74600522024 /* Tpes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149CCF1B1AA74600522024 /* Tpes.swift */; };
 		18149CD21B1AA7C500522024 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149CD11B1AA7C500522024 /* Player.swift */; };
+		18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */; };
+		18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */; };
+		18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC31B1BEF99004C0E5D /* Walk.atlas */; };
+		18A9FCC61B1BF0AB004C0E5D /* Run.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC51B1BF0AB004C0E5D /* Run.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,10 @@
 		18149CCD1B19E2E500522024 /* valley-tiles-5.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "valley-tiles-5.atlasc"; sourceTree = "<group>"; };
 		18149CCF1B1AA74600522024 /* Tpes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tpes.swift; sourceTree = "<group>"; };
 		18149CD11B1AA7C500522024 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Jump.atlas; sourceTree = "<group>"; };
+		18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Idle.atlas; sourceTree = "<group>"; };
+		18A9FCC31B1BEF99004C0E5D /* Walk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Walk.atlas; sourceTree = "<group>"; };
+		18A9FCC51B1BF0AB004C0E5D /* Run.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Run.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +224,10 @@
 		18149CB01B197C1A00522024 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				18A9FCC51B1BF0AB004C0E5D /* Run.atlas */,
+				18A9FCC31B1BEF99004C0E5D /* Walk.atlas */,
+				18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */,
+				18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */,
 				18149CCD1B19E2E500522024 /* valley-tiles-5.atlasc */,
 				18149CB61B197C6E00522024 /* tmx-rpg-bigpack.atlasc */,
 			);
@@ -313,10 +325,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				18149CCE1B19E2E500522024 /* valley-tiles-5.atlasc in Resources */,
+				18A9FCC61B1BF0AB004C0E5D /* Run.atlas in Resources */,
+				18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */,
 				18149C701B19709F00522024 /* LaunchScreen.xib in Resources */,
 				18149C6D1B19709F00522024 /* Images.xcassets in Resources */,
+				18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */,
 				18149CCC1B19E24400522024 /* level-2.tmx in Resources */,
 				18149C641B19709F00522024 /* GameScene.sks in Resources */,
+				18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */,
 				18149C8E1B1972A600522024 /* LICENSE.txt in Resources */,
 				18149C6B1B19709F00522024 /* Main.storyboard in Resources */,
 				18149CB71B197C6E00522024 /* tmx-rpg-bigpack.atlasc in Resources */,
@@ -563,6 +579,7 @@
 				18149C811B1970A000522024 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18149C821B1970A000522024 /* Build configuration list for PBXNativeTarget "KZTests" */ = {
 			isa = XCConfigurationList;
@@ -571,6 +588,7 @@
 				18149C841B1970A000522024 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
