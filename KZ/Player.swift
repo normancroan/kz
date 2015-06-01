@@ -30,7 +30,7 @@ class Player: SKSpriteNode {
     var attackAction:SKAction?
     var jumpAction:SKAction?
     
-    var maxSpeed:CGFloat = 5
+    var maxSpeed:CGFloat = 2
     
     
     var isAttacking:Bool = false
@@ -51,7 +51,7 @@ class Player: SKSpriteNode {
         super.init(texture: imageTexture, color:nil, size: imageTexture.size() )
         
         //resizing the physics rectangle to align with feet
-        var rect:CGRect = CGRectMake(position.x, position.y, imageTexture.size().width / 2.8, imageTexture.size().height)
+        var rect:CGRect = CGRectMake(position.x, position.y, imageTexture.size().width / 2.8, imageTexture.size().height * 0.8)
         var anchor:CGPoint = CGPointMake(position.x - 12.5, position.y)
         
         //creating physics body with above values to align with feet
@@ -60,7 +60,13 @@ class Player: SKSpriteNode {
         
         //using this circle body for now, perhaps extend by adding another body on top to collide with head
 //        var body:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().width / 3, center: CGPointMake(-15, -35))
-        var body:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().width / 3, center: CGPointMake(-10, -25))
+        var body3:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().height / 10, center: CGPointMake(0, -45))
+        
+        var frontFoot:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().height / 10, center: CGPointMake(0, -45))
+        var backFoot:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().height / 6, center: CGPointMake(0, -35))
+        var rectBodyThin:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: rect.size, center: CGPointMake(-12.5, -8))
+        
+        var body:SKPhysicsBody = SKPhysicsBody(bodies: [frontFoot, rectBodyThin])
         
         
         //dynamic required for gravity to work
@@ -260,10 +266,10 @@ class Player: SKSpriteNode {
         
         if ( playerSpeedX > 0 ){
             
-            self.xScale = 1
+            self.xScale = 0.7
         } else {
             
-            self.xScale = -1
+            self.xScale = -0.7
         }
         
         

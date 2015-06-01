@@ -65,8 +65,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         centerViewOn(player.position)
+        player.update()
         if moveButtonIsPressed {
-        applyVelocityX()
+        //applyVelocityX()
+            player.update()
         }
     }
     
@@ -123,23 +125,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //end building larger frames
             
             
+            //touched right
             if (CGRectContainsPoint(eastFrame2, location)) {
                 
                 //currentState = MoveStates.E
                 buttonEast.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
                 moveButtonIsPressed = true
-                xVelocity = 200
+                //xVelocity = 200
+                player.playerSpeedX = player.maxSpeed
+                player.adjustXSpeedAndScale()
                 
+            //touched left
             }  else if (CGRectContainsPoint(westFrame2, location)) {
                 
                 //currentState = MoveStates.W
                 buttonWest.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
                 moveButtonIsPressed = true
-                xVelocity = -200
+                //xVelocity = -200
+                player.playerSpeedX = -player.maxSpeed
+                player.adjustXSpeedAndScale()
                 
+            //jumped
             } else {
                 buttonNorth.texture = SKTexture(imageNamed: "Directional_Button_Lit")
-                player.physicsBody?.applyImpulse(CGVectorMake(0.0, 200.0))
+                player.physicsBody?.applyImpulse(CGVectorMake(0.0, 15.0))
             }
         }
     }
