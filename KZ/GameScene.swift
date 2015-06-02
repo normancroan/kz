@@ -15,6 +15,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var tileMapFrame: CGRect!
     var moveButtonIsPressed = false
     var jumpButtonIsPressed = false
+    var intendsToKeepRunning = false
     let player = Player(imageNamed: "Walk13")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
@@ -49,6 +50,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createWorld()
         worldNode.addChild(player)
         player.position = CGPointMake(55,235)
+        //player.position = CGPointMake(955,2235)
         player.setScale(0.7)
         
         centerViewOn(player.position)
@@ -75,12 +77,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 20.0) && (player.physicsBody?.velocity.dy >= -10.0){//!= 0.0 {
             player.setFalling(false)
             if player.physicsBody?.velocity.dy != 0.0 {
-            //println(player.physicsBody?.velocity.dy)
             }
-        //println(player.physicsBody?.velocity.dy)
         } else {
             player.setFalling(true)
-            //println(player.physicsBody?.velocity.dy)
         }
     }
     
@@ -128,6 +127,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let westFrame:CGRect = CGRectMake(buttonWest.position.x, buttonWest.position.y, buttonWest.frame.width * 2, buttonWest.frame.height * 2)
             let westFrame2:CGRect = CGRectMake(buttonWest.position.x - (westFrame.size.width / 2), buttonWest.position.y - (westFrame.size.height / 2), buttonWest.frame.width * 2, buttonWest.frame.height * 2)
+            
+//            let northFrame:CGRect = CGRectMake(buttonNorth.position.x, buttonNorth.position.y, buttonNorth.frame.width * 3, buttonNorth.frame.height * 3)
+//            let northFrame2:CGRect = CGRectMake(buttonNorth.position.x - (northFrame.size.width / 3), buttonNorth.position.y - (northFrame.size.height / 3), buttonNorth.frame.width * 3, buttonNorth.frame.height * 3)
+            
+            
         //end building larger frames
             
             
@@ -140,6 +144,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 player.playerSpeedX = player.maxSpeed
                 player.adjustXSpeedAndScale()
                 player.startWalk()
+                determineRunIntentions()
                 
             //touched left
             }  else if (CGRectContainsPoint(westFrame2, location)) {
@@ -150,6 +155,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 player.playerSpeedX = -player.maxSpeed
                 player.adjustXSpeedAndScale()
                 player.startWalk()
+                determineRunIntentions()
                 
             //jumped
             } else {
@@ -160,26 +166,104 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    func endWalkAfterJump() {
+        player.stopWalk()
+        player.playerSpeedX = 0
+        moveButtonIsPressed = false
+        buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
+        buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
+    }
+    
+    func updateRunIntentions(intention: String) {
+        if intention == "run" {
+           // println("will keep running")
+            intendsToKeepRunning = true
+        } else {
+            intendsToKeepRunning = false
+        }
+    }
+    
+    func determineRunIntentions() {
+        if moveButtonIsPressed {
+            let wait = SKAction.waitForDuration(0.15)
+            let update = SKAction.runBlock({ self.updateRunIntentions("run")})
+            let seq = SKAction.sequence([wait, update])
+            runAction(seq, withKey: "checking")
+        } else {
+            updateRunIntentions("stop")
+        }
+    }
+    
     
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        let touch = touches.first as! UITouch
+        for touch in (touches as! Set<UITouch>){
+            let location = touch.locationInNode(self)
+
+            let eastFrame:CGRect = CGRectMake(buttonEast.position.x, buttonEast.position.y, buttonEast.frame.width * 2, buttonEast.frame.height * 2)
+            let eastFrame2:CGRect = CGRectMake(buttonEast.position.x - (eastFrame.size.width / 2), buttonEast.position.y - (eastFrame.size.height / 2), buttonEast.frame.width * 2, buttonEast.frame.height * 2)
+            
+            let westFrame:CGRect = CGRectMake(buttonWest.position.x, buttonWest.position.y, buttonWest.frame.width * 2, buttonWest.frame.height * 2)
+            let westFrame2:CGRect = CGRectMake(buttonWest.position.x - (westFrame.size.width / 2), buttonWest.position.y - (westFrame.size.height / 2), buttonWest.frame.width * 2, buttonWest.frame.height * 2)
+            
+
+            if (CGRectContainsPoint(eastFrame2, location)){
+                //println("touch ended on right button")
+                player.stopWalk()
+                player.playerSpeedX = 0
+                moveButtonIsPressed = false
+                buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
+                buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
+                removeActionForKey("checking")
+                updateRunIntentions("stop")
+
+            } else if (CGRectContainsPoint(westFrame2, location)) {
+                //println("touch ended on left button")
+                player.stopWalk()
+                player.playerSpeedX = 0
+                moveButtonIsPressed = false
+                buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
+                buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
+                removeActionForKey("checking")
+                updateRunIntentions("stop")
+
+            } else {
+                //println("touch ended in jump territory")
+            }
+        }
+
 
         if moveButtonIsPressed && !jumpButtonIsPressed {
             
+            //println("just the move was pressed")
             player.stopWalk()
             player.playerSpeedX = 0
             moveButtonIsPressed = false
             buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
             buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
+            removeActionForKey("checking")
+            updateRunIntentions("stop")
             
         } else if jumpButtonIsPressed && !moveButtonIsPressed {
-            
+            //println("just the jump was pressed")
             jumpButtonIsPressed = false
             buttonNorth.texture = SKTexture(imageNamed: "Directional_Button")
         
         } else if moveButtonIsPressed && jumpButtonIsPressed {
-            
+            //println("both were pressed")
             jumpButtonIsPressed = false
             buttonNorth.texture = SKTexture(imageNamed: "Directional_Button")
+            //resolving the sticky button issue with simultaneous presses
+            if !intendsToKeepRunning {
+            removeActionForKey("checking")
+            let wait = SKAction.waitForDuration(0.35)
+            let stop = SKAction.runBlock({ self.endWalkAfterJump() })
+            let stop2 = SKAction.runBlock({ self.updateRunIntentions("stop") })
+            let seq = SKAction.sequence([wait, stop, stop2])
+            runAction(seq)
+            }
+            //end anti stick code, update with intendsToRun soon
         }
     }
 
