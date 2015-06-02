@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="256" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="tmx-rpg-bigpack.1" tilewidth="32" tileheight="32">
+  <image source="tmx-rpg-bigpack.atlasc/tmx-rpg-bigpack.1.png" width="674" height="738"/>
+ </tileset>
+ <layer name="background" width="64" height="256">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgJD+r+4ICgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGoADwAB
+  </data>
+ </layer>
+ <layer name="collision layer" width="64" height="256">
+  <data encoding="base64" compression="zlib">
+   eJzt2DEKADAIA0D7c58ufqEg0nIH2bNkSQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAb8mw3AG7YLgAAAAD8rT/AFzKlAHReFi0=
+  </data>
+ </layer>
+</map>
