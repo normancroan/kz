@@ -38,9 +38,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let background = SKSpriteNode(imageNamed: "background_1")
         self.addChild(background)
         background.zPosition = -100
-        background.xScale = 0.4
+        background.xScale = 1.25
         background.yScale = background.xScale
-        background.position = CGPointMake(0, -80)
+        background.position = CGPointMake(0, 50)
     }
     
     override func didMoveToView(view: SKView) {
