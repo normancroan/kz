@@ -48,6 +48,8 @@
 		18A9FCC81B1BF448004C0E5D /* Attack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC71B1BF448004C0E5D /* Attack.atlas */; };
 		18E659211B1F03D600952BFA /* kz_egypt_test1.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18E659201B1F03D600952BFA /* kz_egypt_test1.atlasc */; };
 		18E659251B1F080100952BFA /* background_egypt.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E659241B1F080100952BFA /* background_egypt.png */; };
+		18E87E9B1B1F377E00E4CC4E /* kz_egypt_large_items.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18E87E9A1B1F377E00E4CC4E /* kz_egypt_large_items.atlasc */; };
+		18E87E9D1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18E87E9C1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		18A9FCC71B1BF448004C0E5D /* Attack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Attack.atlas; sourceTree = "<group>"; };
 		18E659201B1F03D600952BFA /* kz_egypt_test1.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_egypt_test1.atlasc; sourceTree = "<group>"; };
 		18E659241B1F080100952BFA /* background_egypt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_egypt.png; sourceTree = "<group>"; };
+		18E87E9A1B1F377E00E4CC4E /* kz_egypt_large_items.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_egypt_large_items.atlasc; sourceTree = "<group>"; };
+		18E87E9C1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_egypt_light_tiles_sheet.atlasc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +244,8 @@
 		18149CB01B197C1A00522024 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				18E87E9C1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc */,
+				18E87E9A1B1F377E00E4CC4E /* kz_egypt_large_items.atlasc */,
 				18E659201B1F03D600952BFA /* kz_egypt_test1.atlasc */,
 				183096021B1E0E6200BBB25B /* background_1.png */,
 				183096031B1E0E6200BBB25B /* background_2.png */,
@@ -354,6 +360,7 @@
 				183095F21B1C746700BBB25B /* gem_red_1.png in Resources */,
 				18E659251B1F080100952BFA /* background_egypt.png in Resources */,
 				18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */,
+				18E87E9B1B1F377E00E4CC4E /* kz_egypt_large_items.atlasc in Resources */,
 				183095FD1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc in Resources */,
 				18E659211B1F03D600952BFA /* kz_egypt_test1.atlasc in Resources */,
 				18149C701B19709F00522024 /* LaunchScreen.xib in Resources */,
@@ -369,6 +376,7 @@
 				18149C6B1B19709F00522024 /* Main.storyboard in Resources */,
 				183095FF1B1D604B00BBB25B /* kz_egypt.tmx in Resources */,
 				18149CB71B197C6E00522024 /* tmx-rpg-bigpack.atlasc in Resources */,
+				18E87E9D1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,8 +541,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Norman Croan (6SH9V577Y7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Norman Croan (6SH9V577Y7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KZ",
@@ -551,8 +559,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Norman Croan (6SH9V577Y7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Norman Croan (6SH9V577Y7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KZ",
