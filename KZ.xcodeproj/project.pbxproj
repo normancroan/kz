@@ -39,7 +39,6 @@
 		183095F21B1C746700BBB25B /* gem_red_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 183095F11B1C746700BBB25B /* gem_red_1.png */; };
 		183095FD1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 183095FC1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc */; };
 		183095FF1B1D604B00BBB25B /* kz_egypt.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 183095FE1B1D604B00BBB25B /* kz_egypt.tmx */; };
-		183096011B1D621000BBB25B /* kz_items_1.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 183096001B1D621000BBB25B /* kz_items_1.atlasc */; };
 		183096041B1E0E6200BBB25B /* background_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 183096021B1E0E6200BBB25B /* background_1.png */; };
 		183096051B1E0E6200BBB25B /* background_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 183096031B1E0E6200BBB25B /* background_2.png */; };
 		18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */; };
@@ -47,6 +46,8 @@
 		18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC31B1BEF99004C0E5D /* Walk.atlas */; };
 		18A9FCC61B1BF0AB004C0E5D /* Run.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC51B1BF0AB004C0E5D /* Run.atlas */; };
 		18A9FCC81B1BF448004C0E5D /* Attack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC71B1BF448004C0E5D /* Attack.atlas */; };
+		18E659211B1F03D600952BFA /* kz_egypt_test1.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18E659201B1F03D600952BFA /* kz_egypt_test1.atlasc */; };
+		18E659251B1F080100952BFA /* background_egypt.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E659241B1F080100952BFA /* background_egypt.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +100,6 @@
 		183095F11B1C746700BBB25B /* gem_red_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gem_red_1.png; sourceTree = "<group>"; };
 		183095FC1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_egypt_tiles_1.atlasc; sourceTree = "<group>"; };
 		183095FE1B1D604B00BBB25B /* kz_egypt.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt.tmx; sourceTree = "<group>"; };
-		183096001B1D621000BBB25B /* kz_items_1.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_items_1.atlasc; sourceTree = "<group>"; };
 		183096021B1E0E6200BBB25B /* background_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_1.png; sourceTree = "<group>"; };
 		183096031B1E0E6200BBB25B /* background_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_2.png; sourceTree = "<group>"; };
 		18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Jump.atlas; sourceTree = "<group>"; };
@@ -107,6 +107,8 @@
 		18A9FCC31B1BEF99004C0E5D /* Walk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Walk.atlas; sourceTree = "<group>"; };
 		18A9FCC51B1BF0AB004C0E5D /* Run.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Run.atlas; sourceTree = "<group>"; };
 		18A9FCC71B1BF448004C0E5D /* Attack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Attack.atlas; sourceTree = "<group>"; };
+		18E659201B1F03D600952BFA /* kz_egypt_test1.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_egypt_test1.atlasc; sourceTree = "<group>"; };
+		18E659241B1F080100952BFA /* background_egypt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_egypt.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,9 +240,10 @@
 		18149CB01B197C1A00522024 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				18E659201B1F03D600952BFA /* kz_egypt_test1.atlasc */,
 				183096021B1E0E6200BBB25B /* background_1.png */,
 				183096031B1E0E6200BBB25B /* background_2.png */,
-				183096001B1D621000BBB25B /* kz_items_1.atlasc */,
+				18E659241B1F080100952BFA /* background_egypt.png */,
 				183095FC1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc */,
 				183095F11B1C746700BBB25B /* gem_red_1.png */,
 				18A9FCC71B1BF448004C0E5D /* Attack.atlas */,
@@ -346,12 +349,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				183096011B1D621000BBB25B /* kz_items_1.atlasc in Resources */,
 				18149CCE1B19E2E500522024 /* valley-tiles-5.atlasc in Resources */,
 				18A9FCC61B1BF0AB004C0E5D /* Run.atlas in Resources */,
 				183095F21B1C746700BBB25B /* gem_red_1.png in Resources */,
+				18E659251B1F080100952BFA /* background_egypt.png in Resources */,
 				18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */,
 				183095FD1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc in Resources */,
+				18E659211B1F03D600952BFA /* kz_egypt_test1.atlasc in Resources */,
 				18149C701B19709F00522024 /* LaunchScreen.xib in Resources */,
 				18149C6D1B19709F00522024 /* Images.xcassets in Resources */,
 				18A9FCC81B1BF448004C0E5D /* Attack.atlas in Resources */,

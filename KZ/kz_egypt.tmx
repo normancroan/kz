@@ -3,14 +3,30 @@
  <tileset firstgid="1" name="tmx-rpg-bigpack.1" tilewidth="32" tileheight="32">
   <image source="tmx-rpg-bigpack.atlasc/tmx-rpg-bigpack.1.png" width="674" height="738"/>
  </tileset>
+ <tileset firstgid="484" name="kz_egypt_test1.1" tilewidth="32" tileheight="32">
+  <image source="kz_egypt_test1.atlasc/kz_egypt_test1.1.png" width="1024" height="2048"/>
+ </tileset>
+ <tileset firstgid="2532" name="kz_egypt_tiles_1.1" tilewidth="32" tileheight="32" spacing="1">
+  <image source="kz_egypt_tiles_1.atlasc/kz_egypt_tiles_1.1.png" width="990" height="243"/>
+ </tileset>
+ <layer name="background_items" width="64" height="256">
+  <data encoding="base64" compression="zlib">
+   eJzt1kkuRGEYheFfVSEqmk1oJpoJO9BMNAkbINHsgolmI4WNoDZSmGi24CQ1RQ1ESbnPk7z5c2ffmd1SAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfuawXspROk4n9b++pv/Os/kiXaarCu5vZfN1ukm3Fdx/l8336SG1K7i/k82P6Sk9V3B/o1HKcBpJo42/vqb/prN5Js2muQruX83mtbSeNiq4/zCbj9JxOumx/2WolNf0lt6H+nPfbzvP5ot0ma567B+vlTKRJtNUrT/3/bZWNl+nm3TbY/98Ni+kxbT0T/bfZfN9ekjtHvs3s3krbaedAdm/3CxlPx2klWb3+7O3M5b/gLGv30G1m22n6SztNbvfn721VP/mHVQfnJAtNw==
+  </data>
+ </layer>
  <layer name="background" width="64" height="256">
+  <data encoding="base64" compression="zlib">
+   eJzt0jEOgzAQBEDq+xjPSKoU0POG5NcpKB0QldcRM9I2V+1aniYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUuZKN8iyP90g69f+143exP72Zn//Hin2tzf7+/dIsb+92d+/x0jsTzc496jjXLXVHu7jWXv4b0vlsg7wf96Vy2eA/V9uqi7T
+  </data>
+ </layer>
+ <layer name="foreground_items" width="64" height="256">
   <data encoding="base64" compression="zlib">
    eJztwQEBAAAAgJD+r+4ICgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGoADwAB
   </data>
  </layer>
  <layer name="collision layer" width="64" height="256">
   <data encoding="base64" compression="zlib">
-   eJzt2DEKADAIA0D7c58ufqEg0nIH2bNkSQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAb8mw3AG7YLgAAAAD8rT/AFzKlAHReFi0=
+   eJzt1MsKgzAURVH98356cdBJiMVLC9F71gKHhuy8tg0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACg5rWvnsE6/24/xktfT/2rZ7HO2J+2HmNrYv9sDVJ0PP+fhistHfe/2j/798l+2f8O/RUd97+i4/2vSN//mfTzcPfe8X2/+tbPxiBnLc46U/rPPK3/2/1P+NK9Ad3hRYs=
   </data>
  </layer>
 </map>
