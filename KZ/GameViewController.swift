@@ -29,27 +29,41 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let skView = self.view as! SKView
+        let scene = MapSelectScene(size: CGSize(width: 2048, height: 1536))
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        //skView.showsPhysics = true
+        skView.ignoresSiblingOrder = true
+        /* Set the scale mode to scale to fit the window */
+        scene.size = skView.bounds.size
+        scene.scaleMode = .AspectFit
+        //scene.currentMap = "kz_egypt"
+        skView.presentScene(scene)
 
-        if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
-            // Configure the view.
-            let skView = self.view as! SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            //skView.showsPhysics = true
-            //REMOVE IF UNWANTED BEHAVIOR ENSUES FROM FPS DROP
-            //skView.frameInterval = 2
-            
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            /* Set the scale mode to scale to fit the window */
-            scene.size = skView.bounds.size
-            //CHANGE TO FILL IF MESSED UP
-            scene.scaleMode = .AspectFit
-            
-            skView.presentScene(scene)
-            
-        }
+        
+
+//        if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
+//            // Configure the view.
+//            let skView = self.view as! SKView
+//            skView.showsFPS = true
+//            skView.showsNodeCount = true
+//            //skView.showsPhysics = true
+//            //REMOVE IF UNWANTED BEHAVIOR ENSUES FROM FPS DROP
+//            //skView.frameInterval = 2
+//            
+//            /* Sprite Kit applies additional optimizations to improve rendering performance */
+//            skView.ignoresSiblingOrder = true
+//            
+//            /* Set the scale mode to scale to fit the window */
+//            scene.size = skView.bounds.size
+//            //CHANGE TO FILL IF MESSED UP
+//            scene.scaleMode = .AspectFit
+//            //scene.currentMap = "kz_egypt"
+//            skView.presentScene(scene)
+//            
+//        }
     }
 
     override func shouldAutorotate() -> Bool {

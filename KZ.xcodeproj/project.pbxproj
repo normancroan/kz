@@ -51,6 +51,7 @@
 		18E87E9B1B1F377E00E4CC4E /* kz_egypt_large_items.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18E87E9A1B1F377E00E4CC4E /* kz_egypt_large_items.atlasc */; };
 		18E87E9D1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18E87E9C1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc */; };
 		18E87E9F1B2010C800E4CC4E /* kz_wild.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18E87E9E1B2010C800E4CC4E /* kz_wild.tmx */; };
+		18E87EA11B20125700E4CC4E /* MapSelectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E87EA01B20125700E4CC4E /* MapSelectScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		18E87E9A1B1F377E00E4CC4E /* kz_egypt_large_items.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_egypt_large_items.atlasc; sourceTree = "<group>"; };
 		18E87E9C1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_egypt_light_tiles_sheet.atlasc; sourceTree = "<group>"; };
 		18E87E9E1B2010C800E4CC4E /* kz_wild.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_wild.tmx; sourceTree = "<group>"; };
+		18E87EA01B20125700E4CC4E /* MapSelectScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSelectScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				18149C611B19709F00522024 /* AppDelegate.swift */,
 				18149C631B19709F00522024 /* GameScene.sks */,
 				18149C651B19709F00522024 /* GameScene.swift */,
+				18E87EA01B20125700E4CC4E /* MapSelectScene.swift */,
 				18149CD11B1AA7C500522024 /* Player.swift */,
 				18149C671B19709F00522024 /* GameViewController.swift */,
 				18149C691B19709F00522024 /* Main.storyboard */,
@@ -413,6 +416,7 @@
 				18149CA21B1972BE00522024 /* SKColor+Extensions.swift in Sources */,
 				18149C9E1B1972BE00522024 /* CGVector+Extensions.swift in Sources */,
 				18149C621B19709F00522024 /* AppDelegate.swift in Sources */,
+				18E87EA11B20125700E4CC4E /* MapSelectScene.swift in Sources */,
 				18149CA41B1972BE00522024 /* SKTAudio.swift in Sources */,
 				18149CD21B1AA7C500522024 /* Player.swift in Sources */,
 				18149C9C1B1972BE00522024 /* CGFloat+Extensions.swift in Sources */,

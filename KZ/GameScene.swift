@@ -10,6 +10,16 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    init(size: CGSize, currentMap: String) {
+        self.currentMap = currentMap
+        super.init(size: size)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     var worldNode: SKNode!
     var lastUpdateTime: NSTimeInterval = 0
     var dt: NSTimeInterval = 0
@@ -18,15 +28,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var moveButtonIsPressed = false
     var jumpButtonIsPressed = false
     var intendsToKeepRunning = false
-    var currentMap: String = "kz_wild"
+    let currentMap: String
     let player = Player(imageNamed: "Walk13")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonNorth = SKSpriteNode(imageNamed: "Directional_Button")
+    let menuButton = SKSpriteNode(imageNamed: "Key")
     
     
-    func setupMap(level: String) {
-        currentMap = level
+    func setupMap() {
         tileMap = JSTileMap(named: "\(currentMap).tmx")
         createBackground()
     }
@@ -54,7 +64,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        setupMap("kz_egypt")
+        setupMap()
         createWorld()
         worldNode.addChild(player)
         player.position = CGPointMake(55,235)
@@ -76,6 +86,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(buttonEast)
         buttonEast.position = CGPoint(x: buttonWest.position.x + (buttonWest.size.width * 2), y: buttonWest.position.y)
         buttonEast.xScale = -1
+        
+        addChild(menuButton)
+        menuButton.position = CGPoint(x: buttonWest.position.x, y: heightHalf - menuButton.size.height * 0.4)
         
 
     }
@@ -175,6 +188,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 player.adjustXSpeedAndScale()
                 player.startWalk()
                 //determineRunIntentions()
+            }else if (CGRectContainsPoint(menuButton.frame, location)) {
+                    
+                //println("menu touched")
+                let mapSelectScene = MapSelectScene(size: size)
+                let reveal = SKTransition.fadeWithDuration(0.5)
+                view?.presentScene(mapSelectScene, transition: reveal)
                 
             //jumped
             } else {
