@@ -13,18 +13,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var worldNode: SKNode!
     var lastUpdateTime: NSTimeInterval = 0
     var dt: NSTimeInterval = 0
-    var tileMap = JSTileMap(named: "kz_egypt.tmx")
+    var tileMap = JSTileMap(named: "kz_wild.tmx")
     var tileMapFrame: CGRect!
     var moveButtonIsPressed = false
     var jumpButtonIsPressed = false
     var intendsToKeepRunning = false
+    var currentMap: String = "kz_wild"
     let player = Player(imageNamed: "Walk13")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonNorth = SKSpriteNode(imageNamed: "Directional_Button")
     
     
-    
+    func setupMap(level: String) {
+        currentMap = level
+        tileMap = JSTileMap(named: "\(currentMap).tmx")
+        createBackground()
+    }
     
     func createWorld() {
         worldNode = SKNode()
@@ -39,7 +44,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createBackground() {
-        let background = SKSpriteNode(imageNamed: "background_egypt")
+        let background = SKSpriteNode(imageNamed: "\(currentMap)_background")
         self.addChild(background)
         background.zPosition = -100
         background.xScale = 1.25
@@ -49,8 +54,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        //backgroundColor = SKColor.blackColor()
-        createBackground()
+        setupMap("kz_egypt")
         createWorld()
         worldNode.addChild(player)
         player.position = CGPointMake(55,235)
