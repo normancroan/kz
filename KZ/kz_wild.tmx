@@ -26,7 +26,7 @@
    <ellipse/>
   </object>
  </objectgroup>
- <layer name="Tile Layer 2" width="64" height="128" visible="0">
+ <layer name="Tile Layer 2" width="64" height="128">
   <data encoding="base64" compression="zlib">
    eJzt3MFugzAMBuD1zdc3n3pA2rqNFkhiO/k+iQMXk9+ORMmh99vHsu4LZwcAAAAAAAAAAAAAAAAAAACo4PH/EN//I+Ls/bsXscyBjb2wHjNfj5mzsRf6q9LjKuusLFuPs60no9l6NFuekWbr3avzHP6nV78dPf87ek7Yslav/JlVzN9ybhXzP9e/8ozq+a/Knv/IfM/shWz5R79DM+TvkfndmqPz95rv2boZ5n+2bovao95PWd8Ds+z/vefvPS9yLhl6kXVfjtIq/+ft76vX99/Vb7uR338Z869KX9Zj5mwy7YVMa9nT8lsj4jwsqs9ReaPqtljLc41X91GyrKOlGTNxnH3Ag33wU5V3U1ZRvykiVF33WS3zVuhdhTW21jPz0dor9r+X6DPq6Iu1fQGpra6r
   </data>

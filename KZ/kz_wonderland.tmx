@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="256" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="tmx-rpg-bigpack.1" tilewidth="32" tileheight="32">
+  <image source="tmx-rpg-bigpack.atlasc/tmx-rpg-bigpack.1.png" width="674" height="738"/>
+ </tileset>
+ <tileset firstgid="484" name="kz_wonderland_tileset_medium.1" tilewidth="32" tileheight="32">
+  <image source="kz_wonderland_tileset_medium.atlasc/kz_wonderland_tileset_medium.1.png" width="1154" height="1026"/>
+ </tileset>
+ <tileset firstgid="1636" name="kz_wonderland_trees.1" tilewidth="32" tileheight="32">
+  <image source="kz_wonderland_trees.atlasc/kz_wonderland_trees.1.png" width="1154" height="1282"/>
+ </tileset>
+ <layer name="background_walls" width="64" height="256">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgJD+r+4ICgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGoADwAB
+  </data>
+ </layer>
+ <layer name="background_items" width="64" height="256">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgJD+r+4ICgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGoADwAB
+  </data>
+ </layer>
+ <layer name="background" width="64" height="256">
+  <data encoding="base64" compression="zlib">
+   eJztysdRUAEAANEPN5Dch4ikPiSI0IegEvogCvSmEq2BvdLCn/dm9rbDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADw3t+JYfhXD/VYT/VcL/Va/+vPxHi/6clh+FAzNVtzNV8LtVhLNTU53m+5PtVKfa7VWqv12qjN+jjib6u2a6d262vt1bfar4P6MuLvsI7qR/2sX3VcJ3VaZ/V9xN9FXdZVXddN/a7buqv7Oh/x9wa7hafR
+  </data>
+ </layer>
+ <layer name="foreground_items" width="64" height="256">
+  <data encoding="base64" compression="zlib">
+   eJztz1VyngUAheHvskmoJKkga0AqSSrIKpB6gVUg9QKrQOrIKpA6sgqglqSC3PJuIvMP3zzPzHt/zjAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATNbyumFYqdV6VI/rST2tv+rv+qf+XTfppWtjdmoY5mq+NteW2lrb6tl6rp6vF6YmvXRtLPRrsZZqd+2pvbWvXq3X6vV6Y6T/9/frQB2sQ3W4jtTROlbv1nv1/kj/H+/XiTpZp+p0namzda4+qU/rs5H+P9+vC3WxLtXlulJX6+v6pr6t70b6/1q/rteNulm36nbdqZ/rl/q1fhvp/3v9ul8P6mEt10qt1qN6XE/q6Uj/r58ehg21sTbVbM3VfG2uLbW1tk1Peuna2N6vHbWzdtVCLdZS7a49tbf2jfT/m/16q96ud2p/HaiDdagO15E6OtL/H/Trw/qoPq7jdaJO1qk6XWfq7Ej/f96vL+rL+qrO14W6WJfqcl2pqyP9/32/fqgf66e6VtfrRt2sW3W77oz0/+/9+qP+rLt1r+7Xg3pYy7VSqyP9PzUzDNM1U8/U+tpQG2tTzdZczc9MeunaeLFfL9XL9Uptrx21s3bVQi3W0kj/A/xf/Aev8WEo
+  </data>
+ </layer>
+ <layer name="collision" width="64" height="256">
+  <data encoding="base64" compression="zlib">
+   eJzt3DsKgDAURcG4c5duIYEgUeyi787AK+w8+ZTaGgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMA/7Ns55Oh7bt8BAAAAAAAAAAAAAAAAAEiU/p2t/tw16N36177HCuO5T7wDY296/+y5slmr/ow1eOrUX38Nxv/r3E1l6f2jtN6rr/e/OauVB8h1AHfaPHk=
+  </data>
+ </layer>
+</map>
