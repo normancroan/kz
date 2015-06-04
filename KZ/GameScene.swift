@@ -11,6 +11,8 @@ import SpriteKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var worldNode: SKNode!
+    var lastUpdateTime: NSTimeInterval = 0
+    var dt: NSTimeInterval = 0
     var tileMap = JSTileMap(named: "kz_egypt.tmx")
     var tileMapFrame: CGRect!
     var moveButtonIsPressed = false
@@ -20,6 +22,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonNorth = SKSpriteNode(imageNamed: "Directional_Button")
+    
+    
     
     
     func createWorld() {
@@ -68,13 +72,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(buttonEast)
         buttonEast.position = CGPoint(x: buttonWest.position.x + (buttonWest.size.width * 2), y: buttonWest.position.y)
         buttonEast.xScale = -1
+        
 
     }
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        //delta
+        if lastUpdateTime > 0 {
+            dt = currentTime - lastUpdateTime
+        } else {
+            dt = 0
+        }
+        lastUpdateTime = currentTime
+        //println("\(dt) is the dt")
+        //end delta
         centerViewOn(player.position)
-        player.update()
+        player.update(CGFloat(dt))
         if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 20.0) && (player.physicsBody?.velocity.dy >= -10.0){//!= 0.0 {
             player.setFalling(false)
             if player.physicsBody?.velocity.dy != 0.0 {

@@ -36,6 +36,8 @@ class GameViewController: UIViewController {
             skView.showsFPS = true
             skView.showsNodeCount = true
             //skView.showsPhysics = true
+            //REMOVE IF UNWANTED BEHAVIOR ENSUES FROM FPS DROP
+            //skView.frameInterval = 2
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
@@ -46,6 +48,7 @@ class GameViewController: UIViewController {
             scene.scaleMode = .AspectFit
             
             skView.presentScene(scene)
+            
         }
     }
 

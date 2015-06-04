@@ -17,8 +17,7 @@ class Player: SKSpriteNode {
     
     
     var jumpAmount:CGFloat = 0
-    var maxJump:CGFloat = 12//18
-    
+    var maxJump:CGFloat = 7.2//12 was before dt, need to modify by 1.6ish//18
     
     var attackAmount:CGFloat = 0
     var maxAttack:CGFloat = 8
@@ -30,8 +29,7 @@ class Player: SKSpriteNode {
     var attackAction:SKAction?
     var jumpAction:SKAction?
     
-    var maxSpeed:CGFloat = 3.1
-    
+    var maxSpeed:CGFloat = 1.9//3.1 was before DT, need to modify by 1.6ish
     
     var isAttacking:Bool = false
     var isJumping:Bool = false
@@ -78,10 +76,11 @@ class Player: SKSpriteNode {
         body.categoryBitMask = PhysicsCategory.Player
         body.collisionBitMask = PhysicsCategory.Floor | PhysicsCategory.Boundary
         body.contactTestBitMask = PhysicsCategory.All
+        body.usesPreciseCollisionDetection = true
         
         self.physicsBody = body
         
-        setUpAttackAction()
+        //setUpAttackAction()
         setUpIdleAction()
         setUpJumpAction()
         setUpWalkAnimation()
@@ -89,13 +88,14 @@ class Player: SKSpriteNode {
         self.runAction(idleAction)
     }
     
-    func update() {
+    func update(dt: CGFloat) {
         
         
 //        self.position = CGPointMake(self.position.x + playerSpeedX + attackAmount, self.position.y + playerSpeedY + jumpAmount)
         
-        self.position = CGPointMake(self.position.x + playerSpeedX + attackAmount, self.position.y + jumpAmount)
-        
+//        self.position = CGPointMake(self.position.x + playerSpeedX + attackAmount, self.position.y + jumpAmount)
+    
+        self.position = CGPointMake(self.position.x + (playerSpeedX * (dt * 100)), self.position.y + (jumpAmount * (dt * 100)))
         
         
         if (self.position.y < -300) {
