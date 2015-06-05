@@ -430,7 +430,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if collision == PhysicsCategory.Player | PhysicsCategory.Bounce {
             println("hit bounce tile")
-            player.physicsBody?.applyImpulse(CGVectorMake(0,100))
+            player.physicsBody?.applyImpulse(CGVectorMake(0,75))
         }
     }
 
