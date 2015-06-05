@@ -29,11 +29,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var moveButtonIsPressed = false
     var jumpButtonIsPressed = false
     var intendsToKeepRunning = false
+    
+    //checkpoint variables
     var savePoint:CGPoint = CGPoint.zeroPoint
+    var savePointsRemaining = 5
     
     //MARK: Constants
-
+    //checkpoint constants
     let savePointLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
+    let savePointsRemainingLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
+    //end checkpoint constants
     let currentMap: String
     let player = Player(imageNamed: "Walk13")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
@@ -43,7 +48,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let savePointButton = SKSpriteNode(imageNamed: "crystal")
     let teleportButton = SKSpriteNode(imageNamed: "crystal")
     
-    //attempting to mod background
+    //these are used for the scaleBackground method and setupBackground
     let background = SKSpriteNode(imageNamed: "changes during setup")
     var backgroundYStart: CGFloat = 1.0
     var backgroundXScaleStart: CGFloat = 1.0
@@ -101,7 +106,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         savePointButton.setScale(1.5)
         savePointButton.position = CGPoint(x: teleportButton.position.x - (teleportButton.size.width * 3), y: teleportButton.position.y)
         
-        savePointLabel.fontSize = 15
+        savePointLabel.fontSize = 10
         savePointLabel.text = "Checkpoint Saved"
         savePointLabel.fontColor = SKColor.yellowColor()
         savePointLabel.name = "saved point"
@@ -110,6 +115,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         savePointLabel.position = CGPoint(x: widthHalf / 14, y: -heightHalf + savePointLabel.frame.height * 4)
         savePointLabel.alpha = 0
         addChild(savePointLabel)
+        
+        savePointsRemainingLabel.fontSize = 20
+        savePointsRemainingLabel.text = "\(savePointsRemaining)"
+        //savePointsRemainingLabel.fontColor = SKColor.blueColor()
+        savePointsRemainingLabel.name = "save points remaining"
+        savePointsRemainingLabel.zPosition = savePointButton.zPosition + 1
+        savePointsRemainingLabel.verticalAlignmentMode = .Center
+        savePointsRemainingLabel.horizontalAlignmentMode = .Center
+        savePointsRemainingLabel.position = CGPointMake(savePointButton.position.x, savePointButton.position.y + (savePointsRemainingLabel.frame.height * 0.15))
+        savePointsRemainingLabel.alpha = 1
+        addChild(savePointsRemainingLabel)
     }
     
     func createBackground() {
@@ -170,6 +186,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.zPosition = -41
         //player.position = CGPointMake(955,2235)
         player.setScale(0.7)
+        player.jump()
         centerViewOn(player.position)
     }
     
@@ -304,23 +321,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
             }else if (CGRectContainsPoint(savePointButton.frame, location)) {
                 //println("touched save button")
-                if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 20.0) && (player.physicsBody?.velocity.dy >= -10.0){
-                    savePoint = player.position
-                        if teleportButton.alpha != 1 {
-                        teleportButton.alpha = 1
-                        }
-                    //fade the message in/out
-                    savePointLabel.runAction(SKAction.sequence([
-                        SKAction.fadeInWithDuration(0.5),
-                        SKAction.waitForDuration(0.5),
-                        SKAction.fadeOutWithDuration(0.5)
-                        ]))
-                }
+                saveCheckPoint()
             }else if (CGRectContainsPoint(teleportButton.frame, location)) {
                 //println("touched teleport button")
-                if savePoint != CGPoint.zeroPoint {
-                    player.position = savePoint
-                }
+                teleportToCheckPoint()
             //jumped
             } else {
                 buttonNorth.texture = SKTexture(imageNamed: "Directional_Button_Lit")
@@ -329,6 +333,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
+    
     
     override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
         for touch in (touches as! Set<UITouch>) {
@@ -486,6 +491,37 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bounceEmitter.zPosition = player.zPosition - 1
         worldNode.addChild(bounceEmitter)
         //println("spawned particles at \(atPoint)")
+    }
+    
+    //MARK: Checkpoint System
+    func teleportToCheckPoint(){
+        if savePoint != CGPoint.zeroPoint {
+            savePointsRemaining -= 1
+            player.position = savePoint
+        }
+    }
+    
+    func saveCheckPoint(){
+        if savePointsRemaining == 1 {
+            savePointButton.alpha = 0.4
+            savePointsRemainingLabel.alpha = 0
+        }
+        if savePointsRemaining > 0 {
+        if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 20.0) && (player.physicsBody?.velocity.dy >= -10.0){
+            savePointsRemaining -= 1
+            savePointsRemainingLabel.text = "\(savePointsRemaining)"
+            savePoint = player.position
+            if teleportButton.alpha != 1 {
+                teleportButton.alpha = 1
+            }
+            //fade the message in/out
+            savePointLabel.runAction(SKAction.sequence([
+                SKAction.fadeInWithDuration(0.5),
+                SKAction.waitForDuration(0.5),
+                SKAction.fadeOutWithDuration(0.5)
+                ]))
+            }
+        }
     }
 
 }
