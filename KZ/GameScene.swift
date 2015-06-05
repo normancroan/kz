@@ -32,6 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var savePoint:CGPoint = CGPoint.zeroPoint
     
     //MARK: Constants
+
     let savePointLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     let currentMap: String
     let player = Player(imageNamed: "Walk13")
@@ -42,6 +43,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let savePointButton = SKSpriteNode(imageNamed: "crystal")
     let teleportButton = SKSpriteNode(imageNamed: "crystal")
     
+    //attempting to mod background
+    let background = SKSpriteNode(imageNamed: "blankfile")
+    var backgroundYStart: CGFloat = 1.0
+    var setup = false
     
     
     //MARK: Setup Methods
@@ -103,12 +108,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createBackground() {
-        let background = SKSpriteNode(imageNamed: "\(currentMap)_background")
-        self.addChild(background)
+        //let background = SKSpriteNode(imageNamed: "\(currentMap)_background")
+        addChild(background)
         background.zPosition = -100
-        background.xScale = 1.25
-        background.yScale = background.xScale
-        background.position = CGPointMake(0, 50)
+        background.setScale(14)
+        background.name = "background"
+        background.texture = SKTexture(imageNamed: "\(currentMap)_background")
+        background.position = CGPointMake(0, 725)
+        backgroundYStart = background.position.y
+    }
+    
+    func scaleBackground(yPosition: CGFloat) {
+//        background.position = CGPointMake(background.position.x, background.position.y - 20)
+        
+        //scale and position background according to player.position.y
+        if !setup {
+        backgroundYStart = background.position.y
+        setup = true
+        }
+        if setup {
+        let scaleBy = (yPosition / 2000)
+        let maxScale = 100
+        //println("current y position is \(scaleBy)")
+        println("bg position is \(background.position.y)")
+        println("bg start is \(backgroundYStart)")
+        background.position = CGPointMake(background.position.x, backgroundYStart * scaleBy)
+        }
     }
     
     override func didMoveToView(view: SKView) {
@@ -149,6 +174,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else {
             player.setFalling(true)
         }
+        scaleBackground(player.position.y)
     }
     
     
@@ -219,7 +245,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //MARK: - Touch Handling
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         /* Called when a touch begins */
-        
         
         //building larger frames for east and west buttons
         for touch in (touches as! Set<UITouch>) {
