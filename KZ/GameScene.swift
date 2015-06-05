@@ -44,9 +44,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let teleportButton = SKSpriteNode(imageNamed: "crystal")
     
     //attempting to mod background
-    let background = SKSpriteNode(imageNamed: "blankfile")
+    let background = SKSpriteNode(imageNamed: "changes during setup")
     var backgroundYStart: CGFloat = 1.0
+    var backgroundXScaleStart: CGFloat = 1.0
+    var backgroundYScaleStart: CGFloat = 1.0
     var setup = false
+    let maxScaleHeight: CGFloat = 100
+    var currentPlayerHeight: CGFloat = 0
+
     
     
     //MARK: Setup Methods
@@ -115,24 +120,38 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.name = "background"
         background.texture = SKTexture(imageNamed: "\(currentMap)_background")
         background.position = CGPointMake(0, 725)
+        if currentMap == "kz_wonderland" {
+            background.position = CGPointMake(-150, 100)
+            background.setScale(10)
+        }
         backgroundYStart = background.position.y
     }
     
     func scaleBackground(yPosition: CGFloat) {
-//        background.position = CGPointMake(background.position.x, background.position.y - 20)
-        
         //scale and position background according to player.position.y
         if !setup {
         backgroundYStart = background.position.y
+        backgroundXScaleStart = background.xScale
+        backgroundYScaleStart = background.yScale
         setup = true
         }
         if setup {
-        let scaleBy = (yPosition / 2000)
-        let maxScale = 100
-        //println("current y position is \(scaleBy)")
-        println("bg position is \(background.position.y)")
-        println("bg start is \(backgroundYStart)")
-        background.position = CGPointMake(background.position.x, backgroundYStart * scaleBy)
+        var realPlayerHeight = (yPosition / 100)
+            if realPlayerHeight > maxScaleHeight {
+                realPlayerHeight = maxScaleHeight
+            }
+        //background.position = CGPointMake(1,1)
+        //println(realPlayerHeight)
+        var heightPercentage = maxScaleHeight - realPlayerHeight
+        var regulatedPercentage = heightPercentage / 100
+            if regulatedPercentage < 0.40 {
+                regulatedPercentage = 0.40
+            }
+        //println(regulatedPercentage)
+        background.position = CGPointMake(background.position.x , backgroundYStart * regulatedPercentage)
+        println(background.position)
+        //background.xScale = backgroundXScaleStart * regulatedPercentage
+        //background.yScale = backgroundYScaleStart * regulatedPercentage
         }
     }
     
