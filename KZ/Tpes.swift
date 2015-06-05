@@ -12,4 +12,5 @@ struct PhysicsCategory {
     static let Boundary : UInt32 = 0b1 // 1
     static let Player   : UInt32 = 0b10 // 2
     static let Floor    : UInt32 = 0b100 // 4
+    static let Bounce   : UInt32 = 0b10000 // 8
 }

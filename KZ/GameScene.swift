@@ -55,11 +55,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         worldNode.addChild(tileMap)
         addChild(worldNode)
         addFloor()
+        addBounceTiles()
         tileMapFrame = tileMap.calculateAccumulatedFrame()
         
         anchorPoint = CGPointMake(0.5,0.5)
         worldNode.position = CGPointMake(-tileMapFrame.width / 2, -tileMapFrame.height / 2)
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
+        self.physicsWorld.contactDelegate = self
     }
     
     func setupInterface() {
@@ -113,14 +115,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Setup your scene here */
         setupMap()
         createWorld()
+        setupInterface()
+        setupPlayer()
+    }
+    
+    //add support for player based on Tiled map position
+    func setupPlayer() {
         worldNode.addChild(player)
         player.position = CGPointMake(55,235)
         player.zPosition = -41
         //player.position = CGPointMake(955,2235)
         player.setScale(0.7)
         centerViewOn(player.position)
-        setupInterface()
-        
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -175,6 +181,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
+    
+    func addBounceTiles() {
+        for var a = 0; a < Int(tileMap.mapSize.width); a++ { //Go through every point across the tile map
+            for var b = 0; b < Int(tileMap.mapSize.height); b++ { //Go through every point up the tile map
+                let layerInfo:TMXLayerInfo = tileMap.layers.lastObject as! TMXLayerInfo //Get the first layer (you may want to pick another layer if you don't want to use the first one on the tile map)
+                let point = CGPoint(x: a, y: b) //Create a point with a and b
+                let gid = layerInfo.layer.tileGidAt(layerInfo.layer.pointForCoord(point)) //The gID is the ID of the tile. They start at 1 up the the amount of tiles in your tile set.
+                
+                //determining which tiles to act on
+                if gid == 1{ //My gIDs for the floor were 2, 9 and 8 so I checked for those values
+                    println("found a match to create bounce tile on")
+                    let node = layerInfo.layer.tileAtCoord(point) //I fetched a node at that point created by JSTileMap
+                    node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
+                    node.physicsBody?.dynamic = false
+                    node.physicsBody?.restitution = 0
+                    node.physicsBody?.friction
+                    node.alpha = 0
+                    node.physicsBody?.categoryBitMask = PhysicsCategory.Bounce
+                    node.physicsBody?.contactTestBitMask = PhysicsCategory.Player
+                    //println("added physics")
+                    //You now have a physics body on your floor tiles! :)
+                }
+            }
+        }
+    }
+
     
     //MARK: - Camera
     func centerViewOn(centerOn: CGPoint) {
@@ -389,6 +421,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //            runAction(seq)
 //            }
             //end anti stick code, update with intendsToRun soon
+        }
+    }
+    
+    //MARK: Physics Handling
+    func didBeginContact(contact: SKPhysicsContact) {
+        let collision: UInt32 = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        
+        if collision == PhysicsCategory.Player | PhysicsCategory.Bounce {
+            println("hit bounce tile")
+            player.physicsBody?.applyImpulse(CGVectorMake(0,100))
         }
     }
 
