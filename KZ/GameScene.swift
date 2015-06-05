@@ -28,12 +28,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var moveButtonIsPressed = false
     var jumpButtonIsPressed = false
     var intendsToKeepRunning = false
+    var savePoint:CGPoint = CGPoint.zeroPoint
+    let savePointLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     let currentMap: String
     let player = Player(imageNamed: "Walk13")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonNorth = SKSpriteNode(imageNamed: "Directional_Button")
     let menuButton = SKSpriteNode(imageNamed: "Key")
+    let savePointButton = SKSpriteNode(imageNamed: "crystal")
+    let teleportButton = SKSpriteNode(imageNamed: "crystal")
     
     
     func setupMap() {
@@ -90,6 +94,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(menuButton)
         menuButton.position = CGPoint(x: buttonWest.position.x, y: heightHalf - menuButton.size.height * 0.4)
         
+        addChild(teleportButton)
+        teleportButton.setScale(1.5)
+        teleportButton.position = CGPoint(x: widthHalf / 4 , y: -heightHalf + (teleportButton.size.height * 1.1))
+        teleportButton.yScale = -1.5
+        teleportButton.alpha = 0.3
+        
+        addChild(savePointButton)
+        savePointButton.setScale(1.5)
+        savePointButton.position = CGPoint(x: teleportButton.position.x - (teleportButton.size.width * 3), y: teleportButton.position.y)
+        
+        savePointLabel.fontSize = 15
+        savePointLabel.text = "Checkpoint Saved"
+        savePointLabel.fontColor = SKColor.yellowColor()
+        savePointLabel.name = "saved point"
+        savePointLabel.zPosition = 200
+        savePointLabel.verticalAlignmentMode = .Center
+        savePointLabel.position = CGPoint(x: widthHalf / 14, y: -heightHalf + savePointLabel.frame.height * 4)
+        savePointLabel.alpha = 0
+        addChild(savePointLabel)
+
 
     }
     
@@ -108,8 +132,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.update(CGFloat(dt))
         if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 20.0) && (player.physicsBody?.velocity.dy >= -10.0){//!= 0.0 {
             player.setFalling(false)
-            if player.physicsBody?.velocity.dy != 0.0 {
-            }
+//            if player.physicsBody?.velocity.dy != 0.0 {
+//            }
         } else {
             player.setFalling(true)
         }
@@ -160,13 +184,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let westFrame:CGRect = CGRectMake(buttonWest.position.x, buttonWest.position.y, buttonWest.frame.width * 2, buttonWest.frame.height * 2)
             let westFrame2:CGRect = CGRectMake(buttonWest.position.x - (westFrame.size.width / 2), buttonWest.position.y - (westFrame.size.height / 2), buttonWest.frame.width * 2, buttonWest.frame.height * 2)
             
-//            let northFrame:CGRect = CGRectMake(buttonNorth.position.x, buttonNorth.position.y, buttonNorth.frame.width * 3, buttonNorth.frame.height * 3)
-//            let northFrame2:CGRect = CGRectMake(buttonNorth.position.x - (northFrame.size.width / 3), buttonNorth.position.y - (northFrame.size.height / 3), buttonNorth.frame.width * 3, buttonNorth.frame.height * 3)
-            
-            
-        //end building larger frames
-            
-            
             //touched right
             if (CGRectContainsPoint(eastFrame2, location)) {
                 
@@ -195,6 +212,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let reveal = SKTransition.fadeWithDuration(0.5)
                 view?.presentScene(mapSelectScene, transition: reveal)
                 
+            }else if (CGRectContainsPoint(savePointButton.frame, location)) {
+                //println("touched save button")
+                if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 20.0) && (player.physicsBody?.velocity.dy >= -10.0){
+                    savePoint = player.position
+                        if teleportButton.alpha != 1 {
+                        teleportButton.alpha = 1
+                        }
+                    //fade the message in/out
+                    savePointLabel.runAction(SKAction.sequence([
+                        SKAction.fadeInWithDuration(0.5),
+                        SKAction.waitForDuration(0.5),
+                        SKAction.fadeOutWithDuration(0.5)
+                        ]))
+                }
+            }else if (CGRectContainsPoint(teleportButton.frame, location)) {
+                //println("touched teleport button")
+                if savePoint != CGPoint.zeroPoint {
+                    player.position = savePoint
+                }
             //jumped
             } else {
                 buttonNorth.texture = SKTexture(imageNamed: "Directional_Button_Lit")
