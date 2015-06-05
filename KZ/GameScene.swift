@@ -191,7 +191,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 //determining which tiles to act on
                 if gid == 1{ //My gIDs for the floor were 2, 9 and 8 so I checked for those values
-                    println("found a match to create bounce tile on")
+                    //println("found a match to create bounce tile on")
                     let node = layerInfo.layer.tileAtCoord(point) //I fetched a node at that point created by JSTileMap
                     node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
                     node.physicsBody?.dynamic = false
@@ -200,6 +200,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     node.alpha = 0
                     node.physicsBody?.categoryBitMask = PhysicsCategory.Bounce
                     node.physicsBody?.contactTestBitMask = PhysicsCategory.Player
+                    spawnParticles(node.position)
                     //println("added physics")
                     //You now have a physics body on your floor tiles! :)
                 }
@@ -429,9 +430,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let collision: UInt32 = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         
         if collision == PhysicsCategory.Player | PhysicsCategory.Bounce {
-            println("hit bounce tile")
+            //println("hit bounce tile")
             player.physicsBody?.applyImpulse(CGVectorMake(0,75))
         }
+    }
+    
+    //MARK: Particles
+    func spawnParticles(atPoint: CGPoint) {
+        let bounceEmitter = SKEmitterNode(fileNamed: "MagicFire.sks")
+        bounceEmitter.position = atPoint
+        bounceEmitter.zPosition = player.zPosition - 1
+        worldNode.addChild(bounceEmitter)
+        //println("spawned particles at \(atPoint)")
     }
 
 }

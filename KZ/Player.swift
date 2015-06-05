@@ -104,6 +104,10 @@ class Player: SKSpriteNode {
             
         }
         
+        if physicsBody?.velocity.dy > 1000 {
+            physicsBody?.velocity.dy = 1000
+        }
+        
         
     }
     

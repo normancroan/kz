@@ -55,6 +55,10 @@
 		18E87EA51B20511E00E4CC4E /* kz_wonderland.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18E87EA41B20511E00E4CC4E /* kz_wonderland.tmx */; };
 		18E87EA71B20512B00E4CC4E /* kz_wonderland_trees.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18E87EA61B20512B00E4CC4E /* kz_wonderland_trees.atlasc */; };
 		18E87EAB1B20547800E4CC4E /* kz_wonderland_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E87EAA1B20547800E4CC4E /* kz_wonderland_background.png */; };
+		18E87EAF1B218E9E00E4CC4E /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E87EAD1B218E9E00E4CC4E /* spark.png */; };
+		18E87EB11B21954300E4CC4E /* MagicFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18E87EB01B21954300E4CC4E /* MagicFire.sks */; };
+		18E87EB71B219A3E00E4CC4E /* kz_signs_3.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18E87EB61B219A3E00E4CC4E /* kz_signs_3.atlasc */; };
+		18E87EB91B219B4500E4CC4E /* kz_signs_small.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18E87EB81B219B4500E4CC4E /* kz_signs_small.atlasc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +127,10 @@
 		18E87EA41B20511E00E4CC4E /* kz_wonderland.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_wonderland.tmx; sourceTree = "<group>"; };
 		18E87EA61B20512B00E4CC4E /* kz_wonderland_trees.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_wonderland_trees.atlasc; sourceTree = "<group>"; };
 		18E87EAA1B20547800E4CC4E /* kz_wonderland_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_wonderland_background.png; sourceTree = "<group>"; };
+		18E87EAD1B218E9E00E4CC4E /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		18E87EB01B21954300E4CC4E /* MagicFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MagicFire.sks; sourceTree = "<group>"; };
+		18E87EB61B219A3E00E4CC4E /* kz_signs_3.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_signs_3.atlasc; sourceTree = "<group>"; };
+		18E87EB81B219B4500E4CC4E /* kz_signs_small.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_signs_small.atlasc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +188,8 @@
 				18149C6C1B19709F00522024 /* Images.xcassets */,
 				18149C6E1B19709F00522024 /* LaunchScreen.xib */,
 				18149C5F1B19709F00522024 /* Supporting Files */,
+				18E87EB01B21954300E4CC4E /* MagicFire.sks */,
+				18E87EAD1B218E9E00E4CC4E /* spark.png */,
 			);
 			path = KZ;
 			sourceTree = "<group>";
@@ -255,6 +265,8 @@
 		18149CB01B197C1A00522024 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				18E87EB81B219B4500E4CC4E /* kz_signs_small.atlasc */,
+				18E87EB61B219A3E00E4CC4E /* kz_signs_3.atlasc */,
 				18E87EA61B20512B00E4CC4E /* kz_wonderland_trees.atlasc */,
 				18E87EA21B204F4000E4CC4E /* kz_wonderland_tileset_medium.atlasc */,
 				18E87E9C1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc */,
@@ -373,6 +385,7 @@
 				18E87EAB1B20547800E4CC4E /* kz_wonderland_background.png in Resources */,
 				18149CCE1B19E2E500522024 /* valley-tiles-5.atlasc in Resources */,
 				18A9FCC61B1BF0AB004C0E5D /* Run.atlas in Resources */,
+				18E87EB11B21954300E4CC4E /* MagicFire.sks in Resources */,
 				183095F21B1C746700BBB25B /* gem_red_1.png in Resources */,
 				18E659251B1F080100952BFA /* kz_egypt_background.png in Resources */,
 				18E87EA31B204F4000E4CC4E /* kz_wonderland_tileset_medium.atlasc in Resources */,
@@ -381,12 +394,15 @@
 				183095FD1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc in Resources */,
 				18E659211B1F03D600952BFA /* kz_egypt_test1.atlasc in Resources */,
 				18149C701B19709F00522024 /* LaunchScreen.xib in Resources */,
+				18E87EB71B219A3E00E4CC4E /* kz_signs_3.atlasc in Resources */,
 				18149C6D1B19709F00522024 /* Images.xcassets in Resources */,
 				18A9FCC81B1BF448004C0E5D /* Attack.atlas in Resources */,
 				18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */,
 				18149CCC1B19E24400522024 /* level-2.tmx in Resources */,
+				18E87EB91B219B4500E4CC4E /* kz_signs_small.atlasc in Resources */,
 				18149C641B19709F00522024 /* GameScene.sks in Resources */,
 				18E87E9F1B2010C800E4CC4E /* kz_wild.tmx in Resources */,
+				18E87EAF1B218E9E00E4CC4E /* spark.png in Resources */,
 				18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */,
 				183096041B1E0E6200BBB25B /* kz_wild_background.png in Resources */,
 				18E87EA71B20512B00E4CC4E /* kz_wonderland_trees.atlasc in Resources */,
