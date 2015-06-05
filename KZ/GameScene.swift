@@ -20,6 +20,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
+    //MARK: Properties
     var worldNode: SKNode!
     var lastUpdateTime: NSTimeInterval = 0
     var dt: NSTimeInterval = 0
@@ -29,6 +30,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var jumpButtonIsPressed = false
     var intendsToKeepRunning = false
     var savePoint:CGPoint = CGPoint.zeroPoint
+    
+    //MARK: Constants
     let savePointLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     let currentMap: String
     let player = Player(imageNamed: "Walk13")
@@ -40,6 +43,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let teleportButton = SKSpriteNode(imageNamed: "crystal")
     
     
+    
+    //MARK: Setup Methods
     func setupMap() {
         tileMap = JSTileMap(named: "\(currentMap).tmx")
         createBackground()
@@ -57,33 +62,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
     }
     
-    func createBackground() {
-        let background = SKSpriteNode(imageNamed: "\(currentMap)_background")
-        self.addChild(background)
-        background.zPosition = -100
-        background.xScale = 1.25
-        background.yScale = background.xScale
-        background.position = CGPointMake(0, 50)
-    }
-    
-    override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        setupMap()
-        createWorld()
-        worldNode.addChild(player)
-        player.position = CGPointMake(55,235)
-        player.zPosition = -41
-        //player.position = CGPointMake(955,2235)
-        player.setScale(0.7)
-        
-        centerViewOn(player.position)
-        
+    func setupInterface() {
         let widthHalf:CGFloat = self.view!.bounds.width / 2
         let heightHalf:CGFloat = self.view!.bounds.height / 2
-
+        
         addChild(buttonNorth)
         buttonNorth.position = CGPoint(x: widthHalf - (buttonNorth.size.width), y: -heightHalf + (buttonWest.size.height * 0.6))
-
+        
         addChild(buttonWest)
         buttonWest.position = CGPoint(x: -widthHalf + buttonWest.size.width, y: -heightHalf + (buttonWest.size.height * 0.6))
         
@@ -113,8 +98,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         savePointLabel.position = CGPoint(x: widthHalf / 14, y: -heightHalf + savePointLabel.frame.height * 4)
         savePointLabel.alpha = 0
         addChild(savePointLabel)
-
-
+    }
+    
+    func createBackground() {
+        let background = SKSpriteNode(imageNamed: "\(currentMap)_background")
+        self.addChild(background)
+        background.zPosition = -100
+        background.xScale = 1.25
+        background.yScale = background.xScale
+        background.position = CGPointMake(0, 50)
+    }
+    
+    override func didMoveToView(view: SKView) {
+        /* Setup your scene here */
+        setupMap()
+        createWorld()
+        worldNode.addChild(player)
+        player.position = CGPointMake(55,235)
+        player.zPosition = -41
+        //player.position = CGPointMake(955,2235)
+        player.setScale(0.7)
+        centerViewOn(player.position)
+        setupInterface()
+        
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -140,6 +146,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
+    func addPhysicsForTiles() {
+        //implement with support for slippery tiles taking parameter as String
+        
+        //Need to solve for giant block in addFloor, too messy
+    }
+    //not currently supporting slippery tiles
     func addFloor() {
         for var a = 0; a < Int(tileMap.mapSize.width); a++ { //Go through every point across the tile map
             for var b = 0; b < Int(tileMap.mapSize.height); b++ { //Go through every point up the tile map
@@ -147,6 +159,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let point = CGPoint(x: a, y: b) //Create a point with a and b
                 let gid = layerInfo.layer.tileGidAt(layerInfo.layer.pointForCoord(point)) //The gID is the ID of the tile. They start at 1 up the the amount of tiles in your tile set.
                 
+                //determining which tiles to act on
                 if gid == 383 || gid == 384 || gid == 385 || gid == 491{ //My gIDs for the floor were 2, 9 and 8 so I checked for those values
                     let node = layerInfo.layer.tileAtCoord(point) //I fetched a node at that point created by JSTileMap
                     node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
