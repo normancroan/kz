@@ -115,7 +115,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func createBackground() {
         //let background = SKSpriteNode(imageNamed: "\(currentMap)_background")
         addChild(background)
-        background.zPosition = -100
+        background.zPosition = -101
         background.setScale(14)
         background.name = "background"
         background.texture = SKTexture(imageNamed: "\(currentMap)_background")
@@ -149,7 +149,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         //println(regulatedPercentage)
         background.position = CGPointMake(background.position.x , backgroundYStart * regulatedPercentage)
-        println(background.position)
+        //println(background.position)
         //background.xScale = backgroundXScaleStart * regulatedPercentage
         //background.yScale = backgroundYScaleStart * regulatedPercentage
         }
