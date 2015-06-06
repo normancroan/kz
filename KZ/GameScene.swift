@@ -186,7 +186,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.zPosition = -41
         //player.position = CGPointMake(955,2235)
         player.setScale(0.7)
-        player.jump()
         centerViewOn(player.position)
     }
     
@@ -496,7 +495,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //MARK: Checkpoint System
     func teleportToCheckPoint(){
         if savePoint != CGPoint.zeroPoint {
-            savePointsRemaining -= 1
             player.position = savePoint
         }
     }
