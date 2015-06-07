@@ -136,10 +136,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.name = "background"
         background.texture = SKTexture(imageNamed: "\(currentMap)_background")
         background.position = CGPointMake(0, 725)
-        if currentMap == "kz_wonderland" {
-            background.position = CGPointMake(-150, 100)
-            background.setScale(10)
-        }
         backgroundYStart = background.position.y
     }
     
@@ -292,7 +288,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //touched right
             if (CGRectContainsPoint(eastFrame2, location)) {
-                
+                //check for sliding
+               
                 //currentState = MoveStates.E
                 buttonEast.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
                 moveButtonIsPressed = true
@@ -310,6 +307,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 player.playerSpeedX = -player.maxSpeed
                 player.adjustXSpeedAndScale()
                 player.startWalk()
+                
                 //determineRunIntentions()
             }else if (CGRectContainsPoint(menuButton.frame, location)) {
                     
@@ -418,6 +416,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //println("touch ended on right button")
                 player.stopWalk()
                 player.playerSpeedX = 0
+                //playerIdleSpeed(checkTileType(), direction: "right")
                 moveButtonIsPressed = false
                 buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
                 buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
@@ -428,6 +427,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //println("touch ended on left button")
                 player.stopWalk()
                 player.playerSpeedX = 0
+                //playerIdleSpeed(checkTileType(), direction: "left")
                 moveButtonIsPressed = false
                 buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
                 buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
@@ -521,5 +521,45 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
-
+    
+    //MARK: Map Features
+    func checkTileType() -> String{
+        if currentMap == "kz_wonderland" {
+            return "ice"
+        }
+        else {
+            return "floor"
+        }
+    }
+    
+    func playerIdleSpeed(touchEndedOn: String, direction: String) -> CGFloat{
+        var returnValue = 0
+        if touchEndedOn == "ice" {
+            if direction == "left" {
+                returnValue = -1
+            } else if direction == "right" {
+                returnValue = 1
+            }
+            taperSlide("\(direction)")
+        }
+        
+        return CGFloat(returnValue)
+    }
+    
+    func taperSlide(direction: String) {
+        let wait = SKAction.waitForDuration(0.50)
+        let reduceSpeed = SKAction.runBlock({ self.taperSpeed(0.9) })
+        let stopSpeed = SKAction.runBlock({ self.taperSpeed(0) })
+        let seq = SKAction.sequence([ reduceSpeed, wait ])
+        let repeat = SKAction.repeatAction(seq, count: 10)
+        let taperSlide = SKAction.sequence([ seq, stopSpeed ])
+        
+        runAction(taperSlide, withKey: "taperSlide")
+        
+    }
+    
+    func taperSpeed(by: CGFloat) {
+        player.playerSpeedX *= by
+    }
+    
 }

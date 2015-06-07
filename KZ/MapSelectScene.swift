@@ -18,6 +18,8 @@ class MapSelectScene: SKScene {
     let wildIconLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     let wonderlandIcon = SKSpriteNode(imageNamed: "kz_wonderland_background")
     let wonderlandIconLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
+    let dreamIcon = SKSpriteNode(imageNamed: "kz_dream_background")
+    let dreamIconLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     
     let instructionsLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     
@@ -45,8 +47,13 @@ class MapSelectScene: SKScene {
         wildIcon.position = CGPoint(x: widthHalf / 3, y: heightHalf)
         
         addChild(wonderlandIcon)
-        wonderlandIcon.setScale(0.1)
+        wonderlandIcon.setScale(0.2)
         wonderlandIcon.position = CGPoint(x: egyptIcon.position.x + egyptIcon.size.width * 1.05, y: heightHalf)
+        
+        addChild(dreamIcon)
+        dreamIcon.setScale(0.2)
+        dreamIcon.anchorPoint = CGPointMake(0.5, 0.5)
+        dreamIcon.position = CGPoint(x: widthHalf / 2 ,y: heightHalf / 2)
         
         egyptIconLabel.fontSize = 25
         egyptIconLabel.text = "kz_egypt"
@@ -76,6 +83,7 @@ class MapSelectScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         displayLabels()
+        backgroundColor = SKColor.purpleColor()
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
