@@ -137,6 +137,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.texture = SKTexture(imageNamed: "\(currentMap)_background")
         background.position = CGPointMake(0, 725)
         backgroundYStart = background.position.y
+        if currentMap == "kz_wonderland" {
+            background.xScale = 9
+            background.yScale = 8
+            background.position = CGPointMake(0, 170)
+            println("wonderland setup")
+        }
         if currentMap == "kz_dream" {
             background.xScale = 6
             background.yScale = 5
@@ -170,8 +176,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //println(realPlayerHeight)
         var heightPercentage = maxScaleHeight - realPlayerHeight
         var regulatedPercentage = heightPercentage / 100
-            if regulatedPercentage < 0.40 {
-                regulatedPercentage = 0.40
+            if regulatedPercentage < 0.20 {
+                regulatedPercentage = 0.20
             }
         //println(regulatedPercentage)
         background.position = CGPointMake(background.position.x , backgroundYStart * regulatedPercentage)
@@ -192,7 +198,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //add support for player based on Tiled map position
     func setupPlayer() {
         worldNode.addChild(player)
-        player.position = CGPointMake(555,7235)
+        player.position = CGPointMake(55,235)
         player.zPosition = -41
         //player.position = CGPointMake(955,2235)
         player.setScale(0.7)
