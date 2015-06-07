@@ -137,6 +137,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.texture = SKTexture(imageNamed: "\(currentMap)_background")
         background.position = CGPointMake(0, 725)
         backgroundYStart = background.position.y
+        if currentMap == "kz_dream" {
+            background.xScale = 6
+            background.yScale = 5
+            background.position = CGPointMake(0, 0)
+            
+            let turnBlack = SKAction.colorizeWithColor(SKColor.blackColor(), colorBlendFactor: 0.7, duration: 3.0)
+            let turnRed = SKAction.colorizeWithColor(SKColor.redColor(), colorBlendFactor: 0.8, duration: 3.0)
+            let turnOrange = SKAction.colorizeWithColor(SKColor.orangeColor(), colorBlendFactor: 0.9, duration: 3.0)
+            let turnPurple = SKAction.colorizeWithColor(SKColor.purpleColor(), colorBlendFactor: 0.9, duration: 3.0)
+            let sequence = SKAction.sequence([turnOrange, turnBlack, turnRed, turnBlack, turnPurple, turnBlack])
+            let repeat = SKAction.repeatActionForever(sequence)
+            background.runAction(repeat)
+            
+        }
     }
     
     func scaleBackground(yPosition: CGFloat) {
@@ -178,7 +192,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //add support for player based on Tiled map position
     func setupPlayer() {
         worldNode.addChild(player)
-        player.position = CGPointMake(55,235)
+        player.position = CGPointMake(555,7235)
         player.zPosition = -41
         //player.position = CGPointMake(955,2235)
         player.setScale(0.7)

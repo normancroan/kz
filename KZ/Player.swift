@@ -100,12 +100,16 @@ class Player: SKSpriteNode {
         
         if (self.position.y < -300) {
             
-            self.position = CGPointMake( 100, 200)
+            self.position = CGPointMake( 100, 300)
             
         }
         
         if physicsBody?.velocity.dy > 1000 {
             physicsBody?.velocity.dy = 1000
+        }
+        
+        if physicsBody?.velocity.dy < -1000 {
+            physicsBody?.velocity.dy = -1000
         }
         
         
