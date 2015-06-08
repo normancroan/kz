@@ -133,7 +133,7 @@ class MapSelectScene: SKScene {
         dreamIconLabel.verticalAlignmentMode = .Center
 //        dreamIconLabel.position = CGPoint(x: dreamIcon.position.x, y: dreamIcon.position.y - (dreamIcon.size.height / 1.5))
         dreamIconLabel.position = dreamIcon.position
-        addChild(dreamIconLabel)
+        //addChild(dreamIconLabel)
     }
     
     override func didMoveToView(view: SKView) {

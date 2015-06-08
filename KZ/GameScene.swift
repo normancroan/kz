@@ -74,8 +74,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         worldNode = SKNode()
         worldNode.addChild(tileMap)
         addChild(worldNode)
-        addFloor()
-        addBounceTiles()
+        setupTiles()
         tileMapFrame = tileMap.calculateAccumulatedFrame()
         
         if modelName == "iPhone 6" {
@@ -153,7 +152,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             background.xScale = 9
             background.yScale = 8
             background.position = CGPointMake(0, 170)
-            println("wonderland setup")
+            //println("wonderland setup")
         }
         if currentMap == "kz_dream" {
             background.xScale = 6
@@ -247,7 +246,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Need to solve for giant block in addFloor, too messy
     }
     //not currently supporting slippery tiles
-    func addFloor() {
+    func setupTiles() {
         for var a = 0; a < Int(tileMap.mapSize.width); a++ { //Go through every point across the tile map
             for var b = 0; b < Int(tileMap.mapSize.height); b++ { //Go through every point up the tile map
                 let layerInfo:TMXLayerInfo = tileMap.layers.lastObject as! TMXLayerInfo //Get the first layer (you may want to pick another layer if you don't want to use the first one on the tile map)
@@ -255,18 +254,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let gid = layerInfo.layer.tileGidAt(layerInfo.layer.pointForCoord(point)) //The gID is the ID of the tile. They start at 1 up the the amount of tiles in your tile set.
                 
                 //determining which tiles to act on
-                if gid == 383 || gid == 384 || gid == 385 || gid == 491{ //My gIDs for the floor were 2, 9 and 8 so I checked for those values
-                    let node = layerInfo.layer.tileAtCoord(point) //I fetched a node at that point created by JSTileMap
+                if gid == 383 || gid == 384 || gid == 385 || gid == 491 || gid == 1{
+                    
+                    let node = layerInfo.layer.tileAtCoord(point)
+                    //I fetched a node at that point created by JSTileMap
                     node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
                     node.physicsBody?.dynamic = false
                     node.physicsBody?.restitution = 0
+                    //node.physicsBody?.resting = true
                     if currentMap == "kz_wonderland" {
                        node.physicsBody?.friction = 0.01
                     } else {
-                        node.physicsBody?.friction = 5
+                       node.physicsBody?.friction = 5
                     }
                     node.alpha = 0
-                    node.physicsBody?.categoryBitMask = PhysicsCategory.Floor
+                    if gid == 1 {
+                        node.physicsBody?.categoryBitMask = PhysicsCategory.Bounce
+                        spawnParticles(node.position)
+                    } else {
+                        node.physicsBody?.categoryBitMask = PhysicsCategory.Floor
+                    }
                     node.physicsBody?.contactTestBitMask = PhysicsCategory.Player
                     //println("added physics")
                     //You now have a physics body on your floor tiles! :)
@@ -289,7 +296,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
                     node.physicsBody?.dynamic = false
                     node.physicsBody?.restitution = 0
-                    node.physicsBody?.friction
                     node.alpha = 0
                     node.physicsBody?.categoryBitMask = PhysicsCategory.Bounce
                     node.physicsBody?.contactTestBitMask = PhysicsCategory.Player
@@ -530,7 +536,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             bounceEmitter.zPosition = player.zPosition - 1
             worldNode.addChild(bounceEmitter)
         } else {
-            let bounceEmitter = SKEmitterNode(fileNamed: "MagicFireLow.sks")
+            let bounceEmitter = SKEmitterNode(fileNamed: "MagicFire.sks")
             bounceEmitter.position = atPoint
             bounceEmitter.zPosition = player.zPosition - 1
             worldNode.addChild(bounceEmitter)
