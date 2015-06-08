@@ -77,7 +77,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setupTiles()
         tileMapFrame = tileMap.calculateAccumulatedFrame()
         
-        if modelName == "iPhone 6" {
+        if modelName == "iPhone 66" {
             if currentMap == "kz_wonderland"{
                 snowEmitter.position = CGPointMake(self.view!.bounds.width / 2, self.view!.bounds.height)
                 addChild(snowEmitter)
@@ -145,7 +145,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.zPosition = -101
         background.setScale(14)
         background.name = "background"
-        background.texture = SKTexture(imageNamed: "\(currentMap)_background")
+        let bgTexture = SKTexture(imageNamed: "\(currentMap)_background")
+        //bgTexture.filteringMode = .Nearest
+        background.texture = bgTexture
         background.position = CGPointMake(0, 725)
         backgroundYStart = background.position.y
         if currentMap == "kz_wonderland" {
@@ -254,7 +256,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let gid = layerInfo.layer.tileGidAt(layerInfo.layer.pointForCoord(point)) //The gID is the ID of the tile. They start at 1 up the the amount of tiles in your tile set.
                 
                 //determining which tiles to act on
-                if gid == 383 || gid == 384 || gid == 385 || gid == 491 || gid == 1{
+                if gid == 383 || gid == 384 || gid == 385 || gid == 9 || gid == 1{
                     
                     let node = layerInfo.layer.tileAtCoord(point)
                     //I fetched a node at that point created by JSTileMap
@@ -530,17 +532,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //MARK: Particles
     func spawnParticles(atPoint: CGPoint) {
         //println(modelName)
-        if modelName == "iPhone 6"{
             let bounceEmitter = SKEmitterNode(fileNamed: "MagicFire.sks")
             bounceEmitter.position = atPoint
             bounceEmitter.zPosition = player.zPosition - 1
             worldNode.addChild(bounceEmitter)
-        } else {
-            let bounceEmitter = SKEmitterNode(fileNamed: "MagicFire.sks")
-            bounceEmitter.position = atPoint
-            bounceEmitter.zPosition = player.zPosition - 1
-            worldNode.addChild(bounceEmitter)
-        }
         //println("spawned particles at \(atPoint)")
     }
     

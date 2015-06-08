@@ -62,7 +62,6 @@
 		18F760601B2521CF0086E776 /* kz_abandoned_large.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18F7605F1B2521CF0086E776 /* kz_abandoned_large.atlasc */; };
 		18F760621B2522C50086E776 /* kz_abandoned_items_large.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18F760611B2522C50086E776 /* kz_abandoned_items_large.atlasc */; };
 		18F760761B253C6C0086E776 /* Rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18F760751B253C6C0086E776 /* Rain.sks */; };
-		18F760781B255F0E0086E776 /* kz_backgrounds.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18F760771B255F0E0086E776 /* kz_backgrounds.atlasc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,7 +137,6 @@
 		18F7605F1B2521CF0086E776 /* kz_abandoned_large.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_abandoned_large.atlasc; sourceTree = "<group>"; };
 		18F760611B2522C50086E776 /* kz_abandoned_items_large.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_abandoned_items_large.atlasc; sourceTree = "<group>"; };
 		18F760751B253C6C0086E776 /* Rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Rain.sks; sourceTree = "<group>"; };
-		18F760771B255F0E0086E776 /* kz_backgrounds.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_backgrounds.atlasc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,7 +274,6 @@
 		18149CB01B197C1A00522024 /* Art */ = {
 			isa = PBXGroup;
 			children = (
-				18F760771B255F0E0086E776 /* kz_backgrounds.atlasc */,
 				18F760611B2522C50086E776 /* kz_abandoned_items_large.atlasc */,
 				18F7605F1B2521CF0086E776 /* kz_abandoned_large.atlasc */,
 				18F7605B1B251A300086E776 /* kz_abandoned_items.atlasc */,
@@ -417,7 +414,6 @@
 				18E87E9F1B2010C800E4CC4E /* kz_wild.tmx in Resources */,
 				18E87EAF1B218E9E00E4CC4E /* spark.png in Resources */,
 				18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */,
-				18F760781B255F0E0086E776 /* kz_backgrounds.atlasc in Resources */,
 				18E87EA71B20512B00E4CC4E /* kz_wonderland_trees.atlasc in Resources */,
 				18149C8E1B1972A600522024 /* LICENSE.txt in Resources */,
 				18F760761B253C6C0086E776 /* Rain.sks in Resources */,
