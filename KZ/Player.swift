@@ -106,7 +106,7 @@ class Player: SKSpriteNode {
         self.position = CGPointMake(self.position.x + (playerSpeedX * (dt * 100)), self.position.y + (jumpAmount * dtOpen))
         
         //println(dt * 100)
-        println(dtOpen)
+        //println(dtOpen)
         
         
         if (self.position.y < -300) {
@@ -122,6 +122,17 @@ class Player: SKSpriteNode {
         if physicsBody?.velocity.dy < -1000 {
             physicsBody?.velocity.dy = -1000
         }
+        
+        if physicsBody?.velocity.dx > 75 {
+            physicsBody?.velocity.dx = 75
+        }
+        
+        if physicsBody?.velocity.dx < -75 {
+            physicsBody?.velocity.dx = -75
+        }
+        
+        
+        println(physicsBody?.velocity.dx)
         
         
     }

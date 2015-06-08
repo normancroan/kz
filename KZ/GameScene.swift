@@ -250,7 +250,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
                     node.physicsBody?.dynamic = false
                     node.physicsBody?.restitution = 0
-                    node.physicsBody?.friction
+                    if currentMap == "kz_wonderland" {
+                       node.physicsBody?.friction = 0.01
+                    } else {
+                        node.physicsBody?.friction = 5
+                    }
                     node.alpha = 0
                     node.physicsBody?.categoryBitMask = PhysicsCategory.Floor
                     node.physicsBody?.contactTestBitMask = PhysicsCategory.Player
@@ -438,6 +442,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //println("touch ended on right button")
                 player.stopWalk()
                 player.playerSpeedX = 0
+                player.physicsBody?.applyImpulse(CGVectorMake(10,0))
                 //playerIdleSpeed(checkTileType(), direction: "right")
                 moveButtonIsPressed = false
                 buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
@@ -449,6 +454,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //println("touch ended on left button")
                 player.stopWalk()
                 player.playerSpeedX = 0
+                player.physicsBody?.applyImpulse(CGVectorMake(-10,0))
                 //playerIdleSpeed(checkTileType(), direction: "left")
                 moveButtonIsPressed = false
                 buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
