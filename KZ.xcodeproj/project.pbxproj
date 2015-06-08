@@ -69,6 +69,7 @@
 		18F7605E1B251B2F0086E776 /* kz_abandoned.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18F7605D1B251B2F0086E776 /* kz_abandoned.tmx */; };
 		18F760601B2521CF0086E776 /* kz_abandoned_large.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18F7605F1B2521CF0086E776 /* kz_abandoned_large.atlasc */; };
 		18F760621B2522C50086E776 /* kz_abandoned_items_large.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18F760611B2522C50086E776 /* kz_abandoned_items_large.atlasc */; };
+		18F760761B253C6C0086E776 /* Rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18F760751B253C6C0086E776 /* Rain.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,7 @@
 		18F7605D1B251B2F0086E776 /* kz_abandoned.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_abandoned.tmx; sourceTree = "<group>"; };
 		18F7605F1B2521CF0086E776 /* kz_abandoned_large.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_abandoned_large.atlasc; sourceTree = "<group>"; };
 		18F760611B2522C50086E776 /* kz_abandoned_items_large.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_abandoned_items_large.atlasc; sourceTree = "<group>"; };
+		18F760751B253C6C0086E776 /* Rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Rain.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				18149C6E1B19709F00522024 /* LaunchScreen.xib */,
 				18149C5F1B19709F00522024 /* Supporting Files */,
 				18E87EB01B21954300E4CC4E /* MagicFire.sks */,
+				18F760751B253C6C0086E776 /* Rain.sks */,
 				18F760531B250CB70086E776 /* MagicFireLow.sks */,
 				18E87EAD1B218E9E00E4CC4E /* spark.png */,
 			);
@@ -453,6 +456,7 @@
 				183096041B1E0E6200BBB25B /* kz_wild_background.png in Resources */,
 				18E87EA71B20512B00E4CC4E /* kz_wonderland_trees.atlasc in Resources */,
 				18149C8E1B1972A600522024 /* LICENSE.txt in Resources */,
+				18F760761B253C6C0086E776 /* Rain.sks in Resources */,
 				18149C6B1B19709F00522024 /* Main.storyboard in Resources */,
 				18E87EA51B20511E00E4CC4E /* kz_wonderland.tmx in Resources */,
 				18F7605C1B251A300086E776 /* kz_abandoned_items.atlasc in Resources */,

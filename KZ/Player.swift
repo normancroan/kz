@@ -132,7 +132,7 @@ class Player: SKSpriteNode {
         }
         
         
-        println(physicsBody?.velocity.dx)
+       // println(physicsBody?.velocity.dx)
         
         
     }

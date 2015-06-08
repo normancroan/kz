@@ -60,6 +60,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //checking device type
     let modelName = UIDevice.currentDevice().modelName
     
+    //particles
+    let snowEmitter = SKEmitterNode(fileNamed: "Rain.sks")
+    
         
     //MARK: Setup Methods
     func setupMap() {
@@ -74,6 +77,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addFloor()
         addBounceTiles()
         tileMapFrame = tileMap.calculateAccumulatedFrame()
+        
+        if modelName == "iPhone 6" {
+            if currentMap == "kz_wonderland"{
+                snowEmitter.position = CGPointMake(self.view!.bounds.width / 2, self.view!.bounds.height)
+                addChild(snowEmitter)
+            }
+        }
         
         anchorPoint = CGPointMake(0.5,0.5)
         worldNode.position = CGPointMake(-tileMapFrame.width / 2, -tileMapFrame.height / 2)
@@ -513,11 +523,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //MARK: Particles
     func spawnParticles(atPoint: CGPoint) {
-        println(modelName)
-        let bounceEmitter = SKEmitterNode(fileNamed: "MagicFire.sks")
-        bounceEmitter.position = atPoint
-        bounceEmitter.zPosition = player.zPosition - 1
-        worldNode.addChild(bounceEmitter)
+        //println(modelName)
+        if modelName == "iPhone 6"{
+            let bounceEmitter = SKEmitterNode(fileNamed: "MagicFire.sks")
+            bounceEmitter.position = atPoint
+            bounceEmitter.zPosition = player.zPosition - 1
+            worldNode.addChild(bounceEmitter)
+        } else {
+            let bounceEmitter = SKEmitterNode(fileNamed: "MagicFireLow.sks")
+            bounceEmitter.position = atPoint
+            bounceEmitter.zPosition = player.zPosition - 1
+            worldNode.addChild(bounceEmitter)
+        }
         //println("spawned particles at \(atPoint)")
     }
     
