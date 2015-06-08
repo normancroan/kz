@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>codeandweb</key>
+        <dict>
+            <key>generator</key>
+            <string>TexturePacker 3.8.0 - http://www.codeandweb.com/texturepacker</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:784757c7e020c29a1887640f34760a0c:1441fc3c4876407a0439192fee7db41b:9d7cfe96ba315f2b78c56babfd7fb1ae$</string>
+        </dict>
+        <key>format</key>
+        <string>APPL</string>
+        <key>images</key>
+        <array>
+            <dict>
+                <key>path</key>
+                <string>kz_abandoned_items_large.1.png</string>
+                <key>size</key>
+                <string>{1538,1538}</string>
+                <key>subimages</key>
+                <array>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Items.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{1536,1536}</string>
+                        <key>textureRect</key>
+                        <string>{{1,1},{1536,1536}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                </array>
+            </dict>
+        </array>
+        <key>version</key>
+        <integer>1</integer>
+    </dict>
+</plist>

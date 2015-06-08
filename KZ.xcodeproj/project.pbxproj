@@ -61,6 +61,14 @@
 		18F7604C1B2406340086E776 /* kz_wonderland_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F7604B1B2406340086E776 /* kz_wonderland_background.png */; };
 		18F7604E1B2417CF0086E776 /* kz_dream_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F7604D1B2417CF0086E776 /* kz_dream_background.png */; };
 		18F760501B2418CB0086E776 /* kz_dream.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18F7604F1B2418CB0086E776 /* kz_dream.tmx */; };
+		18F760521B2506E30086E776 /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F760511B2506E30086E776 /* Devices.swift */; };
+		18F760541B250CB70086E776 /* MagicFireLow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18F760531B250CB70086E776 /* MagicFireLow.sks */; };
+		18F760581B2517130086E776 /* kz_abandoned_tileset.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18F760571B2517130086E776 /* kz_abandoned_tileset.atlasc */; };
+		18F7605A1B25183C0086E776 /* tmx-bg-tiles.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18F760591B25183C0086E776 /* tmx-bg-tiles.atlasc */; };
+		18F7605C1B251A300086E776 /* kz_abandoned_items.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18F7605B1B251A300086E776 /* kz_abandoned_items.atlasc */; };
+		18F7605E1B251B2F0086E776 /* kz_abandoned.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18F7605D1B251B2F0086E776 /* kz_abandoned.tmx */; };
+		18F760601B2521CF0086E776 /* kz_abandoned_large.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18F7605F1B2521CF0086E776 /* kz_abandoned_large.atlasc */; };
+		18F760621B2522C50086E776 /* kz_abandoned_items_large.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18F760611B2522C50086E776 /* kz_abandoned_items_large.atlasc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +143,14 @@
 		18F7604B1B2406340086E776 /* kz_wonderland_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_wonderland_background.png; sourceTree = "<group>"; };
 		18F7604D1B2417CF0086E776 /* kz_dream_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_dream_background.png; sourceTree = "<group>"; };
 		18F7604F1B2418CB0086E776 /* kz_dream.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_dream.tmx; sourceTree = "<group>"; };
+		18F760511B2506E30086E776 /* Devices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
+		18F760531B250CB70086E776 /* MagicFireLow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MagicFireLow.sks; sourceTree = "<group>"; };
+		18F760571B2517130086E776 /* kz_abandoned_tileset.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_abandoned_tileset.atlasc; sourceTree = "<group>"; };
+		18F760591B25183C0086E776 /* tmx-bg-tiles.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "tmx-bg-tiles.atlasc"; sourceTree = "<group>"; };
+		18F7605B1B251A300086E776 /* kz_abandoned_items.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_abandoned_items.atlasc; sourceTree = "<group>"; };
+		18F7605D1B251B2F0086E776 /* kz_abandoned.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_abandoned.tmx; sourceTree = "<group>"; };
+		18F7605F1B2521CF0086E776 /* kz_abandoned_large.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_abandoned_large.atlasc; sourceTree = "<group>"; };
+		18F760611B2522C50086E776 /* kz_abandoned_items_large.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_abandoned_items_large.atlasc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				18149CCF1B1AA74600522024 /* Tpes.swift */,
+				18F760511B2506E30086E776 /* Devices.swift */,
 				18149C611B19709F00522024 /* AppDelegate.swift */,
 				18149C631B19709F00522024 /* GameScene.sks */,
 				18149C651B19709F00522024 /* GameScene.swift */,
@@ -193,6 +210,7 @@
 				18149C6E1B19709F00522024 /* LaunchScreen.xib */,
 				18149C5F1B19709F00522024 /* Supporting Files */,
 				18E87EB01B21954300E4CC4E /* MagicFire.sks */,
+				18F760531B250CB70086E776 /* MagicFireLow.sks */,
 				18E87EAD1B218E9E00E4CC4E /* spark.png */,
 			);
 			path = KZ;
@@ -269,7 +287,12 @@
 		18149CB01B197C1A00522024 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				18F760611B2522C50086E776 /* kz_abandoned_items_large.atlasc */,
+				18F7605F1B2521CF0086E776 /* kz_abandoned_large.atlasc */,
+				18F7605B1B251A300086E776 /* kz_abandoned_items.atlasc */,
+				18F760591B25183C0086E776 /* tmx-bg-tiles.atlasc */,
 				18F7604A1B2405E00086E776 /* Backgrounds */,
+				18F760571B2517130086E776 /* kz_abandoned_tileset.atlasc */,
 				18E87EB81B219B4500E4CC4E /* kz_signs_small.atlasc */,
 				18E87EB61B219A3E00E4CC4E /* kz_signs_3.atlasc */,
 				18E87EA61B20512B00E4CC4E /* kz_wonderland_trees.atlasc */,
@@ -294,6 +317,7 @@
 		18149CB81B197D3D00522024 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
+				18F7605D1B251B2F0086E776 /* kz_abandoned.tmx */,
 				18F7604F1B2418CB0086E776 /* kz_dream.tmx */,
 				18E87EA41B20511E00E4CC4E /* kz_wonderland.tmx */,
 				18E87E9E1B2010C800E4CC4E /* kz_wild.tmx */,
@@ -397,25 +421,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F760501B2418CB0086E776 /* kz_dream.tmx in Resources */,
+				18F760601B2521CF0086E776 /* kz_abandoned_large.atlasc in Resources */,
 				18E87EAB1B20547800E4CC4E /* kz_wonderland_background_large.png in Resources */,
 				18149CCE1B19E2E500522024 /* valley-tiles-5.atlasc in Resources */,
 				18A9FCC61B1BF0AB004C0E5D /* Run.atlas in Resources */,
 				18E87EB11B21954300E4CC4E /* MagicFire.sks in Resources */,
+				18F760541B250CB70086E776 /* MagicFireLow.sks in Resources */,
 				183095F21B1C746700BBB25B /* gem_red_1.png in Resources */,
 				18E659251B1F080100952BFA /* kz_egypt_background.png in Resources */,
 				18E87EA31B204F4000E4CC4E /* kz_wonderland_tileset_medium.atlasc in Resources */,
 				18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */,
+				18F760581B2517130086E776 /* kz_abandoned_tileset.atlasc in Resources */,
+				18F760621B2522C50086E776 /* kz_abandoned_items_large.atlasc in Resources */,
 				18E87E9B1B1F377E00E4CC4E /* kz_egypt_large_items.atlasc in Resources */,
 				18F7604C1B2406340086E776 /* kz_wonderland_background.png in Resources */,
 				183095FD1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc in Resources */,
 				18E659211B1F03D600952BFA /* kz_egypt_test1.atlasc in Resources */,
 				18149C701B19709F00522024 /* LaunchScreen.xib in Resources */,
+				18F7605A1B25183C0086E776 /* tmx-bg-tiles.atlasc in Resources */,
 				18E87EB71B219A3E00E4CC4E /* kz_signs_3.atlasc in Resources */,
 				18149C6D1B19709F00522024 /* Images.xcassets in Resources */,
 				18A9FCC81B1BF448004C0E5D /* Attack.atlas in Resources */,
 				18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */,
 				18E87EB91B219B4500E4CC4E /* kz_signs_small.atlasc in Resources */,
 				18149C641B19709F00522024 /* GameScene.sks in Resources */,
+				18F7605E1B251B2F0086E776 /* kz_abandoned.tmx in Resources */,
 				18E87E9F1B2010C800E4CC4E /* kz_wild.tmx in Resources */,
 				18E87EAF1B218E9E00E4CC4E /* spark.png in Resources */,
 				18F7604E1B2417CF0086E776 /* kz_dream_background.png in Resources */,
@@ -425,6 +455,7 @@
 				18149C8E1B1972A600522024 /* LICENSE.txt in Resources */,
 				18149C6B1B19709F00522024 /* Main.storyboard in Resources */,
 				18E87EA51B20511E00E4CC4E /* kz_wonderland.tmx in Resources */,
+				18F7605C1B251A300086E776 /* kz_abandoned_items.atlasc in Resources */,
 				183095FF1B1D604B00BBB25B /* kz_egypt.tmx in Resources */,
 				18149CB71B197C6E00522024 /* tmx-rpg-bigpack.atlasc in Resources */,
 				18E87E9D1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc in Resources */,
@@ -456,6 +487,7 @@
 				18149C9F1B1972BE00522024 /* Int+Extensions.swift in Sources */,
 				18149CD01B1AA74600522024 /* Tpes.swift in Sources */,
 				18149CA71B1972BE00522024 /* Vector3.swift in Sources */,
+				18F760521B2506E30086E776 /* Devices.swift in Sources */,
 				18149C681B19709F00522024 /* GameViewController.swift in Sources */,
 				18149CA21B1972BE00522024 /* SKColor+Extensions.swift in Sources */,
 				18149C9E1B1972BE00522024 /* CGVector+Extensions.swift in Sources */,

@@ -56,9 +56,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var setup = false
     let maxScaleHeight: CGFloat = 100
     var currentPlayerHeight: CGFloat = 0
-
     
+    //checking device type
+    let modelName = UIDevice.currentDevice().modelName
     
+        
     //MARK: Setup Methods
     func setupMap() {
         tileMap = JSTileMap(named: "\(currentMap).tmx")
@@ -505,6 +507,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //MARK: Particles
     func spawnParticles(atPoint: CGPoint) {
+        println(modelName)
         let bounceEmitter = SKEmitterNode(fileNamed: "MagicFire.sks")
         bounceEmitter.position = atPoint
         bounceEmitter.zPosition = player.zPosition - 1

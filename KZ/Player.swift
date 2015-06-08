@@ -94,8 +94,18 @@ class Player: SKSpriteNode {
 //        self.position = CGPointMake(self.position.x + playerSpeedX + attackAmount, self.position.y + playerSpeedY + jumpAmount)
         
 //        self.position = CGPointMake(self.position.x + playerSpeedX + attackAmount, self.position.y + jumpAmount)
+        
+        var dtOpen: CGFloat = dt * 100
+        if dtOpen > 6.0 {
+            dtOpen = 6.0
+        }
     
-        self.position = CGPointMake(self.position.x + (playerSpeedX * (dt * 100)), self.position.y + (jumpAmount * (dt * 100)))
+//        self.position = CGPointMake(self.position.x + (playerSpeedX * (dt * 100)), self.position.y + (jumpAmount * (dt * 100)))
+        
+        self.position = CGPointMake(self.position.x + (playerSpeedX * (dt * 100)), self.position.y + (jumpAmount * dtOpen))
+        
+        //println(dt * 100)
+        println(dtOpen)
         
         
         if (self.position.y < -300) {
