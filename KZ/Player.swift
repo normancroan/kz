@@ -95,6 +95,7 @@ class Player: SKSpriteNode {
         
 //        self.position = CGPointMake(self.position.x + playerSpeedX + attackAmount, self.position.y + jumpAmount)
         
+        //capped the delta time to try and correct lag cheating
         var dtOpen: CGFloat = dt * 100
         if dtOpen > 6.0 {
             dtOpen = 6.0
