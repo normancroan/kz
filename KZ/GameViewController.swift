@@ -34,7 +34,7 @@ class GameViewController: UIViewController {
         let scene = MapSelectScene(size: CGSize(width: 2048, height: 1536))
         skView.showsFPS = true
         skView.showsNodeCount = true
-        //skView.showsPhysics = true
+        skView.showsPhysics = true
         skView.ignoresSiblingOrder = true
         /* Set the scale mode to scale to fit the window */
         scene.size = skView.bounds.size
