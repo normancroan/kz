@@ -37,6 +37,9 @@
 		18149CD21B1AA7C500522024 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149CD11B1AA7C500522024 /* Player.swift */; };
 		183095FD1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 183095FC1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc */; };
 		183095FF1B1D604B00BBB25B /* kz_egypt.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 183095FE1B1D604B00BBB25B /* kz_egypt.tmx */; };
+		184DFFF11B26819A001D722E /* kz_egypt_2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF01B26819A001D722E /* kz_egypt_2.tmx */; };
+		184DFFFA1B268C6F001D722E /* egypt_small_floors_bgra.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */; };
+		184DFFFB1B268C6F001D722E /* egypt_small_walls_rgba4.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */; };
 		18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */; };
 		18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */; };
 		18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC31B1BEF99004C0E5D /* Walk.atlas */; };
@@ -112,6 +115,9 @@
 		18149CD11B1AA7C500522024 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		183095FC1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_egypt_tiles_1.atlasc; sourceTree = "<group>"; };
 		183095FE1B1D604B00BBB25B /* kz_egypt.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt.tmx; sourceTree = "<group>"; };
+		184DFFF01B26819A001D722E /* kz_egypt_2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt_2.tmx; sourceTree = "<group>"; };
+		184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_small_floors_bgra.atlasc; sourceTree = "<group>"; };
+		184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_small_walls_rgba4.atlasc; sourceTree = "<group>"; };
 		18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Jump.atlas; sourceTree = "<group>"; };
 		18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Idle.atlas; sourceTree = "<group>"; };
 		18A9FCC31B1BEF99004C0E5D /* Walk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Walk.atlas; sourceTree = "<group>"; };
@@ -274,6 +280,7 @@
 		18149CB01B197C1A00522024 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				184DFFEF1B268063001D722E /* kz_egypt */,
 				18F760611B2522C50086E776 /* kz_abandoned_items_large.atlasc */,
 				18F7605F1B2521CF0086E776 /* kz_abandoned_large.atlasc */,
 				18F7605B1B251A300086E776 /* kz_abandoned_items.atlasc */,
@@ -282,9 +289,6 @@
 				18E87EB81B219B4500E4CC4E /* kz_signs_small.atlasc */,
 				18E87EA61B20512B00E4CC4E /* kz_wonderland_trees.atlasc */,
 				18E87EA21B204F4000E4CC4E /* kz_wonderland_tileset_medium.atlasc */,
-				18E87E9C1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc */,
-				18E87E9A1B1F377E00E4CC4E /* kz_egypt_large_items.atlasc */,
-				183095FC1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc */,
 				18A9FCC71B1BF448004C0E5D /* Attack.atlas */,
 				18A9FCC51B1BF0AB004C0E5D /* Run.atlas */,
 				18A9FCC31B1BEF99004C0E5D /* Walk.atlas */,
@@ -300,6 +304,7 @@
 		18149CB81B197D3D00522024 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
+				184DFFF01B26819A001D722E /* kz_egypt_2.tmx */,
 				18F7605D1B251B2F0086E776 /* kz_abandoned.tmx */,
 				18F7604F1B2418CB0086E776 /* kz_dream.tmx */,
 				18E87EA41B20511E00E4CC4E /* kz_wonderland.tmx */,
@@ -308,6 +313,18 @@
 			);
 			name = Levels;
 			path = KZ;
+			sourceTree = "<group>";
+		};
+		184DFFEF1B268063001D722E /* kz_egypt */ = {
+			isa = PBXGroup;
+			children = (
+				184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */,
+				184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */,
+				18E87E9C1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc */,
+				18E87E9A1B1F377E00E4CC4E /* kz_egypt_large_items.atlasc */,
+				183095FC1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc */,
+			);
+			name = kz_egypt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +413,7 @@
 				18149CCE1B19E2E500522024 /* valley-tiles-5.atlasc in Resources */,
 				18A9FCC61B1BF0AB004C0E5D /* Run.atlas in Resources */,
 				18E87EB11B21954300E4CC4E /* MagicFire.sks in Resources */,
+				184DFFF11B26819A001D722E /* kz_egypt_2.tmx in Resources */,
 				18F760541B250CB70086E776 /* MagicFireLow.sks in Resources */,
 				18E87EA31B204F4000E4CC4E /* kz_wonderland_tileset_medium.atlasc in Resources */,
 				18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */,
@@ -408,8 +426,10 @@
 				18149C6D1B19709F00522024 /* Images.xcassets in Resources */,
 				18A9FCC81B1BF448004C0E5D /* Attack.atlas in Resources */,
 				18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */,
+				184DFFFB1B268C6F001D722E /* egypt_small_walls_rgba4.atlasc in Resources */,
 				18E87EB91B219B4500E4CC4E /* kz_signs_small.atlasc in Resources */,
 				18149C641B19709F00522024 /* GameScene.sks in Resources */,
+				184DFFFA1B268C6F001D722E /* egypt_small_floors_bgra.atlasc in Resources */,
 				18F7605E1B251B2F0086E776 /* kz_abandoned.tmx in Resources */,
 				18E87E9F1B2010C800E4CC4E /* kz_wild.tmx in Resources */,
 				18E87EAF1B218E9E00E4CC4E /* spark.png in Resources */,

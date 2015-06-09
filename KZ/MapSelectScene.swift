@@ -12,7 +12,7 @@ import SpriteKit
 class MapSelectScene: SKScene {
     
     
-    let egyptIcon = SKSpriteNode(imageNamed: "kz_egypt_background")
+    let egyptIcon = SKSpriteNode(imageNamed: "kz_egypt_2_background")
     let egyptIconLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     let wildIcon = SKSpriteNode(imageNamed: "kz_wild_background")
     let wildIconLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
@@ -102,8 +102,8 @@ class MapSelectScene: SKScene {
         
         
         egyptIconLabel.fontSize = 15
-        egyptIconLabel.text = "kz_egypt"
-        egyptIconLabel.name = "egypt"
+        egyptIconLabel.text = "kz_egypt_2"
+        egyptIconLabel.name = "egypt_2"
         egyptIconLabel.zPosition = 200
         egyptIconLabel.verticalAlignmentMode = .Center
         egyptIconLabel.position = egyptIcon.position
@@ -157,7 +157,7 @@ class MapSelectScene: SKScene {
             //touched egypt
             if (CGRectContainsPoint(egyptIcon.frame, location)) {
                 instructionsLabel.text = "Loading kz_egypt..."
-                let myScene = GameScene(size: self.size, currentMap: "kz_egypt")
+                let myScene = GameScene(size: self.size, currentMap: "kz_egypt_2")
                 myScene.scaleMode = self.scaleMode
                 let reveal = SKTransition.fadeWithDuration(0.5)
                 self.view?.presentScene(myScene, transition: reveal)

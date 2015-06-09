@@ -203,6 +203,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             background.position = CGPointMake(0, 170)
             //println("wonderland setup")
         }
+        if currentMap == "kz_egypt_2" {
+            background.setScale(7)
+            background.position = CGPointMake(0, 100)
+        }
         if currentMap == "kz_dream" {
             background.xScale = 6
             background.yScale = 5

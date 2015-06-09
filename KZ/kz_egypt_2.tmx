@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="256" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="tmx-bg-tiles.1" tilewidth="32" tileheight="32" spacing="2">
+  <image source="tmx-bg-tiles.atlasc/tmx-bg-tiles.1.png" width="374" height="34"/>
+ </tileset>
+ <tileset firstgid="12" name="egypt_small_floors_bgra.1" tilewidth="32" tileheight="32" spacing="1">
+  <image source="egypt_small_floors_bgra.atlasc/egypt_small_floors_bgra.1.png" width="792" height="198"/>
+ </tileset>
+ <tileset firstgid="156" name="egypt_small_walls_rgba4.1" tilewidth="32" tileheight="32" spacing="1">
+  <image source="egypt_small_walls_rgba4.atlasc/egypt_small_walls_rgba4.1.png" width="396" height="198"/>
+ </tileset>
+ <layer name="background_walls" width="64" height="256">
+  <data encoding="base64" compression="zlib">
+   eJzt0KkRgAAQBEHyz4TH8oTHRYAdQXfVirG7LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN/W2TbbZ8cP+5xds3v2/LDr/+uu/6+7/r/u+v+66//rrv+vu/6/7vr/uuv/667/r7v+v+76/7pffyBp3w==
+  </data>
+ </layer>
+ <layer name="floor" width="64" height="256">
+  <data encoding="base64" compression="zlib">
+   eJztyMENgCAABEEKEJEeVLT/Br3EEniRzCT72VIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB+W6ppTy0dqS/0Z9+ZrnSnkZ70LvRn3wdd5Q1N
+  </data>
+ </layer>
+ <layer name="background items" width="64" height="256">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgJD+r+4ICgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGoADwAB
+  </data>
+ </layer>
+ <layer name="foreground_items" width="64" height="256">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgJD+r+4ICgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGoADwAB
+  </data>
+ </layer>
+ <layer name="collision" width="64" height="256" opacity="0.42">
+  <data encoding="base64" compression="zlib">
+   eJztw7ENAAAIAyDX/v+wiy84GCGhCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADYkAkAAAAAAAAAAABwSZ7/rgFrDQJT
+  </data>
+ </layer>
+</map>
