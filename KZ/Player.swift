@@ -77,7 +77,7 @@ class Player: SKSpriteNode {
         body.categoryBitMask = PhysicsCategory.Player
         body.collisionBitMask = PhysicsCategory.Floor | PhysicsCategory.Boundary
         body.contactTestBitMask = PhysicsCategory.All
-        body.usesPreciseCollisionDetection = false
+        body.usesPreciseCollisionDetection = true
         
         self.physicsBody = body
         

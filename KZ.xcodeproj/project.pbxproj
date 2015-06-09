@@ -37,6 +37,7 @@
 		18149CD21B1AA7C500522024 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149CD11B1AA7C500522024 /* Player.swift */; };
 		183095FD1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 183095FC1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc */; };
 		183095FF1B1D604B00BBB25B /* kz_egypt.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 183095FE1B1D604B00BBB25B /* kz_egypt.tmx */; };
+		184D00071B269F35001D722E /* egypt_statues_medium.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184D00061B269F35001D722E /* egypt_statues_medium.atlasc */; };
 		184DFFF11B26819A001D722E /* kz_egypt_2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF01B26819A001D722E /* kz_egypt_2.tmx */; };
 		184DFFFA1B268C6F001D722E /* egypt_small_floors_bgra.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */; };
 		184DFFFB1B268C6F001D722E /* egypt_small_walls_rgba4.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */; };
@@ -115,6 +116,7 @@
 		18149CD11B1AA7C500522024 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		183095FC1B1D5F6600BBB25B /* kz_egypt_tiles_1.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_egypt_tiles_1.atlasc; sourceTree = "<group>"; };
 		183095FE1B1D604B00BBB25B /* kz_egypt.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt.tmx; sourceTree = "<group>"; };
+		184D00061B269F35001D722E /* egypt_statues_medium.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_statues_medium.atlasc; sourceTree = "<group>"; };
 		184DFFF01B26819A001D722E /* kz_egypt_2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt_2.tmx; sourceTree = "<group>"; };
 		184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_small_floors_bgra.atlasc; sourceTree = "<group>"; };
 		184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_small_walls_rgba4.atlasc; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 		184DFFEF1B268063001D722E /* kz_egypt */ = {
 			isa = PBXGroup;
 			children = (
+				184D00061B269F35001D722E /* egypt_statues_medium.atlasc */,
 				184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */,
 				184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */,
 				18E87E9C1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc */,
@@ -442,6 +445,7 @@
 				18F7605C1B251A300086E776 /* kz_abandoned_items.atlasc in Resources */,
 				183095FF1B1D604B00BBB25B /* kz_egypt.tmx in Resources */,
 				18149CB71B197C6E00522024 /* tmx-rpg-bigpack.atlasc in Resources */,
+				184D00071B269F35001D722E /* egypt_statues_medium.atlasc in Resources */,
 				18E87E9D1B1F392100E4CC4E /* kz_egypt_light_tiles_sheet.atlasc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
