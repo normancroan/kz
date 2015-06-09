@@ -421,28 +421,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
         buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
     }
-    
-    func updateRunIntentions(intention: String) {
-        if intention == "run" {
-           // println("will keep running")
-            intendsToKeepRunning = true
-        } else {
-            intendsToKeepRunning = false
-        }
-    }
-    
-    func determineRunIntentions() {
-        if moveButtonIsPressed {
-            let wait = SKAction.waitForDuration(0.5)
-            let update = SKAction.runBlock({ self.updateRunIntentions("run")})
-            let seq = SKAction.sequence([wait, update])
-            runAction(seq, withKey: "checking")
-        } else {
-            updateRunIntentions("stop")
-        }
-    }
-    
-    
+        
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         
         let touch = touches.first as! UITouch
@@ -506,16 +485,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //println("both were pressed")
             jumpButtonIsPressed = false
             buttonNorth.texture = SKTexture(imageNamed: "Directional_Button")
-            //resolving the sticky button issue with simultaneous presses
-//            if !intendsToKeepRunning {
-//            removeActionForKey("checking")
-//            let wait = SKAction.waitForDuration(0.35)
-//            let stop = SKAction.runBlock({ self.endWalkAfterJump() })
-//            let stop2 = SKAction.runBlock({ self.updateRunIntentions("stop") })
-//            let seq = SKAction.sequence([wait, stop, stop2])
-//            runAction(seq)
-//            }
-            //end anti stick code, update with intendsToRun soon
         }
     }
     
@@ -567,46 +536,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 ]))
             }
         }
-    }
-    
-    //MARK: Map Features
-    func checkTileType() -> String{
-        if currentMap == "kz_wonderland" {
-            return "ice"
-        }
-        else {
-            return "floor"
-        }
-    }
-    
-    func playerIdleSpeed(touchEndedOn: String, direction: String) -> CGFloat{
-        var returnValue = 0
-        if touchEndedOn == "ice" {
-            if direction == "left" {
-                returnValue = -1
-            } else if direction == "right" {
-                returnValue = 1
-            }
-            taperSlide("\(direction)")
-        }
-        
-        return CGFloat(returnValue)
-    }
-    
-    func taperSlide(direction: String) {
-        let wait = SKAction.waitForDuration(0.50)
-        let reduceSpeed = SKAction.runBlock({ self.taperSpeed(0.9) })
-        let stopSpeed = SKAction.runBlock({ self.taperSpeed(0) })
-        let seq = SKAction.sequence([ reduceSpeed, wait ])
-        let repeat = SKAction.repeatAction(seq, count: 10)
-        let taperSlide = SKAction.sequence([ seq, stopSpeed ])
-        
-        runAction(taperSlide, withKey: "taperSlide")
-        
-    }
-    
-    func taperSpeed(by: CGFloat) {
-        player.playerSpeedX *= by
     }
     
 }
