@@ -70,6 +70,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createBackground()
     }
     
+    //add support for player based on Tiled map position
+    func setupPlayer() {
+        worldNode.addChild(player)
+        player.position = CGPointMake(55,235)
+        player.zPosition = -41
+        //player.position = CGPointMake(955,2235)
+        player.setScale(0.7)
+        centerViewOn(player.position)
+    }
+
+    
     func createWorld() {
         worldNode = SKNode()
         worldNode.addChild(tileMap)
@@ -88,6 +99,42 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         worldNode.position = CGPointMake(-tileMapFrame.width / 2, -tileMapFrame.height / 2)
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
         self.physicsWorld.contactDelegate = self
+    }
+    
+    func setupTiles() {
+        for var a = 0; a < Int(tileMap.mapSize.width); a++ { //Go through every point across the tile map
+            for var b = 0; b < Int(tileMap.mapSize.height); b++ { //Go through every point up the tile map
+                let layerInfo:TMXLayerInfo = tileMap.layers.lastObject as! TMXLayerInfo //Get the first layer (you may want to pick another layer if you don't want to use the first one on the tile map)
+                let point = CGPoint(x: a, y: b) //Create a point with a and b
+                let gid = layerInfo.layer.tileGidAt(layerInfo.layer.pointForCoord(point)) //The gID is the ID of the tile. They start at 1 up the the amount of tiles in your tile set.
+                
+                //determining which tiles to act on
+                if gid == 383 || gid == 384 || gid == 385 || gid == 9 || gid == 1{
+                    
+                    let node = layerInfo.layer.tileAtCoord(point)
+                    //I fetched a node at that point created by JSTileMap
+                    node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
+                    node.physicsBody?.dynamic = false
+                    node.physicsBody?.restitution = 0
+                    //node.physicsBody?.resting = true
+                    if currentMap == "kz_wonderland" {
+                        node.physicsBody?.friction = 0.01
+                    } else {
+                        node.physicsBody?.friction = 5
+                    }
+                    node.alpha = 0
+                    if gid == 1 {
+                        node.physicsBody?.categoryBitMask = PhysicsCategory.Bounce
+                        spawnParticles(node.position)
+                    } else {
+                        node.physicsBody?.categoryBitMask = PhysicsCategory.Floor
+                    }
+                    node.physicsBody?.contactTestBitMask = PhysicsCategory.Player
+                    //println("added physics")
+                    //You now have a physics body on your floor tiles! :)
+                }
+            }
+        }
     }
     
     func setupInterface() {
@@ -171,34 +218,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         }
     }
-    
-    func scaleBackground(yPosition: CGFloat) {
-        //scale and position background according to player.position.y
-        if !setup {
-        backgroundYStart = background.position.y
-        backgroundXScaleStart = background.xScale
-        backgroundYScaleStart = background.yScale
-        setup = true
-        }
-        if setup {
-        var realPlayerHeight = (yPosition / 100)
-            if realPlayerHeight > maxScaleHeight {
-                realPlayerHeight = maxScaleHeight
-            }
-        //background.position = CGPointMake(1,1)
-        //println(realPlayerHeight)
-        var heightPercentage = maxScaleHeight - realPlayerHeight
-        var regulatedPercentage = heightPercentage / 100
-            if regulatedPercentage < 0.20 {
-                regulatedPercentage = 0.20
-            }
-        //println(regulatedPercentage)
-        background.position = CGPointMake(background.position.x , backgroundYStart * regulatedPercentage)
-        //println(background.position)
-        //background.xScale = backgroundXScaleStart * regulatedPercentage
-        //background.yScale = backgroundYScaleStart * regulatedPercentage
-        }
-    }
+    //MARK: Game Loop
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -208,15 +228,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setupPlayer()
     }
     
-    //add support for player based on Tiled map position
-    func setupPlayer() {
-        worldNode.addChild(player)
-        player.position = CGPointMake(55,235)
-        player.zPosition = -41
-        //player.position = CGPointMake(955,2235)
-        player.setScale(0.7)
-        centerViewOn(player.position)
-    }
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
@@ -241,81 +252,42 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scaleBackground(player.position.y)
     }
     
-    
-    func addPhysicsForTiles() {
-        //implement with support for slippery tiles taking parameter as String
-        
-        //Need to solve for giant block in addFloor, too messy
-    }
-    //not currently supporting slippery tiles
-    func setupTiles() {
-        for var a = 0; a < Int(tileMap.mapSize.width); a++ { //Go through every point across the tile map
-            for var b = 0; b < Int(tileMap.mapSize.height); b++ { //Go through every point up the tile map
-                let layerInfo:TMXLayerInfo = tileMap.layers.lastObject as! TMXLayerInfo //Get the first layer (you may want to pick another layer if you don't want to use the first one on the tile map)
-                let point = CGPoint(x: a, y: b) //Create a point with a and b
-                let gid = layerInfo.layer.tileGidAt(layerInfo.layer.pointForCoord(point)) //The gID is the ID of the tile. They start at 1 up the the amount of tiles in your tile set.
-                
-                //determining which tiles to act on
-                if gid == 383 || gid == 384 || gid == 385 || gid == 9 || gid == 1{
-                    
-                    let node = layerInfo.layer.tileAtCoord(point)
-                    //I fetched a node at that point created by JSTileMap
-                    node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
-                    node.physicsBody?.dynamic = false
-                    node.physicsBody?.restitution = 0
-                    //node.physicsBody?.resting = true
-                    if currentMap == "kz_wonderland" {
-                       node.physicsBody?.friction = 0.01
-                    } else {
-                       node.physicsBody?.friction = 5
-                    }
-                    node.alpha = 0
-                    if gid == 1 {
-                        node.physicsBody?.categoryBitMask = PhysicsCategory.Bounce
-                        spawnParticles(node.position)
-                    } else {
-                        node.physicsBody?.categoryBitMask = PhysicsCategory.Floor
-                    }
-                    node.physicsBody?.contactTestBitMask = PhysicsCategory.Player
-                    //println("added physics")
-                    //You now have a physics body on your floor tiles! :)
-                }
-            }
-        }
-    }
-    
-    func addBounceTiles() {
-        for var a = 0; a < Int(tileMap.mapSize.width); a++ { //Go through every point across the tile map
-            for var b = 0; b < Int(tileMap.mapSize.height); b++ { //Go through every point up the tile map
-                let layerInfo:TMXLayerInfo = tileMap.layers.lastObject as! TMXLayerInfo //Get the first layer (you may want to pick another layer if you don't want to use the first one on the tile map)
-                let point = CGPoint(x: a, y: b) //Create a point with a and b
-                let gid = layerInfo.layer.tileGidAt(layerInfo.layer.pointForCoord(point)) //The gID is the ID of the tile. They start at 1 up the the amount of tiles in your tile set.
-                
-                //determining which tiles to act on
-                if gid == 1{ //My gIDs for the floor were 2, 9 and 8 so I checked for those values
-                    //println("found a match to create bounce tile on")
-                    let node = layerInfo.layer.tileAtCoord(point) //I fetched a node at that point created by JSTileMap
-                    node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
-                    node.physicsBody?.dynamic = false
-                    node.physicsBody?.restitution = 0
-                    node.alpha = 0
-                    node.physicsBody?.categoryBitMask = PhysicsCategory.Bounce
-                    node.physicsBody?.contactTestBitMask = PhysicsCategory.Player
-                    spawnParticles(node.position)
-                    //println("added physics")
-                    //You now have a physics body on your floor tiles! :)
-                }
-            }
-        }
-    }
-
-    
     //MARK: - Camera
+    
     func centerViewOn(centerOn: CGPoint) {
         let x = centerOn.x.clamped(size.width / 2, tileMapFrame.width - size.width / 2)
         let y = centerOn.y.clamped(size.height / 2, tileMapFrame.height - size.height / 2)
         worldNode.position = CGPoint(x: -x, y: -y)
     }
+    
+    func scaleBackground(yPosition: CGFloat) {
+        //scale and position background according to player.position.y
+        if !setup {
+            backgroundYStart = background.position.y
+            backgroundXScaleStart = background.xScale
+            backgroundYScaleStart = background.yScale
+            setup = true
+        }
+        if setup {
+            var realPlayerHeight = (yPosition / 100)
+            if realPlayerHeight > maxScaleHeight {
+                realPlayerHeight = maxScaleHeight
+            }
+            //background.position = CGPointMake(1,1)
+            //println(realPlayerHeight)
+            var heightPercentage = maxScaleHeight - realPlayerHeight
+            var regulatedPercentage = heightPercentage / 100
+            if regulatedPercentage < 0.20 {
+                regulatedPercentage = 0.20
+            }
+            //println(regulatedPercentage)
+            background.position = CGPointMake(background.position.x , backgroundYStart * regulatedPercentage)
+            //println(background.position)
+            //background.xScale = backgroundXScaleStart * regulatedPercentage
+            //background.yScale = backgroundYScaleStart * regulatedPercentage
+        }
+    }
+
     
     //MARK: - Touch Handling
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -421,7 +393,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
         buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
     }
-        
+    
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         
         let touch = touches.first as! UITouch
