@@ -28,7 +28,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var tileMapFrame: CGRect!
     var moveButtonIsPressed = false
     var jumpButtonIsPressed = false
-    var intendsToKeepRunning = false
+
     
     //checkpoint variables
     var savePoint:CGPoint = CGPoint.zeroPoint
@@ -66,12 +66,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let snowEmitter = SKEmitterNode(fileNamed: "Rain.sks")
     
     //physics in tiles
-    var currentPoint = CGPointMake(0.0, 0.0)
-    var northPoint = CGPointMake(0.0, 0.0)
-    var southPoint = CGPointMake(0.0, 0.0)
-    var westPoint = CGPointMake(0.0, 0.0)
-    var eastPoint = CGPointMake(0.0, 0.0)
-        
+    var physicsUpdateFromPoint = CGPointMake(0.0, 0.0)
+    
     //MARK: Setup Methods
     func setupMap() {
         tileMap = JSTileMap(named: "\(currentMap).tmx")
@@ -86,6 +82,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //player.position = CGPointMake(955,2235)
         player.setScale(0.7)
         centerViewOn(player.position)
+        physicsUpdateFromPoint = player.position
     }
 
     
@@ -126,11 +123,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     let down = player.position.y - 700
                 
                     let node = layerInfo.layer.tileAtCoord(point)
-                    node.name = "inactive"
                     physicsTiles.append(node)
-                    if node.position.y < up {
                     //I fetched a node at that point created by JSTileMap
                     node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
+                    if node.position.y > up {
+                        node.name = "inactive"
+                        node.physicsBody?.resting = true
+                    }
                     node.physicsBody?.dynamic = false
                     node.physicsBody?.restitution = 0
                     //node.physicsBody?.resting = true
@@ -154,7 +153,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                     //println("added physics")
                     //You now have a physics body on your floor tiles! :)
-                    }
                 }
             }
         }
@@ -163,31 +161,64 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //MARK: Tile Map Management
     var physicsTiles = [SKSpriteNode]()
     
-    
-    func maintainPhysicsTiles(playerPosition: CGPoint){
+    func setRestingOnPhysicsTiles(playerPosition: CGPoint){
         
         for tile in physicsTiles {
             let left = player.position.x - 1500
             let right = player.position.x + 1500
-            let up = player.position.y + 200
-            let down = player.position.y - 200
+            let up = player.position.y + 1000
+            let upRemove = player.position.y + 2400
+            let down = player.position.y - 1000
+            let downRemove = player.position.y - 2400
             
-            if tile.position.y < up && tile.name == "inactive"{
+            if (tile.position.y < up || tile.position.y > down) && tile.name == "inactive"{
                 println("adding body at \(tile.position)")
                 tile.name = "active"
-                tile.physicsBody = SKPhysicsBody(rectangleOfSize: tile.frame.size)
-                tile.physicsBody?.dynamic = false
-                tile.physicsBody?.restitution = 0
-                if currentMap == "kz_wonderland" {
-                    tile.physicsBody?.friction = 0.01
-                } else {
-                    tile.physicsBody?.friction = 5
-                }
-                tile.alpha = 0
-                tile.physicsBody?.categoryBitMask = PhysicsCategory.Floor
-                tile.physicsBody?.contactTestBitMask = PhysicsCategory.Player
-                }
+                tile.physicsBody?.resting = false
+            } else if (tile.position.y > upRemove || tile.position.y < downRemove) && tile.name == "active"{
+                tile.name = "inactive"
+                println("removing body at \(tile.position)")
+                tile.physicsBody?.resting = true
             }
+        }
+    }
+    
+    func maintainPhysicsTiles(playerPosition: CGPoint, xOry: String){
+        
+        for tile in physicsTiles {
+            let left = player.position.x - 300
+            let right = player.position.x + 300
+            let up = player.position.y + 500
+            let down = player.position.y - 500
+            
+            if xOry == "y" {
+            if(tile.position.y < up || tile.position.y > down) && tile.name == "inactive"{
+                println("adding body at \(tile.position)")
+                if tile.parent == nil {
+                worldNode.addChild(tile)
+                }
+                tile.name = "active"
+                } else if(tile.position.y > up || tile.position.y < down) && tile.name == "active"{
+                tile.name = "inactive"
+                println("removing body at \(tile.position)")
+                tile.removeFromParent()
+                }
+            } else if xOry == "x" {
+                if(tile.position.x < right || tile.position.x > left) && tile.name == "inactive"{
+                    println("adding body at \(tile.position)")
+                    if tile.parent == nil {
+                        worldNode.addChild(tile)
+                    }
+                    tile.name = "active"
+                } else if(tile.position.x > right || tile.position.x < left) && tile.name == "active"{
+                    tile.name = "inactive"
+                    println("removing body at \(tile.position)")
+                    tile.removeFromParent()
+                }
+
+            }
+        }
+        //physicsUpdateFromPoint = player.position
         }
 
     
@@ -360,9 +391,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //            if player.physicsBody?.velocity.dy != 0.0 {
 //            }
         } else {
+            //maintainPhysicsTiles(player.position)
+            //setRestingOnPhysicsTiles(player.position)
             player.setFalling(true)
         }
+        checkPhysicsTiles(player.position, lastPos: physicsUpdateFromPoint)
         scaleBackground(player.position.y)
+    }
+    
+    func checkPhysicsTiles(currentPos: CGPoint, lastPos: CGPoint){
+        let xOffset = currentPos.x - lastPos.x
+        let yOffset = currentPos.y - lastPos.y
+        
+        if yOffset > 100 || yOffset < -100{
+            println("will update physics")
+            physicsUpdateFromPoint = player.position
+            maintainPhysicsTiles(player.position, xOry: "y")
+        }
+        if xOffset > 100 || xOffset < -100{
+            println("will update physics")
+            physicsUpdateFromPoint = player.position
+            maintainPhysicsTiles(player.position, xOry: "x")
+        }
+        
     }
     
     //MARK: - Camera
@@ -419,7 +470,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if (CGRectContainsPoint(eastFrame2, location)) {
 
                 //temp
-                maintainPhysicsTiles(player.position)
                 //currentState = MoveStates.E
                 buttonEast.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
                 moveButtonIsPressed = true
