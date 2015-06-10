@@ -67,6 +67,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //physics in tiles
     var currentPoint = CGPointMake(0.0, 0.0)
+    var northPoint = CGPointMake(0.0, 0.0)
+    var southPoint = CGPointMake(0.0, 0.0)
+    var westPoint = CGPointMake(0.0, 0.0)
+    var eastPoint = CGPointMake(0.0, 0.0)
         
     //MARK: Setup Methods
     func setupMap() {
@@ -91,7 +95,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(worldNode)
         setupTiles()
         //maintainTiles()
-        println(tilesCurrentlyActive)
+        //println(tilesCurrentlyActive)
         tileMapFrame = tileMap.calculateAccumulatedFrame()
         
         if modelName == "iPhone 66" {
@@ -115,9 +119,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let gid = layerInfo.layer.tileGidAt(layerInfo.layer.pointForCoord(point)) //The gID is the ID of the tile. They start at 1 up the the amount of tiles in your tile set.
                 
                 //determining which tiles to act on
-                if gid == 383 || gid == 384 || gid == 385 || gid == 9 || gid == 1{
-                    
+                if gid == 383 || gid == 384 || gid == 385 || gid == 9 || gid == 11{
+                    let left = player.position.x - 1500
+                    let right = player.position.x + 1500
+                    let up = player.position.y + 300
+                    let down = player.position.y - 700
+                
                     let node = layerInfo.layer.tileAtCoord(point)
+                    node.name = "inactive"
+                    physicsTiles.append(node)
+                    if node.position.y < up {
                     //I fetched a node at that point created by JSTileMap
                     node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
                     node.physicsBody?.dynamic = false
@@ -129,90 +140,75 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         node.physicsBody?.friction = 5
                     }
                     node.alpha = 0
+                    node.name = "active"
                     if gid == 1 {
                         node.physicsBody?.categoryBitMask = PhysicsCategory.Bounce
                         spawnParticles(node.position)
                     } else {
                         node.physicsBody?.categoryBitMask = PhysicsCategory.Floor
                     }
+                    
+                    if gid == 11 {
+                    }
                     node.physicsBody?.contactTestBitMask = PhysicsCategory.Player
-                    tilesCurrentlyActive.append(point)
+                    
                     //println("added physics")
                     //You now have a physics body on your floor tiles! :)
+                    }
                 }
             }
         }
     }
     
     //MARK: Tile Map Management
-    let horizontalTileRange = 10
-    let verticalTileRange = 10
-    var tilesToRemove = [CGPointMake(0, 0)]
-    var tilesCurrentlyActive = [CGPointMake(0, 0)]
+    var physicsTiles = [SKSpriteNode]()
+    
+    
+    func maintainPhysicsTiles(playerPosition: CGPoint){
+        
+        for tile in physicsTiles {
+            let left = player.position.x - 1500
+            let right = player.position.x + 1500
+            let up = player.position.y + 200
+            let down = player.position.y - 200
+            
+            if tile.position.y < up && tile.name == "inactive"{
+                println("adding body at \(tile.position)")
+                tile.name = "active"
+                tile.physicsBody = SKPhysicsBody(rectangleOfSize: tile.frame.size)
+                tile.physicsBody?.dynamic = false
+                tile.physicsBody?.restitution = 0
+                if currentMap == "kz_wonderland" {
+                    tile.physicsBody?.friction = 0.01
+                } else {
+                    tile.physicsBody?.friction = 5
+                }
+                tile.alpha = 0
+                tile.physicsBody?.categoryBitMask = PhysicsCategory.Floor
+                tile.physicsBody?.contactTestBitMask = PhysicsCategory.Player
+                }
+            }
+        }
+
     
 
-    func indexForTileAtPoint(tileAtPoint: CGPoint) -> Int {
-        var index = 0
-        if let i = find(tilesCurrentlyActive, tileAtPoint) {
-            index = i
-        } else {
-            index = -1
+     func removeTilesInArray(){
+        println("removing tiles")
+        for tile in physicsTiles {
+
+            if tile.position.y > (player.position.y + 50){
+                let layerInfo:TMXLayerInfo = tileMap.layers.lastObject as! TMXLayerInfo
+                
+                layerInfo.layer.removeTileAtCoord(tile.position)
+                //physicsTiles.removeAtIndex(indexForTileAtPoint(tile))
+                println(physicsTiles.count)
+            }
+            
         }
-        return index
     }
-    
-    func tileCheckLeft(currentPoint: CGPoint) -> Int {
-        var value = 0
-        if (Int(currentPoint.x) - horizontalTileRange) <= 0 {
-            value = 0
-        }
-        else {
-            value = (Int(currentPoint.x) - horizontalTileRange)
-        }
-        return value
-    }
-    
-    func tileCheckRight(currentPoint: CGPoint) -> Int {
-        var value = 1
-        if (Int(currentPoint.x) + horizontalTileRange) >=  Int(tileMap.mapSize.width){
-            value = Int(tileMap.mapSize.width)
-        }
-        else {
-            value = (Int(currentPoint.x) + horizontalTileRange)
-        }
-        return value
-    }
-    
-    func tileCheckUp(currentPoint: CGPoint) -> Int {
-        var value = 1
-        if (Int(currentPoint.y) + verticalTileRange) >=  Int(tileMap.mapSize.height){
-            value = Int(tileMap.mapSize.height)
-        }
-        else {
-            value = (Int(currentPoint.y) + verticalTileRange)
-        }
-        return value
-    }
-    
-    func tileCheckDown(currentPoint: CGPoint) -> Int {
-        var value = 1
-        if (Int(currentPoint.y) - verticalTileRange) <= 1{
-            value = 0
-        }
-        else {
-            value = (Int(currentPoint.y) + verticalTileRange)
-        }
-        return value
-    }
-    
-    
 
     
     func maintainTiles() {
-        println(tileCheckLeft(currentPoint))
-        println(tileCheckRight(currentPoint))
-        println(tileCheckUp(currentPoint))
-        println(tileCheckDown(currentPoint))
         for var a = 0; a < Int(tileMap.mapSize.width); a++ { //Go through every point across the tile map
             for var b = 0; b < Int(tileMap.mapSize.height); b++ { //Go through every point up the tile map
                 let layerInfo:TMXLayerInfo = tileMap.layers.lastObject as! TMXLayerInfo //Get the first layer (you may want to pick another layer if you don't want to use the first one on the tile map)
@@ -242,7 +238,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         node.physicsBody?.categoryBitMask = PhysicsCategory.Floor
                     }
                     node.physicsBody?.contactTestBitMask = PhysicsCategory.Player
-                    tilesCurrentlyActive.append(point)
                     //println("added physics")
                     //You now have a physics body on your floor tiles! :)
                 }
@@ -344,16 +339,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createWorld()
         setupInterface()
         setupPlayer()
-        println(indexForTileAtPoint(CGPointMake(0, 127)))
     }
     
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         //delta
-        currentPoint = CGPointMake(round(player.position.x / 50), round(player.position.y / 50))
-        //println(currentPoint)
-        //println("left: \(tileCheckLeft(currentPoint))right: \(tileCheckRight(currentPoint))up:\(tileCheckUp(currentPoint)) down:\(tileCheckDown(currentPoint))")
         if lastUpdateTime > 0 {
             dt = currentTime - lastUpdateTime
         } else {
@@ -426,8 +417,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //touched right
             if (CGRectContainsPoint(eastFrame2, location)) {
-                //check for sliding
-               
+
+                //temp
+                maintainPhysicsTiles(player.position)
                 //currentState = MoveStates.E
                 buttonEast.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
                 moveButtonIsPressed = true
@@ -589,6 +581,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if collision == PhysicsCategory.Player | PhysicsCategory.Bounce {
             //println("hit bounce tile")
             player.physicsBody?.applyImpulse(CGVectorMake(0,75))
+        }
+        
+        if collision == PhysicsCategory.Player | PhysicsCategory.Floor {
         }
     }
     
