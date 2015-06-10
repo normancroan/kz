@@ -91,11 +91,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         worldNode.addChild(tileMap)
         addChild(worldNode)
         setupTiles()
+        maintainPhysicsTiles(player.position, xOry: "x")
+        maintainPhysicsTiles(player.position, xOry: "y")
         //maintainTiles()
         //println(tilesCurrentlyActive)
         tileMapFrame = tileMap.calculateAccumulatedFrame()
         
-        if modelName == "iPhone 66" {
+        if modelName == "iPhone 6" {
             if currentMap == "kz_wonderland"{
                 snowEmitter.position = CGPointMake(self.view!.bounds.width / 2, self.view!.bounds.height)
                 addChild(snowEmitter)
@@ -116,7 +118,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let gid = layerInfo.layer.tileGidAt(layerInfo.layer.pointForCoord(point)) //The gID is the ID of the tile. They start at 1 up the the amount of tiles in your tile set.
                 
                 //determining which tiles to act on
-                if gid == 383 || gid == 384 || gid == 385 || gid == 9 || gid == 11{
+                if gid == 383 || gid == 384 || gid == 385 || gid == 9 || gid == 11 || gid == 1{
                     let left = player.position.x - 1500
                     let right = player.position.x + 1500
                     let up = player.position.y + 300
@@ -141,6 +143,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     node.alpha = 0
                     node.name = "active"
                     if gid == 1 {
+                        node.name = "physics"
                         node.physicsBody?.categoryBitMask = PhysicsCategory.Bounce
                         spawnParticles(node.position)
                     } else {
@@ -186,33 +189,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func maintainPhysicsTiles(playerPosition: CGPoint, xOry: String){
         
         for tile in physicsTiles {
-            let left = player.position.x - 300
-            let right = player.position.x + 300
-            let up = player.position.y + 500
-            let down = player.position.y - 500
+            let left = player.position.x - 1000
+            let right = player.position.x + 1000
+            let up = player.position.y + 1500
+            let down = player.position.y - 1500
             
             if xOry == "y" {
             if(tile.position.y < up || tile.position.y > down) && tile.name == "inactive"{
-                println("adding body at \(tile.position)")
+                //println("adding body at \(tile.position)")
                 if tile.parent == nil {
                 worldNode.addChild(tile)
                 }
                 tile.name = "active"
                 } else if(tile.position.y > up || tile.position.y < down) && tile.name == "active"{
                 tile.name = "inactive"
-                println("removing body at \(tile.position)")
+                //println("removing body at \(tile.position)")
                 tile.removeFromParent()
                 }
             } else if xOry == "x" {
                 if(tile.position.x < right || tile.position.x > left) && tile.name == "inactive"{
-                    println("adding body at \(tile.position)")
+                    //println("adding body at \(tile.position)")
                     if tile.parent == nil {
                         worldNode.addChild(tile)
                     }
                     tile.name = "active"
                 } else if(tile.position.x > right || tile.position.x < left) && tile.name == "active"{
                     tile.name = "inactive"
-                    println("removing body at \(tile.position)")
+                    //println("removing body at \(tile.position)")
                     tile.removeFromParent()
                 }
 
@@ -391,25 +394,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //            if player.physicsBody?.velocity.dy != 0.0 {
 //            }
         } else {
-            //maintainPhysicsTiles(player.position)
-            //setRestingOnPhysicsTiles(player.position)
             player.setFalling(true)
         }
         checkPhysicsTiles(player.position, lastPos: physicsUpdateFromPoint)
-        scaleBackground(player.position.y)
+        //scaleBackground(player.position.y)
     }
     
     func checkPhysicsTiles(currentPos: CGPoint, lastPos: CGPoint){
         let xOffset = currentPos.x - lastPos.x
         let yOffset = currentPos.y - lastPos.y
         
-        if yOffset > 100 || yOffset < -100{
-            println("will update physics")
+        if yOffset > 1000 || yOffset < -1000{
+            //println("will update physics")
             physicsUpdateFromPoint = player.position
             maintainPhysicsTiles(player.position, xOry: "y")
         }
-        if xOffset > 100 || xOffset < -100{
-            println("will update physics")
+        if xOffset > 900 || xOffset < -900{
+            //println("will update physics")
             physicsUpdateFromPoint = player.position
             maintainPhysicsTiles(player.position, xOry: "x")
         }
@@ -631,9 +632,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if collision == PhysicsCategory.Player | PhysicsCategory.Bounce {
             //println("hit bounce tile")
             player.physicsBody?.applyImpulse(CGVectorMake(0,75))
-        }
-        
-        if collision == PhysicsCategory.Player | PhysicsCategory.Floor {
         }
     }
     
