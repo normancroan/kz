@@ -35,7 +35,9 @@ class GameViewController: UIViewController {
         skView.showsFPS = true
         skView.showsNodeCount = true
         //skView.showsPhysics = true
+        skView.showsDrawCount = true
         skView.ignoresSiblingOrder = true
+        //skView.showsQuadCount = true
         /* Set the scale mode to scale to fit the window */
         scene.size = skView.bounds.size
         scene.scaleMode = .AspectFit

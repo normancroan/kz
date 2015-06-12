@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18099AEC1B295D12002932F3 /* SKAMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099AEB1B295D12002932F3 /* SKAMapTile.m */; };
+		18099AFD1B295D1A002932F3 /* SKAMiniMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099AEE1B295D1A002932F3 /* SKAMiniMap.m */; };
+		18099AFE1B295D1A002932F3 /* SKAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099AF01B295D1A002932F3 /* SKAObject.m */; };
+		18099AFF1B295D1A002932F3 /* SKAObjectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099AF21B295D1A002932F3 /* SKAObjectLayer.m */; };
+		18099B001B295D1A002932F3 /* SKASprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099AF41B295D1A002932F3 /* SKASprite.m */; };
+		18099B011B295D1A002932F3 /* SKASpriteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099AF61B295D1A002932F3 /* SKASpriteLayer.m */; };
+		18099B021B295D1A002932F3 /* SKATestHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099AF81B295D1A002932F3 /* SKATestHud.m */; };
+		18099B031B295D1A002932F3 /* SKATestPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099AFA1B295D1A002932F3 /* SKATestPlayer.m */; };
+		18099B041B295D1A002932F3 /* SKATiledMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099AFC1B295D1A002932F3 /* SKATiledMap.m */; };
+		18099B091B295D64002932F3 /* SKAButtonSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099B061B295D64002932F3 /* SKAButtonSprite.m */; };
+		18099B0A1B295D64002932F3 /* SKACroppedMiniMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099B081B295D64002932F3 /* SKACroppedMiniMap.m */; };
+		18099B101B296642002932F3 /* kz_signs_small.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18099B0F1B296642002932F3 /* kz_signs_small.1.png */; };
+		18099B151B296673002932F3 /* egypt_items_medium.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18099B131B296673002932F3 /* egypt_items_medium.1.png */; };
+		18099B191B29667B002932F3 /* egypt_small_floors_bgra.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18099B171B29667B002932F3 /* egypt_small_floors_bgra.1.png */; };
+		18099B1D1B296683002932F3 /* egypt_small_walls_rgba4.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18099B1B1B296683002932F3 /* egypt_small_walls_rgba4.1.png */; };
+		18099B211B29668C002932F3 /* egypt_statues_medium.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18099B1F1B29668C002932F3 /* egypt_statues_medium.1.png */; };
+		18099B251B2966B8002932F3 /* tmx-bg-tiles.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18099B231B2966B8002932F3 /* tmx-bg-tiles.1.png */; };
+		18099B291B2968CF002932F3 /* kz_egypt_walls.tps in Resources */ = {isa = PBXBuildFile; fileRef = 18099B271B2968CF002932F3 /* kz_egypt_walls.tps */; };
+		18099B2A1B2968CF002932F3 /* kz_egypt_tiles_small.tps in Resources */ = {isa = PBXBuildFile; fileRef = 18099B281B2968CF002932F3 /* kz_egypt_tiles_small.tps */; };
+		18099B301B296BDC002932F3 /* kz_egypt_3.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18099B2E1B296BDC002932F3 /* kz_egypt_3.tmx */; };
+		18099B321B296C60002932F3 /* kz_egypt_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 18099B311B296C60002932F3 /* kz_egypt_3.json */; };
 		18149C621B19709F00522024 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149C611B19709F00522024 /* AppDelegate.swift */; };
 		18149C641B19709F00522024 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18149C631B19709F00522024 /* GameScene.sks */; };
 		18149C661B19709F00522024 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149C651B19709F00522024 /* GameScene.swift */; };
@@ -37,7 +58,6 @@
 		18149CD21B1AA7C500522024 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149CD11B1AA7C500522024 /* Player.swift */; };
 		183095FF1B1D604B00BBB25B /* kz_egypt.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 183095FE1B1D604B00BBB25B /* kz_egypt.tmx */; };
 		184D00071B269F35001D722E /* egypt_statues_medium.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184D00061B269F35001D722E /* egypt_statues_medium.atlasc */; };
-		184DFFF11B26819A001D722E /* kz_egypt_2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF01B26819A001D722E /* kz_egypt_2.tmx */; };
 		184DFFFA1B268C6F001D722E /* egypt_small_floors_bgra.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */; };
 		184DFFFB1B268C6F001D722E /* egypt_small_walls_rgba4.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */; };
 		18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */; };
@@ -72,6 +92,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18099AEA1B295D12002932F3 /* SKAMapTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAMapTile.h; sourceTree = "<group>"; };
+		18099AEB1B295D12002932F3 /* SKAMapTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAMapTile.m; sourceTree = "<group>"; };
+		18099AED1B295D1A002932F3 /* SKAMiniMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAMiniMap.h; sourceTree = "<group>"; };
+		18099AEE1B295D1A002932F3 /* SKAMiniMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAMiniMap.m; sourceTree = "<group>"; };
+		18099AEF1B295D1A002932F3 /* SKAObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAObject.h; sourceTree = "<group>"; };
+		18099AF01B295D1A002932F3 /* SKAObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAObject.m; sourceTree = "<group>"; };
+		18099AF11B295D1A002932F3 /* SKAObjectLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAObjectLayer.h; sourceTree = "<group>"; };
+		18099AF21B295D1A002932F3 /* SKAObjectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAObjectLayer.m; sourceTree = "<group>"; };
+		18099AF31B295D1A002932F3 /* SKASprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKASprite.h; sourceTree = "<group>"; };
+		18099AF41B295D1A002932F3 /* SKASprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKASprite.m; sourceTree = "<group>"; };
+		18099AF51B295D1A002932F3 /* SKASpriteLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKASpriteLayer.h; sourceTree = "<group>"; };
+		18099AF61B295D1A002932F3 /* SKASpriteLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKASpriteLayer.m; sourceTree = "<group>"; };
+		18099AF71B295D1A002932F3 /* SKATestHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKATestHud.h; sourceTree = "<group>"; };
+		18099AF81B295D1A002932F3 /* SKATestHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATestHud.m; sourceTree = "<group>"; };
+		18099AF91B295D1A002932F3 /* SKATestPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKATestPlayer.h; sourceTree = "<group>"; };
+		18099AFA1B295D1A002932F3 /* SKATestPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATestPlayer.m; sourceTree = "<group>"; };
+		18099AFB1B295D1A002932F3 /* SKATiledMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKATiledMap.h; sourceTree = "<group>"; };
+		18099AFC1B295D1A002932F3 /* SKATiledMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATiledMap.m; sourceTree = "<group>"; };
+		18099B051B295D64002932F3 /* SKAButtonSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAButtonSprite.h; sourceTree = "<group>"; };
+		18099B061B295D64002932F3 /* SKAButtonSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAButtonSprite.m; sourceTree = "<group>"; };
+		18099B071B295D64002932F3 /* SKACroppedMiniMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKACroppedMiniMap.h; sourceTree = "<group>"; };
+		18099B081B295D64002932F3 /* SKACroppedMiniMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKACroppedMiniMap.m; sourceTree = "<group>"; };
+		18099B0B1B295D83002932F3 /* CollisionDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollisionDefine.h; sourceTree = "<group>"; };
+		18099B0F1B296642002932F3 /* kz_signs_small.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_signs_small.1.png; sourceTree = "<group>"; };
+		18099B131B296673002932F3 /* egypt_items_medium.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egypt_items_medium.1.png; sourceTree = "<group>"; };
+		18099B171B29667B002932F3 /* egypt_small_floors_bgra.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egypt_small_floors_bgra.1.png; sourceTree = "<group>"; };
+		18099B1B1B296683002932F3 /* egypt_small_walls_rgba4.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egypt_small_walls_rgba4.1.png; sourceTree = "<group>"; };
+		18099B1F1B29668C002932F3 /* egypt_statues_medium.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egypt_statues_medium.1.png; sourceTree = "<group>"; };
+		18099B231B2966B8002932F3 /* tmx-bg-tiles.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tmx-bg-tiles.1.png"; path = "tmx-bg-tiles.atlasc/tmx-bg-tiles.1.png"; sourceTree = "<group>"; };
+		18099B271B2968CF002932F3 /* kz_egypt_walls.tps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt_walls.tps; sourceTree = "<group>"; };
+		18099B281B2968CF002932F3 /* kz_egypt_tiles_small.tps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt_tiles_small.tps; sourceTree = "<group>"; };
+		18099B2E1B296BDC002932F3 /* kz_egypt_3.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt_3.tmx; sourceTree = "<group>"; };
+		18099B311B296C60002932F3 /* kz_egypt_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_egypt_3.json; sourceTree = "<group>"; };
 		18149C5C1B19709F00522024 /* KZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18149C601B19709F00522024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18149C611B19709F00522024 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +162,6 @@
 		18149CD11B1AA7C500522024 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		183095FE1B1D604B00BBB25B /* kz_egypt.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt.tmx; sourceTree = "<group>"; };
 		184D00061B269F35001D722E /* egypt_statues_medium.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_statues_medium.atlasc; sourceTree = "<group>"; };
-		184DFFF01B26819A001D722E /* kz_egypt_2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt_2.tmx; sourceTree = "<group>"; };
 		184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_small_floors_bgra.atlasc; sourceTree = "<group>"; };
 		184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_small_walls_rgba4.atlasc; sourceTree = "<group>"; };
 		18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Jump.atlas; sourceTree = "<group>"; };
@@ -152,6 +204,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18099AE91B295BF5002932F3 /* SKAToolKit */ = {
+			isa = PBXGroup;
+			children = (
+				18099B0B1B295D83002932F3 /* CollisionDefine.h */,
+				18099B051B295D64002932F3 /* SKAButtonSprite.h */,
+				18099B061B295D64002932F3 /* SKAButtonSprite.m */,
+				18099B071B295D64002932F3 /* SKACroppedMiniMap.h */,
+				18099B081B295D64002932F3 /* SKACroppedMiniMap.m */,
+				18099AEA1B295D12002932F3 /* SKAMapTile.h */,
+				18099AEB1B295D12002932F3 /* SKAMapTile.m */,
+				18099AED1B295D1A002932F3 /* SKAMiniMap.h */,
+				18099AEE1B295D1A002932F3 /* SKAMiniMap.m */,
+				18099AEF1B295D1A002932F3 /* SKAObject.h */,
+				18099AF01B295D1A002932F3 /* SKAObject.m */,
+				18099AF11B295D1A002932F3 /* SKAObjectLayer.h */,
+				18099AF21B295D1A002932F3 /* SKAObjectLayer.m */,
+				18099AF31B295D1A002932F3 /* SKASprite.h */,
+				18099AF41B295D1A002932F3 /* SKASprite.m */,
+				18099AF51B295D1A002932F3 /* SKASpriteLayer.h */,
+				18099AF61B295D1A002932F3 /* SKASpriteLayer.m */,
+				18099AF71B295D1A002932F3 /* SKATestHud.h */,
+				18099AF81B295D1A002932F3 /* SKATestHud.m */,
+				18099AF91B295D1A002932F3 /* SKATestPlayer.h */,
+				18099AFA1B295D1A002932F3 /* SKATestPlayer.m */,
+				18099AFB1B295D1A002932F3 /* SKATiledMap.h */,
+				18099AFC1B295D1A002932F3 /* SKATiledMap.m */,
+			);
+			name = SKAToolKit;
+			sourceTree = "<group>";
+		};
+		18099B0C1B295F61002932F3 /* SKA Map Test Files */ = {
+			isa = PBXGroup;
+			children = (
+				18099B311B296C60002932F3 /* kz_egypt_3.json */,
+				18099B2E1B296BDC002932F3 /* kz_egypt_3.tmx */,
+				18099B0F1B296642002932F3 /* kz_signs_small.1.png */,
+				18099B131B296673002932F3 /* egypt_items_medium.1.png */,
+				18099B171B29667B002932F3 /* egypt_small_floors_bgra.1.png */,
+				18099B1B1B296683002932F3 /* egypt_small_walls_rgba4.1.png */,
+				18099B1F1B29668C002932F3 /* egypt_statues_medium.1.png */,
+				18099B231B2966B8002932F3 /* tmx-bg-tiles.1.png */,
+				18099B271B2968CF002932F3 /* kz_egypt_walls.tps */,
+				18099B281B2968CF002932F3 /* kz_egypt_tiles_small.tps */,
+			);
+			name = "SKA Map Test Files";
+			sourceTree = "<group>";
+		};
 		18149C531B19709F00522024 = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +324,8 @@
 		18149C851B19727500522024 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				18099B0C1B295F61002932F3 /* SKA Map Test Files */,
+				18099AE91B295BF5002932F3 /* SKAToolKit */,
 				18149C8F1B1972BE00522024 /* SKTUtils */,
 				18149C861B1972A600522024 /* JSTileMap */,
 				18149CAC1B1974DD00522024 /* KZ-Bridging-Header.h */,
@@ -270,7 +371,6 @@
 			children = (
 				184DFFEF1B268063001D722E /* kz_egypt */,
 				18F760591B25183C0086E776 /* tmx-bg-tiles.atlasc */,
-				18E87EB81B219B4500E4CC4E /* kz_signs_small.atlasc */,
 				18E87EA61B20512B00E4CC4E /* kz_wonderland_trees.atlasc */,
 				18E87EA21B204F4000E4CC4E /* kz_wonderland_tileset_medium.atlasc */,
 				18A9FCC71B1BF448004C0E5D /* Attack.atlas */,
@@ -288,7 +388,6 @@
 		18149CB81B197D3D00522024 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
-				184DFFF01B26819A001D722E /* kz_egypt_2.tmx */,
 				18F7605D1B251B2F0086E776 /* kz_abandoned.tmx */,
 				18F7604F1B2418CB0086E776 /* kz_dream.tmx */,
 				18E87EA41B20511E00E4CC4E /* kz_wonderland.tmx */,
@@ -301,6 +400,7 @@
 		184DFFEF1B268063001D722E /* kz_egypt */ = {
 			isa = PBXGroup;
 			children = (
+				18E87EB81B219B4500E4CC4E /* kz_signs_small.atlasc */,
 				183095FE1B1D604B00BBB25B /* kz_egypt.tmx */,
 				184D00061B269F35001D722E /* egypt_statues_medium.atlasc */,
 				184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */,
@@ -391,29 +491,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F760501B2418CB0086E776 /* kz_dream.tmx in Resources */,
+				18099B251B2966B8002932F3 /* tmx-bg-tiles.1.png in Resources */,
 				18149CCE1B19E2E500522024 /* valley-tiles-5.atlasc in Resources */,
 				18A9FCC61B1BF0AB004C0E5D /* Run.atlas in Resources */,
 				18E87EB11B21954300E4CC4E /* MagicFire.sks in Resources */,
-				184DFFF11B26819A001D722E /* kz_egypt_2.tmx in Resources */,
 				18F760541B250CB70086E776 /* MagicFireLow.sks in Resources */,
+				18099B291B2968CF002932F3 /* kz_egypt_walls.tps in Resources */,
 				18E87EA31B204F4000E4CC4E /* kz_wonderland_tileset_medium.atlasc in Resources */,
 				18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */,
+				18099B151B296673002932F3 /* egypt_items_medium.1.png in Resources */,
 				18149C701B19709F00522024 /* LaunchScreen.xib in Resources */,
 				18F7605A1B25183C0086E776 /* tmx-bg-tiles.atlasc in Resources */,
+				18099B1D1B296683002932F3 /* egypt_small_walls_rgba4.1.png in Resources */,
 				18149C6D1B19709F00522024 /* Images.xcassets in Resources */,
+				18099B101B296642002932F3 /* kz_signs_small.1.png in Resources */,
 				18A9FCC81B1BF448004C0E5D /* Attack.atlas in Resources */,
 				18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */,
 				184DFFFB1B268C6F001D722E /* egypt_small_walls_rgba4.atlasc in Resources */,
 				18E87EB91B219B4500E4CC4E /* kz_signs_small.atlasc in Resources */,
+				18099B2A1B2968CF002932F3 /* kz_egypt_tiles_small.tps in Resources */,
 				18149C641B19709F00522024 /* GameScene.sks in Resources */,
 				184DFFFA1B268C6F001D722E /* egypt_small_floors_bgra.atlasc in Resources */,
 				18F7605E1B251B2F0086E776 /* kz_abandoned.tmx in Resources */,
 				18E87E9F1B2010C800E4CC4E /* kz_wild.tmx in Resources */,
 				18E87EAF1B218E9E00E4CC4E /* spark.png in Resources */,
 				18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */,
+				18099B191B29667B002932F3 /* egypt_small_floors_bgra.1.png in Resources */,
+				18099B211B29668C002932F3 /* egypt_statues_medium.1.png in Resources */,
 				18E87EA71B20512B00E4CC4E /* kz_wonderland_trees.atlasc in Resources */,
+				18099B301B296BDC002932F3 /* kz_egypt_3.tmx in Resources */,
 				18149C8E1B1972A600522024 /* LICENSE.txt in Resources */,
 				18F760761B253C6C0086E776 /* Rain.sks in Resources */,
+				18099B321B296C60002932F3 /* kz_egypt_3.json in Resources */,
 				18149C6B1B19709F00522024 /* Main.storyboard in Resources */,
 				18E87EA51B20511E00E4CC4E /* kz_wonderland.tmx in Resources */,
 				183095FF1B1D604B00BBB25B /* kz_egypt.tmx in Resources */,
@@ -437,24 +546,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				18149C9D1B1972BE00522024 /* CGPoint+Extensions.swift in Sources */,
+				18099B041B295D1A002932F3 /* SKATiledMap.m in Sources */,
 				18149CA51B1972BE00522024 /* SKTEffects.swift in Sources */,
 				18149CA01B1972BE00522024 /* SKAction+Extensions.swift in Sources */,
+				18099B021B295D1A002932F3 /* SKATestHud.m in Sources */,
+				18099B0A1B295D64002932F3 /* SKACroppedMiniMap.m in Sources */,
 				18149C661B19709F00522024 /* GameScene.swift in Sources */,
 				18149CA31B1972BE00522024 /* SKNode+Extensions.swift in Sources */,
 				18149C8D1B1972A600522024 /* LFCGzipUtility.m in Sources */,
+				18099B001B295D1A002932F3 /* SKASprite.m in Sources */,
 				18149CA61B1972BE00522024 /* SKTTimingFunctions.swift in Sources */,
+				18099AFF1B295D1A002932F3 /* SKAObjectLayer.m in Sources */,
 				18149CA11B1972BE00522024 /* SKAction+SpecialEffects.swift in Sources */,
+				18099B031B295D1A002932F3 /* SKATestPlayer.m in Sources */,
+				18099AEC1B295D12002932F3 /* SKAMapTile.m in Sources */,
 				18149C9F1B1972BE00522024 /* Int+Extensions.swift in Sources */,
 				18149CD01B1AA74600522024 /* Tpes.swift in Sources */,
 				18149CA71B1972BE00522024 /* Vector3.swift in Sources */,
+				18099AFE1B295D1A002932F3 /* SKAObject.m in Sources */,
 				18F760521B2506E30086E776 /* Devices.swift in Sources */,
 				18149C681B19709F00522024 /* GameViewController.swift in Sources */,
 				18149CA21B1972BE00522024 /* SKColor+Extensions.swift in Sources */,
+				18099B091B295D64002932F3 /* SKAButtonSprite.m in Sources */,
+				18099B011B295D1A002932F3 /* SKASpriteLayer.m in Sources */,
 				18149C9E1B1972BE00522024 /* CGVector+Extensions.swift in Sources */,
 				18149C621B19709F00522024 /* AppDelegate.swift in Sources */,
 				18E87EA11B20125700E4CC4E /* MapSelectScene.swift in Sources */,
 				18149CA41B1972BE00522024 /* SKTAudio.swift in Sources */,
 				18149CD21B1AA7C500522024 /* Player.swift in Sources */,
+				18099AFD1B295D1A002932F3 /* SKAMiniMap.m in Sources */,
 				18149C9C1B1972BE00522024 /* CGFloat+Extensions.swift in Sources */,
 				18149C8C1B1972A600522024 /* JSTileMap.m in Sources */,
 			);

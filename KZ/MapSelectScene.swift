@@ -157,7 +157,7 @@ class MapSelectScene: SKScene {
             //touched egypt
             if (CGRectContainsPoint(egyptIcon.frame, location)) {
                 instructionsLabel.text = "Loading kz_egypt..."
-                let myScene = GameScene(size: self.size, currentMap: "kz_egypt_2")
+                let myScene = GameScene(size: self.size, currentMap: "kz_egypt_3")
                 myScene.scaleMode = self.scaleMode
                 let reveal = SKTransition.fadeWithDuration(0.5)
                 self.view?.presentScene(myScene, transition: reveal)

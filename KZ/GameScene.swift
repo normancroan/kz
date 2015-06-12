@@ -24,7 +24,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var worldNode: SKNode!
     var lastUpdateTime: NSTimeInterval = 0
     var dt: NSTimeInterval = 0
-    var tileMap = JSTileMap(named: "kz_wild.tmx")
+    var tileMap = JSTileMap(named: "I ADDED THIS CODE")
+    //var tileMap = SKATiledMap(mapName: "kz_egypt_3")
     var tileMapFrame: CGRect!
     var moveButtonIsPressed = false
     var jumpButtonIsPressed = false
@@ -51,7 +52,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let teleportButton = SKSpriteNode(imageNamed: "crystal")
     
     //these are used for the scaleBackground method and setupBackground
-    let background = SKSpriteNode(imageNamed: "changes during setup")
+    let background = SKSpriteNode(imageNamed: "kz_wild_background")
     var backgroundYStart: CGFloat = 1.0
     var backgroundXScaleStart: CGFloat = 1.0
     var backgroundYScaleStart: CGFloat = 1.0
@@ -70,6 +71,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //MARK: Setup Methods
     func setupMap() {
+        //****NO****tileMap = SKATiledMap(fileNamed: "kz_egypt_3")
         tileMap = JSTileMap(named: "\(currentMap).tmx")
         createBackground()
     }
@@ -83,6 +85,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.setScale(0.7)
         centerViewOn(player.position)
         physicsUpdateFromPoint = player.position
+        //player.setFalling(false)
     }
 
     
@@ -90,10 +93,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         worldNode = SKNode()
         worldNode.addChild(tileMap)
         addChild(worldNode)
+        //TMX LEGACY
         setupTiles()
         maintainPhysicsTiles(player.position, xOry: "x")
         maintainPhysicsTiles(player.position, xOry: "y")
-        //setupOtherTiles()
+        //setupOtherTiles() **THIS ONE CRASHES
         //maintainTiles()
         //println(tilesCurrentlyActive)
         tileMapFrame = tileMap.calculateAccumulatedFrame()
@@ -111,6 +115,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
     }
     
+    //TMX LEGACY
     func setupTiles() {
         for var a = 0; a < Int(tileMap.mapSize.width); a++ { //Go through every point across the tile map
             for var b = 0; b < Int(tileMap.mapSize.height); b++ { //Go through every point up the tile map
@@ -162,6 +167,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    //TMX LEGACY
     func setupOtherTiles() {
         for var a = 0; a < Int(tileMap.mapSize.width); a++ { //Go through every point across the tile map
             for var b = 0; b < Int(tileMap.mapSize.height); b++ { //Go through every point up the tile map
@@ -314,7 +320,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createBackground() {
-        //let background = SKSpriteNode(imageNamed: "\(currentMap)_background")
+        let background = SKSpriteNode(imageNamed: "\(currentMap)_background")
         addChild(background)
         background.zPosition = -101
         background.setScale(14)
@@ -356,7 +362,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setupMap()
         createWorld()
         setupInterface()
-        setupPlayer()
+        //setupPlayer()
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -374,8 +380,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.update(CGFloat(dt))
         if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 20.0) && (player.physicsBody?.velocity.dy >= -10.0){//!= 0.0 {
             player.setFalling(false)
-//            if player.physicsBody?.velocity.dy != 0.0 {
-//            }
+            if player.physicsBody?.velocity.dy != 0.0 {
+            }
         } else {
             player.setFalling(true)
         }
@@ -609,14 +615,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //MARK: Physics Handling
-    func didBeginContact(contact: SKPhysicsContact) {
-        let collision: UInt32 = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
-        
-        if collision == PhysicsCategory.Player | PhysicsCategory.Bounce {
-            //println("hit bounce tile")
-            player.physicsBody?.applyImpulse(CGVectorMake(0,75))
-        }
-    }
+//    func didBeginContact(contact: SKPhysicsContact) {
+//        let collision: UInt32 = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+//        
+//        if collision == PhysicsCategory.Player | PhysicsCategory.Bounce {
+//            //println("hit bounce tile")
+//            player.physicsBody?.applyImpulse(CGVectorMake(0,75))
+//        }
+//    }
     
     //MARK: Particles
     func spawnParticles(atPoint: CGPoint) {
