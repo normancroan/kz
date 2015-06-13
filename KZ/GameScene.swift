@@ -76,6 +76,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createBackground()
     }
     
+    //testing multiple files in one map
+    var mapOffsetX:CGFloat = 0
+    var mapSectionsArray = [SKNode]()
+    
     //add support for player based on Tiled map position
     func setupPlayer() {
         worldNode.addChild(player)
@@ -88,6 +92,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //player.setFalling(false)
     }
 
+    func createWorldFromMaps() {
+        worldNode = SKNode()
+        addChild(worldNode)
+        
+        for var i = 0; i < 2; i++ {
+            var myString = "small-map-test-\(i).tmx"
+            let tileMap2 = JSTileMap(named: myString)
+            println(i)
+            tileMap2.position = CGPointMake(mapOffsetX, 0)
+            
+            worldNode.addChild(tileMap2)
+            mapSectionsArray.append(tileMap2)
+            mapOffsetX += 2050
+            setupTiles()
+            tileMapFrame = tileMap.calculateAccumulatedFrame()
+        }
+        
+        //maintainPhysicsTiles(player.position, xOry: "x")
+        //maintainPhysicsTiles(player.position, xOry: "y")
+        anchorPoint = CGPointMake(0.5,0.5)
+        worldNode.position = CGPointMake(-tileMapFrame.width / 2, -tileMapFrame.height / 2)
+        self.physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
+        self.physicsWorld.contactDelegate = self
+    }
     
     func createWorld() {
         worldNode = SKNode()
@@ -97,9 +125,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setupTiles()
         maintainPhysicsTiles(player.position, xOry: "x")
         maintainPhysicsTiles(player.position, xOry: "y")
-        //setupOtherTiles() **THIS ONE CRASHES
+        //setupOtherTiles()
+        //hideLayer()
         //maintainTiles()
         //println(tilesCurrentlyActive)
+        //testing skat
         tileMapFrame = tileMap.calculateAccumulatedFrame()
         
         if modelName == "iPhone 6" {
@@ -114,6 +144,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
         self.physicsWorld.contactDelegate = self
     }
+    
+//    func testSKAT(){
+//        println(count(tileMap.spriteLayers))
+//        println(tileMap.spriteLayers)
+//        println(SKAMapTile())
+//    }
     
     //TMX LEGACY
     func setupTiles() {
@@ -131,6 +167,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     let down = player.position.y - 700
                 
                     let node = layerInfo.layer.tileAtCoord(point)
+                    if node != nil {
                     physicsTiles.append(node)
                     //I fetched a node at that point created by JSTileMap
                     node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
@@ -162,26 +199,42 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                     //println("added physics")
                     //You now have a physics body on your floor tiles! :)
+                        }
+                    }
                 }
             }
+            println(physicsTiles.count)
         }
-    }
     
     //TMX LEGACY
+    func hideLayer() {
+        let layerInfo1:TMXLayerInfo = tileMap.layers.firstObject as! TMXLayerInfo
+        let layerInfo2:TMXLayerInfo = tileMap.layers.objectAtIndex(1) as! TMXLayerInfo
+        let layerInfo3:TMXLayerInfo = tileMap.layers.objectAtIndex(2) as! TMXLayerInfo
+        let layerInfo4:TMXLayerInfo = tileMap.layers.objectAtIndex(3) as! TMXLayerInfo
+        //let layerInfo5:TMXLayerInfo = tileMap.layers.objectAtIndex(4) as! TMXLayerInfo
+        layerInfo1.layer.hidden = true
+        layerInfo2.layer.hidden = true
+        layerInfo3.layer.hidden = true
+        layerInfo4.layer.hidden = true
+        //layerInfo5.layer.hidden = true
+        //layerInfo1.tiles.destroy()
+    }
+    
     func setupOtherTiles() {
         for var a = 0; a < Int(tileMap.mapSize.width); a++ { //Go through every point across the tile map
             for var b = 0; b < Int(tileMap.mapSize.height); b++ { //Go through every point up the tile map
                 let layerInfo:TMXLayerInfo = tileMap.layers.firstObject as! TMXLayerInfo //Get the first layer (you may want to pick another layer if you don't want to use the first one on the tile map)
                 let point = CGPoint(x: a, y: b)
-                let left = player.position.x - 1500
-                let right = player.position.x + 1500
-                let up = player.position.y + 1000
-                let down = player.position.y - 1000
+//                let left = player.position.x - 1500
+//                let right = player.position.x + 1500
+//                let up = player.position.y + 1000
+//                let down = player.position.y - 1000
                 
                 let node = layerInfo.layer.tileAtCoord(point)
                 if node != nil {
-                    otherTileCoords.append(node.position)
-                    node.name = "active"
+                    node.hidden = true
+                    //otherTileCoords.append(node.position)
                     //println(otherTiles.count)
                 }
             }
@@ -323,12 +376,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let background = SKSpriteNode(imageNamed: "\(currentMap)_background")
         addChild(background)
         background.zPosition = -101
-        background.setScale(14)
+        background.setScale(2)
         background.name = "background"
         let bgTexture = SKTexture(imageNamed: "\(currentMap)_background")
         //bgTexture.filteringMode = .Nearest
         background.texture = bgTexture
-        background.position = CGPointMake(0, 725)
+        background.position = CGPointMake(0, 100)
         backgroundYStart = background.position.y
         if currentMap == "kz_wonderland" {
             background.xScale = 9
@@ -361,8 +414,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Setup your scene here */
         setupMap()
         createWorld()
+        //createWorldFromMaps()
         setupInterface()
-        //setupPlayer()
+        setupPlayer()
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -386,7 +440,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             player.setFalling(true)
         }
         checkPhysicsTiles(player.position, lastPos: physicsUpdateFromPoint)
-        //scaleBackground(player.position.y)
+        scaleBackground(player.position.y)
     }
     
     func checkPhysicsTiles(currentPos: CGPoint, lastPos: CGPoint){

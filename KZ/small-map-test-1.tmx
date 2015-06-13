@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="tmx-bg-tiles.1" tilewidth="32" tileheight="32" spacing="2">
+  <image source="tmx-bg-tiles.atlasc/tmx-bg-tiles.1.png" width="374" height="34"/>
+ </tileset>
+ <tileset firstgid="12" name="egypt_small_floors_bgra.1" tilewidth="32" tileheight="32" spacing="1">
+  <image source="egypt_small_floors_bgra.atlasc/egypt_small_floors_bgra.1.png" width="792" height="198"/>
+ </tileset>
+ <layer name="floors" width="64" height="64">
+  <data encoding="base64" compression="zlib">
+   eJztmEkOgzAMRXOAzr1mh/vv6iWqaAmBxNN7khcIAvb3j2JRCgDszUPi6ei90dmq29z6aL0YWU807cAnNR7Eq/VoaUWP6rCq06i8Wr/TY37QfA/EprfPM/swUu1WalnKw0qev2DfjActx5BJ50y1WifDPzfQJYufWur0PpNZp0a/NRrTD10inlfe828hY82jQNs47H1+9VgP0Eqk2ct6ftFB/zrQyRb0AyAPL4m3dhIACkTz/p5ntxdttOYVLX2yzWfU24+ph73s92jgbxvU+v87/7XX3vCe/z/meh65XijlIHGUOEmcJS4SV4nbhnt3Q2uXnv8A4TNBYA==
+  </data>
+ </layer>
+ <layer name="collision" width="64" height="64">
+  <data encoding="base64" compression="zlib">
+   eJzt28sKgzAUhOFsff8XlkJFLFpUNJmZ83/golDInEu6sq0BANRN3yftLGBxZu+OvsPO9je1vL4n1ZNUC/I8uZ+qu66aC0h35+6p31f1fDjG7LwxPz9OM3PKOsLZ/tBHDY5zcMwMYOV6hxVzK2b6UM3VG33YR190MAvgHWl36+160vqFZ7EfAFBL2u9+hXerfo3KWe3cUai3z1nV+qyiWt9V6737nsHVz27c8/+zV1tyvdj+f6niMwML+gYE
+  </data>
+ </layer>
+</map>

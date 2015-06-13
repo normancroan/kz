@@ -165,7 +165,7 @@ class MapSelectScene: SKScene {
             //touched wild
             }  else if (CGRectContainsPoint(wildIcon.frame, location)) {
                 instructionsLabel.text = "Loading kz_wild..."
-                let myScene = GameScene(size: self.size, currentMap: "kz_wild")
+                let myScene = GameScene(size: self.size, currentMap: "endless-map-0")
                 myScene.scaleMode = self.scaleMode
                 let reveal = SKTransition.fadeWithDuration(0.5)
                 self.view?.presentScene(myScene, transition: reveal)

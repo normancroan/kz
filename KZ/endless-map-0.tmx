@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="96" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="tmx-bg-tiles.1" tilewidth="32" tileheight="32" spacing="2">
+  <image source="tmx-bg-tiles.atlasc/tmx-bg-tiles.1.png" width="374" height="34"/>
+ </tileset>
+ <tileset firstgid="12" name="egypt_small_floors_bgra.1" tilewidth="32" tileheight="32" spacing="1">
+  <image source="egypt_small_floors_bgra.atlasc/egypt_small_floors_bgra.1.png" width="792" height="198"/>
+ </tileset>
+ <tileset firstgid="156" name="kz_signs_small.1" tilewidth="32" tileheight="32" spacing="1">
+  <image source="kz_signs_small.atlasc/kz_signs_small.1.png" width="204" height="134"/>
+ </tileset>
+ <layer name="egypt_floors" width="32" height="96">
+  <data encoding="base64" compression="zlib">
+   eJztmUsOwyAMRHOEfu7Z3n9XsugmSoQhYMaeeRJSQER4bDCBbJsQQvDxOal/HeurOepnI5v+s/llbVuNZa1E0dJCZNtHET2GvVzlHzR/WNZdT59s+bcV6efAc9/yzB2eGmbrQsu5XjBqPoIWey97rPkXzT+j6Nl/Mt0BsOy/V9T0t37T3ok90rzwBEkzYgxm2tS7/iPcw1jPp8xIfy6870wznDVXj4UCo+YdFM2R/3fIJhuINq2C0RfSfP/dWfcrjLHZQdGM5H90W2ptlmd2GH0hzTHHinIOGEl2fX8epTxLeZXyrtRb+lrrP1Y0VCw=
+  </data>
+ </layer>
+ <layer name="background_items" width="32" height="96">
+  <data encoding="base64" compression="zlib">
+   eJztzaENADAMBLHsP0pKmg2bFYqe2NLhqwIAAAAAAAAAAAAAgD+9neD/bhP8JzxqtQK3
+  </data>
+ </layer>
+ <layer name="collision" width="32" height="96">
+  <data encoding="base64" compression="zlib">
+   eJztmdEOQDAMRT1J9v8/LBJehKjZbm/bexIJgvW0jM2yCCGEP+uxoGg32w247Q1TLB5k87+7v6z7vLE8K1FcvhA59lFEr2EvT85s+bA8dz3HMDl6IP8aIN9byL4D6TDbi63PRVHR+Qpb7VHxWNtgy88oepwyzQGwxOHFm//Xb9o/tWe6L5AwOTPWYGZMvdeNMA9jHZ9WRv65QM+ZZhhrerfFQkXnHRbnyP87FJMNxpi8qJgLOf8/d9b8SsXa7LA4M+WfPZa3fZb16lTMhZxjthVlHDCS7H4nzXnZAEOKB9s=
+  </data>
+ </layer>
+</map>
