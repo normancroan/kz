@@ -145,8 +145,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
     }
     
-    
-    //this is loading ROWS, so x = 1 is 1 row over FOR EACH row up. Should be adjusted to prevent loading LONG rows
+    //need to make sure I'm not adding physics on top of physics 
     func cullPhysicsTiles() {
         let l = 3
         for var x = 0; x < Int(tileMap.mapWidth); x++ {
@@ -455,7 +454,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //createWorldFromMaps()
         setupInterface()
         setupPlayer()
-        cullTiles()
+        
+        //test culling
+//        cullTiles()
         cullPhysicsTiles()
     }
     
@@ -479,8 +480,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else {
             player.setFalling(true)
         }
-        checkPhysicsTiles(player.position, lastPos: physicsUpdateFromPoint)
+        //checkPhysicsTiles(player.position, lastPos: physicsUpdateFromPoint)
         scaleBackground(player.position.y)
+//        let intX = Int(player.position.x)
+//        let intY = Int(player.position.y)
+//        let playerX = intX / 32
+//        let playerY = intY / 32
+        let playerIndex = tileMap.indexForPoint(player.position)
+       tileMap.cullAroundIndexX(Int(playerIndex.x), indexY: Int(playerIndex.y), columnWidth: 5, rowHeight: 5)
+//        tileMap.cullAroundIndexX(playerX, indexY: playerY, columnWidth: 40, rowHeight: 15)
+
     }
     
     func checkPhysicsTiles(currentPos: CGPoint, lastPos: CGPoint){
