@@ -43,6 +43,8 @@
     self.mapWidth = [mapDictionary[@"width"] integerValue];
     self.mapHeight = [mapDictionary[@"height"] integerValue];
     
+    self.tileWidth = [mapDictionary[@"tilewidth"] integerValue];
+    self.tileHeight = [mapDictionary[@"tileheight"] integerValue];
     
     //creating tile dictionary
     NSMutableDictionary *tileSets = [[NSMutableDictionary alloc]init];
@@ -51,7 +53,7 @@
     {
         
         NSInteger tileWidth = [tileset[@"tilewidth"] integerValue];
-        self.tileWidth = tileWidth;
+        NSInteger tileHeight = [tileset[@"tileheight"] integerValue];
         
         //getting big texture
         NSString *path = [[tileset[@"image"] lastPathComponent] stringByDeletingPathExtension];
@@ -66,17 +68,32 @@
         }
         
         SKTexture *mainTexture = [SKTexture textureWithImage:image];
-        
+        mainTexture.filteringMode = SKTextureFilteringNearest;
+
         
         //calculating small texture
         NSInteger imageWidth = [tileset[@"imagewidth"] integerValue];
         NSInteger imageHeight = [tileset[@"imageheight"] integerValue];
         
-        NSInteger tileRows = imageWidth/tileWidth;
-        NSInteger tileColumns = imageHeight/tileWidth;
+        NSInteger spacing = [tileset[@"spacing"] integerValue];
+        NSInteger margin = [tileset[@"margin"] integerValue];
         
-        float tileWidthPercent = 1.0f/(float)tileRows;
-        float tileHeightPercent = 1.0f/(float)tileColumns;
+        NSInteger width = imageWidth - margin * 2;
+        NSInteger height = imageHeight - margin * 2;
+        
+        NSInteger tileColumns = ceil((float)width/(float)(tileWidth + spacing));
+        NSInteger tileRows = ceil((float)height/(float)(tileHeight + spacing));
+        
+
+        
+        float spacingPercentWidth = (float)spacing/(float)imageWidth;
+        float spacingPercentHeight = (float)spacing/(float)imageHeight;
+        
+        float marginPercentWidth = (float)margin/(float)tileWidth;
+        float marginPercentHeight = (float)margin/(float)tileHeight;
+        
+        float tileWidthPercent = (float)tileWidth/(float)imageWidth;
+        float tileHeightPercent = (float)tileHeight/(float)imageHeight;
 
         NSInteger index = [tileset[@"firstgid"] integerValue];
         
@@ -86,7 +103,13 @@
             {
                 
                 SKAMapTile *mapTile = [[SKAMapTile alloc]init];
-                SKTexture *texture = [SKTexture textureWithRect:CGRectMake(j*tileWidthPercent, 1.0f-tileHeightPercent*(i+1), tileWidthPercent, tileHeightPercent) inTexture:mainTexture];
+                float x = marginPercentWidth + j * (tileWidthPercent + spacingPercentWidth); //advance based on column
+                
+                float y = 1.0f - (marginPercentHeight + tileHeightPercent + (i * (tileHeightPercent + (spacingPercentHeight) )));
+                
+                SKTexture *texture = [SKTexture textureWithRect:CGRectMake(x, y, tileWidthPercent, tileHeightPercent) inTexture:mainTexture];
+                texture.filteringMode = SKTextureFilteringNearest;
+                                
                 mapTile.texture = texture;
                 mapTile.indexKey = index;
                 
@@ -147,11 +170,22 @@
             
             NSMutableArray *sprites = [[NSMutableArray alloc]init];
             
+            for (NSInteger i = 0; i < self.mapWidth; i++)
+            {
+                NSMutableArray *column = [[NSMutableArray alloc]init];
+                
+                for (NSInteger j = 0; j < self.mapHeight; j++)
+                {
+                    [column addObject:[NSNull null]];
+                }
+                
+                [sprites addObject:column];
+            }
+            
             //adding sprites
             for (int i = 0; i < rowsArray.count; i ++)
             {
                 NSArray *row = rowsArray[i];
-                NSMutableArray *spriteRow = [[NSMutableArray alloc]init];
                 
                 for (int j = 0; j < row.count; j++)
                 {
@@ -176,13 +210,20 @@
                             sprite.zPosition = 20;
                         }
 
-                        
-                        [spriteRow addObject:sprite];
                         [spriteLayer addChild:sprite];
+                        
+                        if (!spriteLayer.visible)
+                        {
+                            sprite.hidden = YES;
+                        }
+                        
+                        sprites[j][i] = sprite;
+                    }
+                    else
+                    {
+                         sprites[j][i] =[NSNull null];
                     }
                 }
-                
-                [sprites addObject:spriteRow];
             }
             
             spriteLayer.sprites = sprites;
@@ -223,7 +264,7 @@
                 
                 if ([objectLayer.drawOrder isEqualToString:@"topdown"])
                 {
-                    object.y = (self.mapHeight*self.tileWidth)-object.y-object.height;
+                    object.y = (self.mapHeight*self.tileHeight)-object.y-object.height;
                 }
                 
                 object.objectID = [objectDictionary[@"objectID"] integerValue];
@@ -269,7 +310,7 @@
 {
     SKTexture *texture = [self.scene.view textureFromNode:self];
     
-    NSInteger height = ((float)width/((float)self.mapWidth*(float)self.tileWidth)) * (self.mapHeight*self.tileWidth);
+    NSInteger height = ((float)width/((float)self.mapWidth*(float)self.tileWidth)) * (self.mapHeight*self.tileHeight);
     SKSpriteNode *miniMap = [SKSpriteNode spriteNodeWithTexture:texture size:CGSizeMake(width, height)];
     
     [self addChild:miniMap];
@@ -300,6 +341,8 @@
     return self.croppedMap;
 }
 
+
+
 -(void)update
 {
     if (self.autoFollowNode)
@@ -316,8 +359,8 @@
         if (position.y > 0)
             position.y = 0;
         
-        if (position.y < -self.mapHeight*self.tileWidth+self.scene.size.height)
-            position.y = -self.mapHeight*self.tileWidth+self.scene.size.height;
+        if (position.y < -self.mapHeight*self.tileHeight+self.scene.size.height)
+            position.y = -self.mapHeight*self.tileHeight+self.scene.size.height;
         if (position.x < -self.mapWidth*self.tileWidth+self.scene.size.width)
             position.x = -self.mapWidth*self.tileWidth+self.scene.size.width;
         
@@ -353,5 +396,93 @@
 
 }
 
+
+-(CGPoint)indexForPoint:(CGPoint)point
+{
+    return CGPointMake((NSInteger)point.x/self.tileWidth, (NSInteger)point.y/self.tileHeight);
+}
+
+-(NSArray *)tilesAroundPoint:(CGPoint)point inLayer:(NSInteger)layer
+{
+    CGPoint index = [self indexForPoint:point];
+    
+    return [self tilesAroundIndex:index inLayer:layer];
+}
+
+-(NSArray *)tilesAroundIndex:(CGPoint)point inLayer:(NSInteger)layer
+{
+    NSMutableArray *tiles = [[NSMutableArray alloc]init];
+    
+    NSInteger x = point.x;
+    NSInteger y = point.y;
+    
+    SKASpriteLayer *spriteLayer = self.spriteLayers[layer];
+    NSArray *array = spriteLayer.sprites;
+
+    if (x - 1 >= 0)
+    {
+        [tiles addObject:array[x-1][y]];
+        
+        if (y-1 >=0)
+        {
+            [tiles addObject:array[x-1][y-1]];
+        }
+        
+        if (y+1 < self.mapHeight)
+        {
+            [tiles addObject:array[x-1][y+1]];
+        }
+    }
+    
+    if (x + 1 < self.mapWidth)
+    {
+        [tiles addObject:array[x+1][y]];
+        
+        if(y+1 < self.mapHeight)
+        {
+            [tiles addObject:array[x+1][y+1]];
+        }
+        
+        if (y-1 >=0)
+        {
+            [tiles addObject:array[x+1][y-1]];
+        }
+    }
+    
+    if (y - 1 >= 0)
+    {
+        [tiles addObject:array[x][y-1]];
+    }
+    
+    if (y + 1 >= 0)
+    {
+        [tiles addObject:array[x][y+1]];
+    }
+    
+    //removing any NSNulls
+    for (id object in tiles.copy)
+    {
+        if (![object isKindOfClass:[SKASprite class]])
+        {
+            [tiles removeObject:object];
+        }
+    }
+
+    return tiles;
+}
+
+-(SKASprite *)spriteOnLayer:(NSInteger)layerNumber indexX:(NSInteger)x indexY:(NSInteger)y
+{
+    SKASpriteLayer *spriteLayer = self.spriteLayers[layerNumber];
+    
+    return [spriteLayer spriteForIndexX:x indexY:y];
+}
+
+-(NSArray *)objectsOnLayer:(NSInteger)layerNumber withName:(NSString *)name
+{
+    SKAObjectLayer *objectLayer = self.objectLayers[layerNumber];
+    
+    return [objectLayer objectsWithName:name];
+}
 
 @end

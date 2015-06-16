@@ -102,7 +102,7 @@ class MapSelectScene: SKScene {
         
         
         egyptIconLabel.fontSize = 15
-        egyptIconLabel.text = "kz_egypt_2"
+        egyptIconLabel.text = "kz_egypt_3"
         egyptIconLabel.name = "egypt_2"
         egyptIconLabel.zPosition = 200
         egyptIconLabel.verticalAlignmentMode = .Center
