@@ -163,7 +163,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         sprite.physicsBody = SKPhysicsBody(rectangleOfSize: sprite.frame.size)
                         sprite.physicsBody?.dynamic = false
                         sprite.physicsBody?.contactTestBitMask = PhysicsCategory.Player
+                        //sprite.physicsBody?.contactTestBitMask = SKACategoryPlayer
                         sprite.physicsBody?.categoryBitMask = PhysicsCategory.Floor
+                        //sprite.physicsBody?.categoryBitMask = SKACategoryFloor
                     }
                 }
             }
@@ -457,7 +459,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //test culling
 //        cullTiles()
-        cullPhysicsTiles()
+        //cullPhysicsTiles()
     }
     
     override func update(currentTime: CFTimeInterval) {

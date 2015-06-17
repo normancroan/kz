@@ -43,8 +43,65 @@
          "width":64,
          "x":0,
          "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "height":256,
+         "name":"collision",
+         "objects":[
+                {
+                 "height":32,
+                 "id":1,
+                 "name":"",
+                 "properties":
+                    {
+                     "SKACollisionType":"SKACollisionTypeRect"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":512,
+                 "y":7360
+                }, 
+                {
+                 "height":32,
+                 "id":9,
+                 "name":"",
+                 "properties":
+                    {
+                     "SKACollisionType":"SKACollisionTypeRect"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":2048,
+                 "x":0,
+                 "y":8128
+                }, 
+                {
+                 "height":0,
+                 "id":10,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":992,
+                 "y":7392
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "width":64,
+         "x":0,
+         "y":0
         }],
- "nextobjectid":1,
+ "nextobjectid":11,
  "orientation":"orthogonal",
  "properties":
     {

@@ -213,7 +213,7 @@
                         {
                             sprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:sprite.size];
                             sprite.physicsBody.dynamic = NO;
-                            sprite.physicsBody.categoryBitMask = SKACategoryFloor;
+                            sprite.physicsBody.categoryBitMask =SKACategoryFloor;
                             sprite.physicsBody.contactTestBitMask = SKACategoryPlayer;
                             sprite.zPosition = 20;
                         }

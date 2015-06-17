@@ -58,7 +58,7 @@
 		18149CA91B1972E600522024 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18149CA81B1972E600522024 /* libz.dylib */; };
 		18149CB71B197C6E00522024 /* tmx-rpg-bigpack.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18149CB61B197C6E00522024 /* tmx-rpg-bigpack.atlasc */; };
 		18149CCE1B19E2E500522024 /* valley-tiles-5.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18149CCD1B19E2E500522024 /* valley-tiles-5.atlasc */; };
-		18149CD01B1AA74600522024 /* Tpes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149CCF1B1AA74600522024 /* Tpes.swift */; };
+		18149CD01B1AA74600522024 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149CCF1B1AA74600522024 /* Types.swift */; };
 		18149CD21B1AA7C500522024 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149CD11B1AA7C500522024 /* Player.swift */; };
 		183095FF1B1D604B00BBB25B /* kz_egypt.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 183095FE1B1D604B00BBB25B /* kz_egypt.tmx */; };
 		184D00071B269F35001D722E /* egypt_statues_medium.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184D00061B269F35001D722E /* egypt_statues_medium.atlasc */; };
@@ -122,7 +122,6 @@
 		18099B7A1B2BEEA7002932F3 /* SKATestHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATestHud.m; sourceTree = "<group>"; };
 		18099B7B1B2BEEA7002932F3 /* SKATestPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKATestPlayer.h; sourceTree = "<group>"; };
 		18099B7C1B2BEEA7002932F3 /* SKATestPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATestPlayer.m; sourceTree = "<group>"; };
-		18099B8A1B2BEEF1002932F3 /* CollisionDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollisionDefine.h; sourceTree = "<group>"; };
 		18099B8D1B2FF65E002932F3 /* egypt_items_medium.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egypt_items_medium.1.png; sourceTree = "<group>"; };
 		18099B8E1B2FF65E002932F3 /* egypt_small_floors_bgra.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egypt_small_floors_bgra.1.png; sourceTree = "<group>"; };
 		18099B8F1B2FF65E002932F3 /* egypt_small_walls_rgba4.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egypt_small_walls_rgba4.1.png; sourceTree = "<group>"; };
@@ -132,6 +131,7 @@
 		18099B931B2FF65E002932F3 /* kz_signs_small.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_signs_small.1.png; sourceTree = "<group>"; };
 		18099B9F1B30284C002932F3 /* SKATiledMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKATiledMap.h; sourceTree = "<group>"; };
 		18099BA01B30284C002932F3 /* SKATiledMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATiledMap.m; sourceTree = "<group>"; };
+		18099BA21B310964002932F3 /* CollisionDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollisionDefine.h; sourceTree = "<group>"; };
 		18149C5C1B19709F00522024 /* KZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18149C601B19709F00522024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18149C611B19709F00522024 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 		18149CAC1B1974DD00522024 /* KZ-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KZ-Bridging-Header.h"; sourceTree = "<group>"; };
 		18149CB61B197C6E00522024 /* tmx-rpg-bigpack.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "tmx-rpg-bigpack.atlasc"; sourceTree = "<group>"; };
 		18149CCD1B19E2E500522024 /* valley-tiles-5.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "valley-tiles-5.atlasc"; sourceTree = "<group>"; };
-		18149CCF1B1AA74600522024 /* Tpes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tpes.swift; sourceTree = "<group>"; };
+		18149CCF1B1AA74600522024 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		18149CD11B1AA7C500522024 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		183095FE1B1D604B00BBB25B /* kz_egypt.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt.tmx; sourceTree = "<group>"; };
 		184D00061B269F35001D722E /* egypt_statues_medium.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_statues_medium.atlasc; sourceTree = "<group>"; };
@@ -213,7 +213,7 @@
 		18099AE91B295BF5002932F3 /* SKAToolKit */ = {
 			isa = PBXGroup;
 			children = (
-				18099B8A1B2BEEF1002932F3 /* CollisionDefine.h */,
+				18099BA21B310964002932F3 /* CollisionDefine.h */,
 				18099B691B2BEEA7002932F3 /* SKAButtonSprite.h */,
 				18099B6A1B2BEEA7002932F3 /* SKAButtonSprite.m */,
 				18099B6B1B2BEEA7002932F3 /* SKACroppedMiniMap.h */,
@@ -281,7 +281,7 @@
 		18149C5E1B19709F00522024 /* KZ */ = {
 			isa = PBXGroup;
 			children = (
-				18149CCF1B1AA74600522024 /* Tpes.swift */,
+				18149CCF1B1AA74600522024 /* Types.swift */,
 				18F760511B2506E30086E776 /* Devices.swift */,
 				18149C611B19709F00522024 /* AppDelegate.swift */,
 				18149C631B19709F00522024 /* GameScene.sks */,
@@ -572,7 +572,7 @@
 				18149C9F1B1972BE00522024 /* Int+Extensions.swift in Sources */,
 				18099B821B2BEEA7002932F3 /* SKAMiniMap.m in Sources */,
 				18099B881B2BEEA7002932F3 /* SKATestPlayer.m in Sources */,
-				18149CD01B1AA74600522024 /* Tpes.swift in Sources */,
+				18149CD01B1AA74600522024 /* Types.swift in Sources */,
 				18149CA71B1972BE00522024 /* Vector3.swift in Sources */,
 				18F760521B2506E30086E776 /* Devices.swift in Sources */,
 				18099B7F1B2BEEA7002932F3 /* SKAButtonSprite.m in Sources */,
@@ -719,6 +719,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KZ",
@@ -737,6 +738,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KZ",
