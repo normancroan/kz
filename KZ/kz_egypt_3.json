@@ -52,10 +52,10 @@
                 {
                  "height":32,
                  "id":1,
-                 "name":"",
+                 "name":"floor",
                  "properties":
                     {
-                     "SKACollisionType":"SKACollisionTypeRect"
+                     "SKACollisionTypeREMOVED":"SKACollisionTypeRect"
                     },
                  "rotation":0,
                  "type":"",
@@ -67,7 +67,7 @@
                 {
                  "height":32,
                  "id":9,
-                 "name":"",
+                 "name":"floor",
                  "properties":
                     {
                      "SKACollisionType":"SKACollisionTypeRect"

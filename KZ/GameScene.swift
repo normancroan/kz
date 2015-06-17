@@ -145,6 +145,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
     }
     
+    
     //need to make sure I'm not adding physics on top of physics 
     func cullPhysicsTiles() {
         let l = 3
@@ -171,6 +172,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
+    //MARK: SKAToolKit
+//    func setupPhysicsObjectsTest() {
+//        for var o = 0; o < Int(tileMap.objectsOnLayer(0, withName: "floor").count); o++ {
+//            //something
+//        }
+//    }
+    
+//    func setupPhysicsObjects() {
+//        for object in tileMap.objectsOnLayer(0, withName: "floor"){
+//            println(tileMap.objectLayers.first?.objects.x)
+//        }
+//    }
     
     
     func cullTiles() {
@@ -456,10 +469,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //createWorldFromMaps()
         setupInterface()
         setupPlayer()
-        
-        //test culling
-//        cullTiles()
-        //cullPhysicsTiles()
     }
     
     override func update(currentTime: CFTimeInterval) {

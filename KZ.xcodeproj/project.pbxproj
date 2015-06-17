@@ -61,6 +61,7 @@
 		18149CD01B1AA74600522024 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149CCF1B1AA74600522024 /* Types.swift */; };
 		18149CD21B1AA7C500522024 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149CD11B1AA7C500522024 /* Player.swift */; };
 		183095FF1B1D604B00BBB25B /* kz_egypt.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 183095FE1B1D604B00BBB25B /* kz_egypt.tmx */; };
+		183446781B31620700BADEBF /* CollisionDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 183446771B31620700BADEBF /* CollisionDefine.m */; };
 		184D00071B269F35001D722E /* egypt_statues_medium.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184D00061B269F35001D722E /* egypt_statues_medium.atlasc */; };
 		184DFFFA1B268C6F001D722E /* egypt_small_floors_bgra.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */; };
 		184DFFFB1B268C6F001D722E /* egypt_small_walls_rgba4.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */; };
@@ -168,6 +169,7 @@
 		18149CCF1B1AA74600522024 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		18149CD11B1AA7C500522024 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		183095FE1B1D604B00BBB25B /* kz_egypt.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt.tmx; sourceTree = "<group>"; };
+		183446771B31620700BADEBF /* CollisionDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollisionDefine.m; sourceTree = "<group>"; };
 		184D00061B269F35001D722E /* egypt_statues_medium.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_statues_medium.atlasc; sourceTree = "<group>"; };
 		184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_small_floors_bgra.atlasc; sourceTree = "<group>"; };
 		184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_small_walls_rgba4.atlasc; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				18099BA21B310964002932F3 /* CollisionDefine.h */,
+				183446771B31620700BADEBF /* CollisionDefine.m */,
 				18099B691B2BEEA7002932F3 /* SKAButtonSprite.h */,
 				18099B6A1B2BEEA7002932F3 /* SKAButtonSprite.m */,
 				18099B6B1B2BEEA7002932F3 /* SKACroppedMiniMap.h */,
@@ -588,6 +591,7 @@
 				18149C9C1B1972BE00522024 /* CGFloat+Extensions.swift in Sources */,
 				18099B861B2BEEA7002932F3 /* SKASpriteLayer.m in Sources */,
 				18099B841B2BEEA7002932F3 /* SKAObjectLayer.m in Sources */,
+				183446781B31620700BADEBF /* CollisionDefine.m in Sources */,
 				18149C8C1B1972A600522024 /* JSTileMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -726,6 +730,7 @@
 				);
 				INFOPLIST_FILE = KZ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "KZ/KZ-Bridging-Header.h";
@@ -745,6 +750,7 @@
 				);
 				INFOPLIST_FILE = KZ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "KZ/KZ-Bridging-Header.h";

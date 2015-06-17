@@ -74,12 +74,12 @@ class Player: SKSpriteNode {
         body.restitution = 0
         body.affectedByGravity = true
         body.allowsRotation = false
-        body.categoryBitMask = PhysicsCategory.Player
+        //body.categoryBitMask = PhysicsCategory.Player
         body.categoryBitMask = SKACategoryPlayer
         //body.collisionBitMask = PhysicsCategory.Floor | PhysicsCategory.Boundary
         body.collisionBitMask = SKACategoryFloor | SKACategoryWall
         //body.contactTestBitMask = PhysicsCategory.All
-        body.contactTestBitMask = SKACategoryWall | SKACategoryFloor
+        body.contactTestBitMask = SKACategoryFloor
         body.usesPreciseCollisionDetection = true
         
         self.physicsBody = body
