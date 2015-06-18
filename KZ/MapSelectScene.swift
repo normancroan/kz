@@ -12,7 +12,7 @@ import SpriteKit
 class MapSelectScene: SKScene {
     
     
-    let egyptIcon = SKSpriteNode(imageNamed: "kz_egypt_2_background")
+    let egyptIcon = SKSpriteNode(imageNamed: "kz_egypt_3_background")
     let egyptIconLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     let wildIcon = SKSpriteNode(imageNamed: "kz_wild_background")
     let wildIconLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
@@ -103,7 +103,7 @@ class MapSelectScene: SKScene {
         
         egyptIconLabel.fontSize = 15
         egyptIconLabel.text = "kz_egypt_3"
-        egyptIconLabel.name = "egypt_2"
+        egyptIconLabel.name = "egypt_3"
         egyptIconLabel.zPosition = 200
         egyptIconLabel.verticalAlignmentMode = .Center
         egyptIconLabel.position = egyptIcon.position

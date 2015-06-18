@@ -213,6 +213,7 @@
                         {
                             sprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:sprite.size];
                             sprite.physicsBody.dynamic = NO;
+                            sprite.physicsBody.restitution = 0;
                             sprite.physicsBody.categoryBitMask =SKACategoryFloor;
                             sprite.physicsBody.contactTestBitMask = SKACategoryPlayer;
                             sprite.zPosition = 20;
@@ -290,6 +291,8 @@
                     floorSprite.position = CGPointMake(object.centerX, object.centerY);
                     floorSprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:floorSprite.size];
                     floorSprite.physicsBody.dynamic = NO;
+                    floorSprite.physicsBody.restitution = 0.0;
+                    floorSprite.physicsBody.friction = 5;
                     floorSprite.physicsBody.categoryBitMask = SKACategoryFloor;
                     floorSprite.physicsBody.contactTestBitMask = SKACategoryPlayer;
                     [self addChild:floorSprite];

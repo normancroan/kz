@@ -17,8 +17,8 @@ class Player: SKSpriteNode {
     
     
     var jumpAmount:CGFloat = 0
-    var maxJump:CGFloat = 7.2//12 was before dt, need to modify by 1.6ish//18
-    
+//    var maxJump:CGFloat = 7.2//12 was before dt, need to modify by 1.6ish//18
+    var maxJump:CGFloat = 23
     var attackAmount:CGFloat = 0
     var maxAttack:CGFloat = 8
     
@@ -29,10 +29,12 @@ class Player: SKSpriteNode {
     var attackAction:SKAction?
     var jumpAction:SKAction?
     
-    var maxSpeed:CGFloat = 1.9//3.1 was before DT, need to modify by 1.6ish
-    
+//    var maxSpeed:CGFloat = 1.9//3.1 was before DT, need to modify by 1.6ish
+    var maxSpeed:CGFloat = 7//3.1 was before DT, need to modify by 1.6ish
+
     var isAttacking:Bool = false
     var isJumping:Bool = false
+    var isRunning:Bool = false
     var doubleJumpAlreadyUsed:Bool = false
     var walkingSlow:Bool = false
     var isFalling:Bool = false
@@ -98,11 +100,13 @@ class Player: SKSpriteNode {
         
         //capped the delta time to try and correct lag cheating
         var dtOpen: CGFloat = dt * 100
-        if dtOpen > 6.0 {
-            dtOpen = 6.0
+        if dtOpen > 2.5 {
+            dtOpen = 2.5
         }
         
-        self.position = CGPointMake(self.position.x + (playerSpeedX * (dt * 100)), self.position.y + (jumpAmount * dtOpen))
+//        self.position = CGPointMake(self.position.x + (playerSpeedX * (dt * 100)), self.position.y + (jumpAmount * dtOpen))
+        
+        self.position = CGPointMake(self.position.x + playerSpeedX, self.position.y + jumpAmount)
         
         if (self.position.y < -300) {
             
@@ -319,10 +323,8 @@ class Player: SKSpriteNode {
             
             stopWalk()
         }
-        
-        
-        
     }
+
     
     func startWalk() {
         
@@ -338,11 +340,13 @@ class Player: SKSpriteNode {
             walkingSlow = false
             self.runAction(walkAction)
             //println("should be walking")
+            isRunning = true
             
         } else {
             walkingSlow = false
             self.runAction(walkAction)
             //println("should be walking")
+            isRunning = true
         }
         
         
@@ -350,6 +354,8 @@ class Player: SKSpriteNode {
     func stopWalk() {
         
         self.runAction(idleAction)
+        //println("idling")
+        isRunning = false
         
     }
     func attack() {
@@ -426,9 +432,9 @@ class Player: SKSpriteNode {
             jumpAmount = maxJump
             
             let callAgain:SKAction = SKAction.runBlock( taperJump)
-            let wait:SKAction = SKAction.waitForDuration(1/60)
+            let wait:SKAction = SKAction.waitForDuration(2/60)
             let seq:SKAction = SKAction.sequence([wait, callAgain])
-            let repeat:SKAction = SKAction.repeatAction(seq, count: 20)
+            let repeat:SKAction = SKAction.repeatAction(seq, count: 5)
             let stop:SKAction = SKAction.runBlock( stopJump)
             let seq2:SKAction = SKAction.sequence([repeat, stop])
             
@@ -449,9 +455,7 @@ class Player: SKSpriteNode {
     
     func taperJump() {
         
-        jumpAmount = jumpAmount * 0.9
-        
-        
+        jumpAmount = jumpAmount * 0.7
     }
     
     func stopJump() {

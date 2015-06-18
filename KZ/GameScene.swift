@@ -84,10 +84,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setupPlayer() {
         worldNode.addChild(player)
         player.position = CGPointMake(55,235)
-        player.zPosition = -41
+        player.zPosition = 200//-41
         //player.position = CGPointMake(955,2235)
         player.setScale(0.7)
         centerViewOn(player.position)
+        player.physicsBody?.restitution = 0
         physicsUpdateFromPoint = player.position
         //player.setFalling(false)
     }
@@ -123,15 +124,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(worldNode)
         //TMX LEGACY
         //setupTiles()
-        maintainPhysicsTiles(player.position, xOry: "x")
-        maintainPhysicsTiles(player.position, xOry: "y")
-        //setupOtherTiles()
-        //hideLayer()
-        //maintainTiles()
-        //println(tilesCurrentlyActive)
-        //testing skat
         tileMapFrame = tileMap.calculateAccumulatedFrame()
-        
         if modelName == "iPhone 6" {
             if currentMap == "kz_wonderland"{
                 snowEmitter.position = CGPointMake(self.view!.bounds.width / 2, self.view!.bounds.height)
@@ -297,110 +290,38 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var otherTileCoords = [CGPoint]()
     
     
-
-
-    
-    func maintainPhysicsTiles(playerPosition: CGPoint, xOry: String){
-        println("maintaining physics tiles")
-        for tile in physicsTiles {
-            let left = player.position.x - 500
-            let right = player.position.x + 500
-            let up = player.position.y + 200
-            let down = player.position.y - 200
-            
-            if xOry == "y" {
-            if(tile.position.y < up || tile.position.y > down) && tile.name == "inactive"{
-                println("adding body at \(tile.position)")
-                if tile.parent == nil {
-                worldNode.addChild(tile)
-                }
-                tile.name = "active"
-                } else if(tile.position.y > up || tile.position.y < down) && tile.name == "active"{
-                tile.name = "inactive"
-                println("removing body at \(tile.position)")
-                tile.removeFromParent()
-                }
-            } else if xOry == "x" {
-                if(tile.position.x < right || tile.position.x > left) && tile.name == "inactive"{
-                    println("adding body at \(tile.position)")
-                    if tile.parent == nil {
-                        worldNode.addChild(tile)
-                    }
-                    tile.name = "active"
-                } else if(tile.position.x > right || tile.position.x < left) && tile.name == "active"{
-                    tile.name = "inactive"
-                    println("removing body at \(tile.position)")
-                    tile.removeFromParent()
-                }
-            }
-        }
-    }
-    
-    func maintainOtherTiles(playerPosition: CGPoint, xOry: String){
-        
-        for tile in otherTiles {
-            let left = player.position.x - 1000
-            let right = player.position.x + 1000
-            let up = player.position.y + 1500
-            let down = player.position.y - 1500
-            
-            if xOry == "y" {
-                if(tile.position.y < up || tile.position.y > down) && tile.name == "inactive"{
-                    //println("adding body at \(tile.position)")
-                    if tile.parent == nil {
-                        worldNode.addChild(tile)
-                    }
-                    tile.name = "active"
-                } else if(tile.position.y > up || tile.position.y < down) && tile.name == "active"{
-                    tile.name = "inactive"
-                    //println("removing body at \(tile.position)")
-                    tile.removeFromParent()
-                }
-            } else if xOry == "x" {
-                if(tile.position.x < right || tile.position.x > left) && tile.name == "inactive"{
-                    //println("adding body at \(tile.position)")
-                    if tile.parent == nil {
-                        worldNode.addChild(tile)
-                    }
-                    tile.name = "active"
-                } else if(tile.position.x > right || tile.position.x < left) && tile.name == "active"{
-                    tile.name = "inactive"
-                    //println("removing body at \(tile.position)")
-                    tile.removeFromParent()
-                }
-            }
-        }
-    }
-
-    
-
-    
     func setupInterface() {
         let widthHalf:CGFloat = self.view!.bounds.width / 2
         let heightHalf:CGFloat = self.view!.bounds.height / 2
         
         addChild(buttonNorth)
         buttonNorth.position = CGPoint(x: widthHalf - (buttonNorth.size.width), y: -heightHalf + (buttonWest.size.height * 0.6))
+        buttonNorth.zPosition = 200
         
         addChild(buttonWest)
         buttonWest.position = CGPoint(x: -widthHalf + buttonWest.size.width, y: -heightHalf + (buttonWest.size.height * 0.6))
+        buttonWest.zPosition = 200
         
         addChild(buttonEast)
         buttonEast.position = CGPoint(x: buttonWest.position.x + (buttonWest.size.width * 2), y: buttonWest.position.y)
         buttonEast.xScale = -1
+        buttonEast.zPosition = 200
         
         addChild(menuButton)
         menuButton.position = CGPoint(x: buttonWest.position.x, y: heightHalf - menuButton.size.height * 0.4)
+        menuButton.zPosition = 200
         
         addChild(teleportButton)
         teleportButton.setScale(1.5)
         teleportButton.position = CGPoint(x: widthHalf / 4 , y: -heightHalf + (teleportButton.size.height * 1.1))
         teleportButton.yScale = -1.5
         teleportButton.alpha = 0.3
+        teleportButton.zPosition = 200
         
         addChild(savePointButton)
         savePointButton.setScale(1.5)
         savePointButton.position = CGPoint(x: teleportButton.position.x - (teleportButton.size.width * 3), y: teleportButton.position.y)
+        savePointButton.zPosition = 200
         
         savePointLabel.fontSize = 10
         savePointLabel.text = "Checkpoint Saved"
@@ -482,50 +403,40 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         lastUpdateTime = currentTime
         //println("\(dt) is the dt")
         //end delta
-        centerViewOn(player.position)
+        //centerViewOn(player.position)
+        let target = getCenterPointWithTarget(player.position)
+        worldNode.position += (target - worldNode.position) * 0.8
+        
         player.update(CGFloat(dt))
-        if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 20.0) && (player.physicsBody?.velocity.dy >= -10.0){//!= 0.0 {
+        if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 30.0) && (player.physicsBody?.velocity.dy >= -20.0){//!= 0.0 {
             player.setFalling(false)
             if player.physicsBody?.velocity.dy != 0.0 {
             }
         } else {
             player.setFalling(true)
         }
-        //checkPhysicsTiles(player.position, lastPos: physicsUpdateFromPoint)
         scaleBackground(player.position.y)
-//        let intX = Int(player.position.x)
-//        let intY = Int(player.position.y)
-//        let playerX = intX / 32
-//        let playerY = intY / 32
         let playerIndex = tileMap.indexForPoint(player.position)
-       tileMap.cullAroundIndexX(Int(playerIndex.x), indexY: Int(playerIndex.y), columnWidth: 5, rowHeight: 5)
-//        tileMap.cullAroundIndexX(playerX, indexY: playerY, columnWidth: 40, rowHeight: 15)
-
-    }
-    
-    func checkPhysicsTiles(currentPos: CGPoint, lastPos: CGPoint){
-        let xOffset = currentPos.x - lastPos.x
-        let yOffset = currentPos.y - lastPos.y
-        
-        if yOffset > 200 || yOffset < -200{
-            //println("will update physics")
-            physicsUpdateFromPoint = player.position
-            maintainPhysicsTiles(player.position, xOry: "y")
-        }
-        if xOffset > 900 || xOffset < -900{
-            //println("will update physics")
-            physicsUpdateFromPoint = player.position
-            maintainPhysicsTiles(player.position, xOry: "x")
-        }
-        
+       tileMap.cullAroundIndexX(Int(playerIndex.x), indexY: Int(playerIndex.y), columnWidth: 50, rowHeight: 25)
     }
     
     //MARK: - Camera
     
+//    func centerViewOn(centerOn: CGPoint) {
+//        let x = centerOn.x.clamped(size.width / 2, tileMapFrame.width - size.width / 2)
+//        let y = centerOn.y.clamped(size.height / 2, tileMapFrame.height - size.height / 2)
+//        worldNode.position = CGPoint(x: -x, y: -y)
+//    }
+    
     func centerViewOn(centerOn: CGPoint) {
-        let x = centerOn.x.clamped(size.width / 2, tileMapFrame.width - size.width / 2)
-        let y = centerOn.y.clamped(size.height / 2, tileMapFrame.height - size.height / 2)
-        worldNode.position = CGPoint(x: -x, y: -y)
+        worldNode.position = getCenterPointWithTarget(centerOn)
+    }
+    
+    func getCenterPointWithTarget(target: CGPoint) -> CGPoint {
+        let x = target.x.clamped(size.width / 2, tileMapFrame.width - size.width / 2)
+        let y = target.y.clamped(size.height / 2, tileMapFrame.height - size.height / 2)
+        
+        return CGPoint(x: -x, y: -y)
     }
     
     func scaleBackground(yPosition: CGFloat) {
@@ -610,6 +521,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 buttonNorth.texture = SKTexture(imageNamed: "Directional_Button_Lit")
                 jumpButtonIsPressed = true
+//experimenting with launching player
+//                if player.isRunning && !player.isJumping{
+//                    if player.xScale > 0 {
+//                        player.physicsBody?.applyImpulse(CGVectorMake(50, 2))
+//                        println("launch right")
+//                    } else if player.xScale < 0 {
+//                        player.physicsBody?.applyImpulse(CGVectorMake(-50, 2))
+//                        println("launch left")
+//                    }
+//                }
                 player.jump()
             }
         }
@@ -729,13 +650,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //MARK: Physics Handling
+    
+//    func manageFloors() {
+//        let floorLayer: SKAObjectLayer = tileMap.objectLayers[0] as! SKAObjectLayer
+//        var floorArray = [floorLayer.collisionSprites]
+//        floorArray
+//    }
 //    func didBeginContact(contact: SKPhysicsContact) {
 //        let collision: UInt32 = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
 //        
-//        if collision == PhysicsCategory.Player | PhysicsCategory.Bounce {
-//            //println("hit bounce tile")
-//            player.physicsBody?.applyImpulse(CGVectorMake(0,75))
+////        if collision == PhysicsCategory.Player | PhysicsCategory.Bounce {
+////            //println("hit bounce tile")
+////            player.physicsBody?.applyImpulse(CGVectorMake(0,75))
+////        }
+//        
+//        if collision == SKACategoryPlayer | SKACategoryFloor {
+//            //println("touched floor")
+//            player.isJumping = false
 //        }
+//
 //    }
     
     //MARK: Particles

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="256" tilewidth="32" tileheight="32" nextobjectid="11">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="256" tilewidth="32" tileheight="32" nextobjectid="448">
  <tileset firstgid="1" name="tmx-bg-tiles.1" tilewidth="32" tileheight="32" spacing="2">
   <image source="tmx-bg-tiles.atlasc/tmx-bg-tiles.1.png" width="374" height="34"/>
  </tileset>
@@ -30,22 +30,2136 @@
    eJzt3dtNVEEABuAlAW0AsQEvDag0gNCAaAMqDYg0wKUBwA5AExXxLrSD2ADqq3/iCy8Ce5bNOGe+L/lfTrLJ/Mme68zuGQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP56OTEYvJooPYpy3qb7XsP94bK8y36033FfGuWz/4vPGf+Xjh1G+SzAed7n+PKh4WPM13T/1nB/AAAAABiG54mX/zzRfLz5eADqtZNz2G7D57HX6f6m4f4AAK3yPMvzLACgLn2d473odWlffzPiuhSAEsyPtj0/epR8T46TH4XHUsJJ8jP5lfwuPJYSJvPdn0quJFcb3A+m0/laMpNcb7D/jXS+mdxKbjfY/046303uJbMN9p9L5/vJfLLQYP8H6byYPEwedehf+/XT44z9SfI0WerQo/brp2cZ+3LyPFmpuEdXq+m8lqwnGw3230znrWQ7edFgfwAAAPqhr+uGLqqv64YA+LfTa0vPmqf5mO2fxnyOKPH7q9NrS8+apznI9sMxj806V0ZV+1zrqGqfawUAqIH/zXDfRr2GuWcs8e7TcR9fhrlnLPHuU8cXAAAAaNcflalP/Q==
   </data>
  </layer>
- <layer name="collision" width="64" height="256" opacity="0.56">
-  <data encoding="base64" compression="zlib">
-   eJztmtluIyEQRf3q///hUR6scToNXcutBbhHaikmTVE74OT1Opt3tQKkDMaeEEIIIYQQQgghVt7gZzWQOq9mPzpmK+YA499XXgaMf195GTD+feVlwPj3lZcB499XXgaMf195GTD+feVlwPj3lZcB499XXgaMf195GTD+feURPFkxYi7gQf+trvNzZ/upsJbO5aTY09Y96WLrnR4ZY1V00iUD2kvIvlzz3ZP/3Xu3FbRdu/oJzc7niA7QF+eSUQud6g2pi6e3rOb37vquZquUrP2ri72EVNGp7jtAf/wFvb/v4OMMn+zgJzT00zP0x2/oj3uQ/1+xynM69AH54bQ8OKn+O9t61Q39WavLTLeIsQo66FAJzwL30A/kAyIXkL25mijdV9s7vqnWqZvvqv0hZRU9CQbGm3zTNR8kvdty/+tob0edoqCt67NKXaHY2TZyD2NOPqx6rqiGfnqG/vhLt+9yVoH++A398Rv6Q470f4ZWfST2diFaF8n5rpJsXWj/OfZHnKus80e9BxkPiSzNerN+auXOfo8s7XyEvyXzpb5DxEODRwZi/5TGP6pPVeV/Rv1r9JCOo9+TxD/iDKjVfwY6/5H9X/KOp44j9j8UEt968/9undE7mv6P8ENW/Xr3sNlni8zrnNXqH4Wl/rX9FN2bO8laVeerrBGS+hjN8cgYyRqNRclC2C9ZJ1MW4y+Xxfgz/ow/48/469fxyBjJGo1FyXo7HpQctKxRbNBPhL6VvvTgnY+SZbHFaz/Cf1d5mYz01+Y/Uh+krCd53jqw+i+qFrV0y38vWn0s8bt7twJU7+7U/2drRKzjkRtVs5k1pVkrIv+r+8dsfalus/5hkZfJKvUfhbS/7/6cylPMd+f0PDjV7g/Mf+b/iXZ/YP73z/9I3byyK/wmvVuMxp7emY1b9euKRdenOav0E8Q9QJJj2rmZtS7Nf41eneIsyVWUvtX7SEQtW/VYhYj9L9N+RPx2ir/WH1n7XxUS+3aKv5aI7xK7P+Q/9MfZjOIvPStrxroTffeo4ilGGbpFrpF9j7SA1AVtm+euq11j1X0YdU9C2l/pR8s9wzpXs0bXvMqwf7RudG/U3rE6xcmqR8f8j8ajd0f7rWdZ71rV9mee+65rfn6OPg9qP0f7AmH/bN7sPK/tU1F7s2WN2XtZ9xZEvljPf9X2S3myafRdnPRBy4u8h4xy5mS89q96Zo7Iswh5iHc+743qNYrIWv5eY7SudX40ljvK7Hzhkd+l/2l1luxpUlnd8Oiv3Uuze4IEpP3W+dlI1r2+83QGk8iuiL81Nmj51zXeN2NeKvLpKd53Nl/fQa/rAblfSt6V5mZVn0Tsf6MeiTxjV+Hd/7vYarkjS+Y8yfLIQD5aPxE/K/lyJV2jQfhiF39aztKkH9X7T9a+5t3/VmN3+4gcTS5U1+1TjXrGpLZ3ops+2SDsn8W1Y8y/seomtcvSGyxjVqJj0/08oNEJbQNCnlfGqnV7h3VP2hWJP7LvCSdRfa6rjkd1/KtzsKP9mTp1tz/i57v1o+p39Lsu/SU6/jO/VxPde2ayO9gfwbdPI+xH7ZeSubN6Ho1F24+SE5X7EfbPdEXbj8gpSW6i9NbqK92vImRf363A2z8kdmXVPyI+6DhI7UfJn/UFSZw8Okrqx0Pk+cQqG5X/KH2sSNez1tjrZc/NDKr3/2ru+sipz+n8AwdwS98=
-  </data>
- </layer>
  <objectgroup name="collision">
-  <object id="1" x="512" y="7360" width="64" height="32">
+  <object id="1" name="two tiles" x="512" y="7360" width="64" height="32">
    <properties>
     <property name="SKACollisionType" value="SKACollisionTypeRect"/>
    </properties>
   </object>
-  <object id="9" x="0" y="8128" width="2048" height="32">
+  <object id="9" name="wide floor" x="0" y="8128" width="2048" height="32">
    <properties>
     <property name="SKACollisionType" value="SKACollisionTypeRect"/>
    </properties>
   </object>
-  <object id="10" x="992" y="7392"/>
+  <object id="12" name="two tiles" x="224" y="8064" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="13" name="two tiles" x="352" y="8032" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="14" name="two tiles" x="448" y="8000" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="15" name="two tiles" x="352" y="7936" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="16" name="two tiles" x="192" y="7904" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="17" name="two tiles" x="192" y="7808" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="19" name="two tiles" x="352" y="7808" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="20" name="two tiles" x="512" y="7808" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="21" name="two tiles" x="896" y="8064" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="22" name="two tiles" x="1056" y="8032" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="23" name="two tiles" x="1216" y="8000" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="24" name="two tiles" x="1376" y="7968" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="25" name="two tiles" x="1376" y="7872" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="26" name="two tiles" x="1280" y="7840" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="27" name="two tiles" x="1696" y="7968" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="28" name="two tiles" x="1472" y="7424" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="29" name="two tiles" x="1632" y="7392" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="30" name="two tiles" x="1728" y="7328" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="31" name="two tiles" x="1824" y="7296" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="32" name="two tiles" x="1824" y="7200" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="33" name="two tiles" x="1728" y="7232" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="34" name="two tiles" x="1728" y="7136" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="35" name="two tiles" x="1568" y="7232" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="36" name="two tiles" x="1408" y="7232" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="37" name="two tiles" x="992" y="7488" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="38" name="two tiles" x="864" y="7456" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="39" name="two tiles" x="768" y="7424" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="40" name="two tiles" x="672" y="7360" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="41" name="two tiles" x="352" y="7360" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="42" name="two tiles" x="224" y="7424" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="43" name="two tiles" x="96" y="7264" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="44" name="two tiles" x="64" y="7392" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="45" name="two tiles" x="320" y="6912" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="46" name="two tiles" x="256" y="6976" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="47" name="two tiles" x="352" y="7008" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="48" name="two tiles" x="448" y="7040" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="49" name="two tiles" x="736" y="7040" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="50" name="two tiles" x="896" y="7008" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="51" name="two tiles" x="928" y="6944" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="52" name="two tiles" x="1088" y="6816" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="53" name="two tiles" x="1248" y="6784" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="54" name="two tiles" x="1408" y="6752" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="55" name="two tiles" x="1568" y="6720" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="56" name="two tiles" x="1728" y="6688" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="57" name="two tiles" x="1888" y="6656" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="58" name="two tiles" x="1888" y="6560" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="59" name="two tiles" x="1728" y="6528" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="60" name="two tiles" x="1408" y="6464" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="61" name="two tiles" x="1312" y="6432" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="62" name="two tiles" x="736" y="6816" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="63" name="two tiles" x="672" y="6752" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="64" name="two tiles" x="576" y="6688" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="65" name="two tiles" x="544" y="6624" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="66" name="two tiles" x="608" y="6496" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="67" name="two tiles" x="736" y="6464" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="68" name="two tiles" x="640" y="6400" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="69" name="two tiles" x="544" y="6368" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="70" name="two tiles" x="384" y="6336" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="71" name="two tiles" x="224" y="6336" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="72" name="two tiles" x="96" y="6304" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="73" name="two tiles" x="192" y="6592" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="74" name="two tiles" x="128" y="6464" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="75" name="two tiles" x="64" y="6560" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="76" name="two tiles" x="128" y="6688" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="77" name="two tiles" x="64" y="6784" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="78" name="two tiles" x="192" y="6816" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="79" name="two tiles" x="0" y="6272" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="80" name="two tiles" x="64" y="6208" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="81" name="two tiles" x="224" y="6208" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="82" name="two tiles" x="320" y="6176" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="83" name="two tiles" x="416" y="6144" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="84" name="two tiles" x="512" y="6112" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="85" name="two tiles" x="416" y="6048" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="86" name="two tiles" x="288" y="6016" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="87" name="two tiles" x="128" y="5984" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="88" name="two tiles" x="0" y="5984" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="89" name="two tiles" x="64" y="5888" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="90" name="two tiles" x="160" y="5856" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="91" name="two tiles" x="320" y="5856" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="92" name="two tiles" x="480" y="5856" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="93" name="two tiles" x="640" y="5856" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="94" name="two tiles" x="1344" y="6272" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="95" name="two tiles" x="1568" y="6272" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="96" name="two tiles" x="1920" y="6080" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="97" name="two tiles" x="1760" y="6080" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="98" name="two tiles" x="1600" y="6048" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="99" name="two tiles" x="1472" y="6016" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="100" name="two tiles" x="1408" y="5952" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="101" name="two tiles" x="1536" y="5920" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="102" name="two tiles" x="1696" y="5920" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="103" name="two tiles" x="1792" y="5888" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="104" name="two tiles" x="1952" y="5888" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="105" name="two tiles" x="1760" y="5664" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="106" name="two tiles" x="1632" y="5632" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="107" name="two tiles" x="1504" y="5600" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="108" name="two tiles" x="1600" y="5536" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="109" name="two tiles" x="1760" y="5504" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="110" name="two tiles" x="1856" y="5472" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="111" name="two tiles" x="1728" y="5376" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="112" name="two tiles" x="1568" y="5376" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="113" name="two tiles" x="1408" y="5376" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="114" name="two tiles" x="1280" y="5344" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="115" name="two tiles" x="1120" y="5472" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="116" name="two tiles" x="960" y="5472" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="117" name="two tiles" x="800" y="5440" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="118" name="two tiles" x="480" y="5376" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="119" name="two tiles" x="640" y="5408" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="120" name="two tiles" x="576" y="5536" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="121" name="two tiles" x="480" y="5472" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="122" name="two tiles" x="384" y="5440" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="123" name="two tiles" x="480" y="5600" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="124" name="two tiles" x="384" y="5664" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="125" name="two tiles" x="288" y="5504" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="126" name="two tiles" x="160" y="5504" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="127" name="two tiles" x="32" y="5472" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="128" name="two tiles" x="160" y="5408" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="129" name="two tiles" x="160" y="5312" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="130" name="two tiles" x="32" y="5344" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="131" name="two tiles" x="32" y="5248" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="132" name="two tiles" x="160" y="5216" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="133" name="two tiles" x="160" y="5120" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="134" name="two tiles" x="32" y="5152" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="135" name="two tiles" x="192" y="4992" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="136" name="two tiles" x="320" y="4960" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="137" name="two tiles" x="448" y="4928" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="138" name="two tiles" x="32" y="4800" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="139" name="two tiles" x="672" y="4992" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="140" name="two tiles" x="832" y="4992" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="141" name="two tiles" x="992" y="4960" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="142" name="two tiles" x="1152" y="4928" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="143" name="two tiles" x="1312" y="4896" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="144" name="two tiles" x="1472" y="4864" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="145" name="two tiles" x="1632" y="4832" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="146" name="two tiles" x="1728" y="4768" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="147" name="two tiles" x="1600" y="4704" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="148" name="two tiles" x="1760" y="4224" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="149" name="two tiles" x="1856" y="4160" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="150" name="two tiles" x="1312" y="4224" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="151" name="two tiles" x="1152" y="4192" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="152" name="two tiles" x="1312" y="4032" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="153" name="two tiles" x="1472" y="4000" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="154" name="two tiles" x="1600" y="3968" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="155" name="two tiles" x="1728" y="3936" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="156" name="two tiles" x="1856" y="3904" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="157" name="two tiles" x="1888" y="3808" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="158" name="two tiles" x="640" y="4224" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="159" name="two tiles" x="800" y="4192" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="160" name="two tiles" x="800" y="4096" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="161" name="two tiles" x="800" y="4000" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="162" name="two tiles" x="928" y="4064" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="163" name="two tiles" x="928" y="4160" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="164" name="two tiles" x="928" y="3936" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="165" name="two tiles" x="448" y="4032" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="166" name="two tiles" x="320" y="3968" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="167" name="two tiles" x="320" y="4064" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="168" name="two tiles" x="160" y="4096" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="169" name="two tiles" x="160" y="4192" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="170" name="two tiles" x="32" y="4160" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="171" name="two tiles" x="288" y="4224" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="172" name="two tiles" x="1696" y="3712" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="173" name="two tiles" x="1568" y="3680" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="174" name="two tiles" x="1440" y="3648" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="175" name="two tiles" x="1312" y="3616" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="176" name="two tiles" x="1152" y="3616" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="177" name="two tiles" x="992" y="3616" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="178" name="two tiles" x="832" y="3584" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="179" name="two tiles" x="704" y="3552" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="180" name="two tiles" x="544" y="3552" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="181" name="two tiles" x="384" y="3520" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="182" name="two tiles" x="224" y="3520" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="183" name="two tiles" x="96" y="3520" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="184" name="two tiles" x="0" y="3456" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="185" name="two tiles" x="96" y="3392" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="186" name="two tiles" x="224" y="3360" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="187" name="two tiles" x="384" y="3360" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="188" name="two tiles" x="544" y="3328" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="189" name="two tiles" x="704" y="3296" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="190" name="two tiles" x="864" y="3264" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="191" name="two tiles" x="1024" y="3232" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="192" name="two tiles" x="1184" y="3232" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="193" name="two tiles" x="1312" y="3232" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="194" name="two tiles" x="1440" y="3232" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="195" name="two tiles" x="1568" y="3232" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="196" name="two tiles" x="1728" y="3232" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="197" name="two tiles" x="1856" y="3200" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="198" name="two tiles" x="1728" y="3136" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="199" name="two tiles" x="1856" y="3072" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="200" name="two tiles" x="1728" y="3040" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="201" name="two tiles" x="1568" y="3040" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="202" name="two tiles" x="1408" y="3040" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="203" name="two tiles" x="1248" y="3008" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="204" name="two tiles" x="1088" y="3008" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="205" name="two tiles" x="928" y="3008" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="206" name="two tiles" x="768" y="2976" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="207" name="two tiles" x="640" y="2976" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="208" name="two tiles" x="512" y="3072" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="209" name="two tiles" x="384" y="3040" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="210" name="two tiles" x="224" y="3008" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="211" name="two tiles" x="96" y="2976" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="212" name="two tiles" x="0" y="2912" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="213" name="two tiles" x="128" y="2816" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="214" name="two tiles" x="288" y="2816" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="215" name="two tiles" x="448" y="2816" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="216" name="two tiles" x="608" y="2816" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="217" name="two tiles" x="768" y="2816" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="218" name="two tiles" x="928" y="2784" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="219" name="two tiles" x="1056" y="2784" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="220" name="two tiles" x="1184" y="2784" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="221" name="two tiles" x="1312" y="2784" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="222" name="two tiles" x="1440" y="2784" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="223" name="two tiles" x="1568" y="2784" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="224" name="two tiles" x="1728" y="2752" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="225" name="two tiles" x="1888" y="2720" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="226" name="two tiles" x="1856" y="2528" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="227" name="two tiles" x="1728" y="2496" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="228" name="two tiles" x="1600" y="2464" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="229" name="two tiles" x="1440" y="2464" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="230" name="two tiles" x="1280" y="2432" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="231" name="two tiles" x="1120" y="2432" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="232" name="two tiles" x="960" y="2400" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="233" name="two tiles" x="800" y="2432" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="234" name="two tiles" x="640" y="2400" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="235" name="two tiles" x="480" y="2432" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="236" name="two tiles" x="320" y="2400" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="237" name="two tiles" x="160" y="2368" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="238" name="two tiles" x="32" y="2336" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="239" name="two tiles" x="96" y="2208" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="240" name="two tiles" x="256" y="2176" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="241" name="two tiles" x="416" y="2144" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="242" name="two tiles" x="576" y="2144" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="243" name="two tiles" x="736" y="2112" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="244" name="two tiles" x="896" y="2144" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="245" name="two tiles" x="1056" y="2176" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="246" name="two tiles" x="1216" y="2208" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="247" name="two tiles" x="1376" y="2208" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="248" name="two tiles" x="1536" y="2176" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="250" name="two tiles" x="1696" y="2144" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="251" name="two tiles" x="1856" y="2112" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="252" name="two tiles" x="1984" y="2080" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="253" name="two tiles" x="1888" y="1984" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="254" name="two tiles" x="1728" y="1984" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="255" name="two tiles" x="1568" y="1984" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="256" name="two tiles" x="1408" y="1984" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="257" name="two tiles" x="1248" y="1984" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="258" name="two tiles" x="1088" y="1952" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="259" name="two tiles" x="928" y="1952" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="260" name="two tiles" x="768" y="1920" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="261" name="two tiles" x="608" y="1920" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="262" name="two tiles" x="448" y="1952" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="263" name="two tiles" x="288" y="1952" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="264" name="two tiles" x="128" y="1920" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="265" name="two tiles" x="0" y="1920" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="266" name="two tiles" x="128" y="1824" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="267" name="two tiles" x="256" y="1792" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="268" name="two tiles" x="384" y="1760" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="269" name="two tiles" x="512" y="1728" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="270" name="two tiles" x="672" y="1728" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="271" name="two tiles" x="832" y="1728" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="272" name="two tiles" x="992" y="1728" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="273" name="two tiles" x="1152" y="1728" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="274" name="two tiles" x="1312" y="1728" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="275" name="two tiles" x="1472" y="1696" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="276" name="two tiles" x="1632" y="1664" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="277" name="two tiles" x="1792" y="1632" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="278" name="two tiles" x="1952" y="1600" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="279" name="two tiles" x="1984" y="1536" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="280" name="two tiles" x="1376" y="1440" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="281" name="two tiles" x="544" y="1440" width="64" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="283" name="wide floor" x="0" y="5728" width="1920" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="284" name="wide floor" x="0" y="7680" width="640" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="286" name="wide floor" x="0" y="7552" width="1152" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="287" name="wide floor" x="128" y="7232" width="1184" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="288" name="wide floor" x="0" y="7104" width="1728" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="289" name="wide floor" x="960" y="6880" width="1088" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="290" name="wide floor" x="1280" y="7488" width="768" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="291" name="wide floor" x="928" y="7680" width="992" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="293" name="wide floor" x="416" y="6880" width="480" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="294" name="wide floor" x="0" y="6880" width="288" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="295" name="wide floor" x="1856" y="7104" width="192" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="296" name="wide floor" x="800" y="6368" width="512" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="297" name="wide floor" x="1440" y="6368" width="608" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="298" name="wide floor" x="256" y="5056" width="1760" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="299" name="wide floor" x="1120" y="4288" width="512" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="300" name="wide floor" x="1120" y="4672" width="512" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="301" name="wide floor" x="1728" y="4672" width="320" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="302" name="wide floor" x="1728" y="4288" width="320" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="303" name="wide floor" x="512" y="4288" width="512" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="304" name="wide floor" x="512" y="4672" width="512" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="306" name="wide floor" x="32" y="4672" width="384" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="307" name="wide floor" x="32" y="4288" width="384" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="308" name="wide floor" x="672" y="4800" width="448" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="310" name="wide floor" x="32" y="3776" width="1760" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="311" name="wide floor" x="0" y="2592" width="1952" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="312" name="wide floor" x="1888" y="2848" width="160" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="313" name="wide floor" x="0" y="1504" width="1888" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="314" name="wide floor" x="672" y="608" width="640" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="315" name="wide floor" x="1920" y="3776" width="96" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="316" name="wide floor" x="1280" y="4096" width="544" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="317" name="wide floor" x="160" y="4768" width="256" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="318" name="wide floor" x="160" y="4864" width="224" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="319" name="wide floor" x="32" y="5056" width="96" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="322" name="wide floor" x="832" y="5984" width="128" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="323" name="wide floor" x="736" y="7680" width="128" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="325" name="wide floor" x="1376" y="7776" width="128" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="326" name="wide ceiling" x="1120" y="3808" width="32" height="1024">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="327" name="wide ceiling" x="992" y="3936" width="32" height="736">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="328" name="wide ceiling" x="512" y="3936" width="32" height="1120">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="329" name="wide ceiling" x="1728" y="4128" width="32" height="544">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="330" name="wide ceiling" x="2016" y="3776" width="32" height="1824">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="331" name="wide ceiling" x="640" y="5440" width="32" height="288">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="332" name="wide ceiling" x="800" y="5856" width="32" height="1024">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="333" name="wide ceiling" x="1280" y="7264" width="32" height="224">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="334" name="wide ceiling" x="928" y="7712" width="32" height="256">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="335" name="wide ceiling" x="704" y="7744" width="32" height="384">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="337" name="wide ceiling" x="608" y="7776" width="64" height="352">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="338" name="wide ceiling" x="576" y="7872" width="128" height="64">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="339" name="wide ceiling" x="1952" y="7776" width="64" height="352">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="340" name="wide ceiling" x="1888" y="7872" width="160" height="96">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="341" name="wide ceiling" x="1856" y="7936" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="342" name="wide ceiling" x="1504" y="7776" width="32" height="128">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="343" name="wide ceiling" x="1536" y="7872" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="344" name="wide ceiling" x="1472" y="7936" width="64" height="64">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="345" name="wide ceiling" x="2016" y="7520" width="32" height="224">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="346" name="wide ceiling" x="1984" y="7712" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="347" name="wide ceiling" x="96" y="7872" width="64" height="64">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="348" name="wide ceiling" x="992" y="7584" width="64" height="96">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="349" name="wide ceiling" x="960" y="6624" width="32" height="256">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="350" name="wide ceiling" x="448" y="6528" width="64" height="352">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="351" name="wide ceiling" x="416" y="6624" width="128" height="64">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="352" name="wide ceiling" x="288" y="6464" width="32" height="128">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="353" name="wide ceiling" x="288" y="6624" width="32" height="96">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="354" name="wide ceiling" x="928" y="6016" width="32" height="352">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="355" name="wide ceiling" x="384" y="4320" width="32" height="352">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="356" name="wide ceiling" x="0" y="3776" width="32" height="1952">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="358" name="wide ceiling" x="1600" y="4320" width="32" height="352">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="359" name="wide ceiling" x="1280" y="640" width="32" height="768">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="360" name="wide ceiling" x="672" y="640" width="32" height="768">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="361" name="wide ceiling" x="1536" y="6496" width="96" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="362" name="wide ceiling" x="1472" y="6304" width="32" height="64">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="363" name="wide ceiling" x="1248" y="6304" width="32" height="64">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="364" name="wide ceiling" x="1664" y="6240" width="32" height="64">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="365" name="wide ceiling" x="1792" y="6240" width="32" height="64">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="366" name="wide ceiling" x="1920" y="6208" width="32" height="64">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="367" name="wide ceiling" x="1984" y="6176" width="32" height="64">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="368" name="wide ceiling" x="1984" y="6592" width="64" height="64">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="369" name="wide ceiling" x="0" y="7328" width="64" height="96">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="370" name="wide ceiling" x="1856" y="2816" width="32" height="64">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="371" name="single tile" x="1312" y="672" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="372" name="wide ceiling" x="1312" y="736" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="373" name="wide ceiling" x="1312" y="800" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="374" name="wide ceiling" x="1312" y="864" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="375" name="wide ceiling" x="1312" y="928" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="376" name="wide ceiling" x="1312" y="992" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="377" name="wide ceiling" x="1312" y="1056" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="378" name="single tile" x="1312" y="1120" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="379" name="single tile" x="1312" y="1184" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="380" name="single tile" x="1312" y="1248" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="381" name="single tile" x="1312" y="1312" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="382" name="single tile" x="1312" y="1376" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="383" name="single tile" x="640" y="1376" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="384" name="single tile" x="640" y="1312" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="385" name="single tile" x="640" y="1248" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="386" name="single tile" x="640" y="1184" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="387" name="single tile" x="640" y="1120" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="388" name="single tile" x="640" y="1056" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="389" name="single tile" x="640" y="992" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="390" name="single tile" x="640" y="928" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="391" name="single tile" x="640" y="864" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="392" name="single tile" x="640" y="800" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="393" name="single tile" x="640" y="736" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="394" name="single tile" x="640" y="672" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="395" name="single tile" x="2016" y="2016" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="396" name="single tile" x="1952" y="2624" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="397" name="single tile" x="2016" y="2688" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="398" name="single tile" x="1152" y="4128" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="399" name="single tile" x="1152" y="4064" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="400" name="single tile" x="1152" y="4000" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="401" name="single tile" x="1152" y="3936" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="402" name="single tile" x="1632" y="4320" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="403" name="single tile" x="1632" y="4384" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="404" name="single tile" x="1632" y="4448" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="405" name="single tile" x="1632" y="4512" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="406" name="single tile" x="1632" y="4576" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="407" name="single tile" x="1632" y="4640" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="408" name="single tile" x="480" y="3936" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="409" name="single tile" x="480" y="4096" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="410" name="single tile" x="480" y="4160" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="411" name="single tile" x="480" y="4224" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="412" name="single tile" x="480" y="4288" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="413" name="single tile" x="480" y="4352" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="414" name="single tile" x="480" y="4416" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="415" name="single tile" x="480" y="4480" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="416" name="single tile" x="480" y="4544" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="417" name="single tile" x="480" y="4608" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="418" name="single tile" x="480" y="4672" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="419" name="single tile" x="480" y="4736" width="32" height="128">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="420" name="single tile" x="256" y="6688" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="421" name="single tile" x="0" y="6720" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="422" name="single tile" x="0" y="6496" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="423" name="single tile" x="320" y="6464" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="424" name="single tile" x="928" y="6816" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="425" name="single tile" x="832" y="6784" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="426" name="single tile" x="896" y="6720" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="427" name="single tile" x="928" y="6656" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="428" name="single tile" x="1824" y="7648" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="429" name="single tile" x="1728" y="7648" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="430" name="single tile" x="1632" y="7648" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="431" name="single tile" x="1536" y="7648" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="432" name="single tile" x="1440" y="7648" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="433" name="single tile" x="1344" y="7648" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="434" name="single tile" x="1248" y="7648" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="435" name="single tile" x="1152" y="7616" width="32" height="64">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="436" name="single tile" x="2016" y="1504" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="437" name="single tile" x="1984" y="5440" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="438" name="single tile" x="1888" y="5376" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="439" name="single tile" x="2016" y="5632" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="440" name="single tile" x="2016" y="5696" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="441" name="single tile" x="2016" y="5760" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="442" name="single tile" x="2016" y="5824" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="443" name="single tile" x="2016" y="6112" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="444" name="single tile" x="736" y="7712" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="445" name="single tile" x="0" y="5920" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="446" name="single tile" x="0" y="2816" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="447" name="single tile" x="0" y="2240" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
