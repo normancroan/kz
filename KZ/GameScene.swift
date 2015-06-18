@@ -177,7 +177,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //            println(tileMap.objectLayers.first?.objects.x)
 //        }
 //    }
+    func loadObjects() {
+        if tileMap.objectLayers.count > 0 {
+            let layer = tileMap.objectLayers[0] as! SKAObjectLayer
+            loadMapObjectsWithLayer(layer)
+        }
+    }
     
+    func loadMapObjectsWithLayer(layer: SKAObjectLayer) {
+        
+        for object in layer.objects {
+            let obj = object as! SKAObject
+           //load the player
+            if obj.name == "player" {
+                player.position = CGPoint(x: obj.x, y: obj.y)
+                player.zPosition = 200
+                player.setScale(0.7)
+                worldNode.addChild(player)
+                centerViewOn(player.position)
+            }
+        }
+    }
     
     func cullTiles() {
         for var l = 0; l < Int(tileMap.spriteLayers.count); l++ {             for var x = 0; x < Int(tileMap.mapWidth)-1; x++ {
@@ -389,7 +409,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createWorld()
         //createWorldFromMaps()
         setupInterface()
-        setupPlayer()
+        loadObjects()
+        //setupPlayer()
     }
     
     override func update(currentTime: CFTimeInterval) {

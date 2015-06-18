@@ -6472,6 +6472,22 @@
                  "width":32,
                  "x":2016,
                  "y":6880
+                }, 
+                {
+                 "ellipse":true,
+                 "height":0,
+                 "id":452,
+                 "name":"player",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":128,
+                 "y":7776
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -6480,7 +6496,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":452,
+ "nextobjectid":453,
  "orientation":"orthogonal",
  "properties":
     {

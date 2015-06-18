@@ -19,6 +19,7 @@ class MapSelectScene: SKScene {
     
     let instructionsLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     
+    
     //let mapEffect = SKEmitterNode(fileNamed: "BehindTheMap.sks")
     
     func displayLabels() {
@@ -26,7 +27,7 @@ class MapSelectScene: SKScene {
         let heightHalf:CGFloat = self.view!.bounds.height / 2
         
         instructionsLabel.fontSize = 20
-        instructionsLabel.text = "Map Select (currently inactive)"
+        instructionsLabel.text = "Welcome to KZ, where would you like to get frustrated today?"
         instructionsLabel.name = "instructions"
         instructionsLabel.zPosition = 200
         instructionsLabel.verticalAlignmentMode = .Center
@@ -81,6 +82,8 @@ class MapSelectScene: SKScene {
                 self.view?.presentScene(myScene, transition: reveal)
 
             //touched wild
+            } else if (CGRectContainsPoint(buttonWest.frame, location)) {
+                
             }
         }
     }
