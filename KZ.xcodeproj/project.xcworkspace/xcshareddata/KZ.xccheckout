@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>86777C69-F514-491C-9CDA-627AAB7ED1C3</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>KZ</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>84D9982A77A3B56E699A1563E7B56732300F72C7</key>
 		<string>https://bitbucket.org/ncroan/kz.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>KZ.xcodeproj/project.xcworkspace</string>
+	<string>KZ.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>84D9982A77A3B56E699A1563E7B56732300F72C7</key>

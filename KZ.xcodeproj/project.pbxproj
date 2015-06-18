@@ -65,6 +65,8 @@
 		184D00071B269F35001D722E /* egypt_statues_medium.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184D00061B269F35001D722E /* egypt_statues_medium.atlasc */; };
 		184DFFFA1B268C6F001D722E /* egypt_small_floors_bgra.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */; };
 		184DFFFB1B268C6F001D722E /* egypt_small_walls_rgba4.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */; };
+		189A48CC1B329EEE00B3578C /* BehindTheMap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CA1B329EEE00B3578C /* BehindTheMap.sks */; };
+		189A48CD1B329EEE00B3578C /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CB1B329EEE00B3578C /* bokeh.png */; };
 		18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */; };
 		18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */; };
 		18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC31B1BEF99004C0E5D /* Walk.atlas */; };
@@ -173,6 +175,8 @@
 		184D00061B269F35001D722E /* egypt_statues_medium.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_statues_medium.atlasc; sourceTree = "<group>"; };
 		184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_small_floors_bgra.atlasc; sourceTree = "<group>"; };
 		184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_small_walls_rgba4.atlasc; sourceTree = "<group>"; };
+		189A48CA1B329EEE00B3578C /* BehindTheMap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BehindTheMap.sks; sourceTree = "<group>"; };
+		189A48CB1B329EEE00B3578C /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
 		18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Jump.atlas; sourceTree = "<group>"; };
 		18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Idle.atlas; sourceTree = "<group>"; };
 		18A9FCC31B1BEF99004C0E5D /* Walk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Walk.atlas; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 				18149C631B19709F00522024 /* GameScene.sks */,
 				18149C651B19709F00522024 /* GameScene.swift */,
 				18E87EA01B20125700E4CC4E /* MapSelectScene.swift */,
+				189A48CA1B329EEE00B3578C /* BehindTheMap.sks */,
+				189A48CB1B329EEE00B3578C /* bokeh.png */,
 				18149CD11B1AA7C500522024 /* Player.swift */,
 				18149C671B19709F00522024 /* GameViewController.swift */,
 				18149C691B19709F00522024 /* Main.storyboard */,
@@ -532,6 +538,7 @@
 				18E87EAF1B218E9E00E4CC4E /* spark.png in Resources */,
 				18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */,
 				18E87EA71B20512B00E4CC4E /* kz_wonderland_trees.atlasc in Resources */,
+				189A48CD1B329EEE00B3578C /* bokeh.png in Resources */,
 				18099B301B296BDC002932F3 /* kz_egypt_3.tmx in Resources */,
 				18099B981B2FF65E002932F3 /* egypt_statues_medium.1.png in Resources */,
 				18149C8E1B1972A600522024 /* LICENSE.txt in Resources */,
@@ -542,6 +549,7 @@
 				18E87EA51B20511E00E4CC4E /* kz_wonderland.tmx in Resources */,
 				183095FF1B1D604B00BBB25B /* kz_egypt.tmx in Resources */,
 				18149CB71B197C6E00522024 /* tmx-rpg-bigpack.atlasc in Resources */,
+				189A48CC1B329EEE00B3578C /* BehindTheMap.sks in Resources */,
 				184D00071B269F35001D722E /* egypt_statues_medium.atlasc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

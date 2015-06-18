@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="256" tilewidth="32" tileheight="32" nextobjectid="448">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="256" tilewidth="32" tileheight="32" nextobjectid="452">
  <tileset firstgid="1" name="tmx-bg-tiles.1" tilewidth="32" tileheight="32" spacing="2">
   <image source="tmx-bg-tiles.atlasc/tmx-bg-tiles.1.png" width="374" height="34"/>
  </tileset>
@@ -12,8 +12,8 @@
  <tileset firstgid="228" name="egypt_statues_medium.1" tilewidth="32" tileheight="32">
   <image source="egypt_statues_medium.atlasc/egypt_statues_medium.1.png" width="512" height="386"/>
  </tileset>
- <tileset firstgid="420" name="kz_signs_small.1" tilewidth="32" tileheight="32" spacing="1">
-  <image source="kz_signs_small.atlasc/kz_signs_small.1.png" width="204" height="134"/>
+ <tileset firstgid="420" name="kz_wooden_signs.1" tilewidth="32" tileheight="32">
+  <image source="Images.xcassets/kz_wooden_signs.1.imageset/kz_wooden_signs.1.png" width="768" height="102"/>
  </tileset>
  <layer name="background_walls" width="64" height="256">
   <data encoding="base64" compression="zlib">
@@ -27,7 +27,7 @@
  </layer>
  <layer name="background items" width="64" height="256">
   <data encoding="base64" compression="zlib">
-   eJzt3dtNVEEABuAlAW0AsQEvDag0gNCAaAMqDYg0wKUBwA5AExXxLrSD2ADqq3/iCy8Ce5bNOGe+L/lfTrLJ/Mme68zuGQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP56OTEYvJooPYpy3qb7XsP94bK8y36033FfGuWz/4vPGf+Xjh1G+SzAed7n+PKh4WPM13T/1nB/AAAAABiG54mX/zzRfLz5eADqtZNz2G7D57HX6f6m4f4AAK3yPMvzLACgLn2d473odWlffzPiuhSAEsyPtj0/epR8T46TH4XHUsJJ8jP5lfwuPJYSJvPdn0quJFcb3A+m0/laMpNcb7D/jXS+mdxKbjfY/046303uJbMN9p9L5/vJfLLQYP8H6byYPEwedehf+/XT44z9SfI0WerQo/brp2cZ+3LyPFmpuEdXq+m8lqwnGw3230znrWQ7edFgfwAAAPqhr+uGLqqv64YA+LfTa0vPmqf5mO2fxnyOKPH7q9NrS8+apznI9sMxj806V0ZV+1zrqGqfawUAqIH/zXDfRr2GuWcs8e7TcR9fhrlnLPHuU8cXAAAAaNcflalP/Q==
+   eJzt3dWt22AcxmFHKixQWKCwQGGBwgKFBQoLFBYoLFBYoMzMzMzMcKBwW7jtO8HRiZxTx/bzSL+7KP7+khU5+RKnKAAAAAB671CnKA6nI+lop+rV/H+3MvPtdCfdbeH8nzLz5/QlfW3h/AAAAAAAAP1iV6codqc9aW+JfZtePE+v1tKNSznO5XQlXS1xzF48T6/W0o1XOc7r9Ca9LXHMXjxPr9YCAAAAAAAAAAAAAAAAAAAAAPC/nOoUxel0Jp1t4X1THmXmx+lJetrC+b9l5u/pR/rZwvnpjWM5d46nE+lkl+fRtjx+e9qRdtb0HLyXdd9PD9LDLmc4l8efTxfSxZrOP5B1D6ahNNzlDM/y+OfpRXpZ0/mhn1Vxf8R+UsX9EfuJ+yMCAAAAQLXsxduLtxcPUF9lvgvTBGW+C9MEZb4LAwBQZz7P8nmWz7MAoF6a+puR0V6XNvU3I6O9Lm3qb0ZclwJUxx6pPdI275EOpME0lIYrXksVfqXf6U/6W/FaqjAu5/z4NCFNbOH5PykzT05T0tQWzj8tM09PM9LMFs4/KzPPTnPS3BbOPy8zz08L0sIu52/CtdOirHtxWpKWdjlDE66dlmXdy9OKtLLLGZpw7bQq616d1qS1NZ2hjHWZeX3akDa2cP5NmXlz2pK2tnB+AAAAAKC+9nWKYn86kA5W9Plmlb+/upbjXU830s2K5q/y91fvcrz36UP6WNH8vudaXhP2Wstowl5rGU3YawUA+p/7Zrhvhvdt9TXSe8Z++K/TsX59Gek9Yz/81+lYv76M9J6xH/7r1OsLAAAAtNs/bdPlFQ==
   </data>
  </layer>
  <objectgroup name="collision">
@@ -2157,6 +2157,21 @@
    </properties>
   </object>
   <object id="447" name="single tile" x="0" y="2240" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="448" name="single tile" x="0" y="0" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="449" name="single tile" x="2016" y="0" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="451" name="wide ceiling" x="2016" y="6880" width="32" height="256">
    <properties>
     <property name="SKACollisionType" value="SKACollisionTypeRect"/>
    </properties>

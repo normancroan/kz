@@ -52,7 +52,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let teleportButton = SKSpriteNode(imageNamed: "crystal")
     
     //these are used for the scaleBackground method and setupBackground
-    let background = SKSpriteNode(imageNamed: "kz_wild_background")
+    let background = SKSpriteNode(imageNamed: "kz_egypt_3_background")
     var backgroundYStart: CGFloat = 1.0
     var backgroundXScaleStart: CGFloat = 1.0
     var backgroundYScaleStart: CGFloat = 1.0
