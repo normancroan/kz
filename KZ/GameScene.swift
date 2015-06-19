@@ -351,8 +351,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         stopWatchLabel.position = CGPoint(x: buttonNorth.position.x, y: heightHalf - menuButton.size.height * 0.4)
         stopWatchLabel.zPosition = 200
         addChild(stopWatchLabel)
-        //startTimer()
-        updateTimer()
+        startTimer()
         
         savePointLabel.fontSize = 10
         savePointLabel.text = "Checkpoint Saved"
@@ -504,8 +503,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     
     //MARK: - Stopwatch
+    func stopTimer() {
+        if stopWatchLabel.actionForKey("timer") != nil {
+            println("stopping timer")
+            stopWatchLabel.removeActionForKey("timer")
+        }
+    }
     
-    func updateTimer() {
+    func startTimer() {
         var leadingZero = ""
         var leadingZeroMin = ""
         var timeMin = Int()
@@ -520,7 +525,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         self.stopWatchLabel.text = "[ \(leadingZeroMin)\(timeMin/60) : \(leadingZero)\(timesecond) ]"
         })
-        self.stopWatchLabel.runAction(SKAction.repeatActionForever(SKAction.sequence([actionwait,actionrun])))
+        self.stopWatchLabel.runAction(SKAction.repeatActionForever(SKAction.sequence([actionrun, actionwait])), withKey: "timer")
     }
     
     //MARK: - Touch Handling
