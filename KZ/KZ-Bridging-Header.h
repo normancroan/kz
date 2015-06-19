@@ -9,7 +9,7 @@
 #ifndef KZ_KZ_Bridging_Header_h
 #define KZ_KZ_Bridging_Header_h
 
-#import "JSTileMap.h"
+//#import "JSTileMap.h"
 #import "LFCGzipUtility.h"
 #import "CollisionDefine.h"
 #import "SKAButtonSprite.h"

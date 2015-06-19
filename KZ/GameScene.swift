@@ -105,30 +105,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //player.setFalling(false)
     }
 
-    func createWorldFromMaps() {
-        worldNode = SKNode()
-        addChild(worldNode)
-        
-        for var i = 0; i < 2; i++ {
-            var myString = "small-map-test-\(i).tmx"
-            let tileMap2 = JSTileMap(named: myString)
-            println(i)
-            tileMap2.position = CGPointMake(mapOffsetX, 0)
-            
-            worldNode.addChild(tileMap2)
-            mapSectionsArray.append(tileMap2)
-            mapOffsetX += 2050
-            //setupTiles()
-            tileMapFrame = tileMap.calculateAccumulatedFrame()
-        }
-        
-        //maintainPhysicsTiles(player.position, xOry: "x")
-        //maintainPhysicsTiles(player.position, xOry: "y")
-        anchorPoint = CGPointMake(0.5,0.5)
-        worldNode.position = CGPointMake(-tileMapFrame.width / 2, -tileMapFrame.height / 2)
-        self.physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
-        self.physicsWorld.contactDelegate = self
-    }
+//    func createWorldFromMaps() {
+//        worldNode = SKNode()
+//        addChild(worldNode)
+//        
+//        for var i = 0; i < 2; i++ {
+//            var myString = "small-map-test-\(i).tmx"
+//            let tileMap2 = JSTileMap(named: myString)
+//            println(i)
+//            tileMap2.position = CGPointMake(mapOffsetX, 0)
+//            
+//            worldNode.addChild(tileMap2)
+//            mapSectionsArray.append(tileMap2)
+//            mapOffsetX += 2050
+//            //setupTiles()
+//            tileMapFrame = tileMap.calculateAccumulatedFrame()
+//        }
+//        
+//        //maintainPhysicsTiles(player.position, xOry: "x")
+//        //maintainPhysicsTiles(player.position, xOry: "y")
+//        anchorPoint = CGPointMake(0.5,0.5)
+//        worldNode.position = CGPointMake(-tileMapFrame.width / 2, -tileMapFrame.height / 2)
+//        self.physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
+//        self.physicsWorld.contactDelegate = self
+//    }
     
     func createWorld() {
         worldNode = SKNode()
@@ -446,36 +446,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         //delta
-        if lastUpdateTime > 0 {
-            dt = currentTime - lastUpdateTime
-        } else {
-            dt = 0
-        }
-        lastUpdateTime = currentTime
+//        if lastUpdateTime > 0 {
+//            dt = currentTime - lastUpdateTime
+//        } else {
+//            dt = 0
+//        }
+//        lastUpdateTime = currentTime
         //println("\(dt) is the dt")
         //end delta
         //centerViewOn(player.position)
-        let target = getCenterPointWithTarget(player.position)
-        worldNode.position += (target - worldNode.position) * 0.8
+//        let target = getCenterPointWithTarget(player.position)
+//        worldNode.position += (target - worldNode.position) * 0.8
         
         player.update(CGFloat(dt))
         
-        //dead yet?
-        if player.position.y < -300 {
-            player.position = playerSpawnPoint
-        }
+//        //dead yet?
+//        if player.position.y < -300 {
+//            player.position = playerSpawnPoint
+//        }
         
         
-        if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 30.0) && (player.physicsBody?.velocity.dy >= -20.0){//!= 0.0 {
-            player.setFalling(false)
-            if player.physicsBody?.velocity.dy != 0.0 {
-            }
-        } else {
-            player.setFalling(true)
-        }
-        scaleBackground(player.position.y)
-        let playerIndex = tileMap.indexForPoint(player.position)
-       tileMap.cullAroundIndexX(Int(playerIndex.x), indexY: Int(playerIndex.y), columnWidth: 50, rowHeight: 25)
+//        if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 30.0) && (player.physicsBody?.velocity.dy >= -20.0){//!= 0.0 {
+//            player.setFalling(false)
+//            if player.physicsBody?.velocity.dy != 0.0 {
+//            }
+//        } else {
+//            player.setFalling(true)
+//        }
+//        scaleBackground(player.position.y)
+//        let playerIndex = tileMap.indexForPoint(player.position)
+//       tileMap.cullAroundIndexX(Int(playerIndex.x), indexY: Int(playerIndex.y), columnWidth: 50, rowHeight: 25)
     }
     
     //MARK: - Camera
@@ -740,6 +740,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        var floorArray = [floorLayer.collisionSprites]
 //        floorArray
 //    }
+    override func didFinishUpdate() {
+        
+        let playerIndex = tileMap.indexForPoint(player.position)
+        tileMap.cullAroundIndexX(Int(playerIndex.x), indexY: Int(playerIndex.y), columnWidth: 50, rowHeight: 25)
+        
+        let target = getCenterPointWithTarget(player.position)
+        worldNode.position += (target - worldNode.position) * 0.8
+        
+        scaleBackground(player.position.y)
+    }
+    
+    override func didSimulatePhysics() {
+    if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 30.0) && (player.physicsBody?.velocity.dy >= -20.0){//!= 0.0 {
+            player.setFalling(false)
+            if player.physicsBody?.velocity.dy != 0.0 {
+        }
+            } else {
+            player.setFalling(true)
+        }
+        
+        //dead yet?
+        if player.position.y < -300 {
+            player.position = playerSpawnPoint
+        }
+    }
     func didBeginContact(contact: SKPhysicsContact) {
         let collision: UInt32 = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         
