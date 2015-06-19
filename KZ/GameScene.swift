@@ -351,7 +351,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         stopWatchLabel.position = CGPoint(x: buttonNorth.position.x, y: heightHalf - menuButton.size.height * 0.4)
         stopWatchLabel.zPosition = 200
         addChild(stopWatchLabel)
-        startTimer()
+        //startTimer()
+        updateTimer()
         
         savePointLabel.fontSize = 10
         savePointLabel.text = "Checkpoint Saved"
@@ -503,50 +504,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     
     //MARK: - Stopwatch
-    func startTimer() {
-        println("timer started")
-        let aSelector : Selector = "updateTime"
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
-        startTime = NSDate.timeIntervalSinceReferenceDate()
-    }
     
-    func stopTimer() {
-        timer.invalidate()
-        //timer == nil
+    func updateTimer() {
+        var leadingZero = ""
+        var leadingZeroMin = ""
+        var timeMin = Int()
+        var actionwait = SKAction.waitForDuration(1.0)
+        var timesecond = Int()
+        var actionrun = SKAction.runBlock({
+            timeMin++
+            timesecond++
+            if timesecond == 60 {timesecond = 0}
+            if timeMin  / 60 <= 9 { leadingZeroMin = "0" } else { leadingZeroMin = "" }
+            if timesecond <= 9 { leadingZero = "0" } else { leadingZero = "" }
+            
+        self.stopWatchLabel.text = "[ \(leadingZeroMin)\(timeMin/60) : \(leadingZero)\(timesecond) ]"
+        })
+        self.stopWatchLabel.runAction(SKAction.repeatActionForever(SKAction.sequence([actionwait,actionrun])))
     }
-    
-    func updateTime() {
-        //println("timer updated")
-        var currentTime = NSDate.timeIntervalSinceReferenceDate()
-        
-        //find the difference between current time and start time
-        
-        var elapsedTime: NSTimeInterval = currentTime - startTime
-        
-        //calculate minutes in elapsed time
-        
-        let minutes = UInt8(elapsedTime / 60.0)
-        
-        //calculate seconds in elapsed time
-        
-        let seconds = UInt8(elapsedTime)
-        
-        elapsedTime -= NSTimeInterval(seconds)
-        
-        //find fraction of milliseconds to be displayed
-        
-        let fraction = UInt8(elapsedTime * 100)
-        
-        //add the leading zero for minutes, seconds, and ms
-        
-        let strMinutes = String(format: "%02d", minutes)
-        let strSeconds = String(format: "%02d", seconds)
-        let strFraction = String(format: "%02d", fraction)
-        
-        //concatenate minutes, seconds, and ms and assign to label
-        stopWatchLabel.text = "\(strMinutes):\(strSeconds):\(strFraction)"
-    }
-    
     
     //MARK: - Touch Handling
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
