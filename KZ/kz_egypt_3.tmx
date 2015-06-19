@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="256" tilewidth="32" tileheight="32" nextobjectid="453">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="256" tilewidth="32" tileheight="32" nextobjectid="454">
  <tileset firstgid="1" name="tmx-bg-tiles.1" tilewidth="32" tileheight="32" spacing="2">
   <image source="tmx-bg-tiles.atlasc/tmx-bg-tiles.1.png" width="374" height="34"/>
  </tileset>
@@ -2177,6 +2177,9 @@
    </properties>
   </object>
   <object id="452" name="player" x="128" y="8064">
+   <ellipse/>
+  </object>
+  <object id="453" name="greenGem" x="256" y="8032">
    <ellipse/>
   </object>
  </objectgroup>

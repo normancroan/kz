@@ -68,6 +68,9 @@
 		189A48CC1B329EEE00B3578C /* BehindTheMap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CA1B329EEE00B3578C /* BehindTheMap.sks */; };
 		189A48CD1B329EEE00B3578C /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CB1B329EEE00B3578C /* bokeh.png */; };
 		189A48CF1B330FE000B3578C /* kz_wild_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CE1B330FE000B3578C /* kz_wild_3.json */; };
+		189A48D31B33E84A00B3578C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A48D21B33E84A00B3578C /* Item.swift */; };
+		189A48D51B33EC1C00B3578C /* GemGreenIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 189A48D41B33EC1C00B3578C /* GemGreenIdle.atlas */; };
+		189A48D71B33F71000B3578C /* GemRedIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 189A48D61B33F71000B3578C /* GemRedIdle.atlas */; };
 		18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */; };
 		18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */; };
 		18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC31B1BEF99004C0E5D /* Walk.atlas */; };
@@ -179,6 +182,9 @@
 		189A48CA1B329EEE00B3578C /* BehindTheMap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BehindTheMap.sks; sourceTree = "<group>"; };
 		189A48CB1B329EEE00B3578C /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
 		189A48CE1B330FE000B3578C /* kz_wild_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_wild_3.json; sourceTree = "<group>"; };
+		189A48D21B33E84A00B3578C /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		189A48D41B33EC1C00B3578C /* GemGreenIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GemGreenIdle.atlas; sourceTree = "<group>"; };
+		189A48D61B33F71000B3578C /* GemRedIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GemRedIdle.atlas; sourceTree = "<group>"; };
 		18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Jump.atlas; sourceTree = "<group>"; };
 		18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Idle.atlas; sourceTree = "<group>"; };
 		18A9FCC31B1BEF99004C0E5D /* Walk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Walk.atlas; sourceTree = "<group>"; };
@@ -296,9 +302,8 @@
 				18149C631B19709F00522024 /* GameScene.sks */,
 				18149C651B19709F00522024 /* GameScene.swift */,
 				18E87EA01B20125700E4CC4E /* MapSelectScene.swift */,
-				189A48CA1B329EEE00B3578C /* BehindTheMap.sks */,
-				189A48CB1B329EEE00B3578C /* bokeh.png */,
 				18149CD11B1AA7C500522024 /* Player.swift */,
+				189A48D21B33E84A00B3578C /* Item.swift */,
 				18149C671B19709F00522024 /* GameViewController.swift */,
 				18149C691B19709F00522024 /* Main.storyboard */,
 				18149C6C1B19709F00522024 /* Images.xcassets */,
@@ -308,6 +313,8 @@
 				18F760751B253C6C0086E776 /* Rain.sks */,
 				18F760531B250CB70086E776 /* MagicFireLow.sks */,
 				18E87EAD1B218E9E00E4CC4E /* spark.png */,
+				189A48CA1B329EEE00B3578C /* BehindTheMap.sks */,
+				189A48CB1B329EEE00B3578C /* bokeh.png */,
 			);
 			path = KZ;
 			sourceTree = "<group>";
@@ -385,6 +392,8 @@
 		18149CB01B197C1A00522024 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				189A48D61B33F71000B3578C /* GemRedIdle.atlas */,
+				189A48D41B33EC1C00B3578C /* GemGreenIdle.atlas */,
 				184DFFEF1B268063001D722E /* kz_egypt */,
 				18E87EA61B20512B00E4CC4E /* kz_wonderland_trees.atlasc */,
 				18E87EA21B204F4000E4CC4E /* kz_wonderland_tileset_medium.atlasc */,
@@ -520,6 +529,7 @@
 				18099B491B2ABF31002932F3 /* small-map-test-1.tmx in Resources */,
 				18F760541B250CB70086E776 /* MagicFireLow.sks in Resources */,
 				18099B961B2FF65E002932F3 /* egypt_small_floors_bgra.1.png in Resources */,
+				189A48D71B33F71000B3578C /* GemRedIdle.atlas in Resources */,
 				18099B971B2FF65E002932F3 /* egypt_small_walls_rgba4.1.png in Resources */,
 				18E87EA31B204F4000E4CC4E /* kz_wonderland_tileset_medium.atlasc in Resources */,
 				18099B441B2A8522002932F3 /* kz_wild_2.tmx in Resources */,
@@ -550,6 +560,7 @@
 				18099B321B296C60002932F3 /* kz_egypt_3.json in Resources */,
 				18149C6B1B19709F00522024 /* Main.storyboard in Resources */,
 				18099B4A1B2ABF31002932F3 /* small-map-test-0.tmx in Resources */,
+				189A48D51B33EC1C00B3578C /* GemGreenIdle.atlas in Resources */,
 				18E87EA51B20511E00E4CC4E /* kz_wonderland.tmx in Resources */,
 				183095FF1B1D604B00BBB25B /* kz_egypt.tmx in Resources */,
 				18149CB71B197C6E00522024 /* tmx-rpg-bigpack.atlasc in Resources */,
@@ -574,6 +585,7 @@
 			files = (
 				18149C9D1B1972BE00522024 /* CGPoint+Extensions.swift in Sources */,
 				18149CA51B1972BE00522024 /* SKTEffects.swift in Sources */,
+				189A48D31B33E84A00B3578C /* Item.swift in Sources */,
 				18099B811B2BEEA7002932F3 /* SKAMapTile.m in Sources */,
 				18099B801B2BEEA7002932F3 /* SKACroppedMiniMap.m in Sources */,
 				18149CA01B1972BE00522024 /* SKAction+Extensions.swift in Sources */,

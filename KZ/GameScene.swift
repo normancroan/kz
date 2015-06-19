@@ -51,6 +51,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //end checkpoint constants
     let currentMap: String
     let player = Player(imageNamed: "Walk13")
+    let greenGem = Item(imageNamed: "gem_green_1", objectNamed: "greenGem")
+    let redGem = Item(imageNamed: "gem_green_1", objectNamed: "redGem")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonNorth = SKSpriteNode(imageNamed: "Directional_Button")
@@ -66,6 +68,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var setup = false
     let maxScaleHeight: CGFloat = 100
     var currentPlayerHeight: CGFloat = 0
+    
+    //player spawn
+    var playerSpawnPoint: CGPoint = CGPoint.zeroPoint
     
     //checking device type
     let modelName = UIDevice.currentDevice().modelName
@@ -188,10 +193,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
            //load the player
             if obj.name == "player" {
                 player.position = CGPoint(x: obj.x, y: obj.y)
+                //this spawn point is for use in the respawn method
+                playerSpawnPoint = CGPoint(x: obj.x, y: obj.y)
                 player.zPosition = 200
                 player.setScale(0.7)
                 worldNode.addChild(player)
                 centerViewOn(player.position)
+            } else if obj.name == "greenGem" {
+                greenGem.position = CGPoint(x: obj.x, y: obj.y)
+                greenGem.zPosition = 200
+                greenGem.name = "greenGem"
+                worldNode.addChild(greenGem)
+            } else if obj.name == "redGem" {
+                redGem.position = CGPoint(x: obj.x, y: obj.y)
+                redGem.zPosition = 200
+                redGem.name = "redGem"
+                worldNode.addChild(redGem)
             }
         }
     }
@@ -351,7 +368,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         stopWatchLabel.position = CGPoint(x: buttonNorth.position.x, y: heightHalf - menuButton.size.height * 0.4)
         stopWatchLabel.zPosition = 200
         addChild(stopWatchLabel)
-        startTimer()
+        
         
         savePointLabel.fontSize = 10
         savePointLabel.text = "Checkpoint Saved"
@@ -442,6 +459,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         worldNode.position += (target - worldNode.position) * 0.8
         
         player.update(CGFloat(dt))
+        
+        //dead yet?
+        if player.position.y < -300 {
+            player.position = playerSpawnPoint
+        }
+        
+        
         if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 30.0) && (player.physicsBody?.velocity.dy >= -20.0){//!= 0.0 {
             player.setFalling(false)
             if player.physicsBody?.velocity.dy != 0.0 {
@@ -505,7 +529,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //MARK: - Stopwatch
     func stopTimer() {
         if stopWatchLabel.actionForKey("timer") != nil {
-            println("stopping timer")
+            //println("stopping timer")
             stopWatchLabel.removeActionForKey("timer")
         }
     }
@@ -716,20 +740,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        var floorArray = [floorLayer.collisionSprites]
 //        floorArray
 //    }
-//    func didBeginContact(contact: SKPhysicsContact) {
-//        let collision: UInt32 = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
-//        
-////        if collision == PhysicsCategory.Player | PhysicsCategory.Bounce {
-////            //println("hit bounce tile")
-////            player.physicsBody?.applyImpulse(CGVectorMake(0,75))
-////        }
-//        
-//        if collision == SKACategoryPlayer | SKACategoryFloor {
-//            //println("touched floor")
-//            player.isJumping = false
+    func didBeginContact(contact: SKPhysicsContact) {
+        let collision: UInt32 = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        
+//        if collision == PhysicsCategory.Player | PhysicsCategory.Bounce {
+//            //println("hit bounce tile")
+//            player.physicsBody?.applyImpulse(CGVectorMake(0,75))
 //        }
-//
-//    }
+        
+        if collision == SKACategoryPlayer | PhysicsCategory.Item {
+            let b = contact.bodyB.node?.name
+            if b == "greenGem" {
+                startTimer()
+                greenGem.removeFromParent()
+            } else if b == "redGem" {
+                stopTimer()
+                redGem.removeFromParent()
+            }
+        }
+
+    }
     
     //MARK: Particles
     func spawnParticles(atPoint: CGPoint) {

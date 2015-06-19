@@ -6488,6 +6488,38 @@
                  "width":0,
                  "x":128,
                  "y":8064
+                }, 
+                {
+                 "ellipse":true,
+                 "height":0,
+                 "id":453,
+                 "name":"greenGem",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":256,
+                 "y":8032
+                }, 
+                {
+                 "ellipse":true,
+                 "height":0,
+                 "id":456,
+                 "name":"redGem",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":992,
+                 "y":480
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -6496,7 +6528,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":453,
+ "nextobjectid":457,
  "orientation":"orthogonal",
  "properties":
     {
