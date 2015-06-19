@@ -36,6 +36,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var savePoint:CGPoint = CGPoint.zeroPoint
     var savePointsRemaining = 25
     
+    //stopwatch variables
+    var startTime = NSTimeInterval()
+    var timer = NSTimer()
+    let stopWatchLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
+
+    
     
     
     //MARK: Constants
@@ -305,6 +311,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let widthHalf:CGFloat = self.view!.bounds.width / 2
         let heightHalf:CGFloat = self.view!.bounds.height / 2
         
+        
+
+        
         addChild(buttonNorth)
         buttonNorth.position = CGPoint(x: widthHalf - (buttonNorth.size.width), y: -heightHalf + (buttonWest.size.height * 0.6))
         buttonNorth.zPosition = 200
@@ -334,6 +343,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         savePointButton.position = CGPoint(x: teleportButton.position.x - (teleportButton.size.width * 3), y: teleportButton.position.y)
         savePointButton.zPosition = 200
         
+        
+        //timer
+        stopWatchLabel.fontSize = 15
+        stopWatchLabel.name = "timer"
+        stopWatchLabel.verticalAlignmentMode = .Center
+        stopWatchLabel.position = CGPoint(x: buttonNorth.position.x, y: heightHalf - menuButton.size.height * 0.4)
+        stopWatchLabel.zPosition = 200
+        addChild(stopWatchLabel)
+        startTimer()
+        
         savePointLabel.fontSize = 10
         savePointLabel.text = "Checkpoint Saved"
         savePointLabel.fontColor = SKColor.yellowColor()
@@ -344,6 +363,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         savePointLabel.alpha = 0
         addChild(savePointLabel)
         
+
         savePointsRemainingLabel.fontSize = 20
         savePointsRemainingLabel.text = "\(savePointsRemaining)"
         //savePointsRemainingLabel.fontColor = SKColor.blueColor()
@@ -402,6 +422,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setupInterface()
         loadObjects()
         //setupPlayer()
+        
+
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -479,6 +501,52 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
 
+    
+    //MARK: - Stopwatch
+    func startTimer() {
+        println("timer started")
+        let aSelector : Selector = "updateTime"
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        startTime = NSDate.timeIntervalSinceReferenceDate()
+    }
+    
+    func stopTimer() {
+        timer.invalidate()
+        //timer == nil
+    }
+    
+    func updateTime() {
+        //println("timer updated")
+        var currentTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        //find the difference between current time and start time
+        
+        var elapsedTime: NSTimeInterval = currentTime - startTime
+        
+        //calculate minutes in elapsed time
+        
+        let minutes = UInt8(elapsedTime / 60.0)
+        
+        //calculate seconds in elapsed time
+        
+        let seconds = UInt8(elapsedTime)
+        
+        elapsedTime -= NSTimeInterval(seconds)
+        
+        //find fraction of milliseconds to be displayed
+        
+        let fraction = UInt8(elapsedTime * 100)
+        
+        //add the leading zero for minutes, seconds, and ms
+        
+        let strMinutes = String(format: "%02d", minutes)
+        let strSeconds = String(format: "%02d", seconds)
+        let strFraction = String(format: "%02d", fraction)
+        
+        //concatenate minutes, seconds, and ms and assign to label
+        stopWatchLabel.text = "\(strMinutes):\(strSeconds):\(strFraction)"
+    }
+    
     
     //MARK: - Touch Handling
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
