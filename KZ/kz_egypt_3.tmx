@@ -2176,7 +2176,7 @@
     <property name="SKACollisionType" value="SKACollisionTypeRect"/>
    </properties>
   </object>
-  <object id="452" name="player" x="128" y="7776">
+  <object id="452" name="player" x="128" y="8064">
    <ellipse/>
   </object>
  </objectgroup>

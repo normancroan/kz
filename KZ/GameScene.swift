@@ -25,6 +25,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var lastUpdateTime: NSTimeInterval = 0
     var dt: NSTimeInterval = 0
     //var tileMap = JSTileMap(named: "I ADDED THIS CODE")
+//    var tileMap = SKATiledMap(mapName: "kz_egypt_3")
     var tileMap = SKATiledMap(mapName: "kz_egypt_3")
     var tileMapFrame: CGRect!
     var moveButtonIsPressed = false
@@ -165,18 +166,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
-    //MARK: SKAToolKit
-//    func setupPhysicsObjectsTest() {
-//        for var o = 0; o < Int(tileMap.objectsOnLayer(0, withName: "floor").count); o++ {
-//            //something
-//        }
-//    }
     
-//    func setupPhysicsObjects() {
-//        for object in tileMap.objectsOnLayer(0, withName: "floor"){
-//            println(tileMap.objectLayers.first?.objects.x)
-//        }
-//    }
+    //MARK: SKAToolKit
     func loadObjects() {
         if tileMap.objectLayers.count > 0 {
             let layer = tileMap.objectLayers[0] as! SKAObjectLayer
@@ -368,7 +359,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func createBackground() {
         let background = SKSpriteNode(imageNamed: "\(currentMap)_background")
         addChild(background)
-        background.zPosition = -101
+        background.zPosition = -201
         background.setScale(2)
         background.name = "background"
         let bgTexture = SKTexture(imageNamed: "\(currentMap)_background")

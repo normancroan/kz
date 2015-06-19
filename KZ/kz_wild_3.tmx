@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="128" height="128" tilewidth="32" tileheight="32" nextobjectid="18">
+ <tileset firstgid="1" name="_spritesheet_Tileset" tilewidth="32" tileheight="32">
+  <image source="Images.xcassets/forest_tileset.imageset/_spritesheet_Tileset.png" width="1152" height="1024"/>
+ </tileset>
+ <layer name="background" width="128" height="128">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgJD+r+4ICgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGoADwAB
+  </data>
+ </layer>
+ <layer name="floor" width="128" height="128">
+  <data encoding="base64" compression="zlib">
+   eJzt1NVtlnEchuGvRUplAeQU1zXw4iyBuywA5QQpxWEBZAVkAWQFZAHkkJsZoDRfcl3Jffrmlzz5v4MBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAv3WoDteROlrXRgaD6zVTN0YW9jbm36W6XFfqaj1v8xf1sl7Zf+j8mWy0FtXiWlJLa6yW1XhN1GRN1eN6Uk/rWb3vAx/qY32y/9BZXWtqba2r9bWhNtam2lxbamttq9f1pt7Wu/re5j/qZ/2y/9DZXjtqZ+2q3bWn9tZ07av9daAO1uf6Ul/rWy3v57GiVtaq0f9/P3/nWB2vE3WyTtXpOlNn61ydrwt1scZ74xM1WVPe+9C7Wbfqdt2p2bpbc3Wv7teDeliPFuhG5s9vYVMrgQ==
+  </data>
+ </layer>
+ <layer name="foreground" width="128" height="128">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgJD+r+4ICgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGoADwAB
+  </data>
+ </layer>
+ <objectgroup name="collision">
+  <object id="2" x="0" y="3968" width="4128" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="3" x="32" y="64" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="4" x="4032" y="0" width="32" height="32">
+   <properties>
+    <property name="SKACollisionType" value="SKACollisionTypeRect"/>
+   </properties>
+  </object>
+  <object id="5" name="player" x="160" y="3872" width="32" height="32">
+   <ellipse/>
+  </object>
+ </objectgroup>
+</map>
