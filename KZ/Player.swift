@@ -282,12 +282,12 @@ class Player: SKSpriteNode {
         if ( abs(playerSpeedX) < abs(maxSpeed / 2) && isJumping == false && isAttacking == false && walkingSlow == false ) {
             
             walkingSlow = true
-            self.runAction( slowWalkAction)
+            self.runAction( slowWalkAction!, withKey: "walk")
             
         } else if ( abs(playerSpeedX) > abs(maxSpeed / 2) && isJumping == false && isAttacking == false && walkingSlow == true) {
             
             walkingSlow = false
-            self.runAction( walkAction)
+            self.runAction( walkAction!, withKey: "walk")
             
         }
         
@@ -328,23 +328,26 @@ class Player: SKSpriteNode {
     
     func startWalk() {
         
+        if actionForKey("walk") != nil {
+            removeActionForKey("walk")
+        }
         
         if (abs(playerSpeedX) < abs(maxSpeed / 2) && walkingSlow == false  ) {
             
             walkingSlow = true
-            self.runAction(slowWalkAction)
+            self.runAction(slowWalkAction!, withKey: "walk")
             //println("should be walking slow")
             
         } else if (abs(playerSpeedX) > abs(maxSpeed / 2)  && walkingSlow == true ) {
             
             walkingSlow = false
-            self.runAction(walkAction)
+            self.runAction(walkAction!, withKey: "walk")
             //println("should be walking")
             isRunning = true
             
         } else {
             walkingSlow = false
-            self.runAction(walkAction)
+            self.runAction(walkAction!, withKey: "walk")
             //println("should be walking")
             isRunning = true
         }
@@ -353,7 +356,13 @@ class Player: SKSpriteNode {
     }
     func stopWalk() {
         
-        self.runAction(idleAction)
+        if actionForKey("idle") != nil {
+            removeActionForKey("idle")
+        }
+        
+        self.runAction(idleAction!, withKey: "idle")
+        removeActionForKey("walk")
+        removeActionForKey("jump")
         //println("idling")
         isRunning = false
         
@@ -420,10 +429,16 @@ class Player: SKSpriteNode {
     
     func jump() {
         
+
+        
         if !isFalling {
         if (isJumping == false) {
             
-            self.runAction(jumpAction)
+            if actionForKey("jump") != nil {
+                removeActionForKey("jump")
+            }
+            
+            self.runAction(jumpAction!, withKey: "jump")
             
             
             isJumping = true

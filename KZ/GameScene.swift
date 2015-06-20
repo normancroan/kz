@@ -26,7 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var dt: NSTimeInterval = 0
     //var tileMap = JSTileMap(named: "I ADDED THIS CODE")
 //    var tileMap = SKATiledMap(mapName: "kz_egypt_3")
-    var tileMap = SKATiledMap(mapName: "kz_egypt_3")
+    var tileMap = SKATiledMap(mapName: "kz_lava")
     var tileMapFrame: CGRect!
     var moveButtonIsPressed = false
     var jumpButtonIsPressed = false
@@ -61,7 +61,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let teleportButton = SKSpriteNode(imageNamed: "crystal")
     
     //these are used for the scaleBackground method and setupBackground
-    let background = SKSpriteNode(imageNamed: "kz_egypt_3_background")
+//    let background = SKSpriteNode(imageNamed: "kz_egypt_3_background")
+    let background = SKSpriteNode(imageNamed: "kz_lava_background")
     var backgroundYStart: CGFloat = 1.0
     var backgroundXScaleStart: CGFloat = 1.0
     var backgroundYScaleStart: CGFloat = 1.0

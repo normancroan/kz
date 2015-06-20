@@ -71,6 +71,7 @@
 		189A48D31B33E84A00B3578C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A48D21B33E84A00B3578C /* Item.swift */; };
 		189A48D51B33EC1C00B3578C /* GemGreenIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 189A48D41B33EC1C00B3578C /* GemGreenIdle.atlas */; };
 		189A48D71B33F71000B3578C /* GemRedIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 189A48D61B33F71000B3578C /* GemRedIdle.atlas */; };
+		189A48D91B353CC200B3578C /* kz_lava.json in Resources */ = {isa = PBXBuildFile; fileRef = 189A48D81B353CC200B3578C /* kz_lava.json */; };
 		18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */; };
 		18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */; };
 		18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC31B1BEF99004C0E5D /* Walk.atlas */; };
@@ -185,6 +186,7 @@
 		189A48D21B33E84A00B3578C /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		189A48D41B33EC1C00B3578C /* GemGreenIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GemGreenIdle.atlas; sourceTree = "<group>"; };
 		189A48D61B33F71000B3578C /* GemRedIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GemRedIdle.atlas; sourceTree = "<group>"; };
+		189A48D81B353CC200B3578C /* kz_lava.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_lava.json; sourceTree = "<group>"; };
 		18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Jump.atlas; sourceTree = "<group>"; };
 		18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Idle.atlas; sourceTree = "<group>"; };
 		18A9FCC31B1BEF99004C0E5D /* Walk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Walk.atlas; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 		18149CB81B197D3D00522024 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
+				189A48D81B353CC200B3578C /* kz_lava.json */,
 				189A48CE1B330FE000B3578C /* kz_wild_3.json */,
 				18099B4B1B2B1EDD002932F3 /* endless-map-0.tmx */,
 				18099B471B2ABF31002932F3 /* small-map-test-1.tmx */,
@@ -523,6 +526,7 @@
 				18F760501B2418CB0086E776 /* kz_dream.tmx in Resources */,
 				18149CCE1B19E2E500522024 /* valley-tiles-5.atlasc in Resources */,
 				18099B9B1B2FF65E002932F3 /* kz_signs_small.1.png in Resources */,
+				189A48D91B353CC200B3578C /* kz_lava.json in Resources */,
 				18099B991B2FF65E002932F3 /* kz_egypt_tiles_small.tps in Resources */,
 				18A9FCC61B1BF0AB004C0E5D /* Run.atlas in Resources */,
 				18E87EB11B21954300E4CC4E /* MagicFire.sks in Resources */,
