@@ -9,6 +9,7 @@
 #import "SKATiledMap.h"
 #import "SKAMapTile.h"
 #import "CollisionDefine.h"
+#import "SKATMXParser.h"
 
 @interface SKATiledMap ()
 
@@ -27,25 +28,81 @@
 
 @implementation SKATiledMap
 
+#pragma mark - Init
 -(instancetype)initWithMapName:(NSString *)mapName
 {
-    self = [super init];
+    if(!(self = [super init])) return nil;
 
     [self loadFile:mapName];
     
     return self;
 }
 
+#pragma mark - File Loading
 -(void)loadFile:(NSString *)fileName
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"json"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"tmx"];
     
+    if([[NSFileManager defaultManager] fileExistsAtPath:filePath])
+    {
+        NSLog(@"Loading TMX");
+        [self loadMap:[self mapDictionaryForTMXFile:filePath]];
+        //NSLog(@"Dictionary contains: %@", [self mapDictionaryForTMXFile:filePath]);
+    }
+    else
+    {
+        NSLog(@"Loading JSON");
+
+        filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"json"];
+        
+        if([[NSFileManager defaultManager] fileExistsAtPath:filePath])
+        {
+            [self loadMap:[self mapDictionaryForJSONFile:filePath]];
+        }
+        else
+        {
+            NSLog(@"error: no file could be found for %@.tmx or %@.json", fileName, fileName);
+        }
+    }
+}
+
+- (NSDictionary *)mapDictionaryForTMXFile:(NSString *)filePath
+{
+    NSError *error;
+    NSData *data = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+    
+    if(!error)
+    {
+        SKATMXParser *parser = [[SKATMXParser alloc] init];
+        return [parser dictionaryWithData:data];
+    }
+    
+    NSLog(@"Error creating map from TMX file: %@", filePath);
+    return nil;
+}
+
+-(NSDictionary *)mapDictionaryForJSONFile:(NSString *)filePath
+{
     NSError *error = nil;
-    
     NSData *JSONData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
     
-    NSDictionary *mapDictionary = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingAllowFragments error:&error];
+    if(!error)
+    {
+        error = nil;
+        NSDictionary *mapDictionary = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingAllowFragments error:&error];
+        
+        if(!error)
+        {
+            return mapDictionary;
+        }
+    }
     
+    NSLog(@"Error creating map from JSON file: %@", filePath);
+    return nil;
+}
+
+- (void)loadMap:(NSDictionary *)mapDictionary
+{
     self.mapProperties = mapDictionary[@"properties"];
     
     self.mapWidth = [mapDictionary[@"width"] integerValue];
@@ -65,61 +122,98 @@
         
         //getting big texture
         NSString *path = [[tileset[@"image"] lastPathComponent] stringByDeletingPathExtension];
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:path ofType:[tileset[@"image"] pathExtension]];
         
-        UIImage *image = [UIImage imageNamed:[tileset[@"image"] lastPathComponent]];
-        
-        if (!image)
+
+        if (path)
         {
-            NSLog(@"Image not found in bundle: %@ looking in file path", [tileset[@"image"] lastPathComponent]);
-            image = [[UIImage alloc]initWithContentsOfFile:filePath];
-        }
-        
-        SKTexture *mainTexture = [SKTexture textureWithImage:image];
-        mainTexture.filteringMode = SKTextureFilteringNearest;
-
-        
-        //calculating small texture
-        NSInteger imageWidth = [tileset[@"imagewidth"] integerValue];
-        NSInteger imageHeight = [tileset[@"imageheight"] integerValue];
-        
-        NSInteger spacing = [tileset[@"spacing"] integerValue];
-        NSInteger margin = [tileset[@"margin"] integerValue];
-        
-        NSInteger width = imageWidth - margin * 2;
-        NSInteger height = imageHeight - margin * 2;
-        
-        NSInteger tileColumns = ceil((float)width/(float)(tileWidth + spacing));
-        NSInteger tileRows = ceil((float)height/(float)(tileHeight + spacing));
-        
-
-        
-        float spacingPercentWidth = (float)spacing/(float)imageWidth;
-        float spacingPercentHeight = (float)spacing/(float)imageHeight;
-        
-        float marginPercentWidth = (float)margin/(float)tileWidth;
-        float marginPercentHeight = (float)margin/(float)tileHeight;
-        
-        float tileWidthPercent = (float)tileWidth/(float)imageWidth;
-        float tileHeightPercent = (float)tileHeight/(float)imageHeight;
-
-        NSInteger index = [tileset[@"firstgid"] integerValue];
-        
-        for (NSInteger i = 0; i < tileRows; i++)
-        {
-            for (NSInteger j = 0; j < tileColumns; j++)
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:path ofType:[tileset[@"image"] pathExtension]];
+            
+            UIImage *image = [UIImage imageNamed:[tileset[@"image"] lastPathComponent]];
+            
+            if (!image)
             {
-                
+                NSLog(@"Image not found in bundle: %@ looking in file path", [tileset[@"image"] lastPathComponent]);
+                image = [[UIImage alloc]initWithContentsOfFile:filePath];
+            }
+            
+            SKTexture *mainTexture = [SKTexture textureWithImage:image];
+            mainTexture.filteringMode = SKTextureFilteringNearest;
+            
+            
+            //calculating small texture
+            NSInteger imageWidth = [tileset[@"imagewidth"] integerValue];
+            NSInteger imageHeight = [tileset[@"imageheight"] integerValue];
+            
+            NSInteger spacing = [tileset[@"spacing"] integerValue];
+            NSInteger margin = [tileset[@"margin"] integerValue];
+            
+            NSInteger width = imageWidth - margin * 2;
+            NSInteger height = imageHeight - margin * 2;
+            
+            NSInteger tileColumns = ceil((float)width/(float)(tileWidth + spacing));
+            NSInteger tileRows = ceil((float)height/(float)(tileHeight + spacing));
+            
+            
+            
+            float spacingPercentWidth = (float)spacing/(float)imageWidth;
+            float spacingPercentHeight = (float)spacing/(float)imageHeight;
+            
+            float marginPercentWidth = (float)margin/(float)tileWidth;
+            float marginPercentHeight = (float)margin/(float)tileHeight;
+            
+            float tileWidthPercent = (float)tileWidth/(float)imageWidth;
+            float tileHeightPercent = (float)tileHeight/(float)imageHeight;
+            
+            NSInteger index = [tileset[@"firstgid"] integerValue];
+            
+            for (NSInteger i = 0; i < tileRows; i++)
+            {
+                for (NSInteger j = 0; j < tileColumns; j++)
+                {
+                    
+                    SKAMapTile *mapTile = [[SKAMapTile alloc]init];
+                    float x = marginPercentWidth + j * (tileWidthPercent + spacingPercentWidth); //advance based on column
+                    
+                    float y = 1.0f - (marginPercentHeight + tileHeightPercent + (i * (tileHeightPercent + (spacingPercentHeight) )));
+                    
+                    SKTexture *texture = [SKTexture textureWithRect:CGRectMake(x, y, tileWidthPercent, tileHeightPercent) inTexture:mainTexture];
+                    texture.filteringMode = SKTextureFilteringNearest;
+                    
+                    mapTile.texture = texture;
+                    mapTile.indexKey = index;
+                    
+                    NSString *key = [NSString stringWithFormat:@"%@", @(mapTile.indexKey)];
+                    
+                    NSString *propertyKey =  [NSString stringWithFormat:@"%@", @(mapTile.indexKey-[tileset[@"firstgid"] integerValue])];
+                    if (tileset[@"tileproperties"][propertyKey])
+                    {
+                        mapTile.properties = tileset[@"tileproperties"][propertyKey];
+                    }
+                    
+                    [tileSets setObject:mapTile forKey:key];
+                    
+                    index++;
+                }
+            }
+
+        }
+        else
+        {
+            NSLog(@"working off of a collection");
+            
+            for (NSString *key in [tileset[@"tiles"] allKeys])
+            {
                 SKAMapTile *mapTile = [[SKAMapTile alloc]init];
-                float x = marginPercentWidth + j * (tileWidthPercent + spacingPercentWidth); //advance based on column
                 
-                float y = 1.0f - (marginPercentHeight + tileHeightPercent + (i * (tileHeightPercent + (spacingPercentHeight) )));
+                NSDictionary *spriteDict = tileset[@"tiles"][key];
                 
-                SKTexture *texture = [SKTexture textureWithRect:CGRectMake(x, y, tileWidthPercent, tileHeightPercent) inTexture:mainTexture];
+                NSString *imageName = [spriteDict[@"image"] lastPathComponent];
+                
+                SKTexture *texture = [SKTexture textureWithImageNamed:imageName];
                 texture.filteringMode = SKTextureFilteringNearest;
-                                
+                
                 mapTile.texture = texture;
-                mapTile.indexKey = index;
+                mapTile.indexKey = [tileset[@"firstgid"] integerValue] + [key integerValue];
                 
                 NSString *key = [NSString stringWithFormat:@"%@", @(mapTile.indexKey)];
                 
@@ -131,7 +225,6 @@
                 
                 [tileSets setObject:mapTile forKey:key];
                 
-                index++;
             }
         }
     }
@@ -145,7 +238,6 @@
     for (NSDictionary *layerDictionary in mapDictionary[@"layers"])
     {
         NSArray *data = layerDictionary[@"data"];
-        
         
         if (data.count)
         {
@@ -213,8 +305,7 @@
                         {
                             sprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:sprite.size];
                             sprite.physicsBody.dynamic = NO;
-                            sprite.physicsBody.restitution = 0;
-                            sprite.physicsBody.categoryBitMask =SKACategoryFloor;
+                            sprite.physicsBody.categoryBitMask = SKACategoryFloor;
                             sprite.physicsBody.contactTestBitMask = SKACategoryPlayer;
                             sprite.zPosition = 20;
                         }
@@ -291,8 +382,6 @@
                     floorSprite.position = CGPointMake(object.centerX, object.centerY);
                     floorSprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:floorSprite.size];
                     floorSprite.physicsBody.dynamic = NO;
-                    floorSprite.physicsBody.restitution = 0.0;
-                    floorSprite.physicsBody.friction = 5;
                     floorSprite.physicsBody.categoryBitMask = SKACategoryFloor;
                     floorSprite.physicsBody.contactTestBitMask = SKACategoryPlayer;
                     [self addChild:floorSprite];
@@ -531,22 +620,38 @@
         
         if (staringX < 0)
         {
+            endingX += -staringX;
+
             staringX = 0;
         }
         
         if (staringY < 0)
         {
+            endingX += -staringY;
+
             staringY = 0;
         }
         
         if (endingX > self.mapWidth -1)
         {
+            staringX = endingX - self.mapWidth-1;
             endingX = self.mapWidth -1;
         }
         
         if (endingY > self.mapHeight -1)
         {
+            staringY = endingY - self.mapHeight-1;
             endingY = self.mapHeight -1;
+        }
+        
+        if (endingX < 0)
+        {
+            endingX = 0;
+        }
+        
+        if (endingY < 0)
+        {
+            endingY = 0;
         }
         
         for (NSInteger l = 0; l < self.spriteLayers.count; l++)

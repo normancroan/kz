@@ -26,7 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var dt: NSTimeInterval = 0
     //var tileMap = JSTileMap(named: "I ADDED THIS CODE")
 //    var tileMap = SKATiledMap(mapName: "kz_egypt_3")
-    var tileMap = SKATiledMap(mapName: "kz_lava")
+    var tileMap = SKATiledMap(mapName: "kz_egypt_3")
     var tileMapFrame: CGRect!
     var moveButtonIsPressed = false
     var jumpButtonIsPressed = false

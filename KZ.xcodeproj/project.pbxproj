@@ -14,16 +14,6 @@
 		18099B491B2ABF31002932F3 /* small-map-test-1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18099B471B2ABF31002932F3 /* small-map-test-1.tmx */; };
 		18099B4A1B2ABF31002932F3 /* small-map-test-0.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18099B481B2ABF31002932F3 /* small-map-test-0.tmx */; };
 		18099B4C1B2B1EDD002932F3 /* endless-map-0.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18099B4B1B2B1EDD002932F3 /* endless-map-0.tmx */; };
-		18099B7F1B2BEEA7002932F3 /* SKAButtonSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099B6A1B2BEEA7002932F3 /* SKAButtonSprite.m */; };
-		18099B801B2BEEA7002932F3 /* SKACroppedMiniMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099B6C1B2BEEA7002932F3 /* SKACroppedMiniMap.m */; };
-		18099B811B2BEEA7002932F3 /* SKAMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099B6E1B2BEEA7002932F3 /* SKAMapTile.m */; };
-		18099B821B2BEEA7002932F3 /* SKAMiniMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099B701B2BEEA7002932F3 /* SKAMiniMap.m */; };
-		18099B831B2BEEA7002932F3 /* SKAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099B721B2BEEA7002932F3 /* SKAObject.m */; };
-		18099B841B2BEEA7002932F3 /* SKAObjectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099B741B2BEEA7002932F3 /* SKAObjectLayer.m */; };
-		18099B851B2BEEA7002932F3 /* SKASprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099B761B2BEEA7002932F3 /* SKASprite.m */; };
-		18099B861B2BEEA7002932F3 /* SKASpriteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099B781B2BEEA7002932F3 /* SKASpriteLayer.m */; };
-		18099B871B2BEEA7002932F3 /* SKATestHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099B7A1B2BEEA7002932F3 /* SKATestHud.m */; };
-		18099B881B2BEEA7002932F3 /* SKATestPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099B7C1B2BEEA7002932F3 /* SKATestPlayer.m */; };
 		18099B951B2FF65E002932F3 /* egypt_items_medium.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18099B8D1B2FF65E002932F3 /* egypt_items_medium.1.png */; };
 		18099B961B2FF65E002932F3 /* egypt_small_floors_bgra.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18099B8E1B2FF65E002932F3 /* egypt_small_floors_bgra.1.png */; };
 		18099B971B2FF65E002932F3 /* egypt_small_walls_rgba4.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18099B8F1B2FF65E002932F3 /* egypt_small_walls_rgba4.1.png */; };
@@ -31,7 +21,6 @@
 		18099B991B2FF65E002932F3 /* kz_egypt_tiles_small.tps in Resources */ = {isa = PBXBuildFile; fileRef = 18099B911B2FF65E002932F3 /* kz_egypt_tiles_small.tps */; };
 		18099B9A1B2FF65E002932F3 /* kz_egypt_walls.tps in Resources */ = {isa = PBXBuildFile; fileRef = 18099B921B2FF65E002932F3 /* kz_egypt_walls.tps */; };
 		18099B9B1B2FF65E002932F3 /* kz_signs_small.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18099B931B2FF65E002932F3 /* kz_signs_small.1.png */; };
-		18099BA11B30284C002932F3 /* SKATiledMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 18099BA01B30284C002932F3 /* SKATiledMap.m */; };
 		18149C621B19709F00522024 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149C611B19709F00522024 /* AppDelegate.swift */; };
 		18149C641B19709F00522024 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18149C631B19709F00522024 /* GameScene.sks */; };
 		18149C661B19709F00522024 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149C651B19709F00522024 /* GameScene.swift */; };
@@ -40,8 +29,6 @@
 		18149C6D1B19709F00522024 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18149C6C1B19709F00522024 /* Images.xcassets */; };
 		18149C701B19709F00522024 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18149C6E1B19709F00522024 /* LaunchScreen.xib */; };
 		18149C7C1B1970A000522024 /* KZTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149C7B1B1970A000522024 /* KZTests.swift */; };
-		18149C8C1B1972A600522024 /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 18149C881B1972A600522024 /* JSTileMap.m */; };
-		18149C8D1B1972A600522024 /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 18149C8A1B1972A600522024 /* LFCGzipUtility.m */; };
 		18149C8E1B1972A600522024 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18149C8B1B1972A600522024 /* LICENSE.txt */; };
 		18149C9C1B1972BE00522024 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149C901B1972BE00522024 /* CGFloat+Extensions.swift */; };
 		18149C9D1B1972BE00522024 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18149C911B1972BE00522024 /* CGPoint+Extensions.swift */; };
@@ -72,6 +59,16 @@
 		189A48D51B33EC1C00B3578C /* GemGreenIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 189A48D41B33EC1C00B3578C /* GemGreenIdle.atlas */; };
 		189A48D71B33F71000B3578C /* GemRedIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 189A48D61B33F71000B3578C /* GemRedIdle.atlas */; };
 		189A48D91B353CC200B3578C /* kz_lava.json in Resources */ = {isa = PBXBuildFile; fileRef = 189A48D81B353CC200B3578C /* kz_lava.json */; };
+		189A48DD1B35809700B3578C /* lava-tiles-tight.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 189A48DC1B35809700B3578C /* lava-tiles-tight.atlasc */; };
+		189A48F01B363D4000B3578C /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A48DF1B363D4000B3578C /* LFCGzipUtility.m */; };
+		189A48F11B363D4000B3578C /* NSMutableDictionary+SKATMXParserUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A48E11B363D4000B3578C /* NSMutableDictionary+SKATMXParserUtils.m */; };
+		189A48F21B363D4000B3578C /* SKAMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A48E31B363D4000B3578C /* SKAMapTile.m */; };
+		189A48F31B363D4000B3578C /* SKAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A48E51B363D4000B3578C /* SKAObject.m */; };
+		189A48F41B363D4000B3578C /* SKAObjectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A48E71B363D4000B3578C /* SKAObjectLayer.m */; };
+		189A48F51B363D4000B3578C /* SKASprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A48E91B363D4000B3578C /* SKASprite.m */; };
+		189A48F61B363D4000B3578C /* SKASpriteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A48EB1B363D4000B3578C /* SKASpriteLayer.m */; };
+		189A48F81B363D4000B3578C /* SKATMXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A48EF1B363D4000B3578C /* SKATMXParser.m */; };
+		189A48FD1B364A6F00B3578C /* SKATiledMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A48FC1B364A6F00B3578C /* SKATiledMap.m */; };
 		18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */; };
 		18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */; };
 		18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC31B1BEF99004C0E5D /* Walk.atlas */; };
@@ -110,26 +107,6 @@
 		18099B471B2ABF31002932F3 /* small-map-test-1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "small-map-test-1.tmx"; sourceTree = "<group>"; };
 		18099B481B2ABF31002932F3 /* small-map-test-0.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "small-map-test-0.tmx"; sourceTree = "<group>"; };
 		18099B4B1B2B1EDD002932F3 /* endless-map-0.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "endless-map-0.tmx"; sourceTree = "<group>"; };
-		18099B691B2BEEA7002932F3 /* SKAButtonSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAButtonSprite.h; sourceTree = "<group>"; };
-		18099B6A1B2BEEA7002932F3 /* SKAButtonSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAButtonSprite.m; sourceTree = "<group>"; };
-		18099B6B1B2BEEA7002932F3 /* SKACroppedMiniMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKACroppedMiniMap.h; sourceTree = "<group>"; };
-		18099B6C1B2BEEA7002932F3 /* SKACroppedMiniMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKACroppedMiniMap.m; sourceTree = "<group>"; };
-		18099B6D1B2BEEA7002932F3 /* SKAMapTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAMapTile.h; sourceTree = "<group>"; };
-		18099B6E1B2BEEA7002932F3 /* SKAMapTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAMapTile.m; sourceTree = "<group>"; };
-		18099B6F1B2BEEA7002932F3 /* SKAMiniMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAMiniMap.h; sourceTree = "<group>"; };
-		18099B701B2BEEA7002932F3 /* SKAMiniMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAMiniMap.m; sourceTree = "<group>"; };
-		18099B711B2BEEA7002932F3 /* SKAObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAObject.h; sourceTree = "<group>"; };
-		18099B721B2BEEA7002932F3 /* SKAObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAObject.m; sourceTree = "<group>"; };
-		18099B731B2BEEA7002932F3 /* SKAObjectLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAObjectLayer.h; sourceTree = "<group>"; };
-		18099B741B2BEEA7002932F3 /* SKAObjectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAObjectLayer.m; sourceTree = "<group>"; };
-		18099B751B2BEEA7002932F3 /* SKASprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKASprite.h; sourceTree = "<group>"; };
-		18099B761B2BEEA7002932F3 /* SKASprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKASprite.m; sourceTree = "<group>"; };
-		18099B771B2BEEA7002932F3 /* SKASpriteLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKASpriteLayer.h; sourceTree = "<group>"; };
-		18099B781B2BEEA7002932F3 /* SKASpriteLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKASpriteLayer.m; sourceTree = "<group>"; };
-		18099B791B2BEEA7002932F3 /* SKATestHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKATestHud.h; sourceTree = "<group>"; };
-		18099B7A1B2BEEA7002932F3 /* SKATestHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATestHud.m; sourceTree = "<group>"; };
-		18099B7B1B2BEEA7002932F3 /* SKATestPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKATestPlayer.h; sourceTree = "<group>"; };
-		18099B7C1B2BEEA7002932F3 /* SKATestPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATestPlayer.m; sourceTree = "<group>"; };
 		18099B8D1B2FF65E002932F3 /* egypt_items_medium.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egypt_items_medium.1.png; sourceTree = "<group>"; };
 		18099B8E1B2FF65E002932F3 /* egypt_small_floors_bgra.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egypt_small_floors_bgra.1.png; sourceTree = "<group>"; };
 		18099B8F1B2FF65E002932F3 /* egypt_small_walls_rgba4.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egypt_small_walls_rgba4.1.png; sourceTree = "<group>"; };
@@ -137,8 +114,6 @@
 		18099B911B2FF65E002932F3 /* kz_egypt_tiles_small.tps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt_tiles_small.tps; sourceTree = "<group>"; };
 		18099B921B2FF65E002932F3 /* kz_egypt_walls.tps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt_walls.tps; sourceTree = "<group>"; };
 		18099B931B2FF65E002932F3 /* kz_signs_small.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_signs_small.1.png; sourceTree = "<group>"; };
-		18099B9F1B30284C002932F3 /* SKATiledMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKATiledMap.h; sourceTree = "<group>"; };
-		18099BA01B30284C002932F3 /* SKATiledMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATiledMap.m; sourceTree = "<group>"; };
 		18099BA21B310964002932F3 /* CollisionDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollisionDefine.h; sourceTree = "<group>"; };
 		18149C5C1B19709F00522024 /* KZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18149C601B19709F00522024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,10 +127,6 @@
 		18149C751B1970A000522024 /* KZTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KZTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18149C7A1B1970A000522024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18149C7B1B1970A000522024 /* KZTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZTests.swift; sourceTree = "<group>"; };
-		18149C871B1972A600522024 /* JSTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTileMap.h; sourceTree = "<group>"; };
-		18149C881B1972A600522024 /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
-		18149C891B1972A600522024 /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
-		18149C8A1B1972A600522024 /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
 		18149C8B1B1972A600522024 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		18149C901B1972BE00522024 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		18149C911B1972BE00522024 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
@@ -187,6 +158,25 @@
 		189A48D41B33EC1C00B3578C /* GemGreenIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GemGreenIdle.atlas; sourceTree = "<group>"; };
 		189A48D61B33F71000B3578C /* GemRedIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GemRedIdle.atlas; sourceTree = "<group>"; };
 		189A48D81B353CC200B3578C /* kz_lava.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_lava.json; sourceTree = "<group>"; };
+		189A48DC1B35809700B3578C /* lava-tiles-tight.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "lava-tiles-tight.atlasc"; sourceTree = "<group>"; };
+		189A48DE1B363D4000B3578C /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
+		189A48DF1B363D4000B3578C /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
+		189A48E01B363D4000B3578C /* NSMutableDictionary+SKATMXParserUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+SKATMXParserUtils.h"; sourceTree = "<group>"; };
+		189A48E11B363D4000B3578C /* NSMutableDictionary+SKATMXParserUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+SKATMXParserUtils.m"; sourceTree = "<group>"; };
+		189A48E21B363D4000B3578C /* SKAMapTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAMapTile.h; sourceTree = "<group>"; };
+		189A48E31B363D4000B3578C /* SKAMapTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAMapTile.m; sourceTree = "<group>"; };
+		189A48E41B363D4000B3578C /* SKAObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAObject.h; sourceTree = "<group>"; };
+		189A48E51B363D4000B3578C /* SKAObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAObject.m; sourceTree = "<group>"; };
+		189A48E61B363D4000B3578C /* SKAObjectLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAObjectLayer.h; sourceTree = "<group>"; };
+		189A48E71B363D4000B3578C /* SKAObjectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAObjectLayer.m; sourceTree = "<group>"; };
+		189A48E81B363D4000B3578C /* SKASprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKASprite.h; sourceTree = "<group>"; };
+		189A48E91B363D4000B3578C /* SKASprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKASprite.m; sourceTree = "<group>"; };
+		189A48EA1B363D4000B3578C /* SKASpriteLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKASpriteLayer.h; sourceTree = "<group>"; };
+		189A48EB1B363D4000B3578C /* SKASpriteLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKASpriteLayer.m; sourceTree = "<group>"; };
+		189A48EE1B363D4000B3578C /* SKATMXParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKATMXParser.h; sourceTree = "<group>"; };
+		189A48EF1B363D4000B3578C /* SKATMXParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATMXParser.m; sourceTree = "<group>"; };
+		189A48F91B36412600B3578C /* SKATiledMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKATiledMap.h; sourceTree = "<group>"; };
+		189A48FC1B364A6F00B3578C /* SKATiledMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATiledMap.m; sourceTree = "<group>"; };
 		18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Jump.atlas; sourceTree = "<group>"; };
 		18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Idle.atlas; sourceTree = "<group>"; };
 		18A9FCC31B1BEF99004C0E5D /* Walk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Walk.atlas; sourceTree = "<group>"; };
@@ -229,30 +219,26 @@
 		18099AE91B295BF5002932F3 /* SKAToolKit */ = {
 			isa = PBXGroup;
 			children = (
+				189A48F91B36412600B3578C /* SKATiledMap.h */,
+				189A48FC1B364A6F00B3578C /* SKATiledMap.m */,
 				18099BA21B310964002932F3 /* CollisionDefine.h */,
 				183446771B31620700BADEBF /* CollisionDefine.m */,
-				18099B691B2BEEA7002932F3 /* SKAButtonSprite.h */,
-				18099B6A1B2BEEA7002932F3 /* SKAButtonSprite.m */,
-				18099B6B1B2BEEA7002932F3 /* SKACroppedMiniMap.h */,
-				18099B6C1B2BEEA7002932F3 /* SKACroppedMiniMap.m */,
-				18099B6D1B2BEEA7002932F3 /* SKAMapTile.h */,
-				18099B6E1B2BEEA7002932F3 /* SKAMapTile.m */,
-				18099B6F1B2BEEA7002932F3 /* SKAMiniMap.h */,
-				18099B701B2BEEA7002932F3 /* SKAMiniMap.m */,
-				18099B711B2BEEA7002932F3 /* SKAObject.h */,
-				18099B721B2BEEA7002932F3 /* SKAObject.m */,
-				18099B731B2BEEA7002932F3 /* SKAObjectLayer.h */,
-				18099B741B2BEEA7002932F3 /* SKAObjectLayer.m */,
-				18099B751B2BEEA7002932F3 /* SKASprite.h */,
-				18099B761B2BEEA7002932F3 /* SKASprite.m */,
-				18099B771B2BEEA7002932F3 /* SKASpriteLayer.h */,
-				18099B781B2BEEA7002932F3 /* SKASpriteLayer.m */,
-				18099B791B2BEEA7002932F3 /* SKATestHud.h */,
-				18099B7A1B2BEEA7002932F3 /* SKATestHud.m */,
-				18099B7B1B2BEEA7002932F3 /* SKATestPlayer.h */,
-				18099B7C1B2BEEA7002932F3 /* SKATestPlayer.m */,
-				18099B9F1B30284C002932F3 /* SKATiledMap.h */,
-				18099BA01B30284C002932F3 /* SKATiledMap.m */,
+				189A48DE1B363D4000B3578C /* LFCGzipUtility.h */,
+				189A48DF1B363D4000B3578C /* LFCGzipUtility.m */,
+				189A48E01B363D4000B3578C /* NSMutableDictionary+SKATMXParserUtils.h */,
+				189A48E11B363D4000B3578C /* NSMutableDictionary+SKATMXParserUtils.m */,
+				189A48E21B363D4000B3578C /* SKAMapTile.h */,
+				189A48E31B363D4000B3578C /* SKAMapTile.m */,
+				189A48E41B363D4000B3578C /* SKAObject.h */,
+				189A48E51B363D4000B3578C /* SKAObject.m */,
+				189A48E61B363D4000B3578C /* SKAObjectLayer.h */,
+				189A48E71B363D4000B3578C /* SKAObjectLayer.m */,
+				189A48E81B363D4000B3578C /* SKASprite.h */,
+				189A48E91B363D4000B3578C /* SKASprite.m */,
+				189A48EA1B363D4000B3578C /* SKASpriteLayer.h */,
+				189A48EB1B363D4000B3578C /* SKASpriteLayer.m */,
+				189A48EE1B363D4000B3578C /* SKATMXParser.h */,
+				189A48EF1B363D4000B3578C /* SKATMXParser.m */,
 			);
 			name = SKAToolKit;
 			sourceTree = "<group>";
@@ -362,10 +348,6 @@
 		18149C861B1972A600522024 /* JSTileMap */ = {
 			isa = PBXGroup;
 			children = (
-				18149C871B1972A600522024 /* JSTileMap.h */,
-				18149C881B1972A600522024 /* JSTileMap.m */,
-				18149C891B1972A600522024 /* LFCGzipUtility.h */,
-				18149C8A1B1972A600522024 /* LFCGzipUtility.m */,
 				18149C8B1B1972A600522024 /* LICENSE.txt */,
 			);
 			path = JSTileMap;
@@ -394,6 +376,7 @@
 		18149CB01B197C1A00522024 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				189A48DC1B35809700B3578C /* lava-tiles-tight.atlasc */,
 				189A48D61B33F71000B3578C /* GemRedIdle.atlas */,
 				189A48D41B33EC1C00B3578C /* GemGreenIdle.atlas */,
 				184DFFEF1B268063001D722E /* kz_egypt */,
@@ -535,6 +518,7 @@
 				18099B961B2FF65E002932F3 /* egypt_small_floors_bgra.1.png in Resources */,
 				189A48D71B33F71000B3578C /* GemRedIdle.atlas in Resources */,
 				18099B971B2FF65E002932F3 /* egypt_small_walls_rgba4.1.png in Resources */,
+				189A48DD1B35809700B3578C /* lava-tiles-tight.atlasc in Resources */,
 				18E87EA31B204F4000E4CC4E /* kz_wonderland_tileset_medium.atlasc in Resources */,
 				18099B441B2A8522002932F3 /* kz_wild_2.tmx in Resources */,
 				18099B9A1B2FF65E002932F3 /* kz_egypt_walls.tps in Resources */,
@@ -587,40 +571,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189A48F31B363D4000B3578C /* SKAObject.m in Sources */,
+				189A48FD1B364A6F00B3578C /* SKATiledMap.m in Sources */,
+				189A48F21B363D4000B3578C /* SKAMapTile.m in Sources */,
 				18149C9D1B1972BE00522024 /* CGPoint+Extensions.swift in Sources */,
 				18149CA51B1972BE00522024 /* SKTEffects.swift in Sources */,
 				189A48D31B33E84A00B3578C /* Item.swift in Sources */,
-				18099B811B2BEEA7002932F3 /* SKAMapTile.m in Sources */,
-				18099B801B2BEEA7002932F3 /* SKACroppedMiniMap.m in Sources */,
+				189A48F11B363D4000B3578C /* NSMutableDictionary+SKATMXParserUtils.m in Sources */,
+				189A48F61B363D4000B3578C /* SKASpriteLayer.m in Sources */,
 				18149CA01B1972BE00522024 /* SKAction+Extensions.swift in Sources */,
 				18149C661B19709F00522024 /* GameScene.swift in Sources */,
 				18149CA31B1972BE00522024 /* SKNode+Extensions.swift in Sources */,
-				18149C8D1B1972A600522024 /* LFCGzipUtility.m in Sources */,
-				18099B851B2BEEA7002932F3 /* SKASprite.m in Sources */,
 				18149CA61B1972BE00522024 /* SKTTimingFunctions.swift in Sources */,
 				18149CA11B1972BE00522024 /* SKAction+SpecialEffects.swift in Sources */,
-				18099B831B2BEEA7002932F3 /* SKAObject.m in Sources */,
 				18149C9F1B1972BE00522024 /* Int+Extensions.swift in Sources */,
-				18099B821B2BEEA7002932F3 /* SKAMiniMap.m in Sources */,
-				18099B881B2BEEA7002932F3 /* SKATestPlayer.m in Sources */,
+				189A48F81B363D4000B3578C /* SKATMXParser.m in Sources */,
 				18149CD01B1AA74600522024 /* Types.swift in Sources */,
+				189A48F41B363D4000B3578C /* SKAObjectLayer.m in Sources */,
 				18149CA71B1972BE00522024 /* Vector3.swift in Sources */,
 				18F760521B2506E30086E776 /* Devices.swift in Sources */,
-				18099B7F1B2BEEA7002932F3 /* SKAButtonSprite.m in Sources */,
 				18149C681B19709F00522024 /* GameViewController.swift in Sources */,
-				18099B871B2BEEA7002932F3 /* SKATestHud.m in Sources */,
 				18149CA21B1972BE00522024 /* SKColor+Extensions.swift in Sources */,
 				18149C9E1B1972BE00522024 /* CGVector+Extensions.swift in Sources */,
-				18099BA11B30284C002932F3 /* SKATiledMap.m in Sources */,
 				18149C621B19709F00522024 /* AppDelegate.swift in Sources */,
 				18E87EA11B20125700E4CC4E /* MapSelectScene.swift in Sources */,
 				18149CA41B1972BE00522024 /* SKTAudio.swift in Sources */,
 				18149CD21B1AA7C500522024 /* Player.swift in Sources */,
 				18149C9C1B1972BE00522024 /* CGFloat+Extensions.swift in Sources */,
-				18099B861B2BEEA7002932F3 /* SKASpriteLayer.m in Sources */,
-				18099B841B2BEEA7002932F3 /* SKAObjectLayer.m in Sources */,
+				189A48F51B363D4000B3578C /* SKASprite.m in Sources */,
 				183446781B31620700BADEBF /* CollisionDefine.m in Sources */,
-				18149C8C1B1972A600522024 /* JSTileMap.m in Sources */,
+				189A48F01B363D4000B3578C /* LFCGzipUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
