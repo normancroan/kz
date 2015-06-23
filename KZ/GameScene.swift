@@ -26,7 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var dt: NSTimeInterval = 0
     //var tileMap = JSTileMap(named: "I ADDED THIS CODE")
 //    var tileMap = SKATiledMap(mapName: "kz_egypt_3")
-    var tileMap = SKATiledMap(mapName: "kz_egypt_3")
+    var tileMap = SKATiledMap(mapName: "kz_caves")//"kz_caves"
     var tileMapFrame: CGRect!
     var moveButtonIsPressed = false
     var jumpButtonIsPressed = false
@@ -395,12 +395,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createBackground() {
-        let background = SKSpriteNode(imageNamed: "\(currentMap)_background")
+        //let background = SKSpriteNode(imageNamed: "\(currentMap)_background")
+        let background = SKSpriteNode(imageNamed: "kz_lava_background")
         addChild(background)
         background.zPosition = -201
         background.setScale(2)
         background.name = "background"
-        let bgTexture = SKTexture(imageNamed: "\(currentMap)_background")
+        let bgTexture = SKTexture(imageNamed: "kz_lava_background")
+        //let bgTexture = SKTexture(imageNamed: "\(currentMap)_background")
         //bgTexture.filteringMode = .Nearest
         background.texture = bgTexture
         background.position = CGPointMake(0, 100)
@@ -735,14 +737,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //MARK: Physics Handling
-    
-//    func manageFloors() {
-//        let floorLayer: SKAObjectLayer = tileMap.objectLayers[0] as! SKAObjectLayer
-//        var floorArray = [floorLayer.collisionSprites]
-//        floorArray
-//    }
     override func didFinishUpdate() {
         
+        //used 50 and 25 before
         let playerIndex = tileMap.indexForPoint(player.position)
         tileMap.cullAroundIndexX(Int(playerIndex.x), indexY: Int(playerIndex.y), columnWidth: 50, rowHeight: 25)
         

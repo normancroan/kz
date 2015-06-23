@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18099B301B296BDC002932F3 /* kz_egypt_3.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18099B2E1B296BDC002932F3 /* kz_egypt_3.tmx */; };
+		18099B301B296BDC002932F3 /* 1kz_egypt_3.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18099B2E1B296BDC002932F3 /* 1kz_egypt_3.tmx */; };
 		18099B321B296C60002932F3 /* kz_egypt_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 18099B311B296C60002932F3 /* kz_egypt_3.json */; };
 		18099B441B2A8522002932F3 /* kz_wild_2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18099B431B2A8521002932F3 /* kz_wild_2.tmx */; };
 		18099B461B2AB8B7002932F3 /* small-map-test.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18099B451B2AB8B7002932F3 /* small-map-test.tmx */; };
@@ -68,7 +68,9 @@
 		189A48F51B363D4000B3578C /* SKASprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A48E91B363D4000B3578C /* SKASprite.m */; };
 		189A48F61B363D4000B3578C /* SKASpriteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A48EB1B363D4000B3578C /* SKASpriteLayer.m */; };
 		189A48F81B363D4000B3578C /* SKATMXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A48EF1B363D4000B3578C /* SKATMXParser.m */; };
-		189A48FD1B364A6F00B3578C /* SKATiledMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A48FC1B364A6F00B3578C /* SKATiledMap.m */; };
+		189A49051B37187900B3578C /* kz_caves.json in Resources */ = {isa = PBXBuildFile; fileRef = 189A49041B37187900B3578C /* kz_caves.json */; };
+		189A49071B37188500B3578C /* kz_cave_tiles.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 189A49061B37188500B3578C /* kz_cave_tiles.atlasc */; };
+		189A49091B38634100B3578C /* SKATiledMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A49081B38634100B3578C /* SKATiledMap.m */; };
 		18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */; };
 		18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */; };
 		18A9FCC41B1BEF99004C0E5D /* Walk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18A9FCC31B1BEF99004C0E5D /* Walk.atlas */; };
@@ -100,7 +102,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18099B2E1B296BDC002932F3 /* kz_egypt_3.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_egypt_3.tmx; sourceTree = "<group>"; };
+		18099B2E1B296BDC002932F3 /* 1kz_egypt_3.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 1kz_egypt_3.tmx; sourceTree = "<group>"; };
 		18099B311B296C60002932F3 /* kz_egypt_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_egypt_3.json; sourceTree = "<group>"; };
 		18099B431B2A8521002932F3 /* kz_wild_2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kz_wild_2.tmx; sourceTree = "<group>"; };
 		18099B451B2AB8B7002932F3 /* small-map-test.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "small-map-test.tmx"; sourceTree = "<group>"; };
@@ -176,7 +178,9 @@
 		189A48EE1B363D4000B3578C /* SKATMXParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKATMXParser.h; sourceTree = "<group>"; };
 		189A48EF1B363D4000B3578C /* SKATMXParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATMXParser.m; sourceTree = "<group>"; };
 		189A48F91B36412600B3578C /* SKATiledMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKATiledMap.h; sourceTree = "<group>"; };
-		189A48FC1B364A6F00B3578C /* SKATiledMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATiledMap.m; sourceTree = "<group>"; };
+		189A49041B37187900B3578C /* kz_caves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_caves.json; sourceTree = "<group>"; };
+		189A49061B37188500B3578C /* kz_cave_tiles.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kz_cave_tiles.atlasc; sourceTree = "<group>"; };
+		189A49081B38634100B3578C /* SKATiledMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKATiledMap.m; sourceTree = "<group>"; };
 		18A9FCBF1B1BEF83004C0E5D /* Jump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Jump.atlas; sourceTree = "<group>"; };
 		18A9FCC11B1BEF8B004C0E5D /* Idle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Idle.atlas; sourceTree = "<group>"; };
 		18A9FCC31B1BEF99004C0E5D /* Walk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Walk.atlas; sourceTree = "<group>"; };
@@ -220,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				189A48F91B36412600B3578C /* SKATiledMap.h */,
-				189A48FC1B364A6F00B3578C /* SKATiledMap.m */,
+				189A49081B38634100B3578C /* SKATiledMap.m */,
 				18099BA21B310964002932F3 /* CollisionDefine.h */,
 				183446771B31620700BADEBF /* CollisionDefine.m */,
 				189A48DE1B363D4000B3578C /* LFCGzipUtility.h */,
@@ -254,7 +258,7 @@
 				18099B921B2FF65E002932F3 /* kz_egypt_walls.tps */,
 				18099B931B2FF65E002932F3 /* kz_signs_small.1.png */,
 				18099B311B296C60002932F3 /* kz_egypt_3.json */,
-				18099B2E1B296BDC002932F3 /* kz_egypt_3.tmx */,
+				18099B2E1B296BDC002932F3 /* 1kz_egypt_3.tmx */,
 			);
 			name = "SKA Map Test Files";
 			sourceTree = "<group>";
@@ -397,6 +401,8 @@
 		18149CB81B197D3D00522024 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
+				189A49061B37188500B3578C /* kz_cave_tiles.atlasc */,
+				189A49041B37187900B3578C /* kz_caves.json */,
 				189A48D81B353CC200B3578C /* kz_lava.json */,
 				189A48CE1B330FE000B3578C /* kz_wild_3.json */,
 				18099B4B1B2B1EDD002932F3 /* endless-map-0.tmx */,
@@ -536,12 +542,14 @@
 				189A48CF1B330FE000B3578C /* kz_wild_3.json in Resources */,
 				184DFFFA1B268C6F001D722E /* egypt_small_floors_bgra.atlasc in Resources */,
 				18F7605E1B251B2F0086E776 /* kz_abandoned.tmx in Resources */,
+				189A49051B37187900B3578C /* kz_caves.json in Resources */,
 				18E87E9F1B2010C800E4CC4E /* kz_wild.tmx in Resources */,
 				18E87EAF1B218E9E00E4CC4E /* spark.png in Resources */,
 				18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */,
 				18E87EA71B20512B00E4CC4E /* kz_wonderland_trees.atlasc in Resources */,
+				189A49071B37188500B3578C /* kz_cave_tiles.atlasc in Resources */,
 				189A48CD1B329EEE00B3578C /* bokeh.png in Resources */,
-				18099B301B296BDC002932F3 /* kz_egypt_3.tmx in Resources */,
+				18099B301B296BDC002932F3 /* 1kz_egypt_3.tmx in Resources */,
 				18099B981B2FF65E002932F3 /* egypt_statues_medium.1.png in Resources */,
 				18149C8E1B1972A600522024 /* LICENSE.txt in Resources */,
 				18F760761B253C6C0086E776 /* Rain.sks in Resources */,
@@ -572,7 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				189A48F31B363D4000B3578C /* SKAObject.m in Sources */,
-				189A48FD1B364A6F00B3578C /* SKATiledMap.m in Sources */,
+				189A49091B38634100B3578C /* SKATiledMap.m in Sources */,
 				189A48F21B363D4000B3578C /* SKAMapTile.m in Sources */,
 				18149C9D1B1972BE00522024 /* CGPoint+Extensions.swift in Sources */,
 				18149CA51B1972BE00522024 /* SKTEffects.swift in Sources */,
