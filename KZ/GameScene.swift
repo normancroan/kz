@@ -309,11 +309,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(currentTime: CFTimeInterval) {
+        
+        //used 50 and 25 before
+        let playerIndex = tileMap.indexForPoint(player.position)
+        tileMap.cullAroundIndexX(Int(playerIndex.x), indexY: Int(playerIndex.y), columnWidth: 50, rowHeight: 25)
+        
+        let target = getCenterPointWithTarget(player.position)
+        worldNode.position += (target - worldNode.position) * 0.8
+        
+        scaleBackground(player.position.y)
+        
+        if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 30.0) && (player.physicsBody?.velocity.dy >= -20.0){//!= 0.0 {
+            player.setFalling(false)
+            if player.physicsBody?.velocity.dy != 0.0 {
+            }
+        } else {
+            player.setFalling(true)
+        }
         player.update(CGFloat(dt))
+        
+        
+        //dead yet?
+        if player.position.y < -300 {
+            player.position = playerSpawnPoint
+        }
 
     }
     
-    //MARK: - Camera    
+    //MARK: - Camera
     func centerViewOn(centerOn: CGPoint) {
         worldNode.position = getCenterPointWithTarget(centerOn)
     }
@@ -563,30 +586,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //MARK: Physics Handling
     override func didFinishUpdate() {
-        
-        //used 50 and 25 before
-        let playerIndex = tileMap.indexForPoint(player.position)
-        tileMap.cullAroundIndexX(Int(playerIndex.x), indexY: Int(playerIndex.y), columnWidth: 50, rowHeight: 25)
-        
-        let target = getCenterPointWithTarget(player.position)
-        worldNode.position += (target - worldNode.position) * 0.8
-        
-        scaleBackground(player.position.y)
+//        
+//        //used 50 and 25 before
+//        let playerIndex = tileMap.indexForPoint(player.position)
+//        tileMap.cullAroundIndexX(Int(playerIndex.x), indexY: Int(playerIndex.y), columnWidth: 50, rowHeight: 25)
+//        
+//        let target = getCenterPointWithTarget(player.position)
+//        worldNode.position += (target - worldNode.position) * 0.8
+//        
+//        scaleBackground(player.position.y)
     }
     
     override func didSimulatePhysics() {
-    if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 30.0) && (player.physicsBody?.velocity.dy >= -20.0){//!= 0.0 {
-            player.setFalling(false)
-            if player.physicsBody?.velocity.dy != 0.0 {
-        }
-            } else {
-            player.setFalling(true)
-        }
-        
-        //dead yet?
-        if player.position.y < -300 {
-            player.position = playerSpawnPoint
-        }
+//    if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 30.0) && (player.physicsBody?.velocity.dy >= -20.0){//!= 0.0 {
+//            player.setFalling(false)
+//            if player.physicsBody?.velocity.dy != 0.0 {
+//        }
+//            } else {
+//            player.setFalling(true)
+//        }
+//        player.update(CGFloat(dt))
+//
+//        
+//        //dead yet?
+//        if player.position.y < -300 {
+//            player.position = playerSpawnPoint
+//        }
     }
     func didBeginContact(contact: SKPhysicsContact) {
         let collision: UInt32 = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
@@ -605,6 +630,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 stopTimer()
                 redGem.removeFromParent()
             }
+        } else if collision == SKACategoryPlayer | SKACategoryFloor {
+            player.isJumping = false
+            //player.jumpAmount = 0
         }
 
     }

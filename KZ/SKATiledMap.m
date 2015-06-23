@@ -308,6 +308,8 @@
                             sprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:sprite.size];
                             sprite.physicsBody.dynamic = NO;
                             sprite.physicsBody.restitution = 0;
+                            sprite.physicsBody.allowsRotation = false;
+                            sprite.physicsBody.affectedByGravity = false;
                             sprite.physicsBody.friction = 5;
                             sprite.physicsBody.categoryBitMask = SKACategoryFloor;
                             sprite.physicsBody.contactTestBitMask = SKACategoryPlayer;
