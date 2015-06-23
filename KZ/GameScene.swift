@@ -128,33 +128,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     //need to make sure I'm not adding physics on top of physics 
-    func cullPhysicsTiles() {
-        let l = 3
-        for var x = 0; x < Int(tileMap.mapWidth); x++ {
-            for var y = 0; y < Int(tileMap.mapHeight); y++ {
-                if x > 20 || y > 20 {
-                    let sprite = tileMap.spriteOnLayer(l, indexX: x, indexY: y)
-                    if sprite != nil {
-                        sprite.hidden = false
-                    }
-                } else {
-                    let sprite = tileMap.spriteOnLayer(l, indexX: x, indexY: y)
-                    if sprite != nil {
-                        sprite.hidden = false
-                        sprite.alpha = 0
-                        sprite.physicsBody = SKPhysicsBody(rectangleOfSize: sprite.frame.size)
-                        sprite.physicsBody?.dynamic = false
-                        sprite.physicsBody?.contactTestBitMask = PhysicsCategory.Player
-                        //sprite.physicsBody?.contactTestBitMask = SKACategoryPlayer
-                        sprite.physicsBody?.categoryBitMask = PhysicsCategory.Floor
-                        //sprite.physicsBody?.categoryBitMask = SKACategoryFloor
-                    }
-                }
-            }
-        }
-    }
+
     
     //MARK: SKAToolKit
+    
     func loadObjects() {
         if tileMap.objectLayers.count > 0 {
             let layer = tileMap.objectLayers[0] as! SKAObjectLayer
@@ -171,6 +148,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 player.position = CGPoint(x: obj.x, y: obj.y)
                 //this spawn point is for use in the respawn method
                 playerSpawnPoint = CGPoint(x: obj.x, y: obj.y)
+                player.physicsBody?.restitution = -1
                 player.zPosition = 200
                 player.setScale(0.7)
                 worldNode.addChild(player)
@@ -202,97 +180,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
-    
-    //TMX LEGACY
-//    func setupTiles() {
-//        for var a = 0; a < Int(tileMap.mapSize.width); a++ { //Go through every point across the tile map
-//            for var b = 0; b < Int(tileMap.mapSize.height); b++ { //Go through every point up the tile map
-//                let layerInfo:TMXLayerInfo = tileMap.layers.lastObject as! TMXLayerInfo //Get the first layer (you may want to pick another layer if you don't want to use the first one on the tile map)
-//                let point = CGPoint(x: a, y: b)//Create a point with a and b
-//                let gid = layerInfo.layer.tileGidAt(layerInfo.layer.pointForCoord(point)) //The gID is the ID of the tile. They start at 1 up the the amount of tiles in your tile set.
-//                
-//                //determining which tiles to act on
-//                if gid == 383 || gid == 384 || gid == 385 || gid == 9 || gid == 11 || gid == 1{
-//                    let left = player.position.x - 1500
-//                    let right = player.position.x + 1500
-//                    let up = player.position.y + 300
-//                    let down = player.position.y - 700
-//                
-//                    let node = layerInfo.layer.tileAtCoord(point)
-//                    if node != nil {
-//                    physicsTiles.append(node)
-//                    //I fetched a node at that point created by JSTileMap
-//                    node.physicsBody = SKPhysicsBody(rectangleOfSize: node.frame.size) //I added a physics body
-//                    if node.position.y > up {
-//                        node.name = "inactive"
-//                        node.physicsBody?.resting = true
-//                    }
-//                    node.physicsBody?.dynamic = false
-//                    node.physicsBody?.restitution = 0
-//                    //node.physicsBody?.resting = true
-//                    if currentMap == "kz_wonderland" {
-//                        node.physicsBody?.friction = 0.01
-//                    } else {
-//                        node.physicsBody?.friction = 5
-//                    }
-//                    node.alpha = 0
-//                    node.name = "active"
-//                    if gid == 1 {
-//                        node.name = "physics"
-//                        node.physicsBody?.categoryBitMask = PhysicsCategory.Bounce
-//                        spawnParticles(node.position)
-//                    } else {
-//                        node.physicsBody?.categoryBitMask = PhysicsCategory.Floor
-//                    }
-//                    
-//                    if gid == 11 {
-//                    }
-//                    node.physicsBody?.contactTestBitMask = PhysicsCategory.Player
-//                    
-//                    //println("added physics")
-//                    //You now have a physics body on your floor tiles! :)
-//                        }
-//                    }
-//                }
-//            }
-//            println(physicsTiles.count)
-//        }
-//    
-    //TMX LEGACY
-//    func hideLayer() {
-//        let layerInfo1:TMXLayerInfo = tileMap.layers.firstObject as! TMXLayerInfo
-//        let layerInfo2:TMXLayerInfo = tileMap.layers.objectAtIndex(1) as! TMXLayerInfo
-//        let layerInfo3:TMXLayerInfo = tileMap.layers.objectAtIndex(2) as! TMXLayerInfo
-//        let layerInfo4:TMXLayerInfo = tileMap.layers.objectAtIndex(3) as! TMXLayerInfo
-//        //let layerInfo5:TMXLayerInfo = tileMap.layers.objectAtIndex(4) as! TMXLayerInfo
-//        layerInfo1.layer.hidden = true
-//        layerInfo2.layer.hidden = true
-//        layerInfo3.layer.hidden = true
-//        layerInfo4.layer.hidden = true
-//        //layerInfo5.layer.hidden = true
-//        //layerInfo1.tiles.destroy()
-//    }
-//
-//    func setupOtherTiles() {
-//        for var a = 0; a < Int(tileMap.mapSize.width); a++ { //Go through every point across the tile map
-//            for var b = 0; b < Int(tileMap.mapSize.height); b++ { //Go through every point up the tile map
-//                let layerInfo:TMXLayerInfo = tileMap.layers.firstObject as! TMXLayerInfo //Get the first layer (you may want to pick another layer if you don't want to use the first one on the tile map)
-//                let point = CGPoint(x: a, y: b)
-////                let left = player.position.x - 1500
-////                let right = player.position.x + 1500
-////                let up = player.position.y + 1000
-////                let down = player.position.y - 1000
-//                
-//                let node = layerInfo.layer.tileAtCoord(point)
-//                if node != nil {
-//                    node.hidden = true
-//                    //otherTileCoords.append(node.position)
-//                    //println(otherTiles.count)
-//                }
-//            }
-//        }
-//    }
-
     
     //MARK: Tile Map Management
     var physicsTiles = [SKSpriteNode]()
@@ -422,48 +309,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
-        //delta
-//        if lastUpdateTime > 0 {
-//            dt = currentTime - lastUpdateTime
-//        } else {
-//            dt = 0
-//        }
-//        lastUpdateTime = currentTime
-        //println("\(dt) is the dt")
-        //end delta
-        //centerViewOn(player.position)
-//        let target = getCenterPointWithTarget(player.position)
-//        worldNode.position += (target - worldNode.position) * 0.8
-        
         player.update(CGFloat(dt))
-        
-//        //dead yet?
-//        if player.position.y < -300 {
-//            player.position = playerSpawnPoint
-//        }
-        
-        
-//        if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 30.0) && (player.physicsBody?.velocity.dy >= -20.0){//!= 0.0 {
-//            player.setFalling(false)
-//            if player.physicsBody?.velocity.dy != 0.0 {
-//            }
-//        } else {
-//            player.setFalling(true)
-//        }
-//        scaleBackground(player.position.y)
-//        let playerIndex = tileMap.indexForPoint(player.position)
-//       tileMap.cullAroundIndexX(Int(playerIndex.x), indexY: Int(playerIndex.y), columnWidth: 50, rowHeight: 25)
+
     }
     
-    //MARK: - Camera
-    
-//    func centerViewOn(centerOn: CGPoint) {
-//        let x = centerOn.x.clamped(size.width / 2, tileMapFrame.width - size.width / 2)
-//        let y = centerOn.y.clamped(size.height / 2, tileMapFrame.height - size.height / 2)
-//        worldNode.position = CGPoint(x: -x, y: -y)
-//    }
-    
+    //MARK: - Camera    
     func centerViewOn(centerOn: CGPoint) {
         worldNode.position = getCenterPointWithTarget(centerOn)
     }
