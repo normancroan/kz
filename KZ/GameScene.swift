@@ -62,7 +62,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //these are used for the scaleBackground method and setupBackground
 //    let background = SKSpriteNode(imageNamed: "kz_egypt_3_background")
-    let background = SKSpriteNode(imageNamed: "kz_lava_background")
+    let background = SKSpriteNode(imageNamed: "kz_caves_background")
     var backgroundYStart: CGFloat = 1.0
     var backgroundXScaleStart: CGFloat = 1.0
     var backgroundYScaleStart: CGFloat = 1.0
@@ -86,6 +86,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setupMap() {
         //****NO****tileMap = SKATiledMap(fileNamed: "kz_egypt_3")
         //tileMap = JSTileMap(named: "\(currentMap).tmx")
+        tileMap = SKATiledMap(mapName: currentMap)
         createBackground()
     }
     
@@ -93,7 +94,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var mapOffsetX:CGFloat = 0
     var mapSectionsArray = [SKNode]()
     
-    //add support for player based on Tiled map position
     func setupPlayer() {
         worldNode.addChild(player)
         player.position = CGPointMake(55,235)
@@ -106,31 +106,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //player.setFalling(false)
     }
 
-//    func createWorldFromMaps() {
-//        worldNode = SKNode()
-//        addChild(worldNode)
-//        
-//        for var i = 0; i < 2; i++ {
-//            var myString = "small-map-test-\(i).tmx"
-//            let tileMap2 = JSTileMap(named: myString)
-//            println(i)
-//            tileMap2.position = CGPointMake(mapOffsetX, 0)
-//            
-//            worldNode.addChild(tileMap2)
-//            mapSectionsArray.append(tileMap2)
-//            mapOffsetX += 2050
-//            //setupTiles()
-//            tileMapFrame = tileMap.calculateAccumulatedFrame()
-//        }
-//        
-//        //maintainPhysicsTiles(player.position, xOry: "x")
-//        //maintainPhysicsTiles(player.position, xOry: "y")
-//        anchorPoint = CGPointMake(0.5,0.5)
-//        worldNode.position = CGPointMake(-tileMapFrame.width / 2, -tileMapFrame.height / 2)
-//        self.physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
-//        self.physicsWorld.contactDelegate = self
-//    }
-    
     func createWorld() {
         worldNode = SKNode()
         worldNode.addChild(tileMap)
@@ -396,13 +371,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func createBackground() {
         //let background = SKSpriteNode(imageNamed: "\(currentMap)_background")
-        let background = SKSpriteNode(imageNamed: "kz_lava_background")
+        let background = SKSpriteNode(imageNamed: "kz_caves_background")
         addChild(background)
         background.zPosition = -201
         background.setScale(2)
         background.name = "background"
-        let bgTexture = SKTexture(imageNamed: "kz_lava_background")
-        //let bgTexture = SKTexture(imageNamed: "\(currentMap)_background")
+        //let bgTexture = SKTexture(imageNamed: "kz_caves_background")
+        let bgTexture = SKTexture(imageNamed: "\(currentMap)_background")
         //bgTexture.filteringMode = .Nearest
         background.texture = bgTexture
         background.position = CGPointMake(0, 100)

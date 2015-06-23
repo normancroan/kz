@@ -12,12 +12,28 @@ import SpriteKit
 class MapSelectScene: SKScene {
     
     
-    let egyptIcon = SKSpriteNode(imageNamed: "kz_egypt_3_background")
-    let egyptIconLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
+    let activeMapIcon = SKSpriteNode(imageNamed: "kz_caves_background")
+    let activeMapIconLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
     
     let instructionsLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
+    
+    var activeMap: String = "kz_caves"
+    
+    func switchActiveMap() {
+        if activeMap == "kz_caves"{
+            activeMap = "kz_egypt_3"
+        } else {
+            activeMap = "kz_caves"
+        }
+    }
+    
+    func updateLabels() {
+        activeMapIconLabel.text = activeMap
+        let backgroundString = "\(activeMap)_background"
+        activeMapIcon.texture = SKTexture(imageNamed: backgroundString)
+    }
     
     
     //let mapEffect = SKEmitterNode(fileNamed: "BehindTheMap.sks")
@@ -27,7 +43,7 @@ class MapSelectScene: SKScene {
         let heightHalf:CGFloat = self.view!.bounds.height / 2
         
         instructionsLabel.fontSize = 20
-        instructionsLabel.text = "Welcome to KZ, where would you like to get frustrated today?"
+        instructionsLabel.text = "Let's do this!"
         instructionsLabel.name = "instructions"
         instructionsLabel.zPosition = 200
         instructionsLabel.verticalAlignmentMode = .Center
@@ -42,25 +58,25 @@ class MapSelectScene: SKScene {
         addChild(buttonEast)
         
         
-        addChild(egyptIcon)
-        egyptIcon.setScale(0.3)
-        egyptIcon.anchorPoint = CGPointMake(0.5, 0.5)
-        egyptIcon.position = CGPoint(x: widthHalf,y: heightHalf)
+        addChild(activeMapIcon)
+        activeMapIcon.setScale(0.3)
+        activeMapIcon.anchorPoint = CGPointMake(0.5, 0.5)
+        activeMapIcon.position = CGPoint(x: widthHalf,y: heightHalf)
         
         
-        egyptIconLabel.fontSize = 15
-        egyptIconLabel.text = "kz_caves"//"kz_egypt_3"
-        egyptIconLabel.name = "egypt_3"
-        egyptIconLabel.zPosition = 200
-        egyptIconLabel.verticalAlignmentMode = .Center
-        egyptIconLabel.position = CGPoint(x: widthHalf,y: heightHalf - egyptIcon.frame.height * 0.8)
-        addChild(egyptIconLabel)
+        activeMapIconLabel.fontSize = 15
+        activeMapIconLabel.text = activeMap//"kz_caves"//"kz_egypt_3"
+        activeMapIconLabel.name = "caves"
+        activeMapIconLabel.zPosition = 200
+        activeMapIconLabel.verticalAlignmentMode = .Center
+        activeMapIconLabel.position = CGPoint(x: widthHalf,y: heightHalf - activeMapIcon.frame.height * 0.8)
+        addChild(activeMapIconLabel)
     }
     
     func mapEffects(){
         let mapEmitter = SKEmitterNode(fileNamed: "BehindTheMap.sks")
-        mapEmitter.position = egyptIcon.position
-        mapEmitter.zPosition = egyptIcon.zPosition - 1
+        mapEmitter.position = activeMapIcon.position
+        mapEmitter.zPosition = activeMapIcon.zPosition - 1
         addChild(mapEmitter)
     }
     
@@ -74,16 +90,20 @@ class MapSelectScene: SKScene {
         for touch in (touches as! Set<UITouch>) {
             let location = touch.locationInNode(self)
             //touched egypt
-            if (CGRectContainsPoint(egyptIcon.frame, location)) {
-                instructionsLabel.text = "Loading kz_egypt..."
-                let myScene = GameScene(size: self.size, currentMap: "kz_egypt_3")
+            if (CGRectContainsPoint(activeMapIcon.frame, location)) {
+                instructionsLabel.text = "Loading..."
+                let myScene = GameScene(size: self.size, currentMap: activeMap)
                 myScene.scaleMode = self.scaleMode
                 let reveal = SKTransition.fadeWithDuration(0.5)
                 self.view?.presentScene(myScene, transition: reveal)
 
             //touched wild
             } else if (CGRectContainsPoint(buttonWest.frame, location)) {
-                
+                switchActiveMap()
+                updateLabels()
+            } else if (CGRectContainsPoint(buttonEast.frame, location)){
+                switchActiveMap()
+                updateLabels()
             }
         }
     }
