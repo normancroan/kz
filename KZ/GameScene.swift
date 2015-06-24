@@ -86,7 +86,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setupMap() {
         //****NO****tileMap = SKATiledMap(fileNamed: "kz_egypt_3")
         //tileMap = JSTileMap(named: "\(currentMap).tmx")
-        tileMap = SKATiledMap(mapName: currentMap)
+        //tileMap = SKATiledMap(mapName: currentMap)
+        //CHANGE THIS!!
+        tileMap = SKATiledMap(mapName: "kz_castle")
         createBackground()
     }
     
