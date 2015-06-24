@@ -73,7 +73,7 @@ class Player: SKSpriteNode {
         
         //dynamic required for gravity to work
         body.dynamic = true
-        body.restitution = 0
+        //body.restitution = 0
         body.affectedByGravity = true
         body.allowsRotation = false
         //body.categoryBitMask = PhysicsCategory.Player

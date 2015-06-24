@@ -131,6 +131,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     
     //MARK: SKAToolKit
+    func loadFloors() {
+        if tileMap.spriteLayers.count > 0 {
+            let layer = tileMap.spriteLayers[0] as! SKASpriteLayer
+        }
+    }
     
     func loadObjects() {
         if tileMap.objectLayers.count > 0 {
@@ -148,7 +153,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 player.position = CGPoint(x: obj.x, y: obj.y)
                 //this spawn point is for use in the respawn method
                 playerSpawnPoint = CGPoint(x: obj.x, y: obj.y)
-                player.physicsBody?.restitution = -1
+                player.physicsBody?.restitution = 0
                 player.zPosition = 200
                 player.setScale(0.7)
                 worldNode.addChild(player)
@@ -304,8 +309,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setupInterface()
         loadObjects()
         //setupPlayer()
-        
-
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -326,6 +329,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else {
             player.setFalling(true)
         }
+        
         player.update(CGFloat(dt))
         
         
@@ -631,6 +635,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 redGem.removeFromParent()
             }
         } else if collision == SKACategoryPlayer | SKACategoryFloor {
+//            contact.bodyA.restitution = 0
+//            contact.bodyB.restitution = 0
+//            println(contact.bodyA.restitution)
+//            println(contact.bodyB.restitution)
+            //remember its the floorSprite that needs to be set on, NOT SPRITE
             player.isJumping = false
             //player.jumpAmount = 0
         }

@@ -39,7 +39,7 @@
          "name":"collision",
          "objects":[
                 {
-                 "height":32,
+                 "height":512,
                  "id":2,
                  "name":"floor",
                  "properties":
@@ -174,21 +174,6 @@
                  "y":1376
                 }, 
                 {
-                 "height":480,
-                 "id":11,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":96,
-                 "y":1568
-                }, 
-                {
                  "height":1664,
                  "id":12,
                  "name":"floor",
@@ -199,39 +184,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":32,
+                 "width":256,
                  "x":992,
                  "y":384
-                }, 
-                {
-                 "height":1664,
-                 "id":13,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":1216,
-                 "y":384
-                }, 
-                {
-                 "height":480,
-                 "id":14,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":0,
-                 "y":1568
                 }, 
                 {
                  "ellipse":true,
@@ -323,21 +278,6 @@
                  "width":64,
                  "x":928,
                  "y":1280
-                }, 
-                {
-                 "height":32,
-                 "id":24,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":192,
-                 "x":1024,
-                 "y":384
                 }, 
                 {
                  "height":32,
@@ -786,39 +726,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":32,
+                 "width":256,
                  "x":1440,
                  "y":128
-                }, 
-                {
-                 "height":1472,
-                 "id":57,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":1664,
-                 "y":128
-                }, 
-                {
-                 "height":32,
-                 "id":59,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":192,
-                 "x":1472,
-                 "y":1568
                 }, 
                 {
                  "height":32,
@@ -1029,21 +939,6 @@
                  "width":64,
                  "x":1248,
                  "y":1696
-                }, 
-                {
-                 "height":32,
-                 "id":74,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":192,
-                 "x":1472,
-                 "y":128
                 }, 
                 {
                  "height":32,
@@ -2516,7 +2411,7 @@
                  "y":1056
                 }, 
                 {
-                 "height":32,
+                 "height":704,
                  "id":174,
                  "name":"floor",
                  "properties":
@@ -2531,51 +2426,6 @@
                  "y":416
                 }, 
                 {
-                 "height":672,
-                 "id":175,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":5056,
-                 "y":448
-                }, 
-                {
-                 "height":1600,
-                 "id":176,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":5280,
-                 "y":448
-                }, 
-                {
-                 "height":32,
-                 "id":177,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":384,
-                 "x":4704,
-                 "y":1120
-                }, 
-                {
                  "height":928,
                  "id":178,
                  "name":"floor",
@@ -2586,7 +2436,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":32,
+                 "width":640,
                  "x":4672,
                  "y":1120
                 }, 
@@ -3716,21 +3566,6 @@
                  "y":192
                 }, 
                 {
-                 "height":32,
-                 "id":255,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":192,
-                 "x":7232,
-                 "y":256
-                }, 
-                {
                  "height":1792,
                  "id":256,
                  "name":"floor",
@@ -3741,23 +3576,8 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":32,
+                 "width":256,
                  "x":7200,
-                 "y":256
-                }, 
-                {
-                 "height":1792,
-                 "id":257,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":7424,
                  "y":256
                 }, 
                 {
@@ -4406,21 +4226,6 @@
                  "y":736
                 }, 
                 {
-                 "height":32,
-                 "id":302,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":192,
-                 "x":7744,
-                 "y":256
-                }, 
-                {
                  "height":384,
                  "id":303,
                  "name":"floor",
@@ -4431,54 +4236,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":32,
+                 "width":256,
                  "x":7712,
                  "y":256
-                }, 
-                {
-                 "height":32,
-                 "id":304,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":192,
-                 "x":7744,
-                 "y":608
-                }, 
-                {
-                 "height":384,
-                 "id":305,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":7936,
-                 "y":256
-                }, 
-                {
-                 "height":32,
-                 "id":306,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":192,
-                 "x":7744,
-                 "y":736
                 }, 
                 {
                  "height":992,
@@ -4491,39 +4251,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":32,
+                 "width":256,
                  "x":7712,
                  "y":736
-                }, 
-                {
-                 "height":992,
-                 "id":308,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":7936,
-                 "y":736
-                }, 
-                {
-                 "height":32,
-                 "id":309,
-                 "name":"floor",
-                 "properties":
-                    {
-                     "SKACollisionType":"SKACollisionTypeRect"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":192,
-                 "x":7744,
-                 "y":1696
                 }, 
                 {
                  "ellipse":true,
