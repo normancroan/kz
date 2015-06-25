@@ -19,15 +19,32 @@ class MapSelectScene: SKScene {
     
     let instructionsLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     
+    var mapList = [String]()
+    var mapNumber = 0
+    
+    func addMaps(){
+        mapList.append("kz_caves")
+        mapList.append("kz_egypt_3")
+        mapList.append("kz_castle")
+    }
+    
     var activeMap: String = "kz_caves"
     
-    func switchActiveMap() {
-        if activeMap == "kz_caves"{
-            activeMap = "kz_egypt_3"
-        } else {
-            activeMap = "kz_caves"
+    func switchActiveMap(direction: String) {
+            if direction == "up" {
+                if mapNumber < (mapList.count - 1) {
+                    mapNumber++
+                    println("mapNumber is \(mapNumber)")
+                    activeMap = mapList[mapNumber]
+                }
+            } else if direction == "down" {
+                if mapNumber >= 1 {
+                    mapNumber--
+                    println("mapNumber is \(mapNumber)")
+                    activeMap = mapList[mapNumber]
+                }
+            }
         }
-    }
     
     func updateLabels() {
         activeMapIconLabel.text = activeMap
@@ -82,6 +99,7 @@ class MapSelectScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         displayLabels()
+        addMaps()
         mapEffects()
         backgroundColor = SKColor.blackColor()
     }
@@ -99,10 +117,10 @@ class MapSelectScene: SKScene {
 
             //touched wild
             } else if (CGRectContainsPoint(buttonWest.frame, location)) {
-                switchActiveMap()
+                switchActiveMap("down")
                 updateLabels()
             } else if (CGRectContainsPoint(buttonEast.frame, location)){
-                switchActiveMap()
+                switchActiveMap("up")
                 updateLabels()
             }
         }

@@ -7,7 +7,7 @@
             <key>generator</key>
             <string>TexturePacker 3.9.0 - http://www.codeandweb.com/texturepacker</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:03c583f108bfa68ea7d234499785052c:24f81097711d44ef793f6d6ede005e41:1530bf0942512f049c6dae9d7889d487$</string>
+            <string>$TexturePacker:SmartUpdate:c61c191d93b768326a15337e1b706025:ca3c91e6a030184a1c175b0b325da769:1530bf0942512f049c6dae9d7889d487$</string>
         </dict>
         <key>format</key>
         <string>APPL</string>
@@ -17,7 +17,7 @@
                 <key>path</key>
                 <string>castle_tiles.1.png</string>
                 <key>size</key>
-                <string>{2043,520}</string>
+                <string>{1162,976}</string>
                 <key>subimages</key>
                 <array>
                     <dict>
@@ -64,7 +64,7 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{131,1},{128,128}}</string>
+                        <string>{{1,261},{128,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -80,7 +80,7 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{131,1},{128,128}}</string>
+                        <string>{{1,261},{128,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -96,7 +96,7 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{1,261},{128,128}}</string>
+                        <string>{{1,391},{128,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -112,7 +112,7 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{1,391},{128,128}}</string>
+                        <string>{{1,521},{128,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -128,7 +128,7 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{1,391},{128,128}}</string>
+                        <string>{{1,521},{128,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -144,7 +144,7 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{131,131},{128,128}}</string>
+                        <string>{{1,651},{128,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -160,7 +160,7 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{261,1},{128,128}}</string>
+                        <string>{{1,781},{128,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -176,855 +176,7 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{261,1},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Background (16)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{131,261},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Background (17)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{131,391},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Background (18)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{261,131},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Background (2)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{391,1},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Background (3)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{261,261},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Background (5)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{261,391},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Background (7)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{391,131},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <true/>
-                        <key>name</key>
-                        <string>Background (9)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{521,1},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Decor (1)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{391,261},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Decor (10)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{391,391},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Decor (12)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{521,131},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Decor (2)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{651,1},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Decor (4)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{521,261},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Decor (7)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{521,391},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Decor (9)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{651,131},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <true/>
-                        <key>name</key>
-                        <string>Tile (10)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{781,1},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (11)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{651,261},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (12)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{651,391},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (13)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{781,131},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <true/>
-                        <key>name</key>
-                        <string>Tile (14)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{911,1},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (15)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{781,261},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <true/>
-                        <key>name</key>
-                        <string>Tile (16)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{781,391},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (17)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{911,131},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (18)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1041,1},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (19)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{911,261},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (2)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{911,391},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (20)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1041,131},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (21)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1171,1},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <true/>
-                        <key>name</key>
-                        <string>Tile (22)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1041,261},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <true/>
-                        <key>name</key>
-                        <string>Tile (23)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1041,391},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <true/>
-                        <key>name</key>
-                        <string>Tile (24)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1171,131},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (25)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1301,1},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (26)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1171,261},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <true/>
-                        <key>name</key>
-                        <string>Tile (27)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1171,391},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (28)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1301,131},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <true/>
-                        <key>name</key>
-                        <string>Tile (29)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1431,1},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (3)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1301,261},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (30)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1301,391},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (31)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1431,131},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (32)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1561,1},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (33)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1431,261},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (34)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1431,391},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <true/>
-                        <key>name</key>
-                        <string>Tile (4)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1561,131},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (5)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1691,1},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (6)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1561,261},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (8)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1561,391},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Tile (9)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1691,131},{128,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Stair (1)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1821,1},{126,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Stair (2)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{2,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1691,261},{126,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Pillar (1)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{3,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1691,391},{122,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Spike_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1815,391},{104,128}}</string>
-                        <key>textureRotated</key>
-                        <true/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Pillar (3)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{15,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1819,261},{98,128}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Decor (6)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{32,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1821,131},{64,128}}</string>
+                        <string>{{1,781},{128,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1040,23 +192,7 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{1887,131},{64,128}}</string>
-                        <key>textureRotated</key>
-                        <true/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>Fence (2)_castle.png</string>
-                        <key>spriteOffset</key>
-                        <string>{35,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{128,128}</string>
-                        <key>textureRect</key>
-                        <string>{{1949,1},{93,55}}</string>
+                        <string>{{1,911},{128,64}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1066,13 +202,109 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>Fence (3)_castle.png</string>
+                        <string>Background (16)_castle.png</string>
                         <key>spriteOffset</key>
                         <string>{0,0}</string>
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{1949,58},{93,55}}</string>
+                        <string>{{131,1},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Background (17)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{131,131},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Background (18)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{131,261},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Background (2)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{131,391},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Background (3)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{131,521},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Background (5)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{131,651},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Background (7)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{131,781},{128,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1088,23 +320,119 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{1953,115},{64,128}}</string>
+                        <string>{{131,911},{128,64}}</string>
                         <key>textureRotated</key>
-                        <true/>
+                        <false/>
                     </dict>
                     <dict>
                         <key>aliases</key>
                         <array/>
                         <key>isFullyOpaque</key>
-                        <false/>
+                        <true/>
                         <key>name</key>
-                        <string>Fence (1)_castle.png</string>
+                        <string>Background (9)_castle.png</string>
                         <key>spriteOffset</key>
                         <string>{0,0}</string>
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{1919,261},{55,128}}</string>
+                        <string>{{261,1},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Decor (1)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{391,1},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Decor (10)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{521,1},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Decor (12)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{651,1},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Decor (2)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{781,1},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Decor (4)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{911,1},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Spike_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{1041,1},{104,128}}</string>
                         <key>textureRotated</key>
                         <true/>
                     </dict>
@@ -1114,13 +442,205 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>Pillar (2)_castle.png</string>
+                        <string>Decor (7)_castle.png</string>
                         <key>spriteOffset</key>
-                        <string>{36,0}</string>
+                        <string>{0,0}</string>
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{1921,391},{56,128}}</string>
+                        <string>{{261,131},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Decor (9)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{261,261},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <true/>
+                        <key>name</key>
+                        <string>Tile (10)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{261,391},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (11)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{261,521},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (12)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{261,651},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (13)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{261,781},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Decor (6)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{32,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{261,911},{128,64}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <true/>
+                        <key>name</key>
+                        <string>Tile (14)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{391,131},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (15)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{521,131},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <true/>
+                        <key>name</key>
+                        <string>Tile (16)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{651,131},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (17)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{781,131},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (18)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{911,131},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Pillar (3)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{15,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{1041,131},{98,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1136,9 +656,233 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{2019,115},{19,128}}</string>
+                        <string>{{1141,131},{19,128}}</string>
                         <key>textureRotated</key>
                         <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (19)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{391,261},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (2)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{391,391},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (20)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{391,521},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (21)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{391,651},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <true/>
+                        <key>name</key>
+                        <string>Tile (22)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{391,781},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Pillar (2)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{36,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{391,911},{128,56}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <true/>
+                        <key>name</key>
+                        <string>Tile (23)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{521,261},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <true/>
+                        <key>name</key>
+                        <string>Tile (24)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{651,261},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (25)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{781,261},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (26)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{911,261},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Fence (1)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{1041,261},{55,128}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Fence (2)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{35,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{1098,261},{55,93}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Fence (3)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{1098,356},{55,93}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <true/>
+                        <key>name</key>
+                        <string>Tile (27)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{521,451},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -1152,9 +896,9 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{1976,245},{19,128}}</string>
+                        <string>{{521,391},{128,19}}</string>
                         <key>textureRotated</key>
-                        <true/>
+                        <false/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -1168,9 +912,9 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{1997,245},{17,128}}</string>
+                        <string>{{521,412},{128,17}}</string>
                         <key>textureRotated</key>
-                        <false/>
+                        <true/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -1184,7 +928,359 @@
                         <key>spriteSourceSize</key>
                         <string>{128,128}</string>
                         <key>textureRect</key>
-                        <string>{{2016,245},{17,128}}</string>
+                        <string>{{521,431},{128,17}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (28)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{521,581},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <true/>
+                        <key>name</key>
+                        <string>Tile (29)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{521,711},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (3)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{521,841},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (30)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{651,391},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (31)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{781,391},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (32)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{911,391},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (15)_32_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{32,32}</string>
+                        <key>textureRect</key>
+                        <string>{{1041,391},{32,32}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (19)_32_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{32,32}</string>
+                        <key>textureRect</key>
+                        <string>{{1041,425},{32,32}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (15)_64_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{64,64}</string>
+                        <key>textureRect</key>
+                        <string>{{1075,451},{64,64}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (4)_32_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{32,32}</string>
+                        <key>textureRect</key>
+                        <string>{{1041,459},{32,32}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (19)_64_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{64,64}</string>
+                        <key>textureRect</key>
+                        <string>{{1041,517},{64,64}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (33)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{651,521},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (34)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{781,521},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <true/>
+                        <key>name</key>
+                        <string>Tile (4)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{911,521},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (4)_64_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{64,64}</string>
+                        <key>textureRect</key>
+                        <string>{{1041,583},{64,64}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (5)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{651,651},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (6)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{651,781},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (8)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{781,651},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Tile (9)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{781,781},{128,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Stair (1)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{911,651},{128,126}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Stair (2)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{2,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{911,779},{126,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Pillar (1)_castle.png</string>
+                        <key>spriteOffset</key>
+                        <string>{3,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{128,128}</string>
+                        <key>textureRect</key>
+                        <string>{{1039,779},{122,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>

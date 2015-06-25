@@ -86,9 +86,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setupMap() {
         //****NO****tileMap = SKATiledMap(fileNamed: "kz_egypt_3")
         //tileMap = JSTileMap(named: "\(currentMap).tmx")
-        //tileMap = SKATiledMap(mapName: currentMap)
+        tileMap = SKATiledMap(mapName: currentMap)
         //CHANGE THIS!!
-        tileMap = SKATiledMap(mapName: "kz_castle")
+        //tileMap = SKATiledMap(mapName: "kz_castle")
         createBackground()
     }
     
@@ -170,6 +170,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 redGem.zPosition = 200
                 redGem.name = "redGem"
                 worldNode.addChild(redGem)
+            } else if obj.name == "lighting" {
+                let item = Item(imageNamed: "lighting_1", objectNamed: "lighting")
+                item.position = CGPoint(x: obj.x, y: obj.y)
+                item.zPosition = 100
+                item.name = "lighting"
+                worldNode.addChild(item)
+                
+            } else if obj.name == "candle" {
+                let item = Item(imageNamed: "candle_1", objectNamed: "candle")
+                item.position = CGPoint(x: obj.x, y: obj.y + 7)
+                item.zPosition = 100
+                item.name = "candle"
+                worldNode.addChild(item)
+            } else if obj.name == "chandelier" {
+                let item = Item(imageNamed: "chandelier_1", objectNamed: "chandelier")
+                item.position = CGPoint(x: obj.x, y: obj.y + 8)
+                item.zPosition = 100
+                item.name = "chandelier"
+                worldNode.addChild(item)
             }
         }
     }
