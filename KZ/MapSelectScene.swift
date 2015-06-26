@@ -12,7 +12,7 @@ import SpriteKit
 class MapSelectScene: SKScene {
     
     
-    let activeMapIcon = SKSpriteNode(imageNamed: "kz_caves_background")
+    let activeMapIcon = SKSpriteNode(imageNamed: "kz_egypt_3_background")
     let activeMapIconLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
@@ -23,24 +23,22 @@ class MapSelectScene: SKScene {
     var mapNumber = 0
     
     func addMaps(){
-        mapList.append("kz_caves")
         mapList.append("kz_egypt_3")
+        mapList.append("kz_caves")
         mapList.append("kz_castle")
     }
     
-    var activeMap: String = "kz_caves"
+    var activeMap: String = "kz_egypt_3"
     
     func switchActiveMap(direction: String) {
             if direction == "up" {
                 if mapNumber < (mapList.count - 1) {
                     mapNumber++
-                    println("mapNumber is \(mapNumber)")
                     activeMap = mapList[mapNumber]
                 }
             } else if direction == "down" {
                 if mapNumber >= 1 {
                     mapNumber--
-                    println("mapNumber is \(mapNumber)")
                     activeMap = mapList[mapNumber]
                 }
             }
@@ -82,8 +80,8 @@ class MapSelectScene: SKScene {
         
         
         activeMapIconLabel.fontSize = 15
-        activeMapIconLabel.text = activeMap//"kz_caves"//"kz_egypt_3"
-        activeMapIconLabel.name = "caves"
+        activeMapIconLabel.text = activeMap
+        activeMapIconLabel.name = "\(activeMap)"
         activeMapIconLabel.zPosition = 200
         activeMapIconLabel.verticalAlignmentMode = .Center
         activeMapIconLabel.position = CGPoint(x: widthHalf,y: heightHalf - activeMapIcon.frame.height * 0.8)
@@ -98,8 +96,9 @@ class MapSelectScene: SKScene {
     }
     
     override func didMoveToView(view: SKView) {
-        displayLabels()
         addMaps()
+        activeMap = mapList[0]
+        displayLabels()
         mapEffects()
         backgroundColor = SKColor.blackColor()
     }
@@ -107,13 +106,14 @@ class MapSelectScene: SKScene {
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         for touch in (touches as! Set<UITouch>) {
             let location = touch.locationInNode(self)
-            //touched egypt
+            //touched activeMap
             if (CGRectContainsPoint(activeMapIcon.frame, location)) {
                 instructionsLabel.text = "Loading..."
                 let myScene = GameScene(size: self.size, currentMap: activeMap)
                 myScene.scaleMode = self.scaleMode
                 let reveal = SKTransition.fadeWithDuration(0.5)
                 self.view?.presentScene(myScene, transition: reveal)
+                self.removeFromParent()
 
             //touched wild
             } else if (CGRectContainsPoint(buttonWest.frame, location)) {

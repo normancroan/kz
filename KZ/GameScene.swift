@@ -84,12 +84,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //MARK: Setup Methods
     func setupMap() {
-        //****NO****tileMap = SKATiledMap(fileNamed: "kz_egypt_3")
-        //tileMap = JSTileMap(named: "\(currentMap).tmx")
         tileMap = SKATiledMap(mapName: currentMap)
-        //CHANGE THIS!!
-        //tileMap = SKATiledMap(mapName: "kz_castle")
-        createBackground()
     }
     
     //testing multiple files in one map
@@ -133,9 +128,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     
     //MARK: SKAToolKit
-    func loadFloors() {
-        if tileMap.spriteLayers.count > 0 {
-            let layer = tileMap.spriteLayers[0] as! SKASpriteLayer
+//    func loadFloors() {
+//        if tileMap.spriteLayers.count > 0 {
+//            let layer = tileMap.spriteLayers[0] as! SKASpriteLayer
+//        }
+//    }
+    var itemsArray = [SKNode]()
+    
+    func cullItems() {
+        let left = player.position.x - 500
+        let right = player.position.x + 500
+        let up = player.position.y + 500
+        let down = player.position.y - 500
+        
+        for item in itemsArray {
+            if item.position.x > left && item.position.x < right && item.position.y < up && item.position.y > down {
+                if item.parent == nil {
+                    worldNode.addChild(item)
+                    //println("added an item")
+                }
+            } else {
+                if item.parent != nil {
+                    item.removeFromParent()
+                    //println("removed an item")
+                }
+            }
         }
     }
     
@@ -176,6 +193,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 item.zPosition = 100
                 item.name = "lighting"
                 worldNode.addChild(item)
+                itemsArray.append(item)
                 
             } else if obj.name == "candle" {
                 let item = Item(imageNamed: "candle_1", objectNamed: "candle")
@@ -183,14 +201,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 item.zPosition = 100
                 item.name = "candle"
                 worldNode.addChild(item)
+                itemsArray.append(item)
             } else if obj.name == "chandelier" {
                 let item = Item(imageNamed: "chandelier_1", objectNamed: "chandelier")
                 item.position = CGPoint(x: obj.x, y: obj.y + 8)
                 item.zPosition = 100
                 item.name = "chandelier"
                 worldNode.addChild(item)
+                itemsArray.append(item)
             }
         }
+        //println(itemsArray.count)
     }
     
     func cullTiles() {
@@ -324,6 +345,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
+        if currentMap == "kz_castle" {
+            background.color = SKColor.blackColor()
+        }
+        if currentMap != "kz_castle" {
+            createBackground()
+        }
         setupMap()
         createWorld()
         //createWorldFromMaps()
@@ -358,6 +385,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if player.position.y < -300 {
             player.position = playerSpawnPoint
         }
+        
+        cullItems()
 
     }
     
