@@ -190,7 +190,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             } else if obj.name == "lighting" {
                 let item = Item(imageNamed: "lighting_1", objectNamed: "lighting")
                 item.position = CGPoint(x: obj.x, y: obj.y)
-                item.zPosition = 100
+                item.zPosition = 1
                 item.name = "lighting"
                 worldNode.addChild(item)
                 itemsArray.append(item)
