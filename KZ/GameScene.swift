@@ -34,7 +34,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //checkpoint variables
     var savePoint:CGPoint = CGPoint.zeroPoint
-    var savePointsRemaining = 25
+    var savePointsRemaining = 50
     
     //stopwatch variables
     var startTime = NSTimeInterval()
