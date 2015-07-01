@@ -510,7 +510,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 buttonNorth.texture = SKTexture(imageNamed: "Directional_Button_Lit")
                 jumpButtonIsPressed = true
-//experimenting with launching player
+//experimenting with launching player, this gave a memory error
 //                if player.isRunning && !player.isJumping{
 //                    if player.xScale > 0 {
 //                        player.physicsBody?.applyImpulse(CGVectorMake(50, 2))

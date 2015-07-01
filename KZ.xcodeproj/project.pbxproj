@@ -51,6 +51,10 @@
 		184D00071B269F35001D722E /* egypt_statues_medium.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184D00061B269F35001D722E /* egypt_statues_medium.atlasc */; };
 		184DFFFA1B268C6F001D722E /* egypt_small_floors_bgra.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */; };
 		184DFFFB1B268C6F001D722E /* egypt_small_walls_rgba4.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */; };
+		18614DA21B43C13600E108C3 /* tmx-bg-tiles.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18614DA11B43C13600E108C3 /* tmx-bg-tiles.atlasc */; };
+		18614DA41B43C28700E108C3 /* kz_wonderland_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 18614DA31B43C28700E108C3 /* kz_wonderland_2.json */; };
+		18614DA61B43C2E000E108C3 /* kz_wonderland_tileset_medium.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18614DA51B43C2E000E108C3 /* kz_wonderland_tileset_medium.1.png */; };
+		18614DA81B43C30400E108C3 /* kz_wonderland_trees.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18614DA71B43C30400E108C3 /* kz_wonderland_trees.1.png */; };
 		189A48CC1B329EEE00B3578C /* BehindTheMap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CA1B329EEE00B3578C /* BehindTheMap.sks */; };
 		189A48CD1B329EEE00B3578C /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CB1B329EEE00B3578C /* bokeh.png */; };
 		189A48CF1B330FE000B3578C /* kz_wild_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CE1B330FE000B3578C /* kz_wild_3.json */; };
@@ -155,6 +159,10 @@
 		184D00061B269F35001D722E /* egypt_statues_medium.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_statues_medium.atlasc; sourceTree = "<group>"; };
 		184DFFF81B268C6F001D722E /* egypt_small_floors_bgra.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_small_floors_bgra.atlasc; sourceTree = "<group>"; };
 		184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = egypt_small_walls_rgba4.atlasc; sourceTree = "<group>"; };
+		18614DA11B43C13600E108C3 /* tmx-bg-tiles.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "tmx-bg-tiles.atlasc"; sourceTree = "<group>"; };
+		18614DA31B43C28700E108C3 /* kz_wonderland_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_wonderland_2.json; sourceTree = "<group>"; };
+		18614DA51B43C2E000E108C3 /* kz_wonderland_tileset_medium.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_wonderland_tileset_medium.1.png; sourceTree = "<group>"; };
+		18614DA71B43C30400E108C3 /* kz_wonderland_trees.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_wonderland_trees.1.png; sourceTree = "<group>"; };
 		189A48CA1B329EEE00B3578C /* BehindTheMap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BehindTheMap.sks; sourceTree = "<group>"; };
 		189A48CB1B329EEE00B3578C /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
 		189A48CE1B330FE000B3578C /* kz_wild_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_wild_3.json; sourceTree = "<group>"; };
@@ -377,6 +385,7 @@
 		18149CB01B197C1A00522024 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				18614DA11B43C13600E108C3 /* tmx-bg-tiles.atlasc */,
 				189A48DC1B35809700B3578C /* lava-tiles-tight.atlasc */,
 				189A48D61B33F71000B3578C /* GemRedIdle.atlas */,
 				189A48D41B33EC1C00B3578C /* GemGreenIdle.atlas */,
@@ -415,6 +424,9 @@
 				18F7604F1B2418CB0086E776 /* kz_dream.tmx */,
 				18E87EA41B20511E00E4CC4E /* kz_wonderland.tmx */,
 				18E87E9E1B2010C800E4CC4E /* kz_wild.tmx */,
+				18614DA31B43C28700E108C3 /* kz_wonderland_2.json */,
+				18614DA51B43C2E000E108C3 /* kz_wonderland_tileset_medium.1.png */,
+				18614DA71B43C30400E108C3 /* kz_wonderland_trees.1.png */,
 			);
 			name = Levels;
 			path = KZ;
@@ -516,6 +528,7 @@
 				18F760501B2418CB0086E776 /* kz_dream.tmx in Resources */,
 				18149CCE1B19E2E500522024 /* valley-tiles-5.atlasc in Resources */,
 				18099B9B1B2FF65E002932F3 /* kz_signs_small.1.png in Resources */,
+				18614DA61B43C2E000E108C3 /* kz_wonderland_tileset_medium.1.png in Resources */,
 				189A48D91B353CC200B3578C /* kz_lava.json in Resources */,
 				18099B991B2FF65E002932F3 /* kz_egypt_tiles_small.tps in Resources */,
 				18A9FCC61B1BF0AB004C0E5D /* Run.atlas in Resources */,
@@ -549,10 +562,13 @@
 				18E87E9F1B2010C800E4CC4E /* kz_wild.tmx in Resources */,
 				18E87EAF1B218E9E00E4CC4E /* spark.png in Resources */,
 				18A9FCC01B1BEF83004C0E5D /* Jump.atlas in Resources */,
+				18614DA21B43C13600E108C3 /* tmx-bg-tiles.atlasc in Resources */,
 				18E87EA71B20512B00E4CC4E /* kz_wonderland_trees.atlasc in Resources */,
+				18614DA81B43C30400E108C3 /* kz_wonderland_trees.1.png in Resources */,
 				189A49071B37188500B3578C /* kz_cave_tiles.atlasc in Resources */,
 				189A48CD1B329EEE00B3578C /* bokeh.png in Resources */,
 				18099B301B296BDC002932F3 /* 1kz_egypt_3.tmx in Resources */,
+				18614DA41B43C28700E108C3 /* kz_wonderland_2.json in Resources */,
 				18099B981B2FF65E002932F3 /* egypt_statues_medium.1.png in Resources */,
 				18F760761B253C6C0086E776 /* Rain.sks in Resources */,
 				18099B321B296C60002932F3 /* kz_egypt_3.json in Resources */,

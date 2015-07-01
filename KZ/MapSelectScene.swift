@@ -24,6 +24,7 @@ class MapSelectScene: SKScene {
     
     func addMaps(){
         mapList.append("kz_egypt_3")
+        //mapList.append("kz_wonderland_2")
         mapList.append("kz_caves")
         mapList.append("kz_castle")
     }

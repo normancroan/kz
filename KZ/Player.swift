@@ -30,7 +30,7 @@ class Player: SKSpriteNode {
     var jumpAction:SKAction?
     
 //    var maxSpeed:CGFloat = 1.9//3.1 was before DT, need to modify by 1.6ish
-    var maxSpeed:CGFloat = 7//3.1 was before DT, need to modify by 1.6ish
+    var maxSpeed:CGFloat = 8//was 7//3.1 was before DT, need to modify by 1.6ish
 
     var isAttacking:Bool = false
     var isJumping:Bool = false
