@@ -103,6 +103,7 @@ class MapSelectScene: SKScene {
         mapEffects()
         backgroundColor = SKColor.blackColor()
     }
+
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         for touch in (touches as! Set<UITouch>) {

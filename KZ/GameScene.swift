@@ -50,7 +50,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let savePointsRemainingLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     //end checkpoint constants
     let currentMap: String
-    let player = Player(imageNamed: "Walk13")
+    //let player = Player(imageNamed: "Walk13")
+    let player = Hero(imageNamed: "Idle_0")
     let greenGem = Item(imageNamed: "gem_green_1", objectNamed: "greenGem")
     let redGem = Item(imageNamed: "gem_green_1", objectNamed: "redGem")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
@@ -96,7 +97,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.position = CGPointMake(55,235)
         player.zPosition = 200//-41
         //player.position = CGPointMake(955,2235)
-        player.setScale(0.7)
+        player.setScale(0.1)
         centerViewOn(player.position)
         player.physicsBody?.restitution = 0
         physicsUpdateFromPoint = player.position
@@ -174,7 +175,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 playerSpawnPoint = CGPoint(x: obj.x, y: obj.y)
                 player.physicsBody?.restitution = 0
                 player.zPosition = 200
-                player.setScale(0.7)
+                player.setScale(0.4)
                 worldNode.addChild(player)
                 centerViewOn(player.position)
             } else if obj.name == "greenGem" {

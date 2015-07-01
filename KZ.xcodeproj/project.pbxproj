@@ -55,6 +55,8 @@
 		18614DA41B43C28700E108C3 /* kz_wonderland_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 18614DA31B43C28700E108C3 /* kz_wonderland_2.json */; };
 		18614DA61B43C2E000E108C3 /* kz_wonderland_tileset_medium.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18614DA51B43C2E000E108C3 /* kz_wonderland_tileset_medium.1.png */; };
 		18614DA81B43C30400E108C3 /* kz_wonderland_trees.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18614DA71B43C30400E108C3 /* kz_wonderland_trees.1.png */; };
+		18614DAD1B43C5D200E108C3 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18614DAC1B43C5D200E108C3 /* Hero.swift */; };
+		18614DAF1B43CD3B00E108C3 /* executioner_animations.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18614DAE1B43CD3B00E108C3 /* executioner_animations.atlasc */; };
 		189A48CC1B329EEE00B3578C /* BehindTheMap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CA1B329EEE00B3578C /* BehindTheMap.sks */; };
 		189A48CD1B329EEE00B3578C /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CB1B329EEE00B3578C /* bokeh.png */; };
 		189A48CF1B330FE000B3578C /* kz_wild_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CE1B330FE000B3578C /* kz_wild_3.json */; };
@@ -163,6 +165,8 @@
 		18614DA31B43C28700E108C3 /* kz_wonderland_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_wonderland_2.json; sourceTree = "<group>"; };
 		18614DA51B43C2E000E108C3 /* kz_wonderland_tileset_medium.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_wonderland_tileset_medium.1.png; sourceTree = "<group>"; };
 		18614DA71B43C30400E108C3 /* kz_wonderland_trees.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_wonderland_trees.1.png; sourceTree = "<group>"; };
+		18614DAC1B43C5D200E108C3 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		18614DAE1B43CD3B00E108C3 /* executioner_animations.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = executioner_animations.atlasc; sourceTree = "<group>"; };
 		189A48CA1B329EEE00B3578C /* BehindTheMap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BehindTheMap.sks; sourceTree = "<group>"; };
 		189A48CB1B329EEE00B3578C /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
 		189A48CE1B330FE000B3578C /* kz_wild_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_wild_3.json; sourceTree = "<group>"; };
@@ -309,6 +313,7 @@
 				18149C651B19709F00522024 /* GameScene.swift */,
 				18E87EA01B20125700E4CC4E /* MapSelectScene.swift */,
 				18149CD11B1AA7C500522024 /* Player.swift */,
+				18614DAC1B43C5D200E108C3 /* Hero.swift */,
 				189A48D21B33E84A00B3578C /* Item.swift */,
 				18149C671B19709F00522024 /* GameViewController.swift */,
 				18149C691B19709F00522024 /* Main.storyboard */,
@@ -385,6 +390,7 @@
 		18149CB01B197C1A00522024 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				18614DA91B43C57B00E108C3 /* characters */,
 				18614DA11B43C13600E108C3 /* tmx-bg-tiles.atlasc */,
 				189A48DC1B35809700B3578C /* lava-tiles-tight.atlasc */,
 				189A48D61B33F71000B3578C /* GemRedIdle.atlas */,
@@ -442,6 +448,14 @@
 				184DFFF91B268C6F001D722E /* egypt_small_walls_rgba4.atlasc */,
 			);
 			name = kz_egypt;
+			sourceTree = "<group>";
+		};
+		18614DA91B43C57B00E108C3 /* characters */ = {
+			isa = PBXGroup;
+			children = (
+				18614DAE1B43CD3B00E108C3 /* executioner_animations.atlasc */,
+			);
+			name = characters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -555,6 +569,7 @@
 				184DFFFB1B268C6F001D722E /* egypt_small_walls_rgba4.atlasc in Resources */,
 				18E87EB91B219B4500E4CC4E /* kz_signs_small.atlasc in Resources */,
 				18149C641B19709F00522024 /* GameScene.sks in Resources */,
+				18614DAF1B43CD3B00E108C3 /* executioner_animations.atlasc in Resources */,
 				189A48CF1B330FE000B3578C /* kz_wild_3.json in Resources */,
 				184DFFFA1B268C6F001D722E /* egypt_small_floors_bgra.atlasc in Resources */,
 				18F7605E1B251B2F0086E776 /* kz_abandoned.tmx in Resources */,
@@ -612,6 +627,7 @@
 				18149CA31B1972BE00522024 /* SKNode+Extensions.swift in Sources */,
 				18149CA61B1972BE00522024 /* SKTTimingFunctions.swift in Sources */,
 				18149CA11B1972BE00522024 /* SKAction+SpecialEffects.swift in Sources */,
+				18614DAD1B43C5D200E108C3 /* Hero.swift in Sources */,
 				18149C9F1B1972BE00522024 /* Int+Extensions.swift in Sources */,
 				189A48F81B363D4000B3578C /* SKATMXParser.m in Sources */,
 				18149CD01B1AA74600522024 /* Types.swift in Sources */,
