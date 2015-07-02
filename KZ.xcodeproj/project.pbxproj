@@ -57,6 +57,7 @@
 		18614DA81B43C30400E108C3 /* kz_wonderland_trees.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18614DA71B43C30400E108C3 /* kz_wonderland_trees.1.png */; };
 		18614DAD1B43C5D200E108C3 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18614DAC1B43C5D200E108C3 /* Hero.swift */; };
 		18614DAF1B43CD3B00E108C3 /* executioner_animations.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18614DAE1B43CD3B00E108C3 /* executioner_animations.atlasc */; };
+		18614DB11B44DC9B00E108C3 /* cat_player.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18614DB01B44DC9B00E108C3 /* cat_player.atlasc */; };
 		189A48CC1B329EEE00B3578C /* BehindTheMap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CA1B329EEE00B3578C /* BehindTheMap.sks */; };
 		189A48CD1B329EEE00B3578C /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CB1B329EEE00B3578C /* bokeh.png */; };
 		189A48CF1B330FE000B3578C /* kz_wild_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CE1B330FE000B3578C /* kz_wild_3.json */; };
@@ -167,6 +168,7 @@
 		18614DA71B43C30400E108C3 /* kz_wonderland_trees.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_wonderland_trees.1.png; sourceTree = "<group>"; };
 		18614DAC1B43C5D200E108C3 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		18614DAE1B43CD3B00E108C3 /* executioner_animations.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = executioner_animations.atlasc; sourceTree = "<group>"; };
+		18614DB01B44DC9B00E108C3 /* cat_player.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cat_player.atlasc; sourceTree = "<group>"; };
 		189A48CA1B329EEE00B3578C /* BehindTheMap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BehindTheMap.sks; sourceTree = "<group>"; };
 		189A48CB1B329EEE00B3578C /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
 		189A48CE1B330FE000B3578C /* kz_wild_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_wild_3.json; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 		18614DA91B43C57B00E108C3 /* characters */ = {
 			isa = PBXGroup;
 			children = (
+				18614DB01B44DC9B00E108C3 /* cat_player.atlasc */,
 				18614DAE1B43CD3B00E108C3 /* executioner_animations.atlasc */,
 			);
 			name = characters;
@@ -596,6 +599,7 @@
 				18149CB71B197C6E00522024 /* tmx-rpg-bigpack.atlasc in Resources */,
 				189A48CC1B329EEE00B3578C /* BehindTheMap.sks in Resources */,
 				189A49111B3A728400B3578C /* kz_castle.json in Resources */,
+				18614DB11B44DC9B00E108C3 /* cat_player.atlasc in Resources */,
 				184D00071B269F35001D722E /* egypt_statues_medium.atlasc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

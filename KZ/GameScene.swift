@@ -51,7 +51,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //end checkpoint constants
     let currentMap: String
     //let player = Player(imageNamed: "Walk13")
-    let player = Hero(imageNamed: "Idle_0")
+    let player = Hero(imageNamed: "idle_0")
     let greenGem = Item(imageNamed: "gem_green_1", objectNamed: "greenGem")
     let redGem = Item(imageNamed: "gem_green_1", objectNamed: "redGem")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
@@ -175,7 +175,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 playerSpawnPoint = CGPoint(x: obj.x, y: obj.y)
                 player.physicsBody?.restitution = 0
                 player.zPosition = 200
-                player.setScale(0.4)
+                player.setScale(0.7)
                 worldNode.addChild(player)
                 centerViewOn(player.position)
             } else if obj.name == "greenGem" {
@@ -545,7 +545,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 moveButtonIsPressed = true
                 player.playerSpeedX = player.maxSpeed
                 player.adjustXSpeedAndScale()
-                player.startWalk()
+                //player.startWalk()
                 
                 
                 //touched left
@@ -557,7 +557,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 moveButtonIsPressed = true
                 player.playerSpeedX = -player.maxSpeed
                 player.adjustXSpeedAndScale()
-                player.startWalk()
+                //player.startWalk()
                 
                 
                 //jumped

@@ -36,7 +36,7 @@ class Hero: SKSpriteNode {
     var jumpAction:SKAction?
     var jumpAttackAction:SKAction?
     
-    var maxSpeed:CGFloat = 8
+    var maxSpeed:CGFloat = 9
     
     var isAttacking:Bool = false
     var isJumping:Bool = false
@@ -44,9 +44,6 @@ class Hero: SKSpriteNode {
     var doubleJumpAlreadyUsed:Bool = false
     var walkingSlow:Bool = false
     var isFalling:Bool = false
-    
-    
-    
     
     
     required init(coder aDecoder: NSCoder) {
@@ -59,14 +56,22 @@ class Hero: SKSpriteNode {
         super.init(texture: imageTexture, color:nil, size: imageTexture.size() )
         
         //resizing the physics rectangle to align with feet
-        var rect:CGRect = CGRectMake(position.x, position.y, imageTexture.size().width / 2, imageTexture.size().height)
+        var rect:CGRect = CGRectMake(position.x, position.y, imageTexture.size().width / 2, imageTexture.size().height - (imageTexture.size().height / 2))
         var anchor:CGPoint = CGPointMake(position.x - 12.5, position.y)
         
         //creating physics body with above values to align with feet
         var frontFoot:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().height / 5, center: CGPointMake(0, -95))
         var rectBodyThin:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: rect.size, center: CGPointMake(-12.5, -18))
-        var body:SKPhysicsBody = SKPhysicsBody(bodies: [frontFoot, rectBodyThin])
+        //var body:SKPhysicsBody = SKPhysicsBody(bodies: [frontFoot, rectBodyThin])
         
+        //lets try this again, too convoluted above
+        let bodyRectangleBase = CGRectMake(position.x, position.y, imageTexture.size().width / 2.5, imageTexture.size().height - (imageTexture.size().height / 1.5))
+            
+        var bodyRectangle:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: bodyRectangleBase.size)
+        
+        var bodyFrontFoot:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().height / 6, center: CGPointMake(0, -45))
+        
+        var body:SKPhysicsBody = SKPhysicsBody(bodies: [bodyFrontFoot, bodyRectangle])
         
         //dynamic required for gravity to work
         body.dynamic = true
@@ -89,11 +94,11 @@ class Hero: SKSpriteNode {
         //setUpJumpAction()
         //setUpWalkAnimation()
         
-        setupAction("idle", characterName: "executioner")
-        setupAction("walk", characterName: "executioner")
-        setupAction("run", characterName: "executioner")
-        setupAction("jump", characterName: "executioner")
-        setupAction("jump attack", characterName: "executioner")
+        setupAction("idle", characterName: "cat")
+        //setupAction("walk", characterName: "cat")
+        setupAction("run", characterName: "cat")
+        setupAction("jump", characterName: "cat")
+        //setupAction("jump attack", characterName: "cat")
         
         self.runAction(idleAction)
     }
@@ -171,34 +176,36 @@ class Hero: SKSpriteNode {
         //choose atlas based on character name
         if characterName == "executioner" {
             atlasName = "executioner_animations"
-            println(atlasName)
+            //println(atlasName)
+        } else if characterName == "cat" {
+            atlasName = "cat_player"
         }
         
         //modify the variables
         if actionName == "idle" {
-            animationPrefix = "Idle_"
+            animationPrefix = "idle_"
             animationStart = 0
-            animationStop = 23
-            frameSpeed = 15
+            animationStop = 120
+            frameSpeed = 30
         } else if actionName == "walk" {
-            animationPrefix = "Walk_"
+            animationPrefix = "walk_"
             animationStart = 0
-            animationStop = 23
+            animationStop = 9
             frameSpeed = 30
         } else if actionName == "run" {
-            animationPrefix = "Walk_"
+            animationPrefix = "run_"
             animationStart = 0
-            animationStop = 23
-            frameSpeed = 30
+            animationStop = 29
+            frameSpeed = 40
         } else if actionName == "jump" {
-            animationPrefix = "Jump_"
+            animationPrefix = "jump_start_"
             animationStart = 0
-            animationStop = 23
-            frameSpeed = 60
+            animationStop = 8
+            frameSpeed = 30
         } else if actionName == "jump attack" {
             animationPrefix = "Jump Attack_"
             animationStart = 0
-            animationStop = 23
+            animationStop = 15
             frameSpeed = 60
         }
         
@@ -225,7 +232,7 @@ class Hero: SKSpriteNode {
         
         //create the animation
         let atlasAnimation = SKAction.animateWithTextures(atlasTextures, timePerFrame: 1.0/Double(frameSpeed), resize: true , restore:false )
-        println(atlasTextures)
+        //println(atlasTextures)
         
         //assign the animation to appropriate action
         if actionName == "idle" {
@@ -233,7 +240,8 @@ class Hero: SKSpriteNode {
         } else if actionName == "run" {
             runAction   = SKAction.repeatActionForever(atlasAnimation)
         } else if actionName == "jump" {
-            jumpAction  = SKAction.repeatActionForever(atlasAnimation)
+            let performSelector:SKAction = SKAction.runBlock(self.walkOrStop)
+            jumpAction =  SKAction.sequence([atlasAnimation, performSelector])
         } else if actionName == "jump attack" {
             jumpAttackAction = SKAction.repeatActionForever(atlasAnimation)
         } else if actionName == "walk" {
@@ -354,13 +362,16 @@ class Hero: SKSpriteNode {
         if ( abs(playerSpeedX) < abs(maxSpeed / 2) && isJumping == false && isAttacking == false && walkingSlow == false ) {
             
             walkingSlow = true
+            println("started walking slow from setspeed")
             self.runAction( slowWalkAction!, withKey: "walk")
             
         } else if ( abs(playerSpeedX) > abs(maxSpeed / 2) && isJumping == false && isAttacking == false && walkingSlow == true) {
             
             walkingSlow = false
-            self.runAction( walkAction!, withKey: "walk")
-            
+            if actionForKey("walk") == nil {
+                println("started walking from setspeed")
+              self.runAction( walkAction!, withKey: "walk")
+            }
         }
         
         
@@ -370,10 +381,10 @@ class Hero: SKSpriteNode {
         
         if ( playerSpeedX > 0 ){
             
-            self.xScale = 0.4
+            self.xScale = 0.7//1//0.4
         } else {
             
-            self.xScale = -0.4
+            self.xScale = -0.7//-1//-0.4
         }
         
         
@@ -404,6 +415,7 @@ class Hero: SKSpriteNode {
             removeActionForKey("walk")
         }
         
+        //println("walking")
         if (abs(playerSpeedX) < abs(maxSpeed / 2) && walkingSlow == false  ) {
             
             walkingSlow = true
@@ -419,13 +431,12 @@ class Hero: SKSpriteNode {
             
         } else {
             walkingSlow = false
-            self.runAction(walkAction!, withKey: "walk")
-            //println("should be walking")
+            self.runAction(runAction!, withKey: "walk")
+            println("should be running")
             isRunning = true
         }
-        
-        
     }
+    
     func stopWalk() {
         
         if actionForKey("idle") != nil {
