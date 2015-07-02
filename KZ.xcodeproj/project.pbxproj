@@ -57,7 +57,10 @@
 		18614DA81B43C30400E108C3 /* kz_wonderland_trees.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18614DA71B43C30400E108C3 /* kz_wonderland_trees.1.png */; };
 		18614DAD1B43C5D200E108C3 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18614DAC1B43C5D200E108C3 /* Hero.swift */; };
 		18614DAF1B43CD3B00E108C3 /* executioner_animations.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18614DAE1B43CD3B00E108C3 /* executioner_animations.atlasc */; };
-		18614DB11B44DC9B00E108C3 /* cat_player.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18614DB01B44DC9B00E108C3 /* cat_player.atlasc */; };
+		18614DB31B44F04E00E108C3 /* cat_player.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 18614DB21B44F04E00E108C3 /* cat_player.atlasc */; };
+		18614DB81B45355300E108C3 /* jump_01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18614DB71B45355300E108C3 /* jump_01.wav */; };
+		18614DBA1B45360700E108C3 /* jump_02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18614DB91B45360700E108C3 /* jump_02.wav */; };
+		18614DBC1B45367800E108C3 /* jump_03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18614DBB1B45367800E108C3 /* jump_03.wav */; };
 		189A48CC1B329EEE00B3578C /* BehindTheMap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CA1B329EEE00B3578C /* BehindTheMap.sks */; };
 		189A48CD1B329EEE00B3578C /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CB1B329EEE00B3578C /* bokeh.png */; };
 		189A48CF1B330FE000B3578C /* kz_wild_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CE1B330FE000B3578C /* kz_wild_3.json */; };
@@ -168,7 +171,10 @@
 		18614DA71B43C30400E108C3 /* kz_wonderland_trees.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_wonderland_trees.1.png; sourceTree = "<group>"; };
 		18614DAC1B43C5D200E108C3 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		18614DAE1B43CD3B00E108C3 /* executioner_animations.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = executioner_animations.atlasc; sourceTree = "<group>"; };
-		18614DB01B44DC9B00E108C3 /* cat_player.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cat_player.atlasc; sourceTree = "<group>"; };
+		18614DB21B44F04E00E108C3 /* cat_player.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cat_player.atlasc; sourceTree = "<group>"; };
+		18614DB71B45355300E108C3 /* jump_01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump_01.wav; sourceTree = "<group>"; };
+		18614DB91B45360700E108C3 /* jump_02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump_02.wav; sourceTree = "<group>"; };
+		18614DBB1B45367800E108C3 /* jump_03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump_03.wav; sourceTree = "<group>"; };
 		189A48CA1B329EEE00B3578C /* BehindTheMap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BehindTheMap.sks; sourceTree = "<group>"; };
 		189A48CB1B329EEE00B3578C /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
 		189A48CE1B330FE000B3578C /* kz_wild_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_wild_3.json; sourceTree = "<group>"; };
@@ -287,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				18149CA81B1972E600522024 /* libz.dylib */,
+				18614DB41B4533B500E108C3 /* sounds */,
 				18149CB81B197D3D00522024 /* Levels */,
 				18149CB01B197C1A00522024 /* Art */,
 				18149C5E1B19709F00522024 /* KZ */,
@@ -455,10 +462,21 @@
 		18614DA91B43C57B00E108C3 /* characters */ = {
 			isa = PBXGroup;
 			children = (
-				18614DB01B44DC9B00E108C3 /* cat_player.atlasc */,
+				18614DB21B44F04E00E108C3 /* cat_player.atlasc */,
 				18614DAE1B43CD3B00E108C3 /* executioner_animations.atlasc */,
 			);
 			name = characters;
+			sourceTree = "<group>";
+		};
+		18614DB41B4533B500E108C3 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				18614DB71B45355300E108C3 /* jump_01.wav */,
+				18614DB91B45360700E108C3 /* jump_02.wav */,
+				18614DBB1B45367800E108C3 /* jump_03.wav */,
+			);
+			name = sounds;
+			path = KZ;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -560,6 +578,7 @@
 				18E87EA31B204F4000E4CC4E /* kz_wonderland_tileset_medium.atlasc in Resources */,
 				18099B441B2A8522002932F3 /* kz_wild_2.tmx in Resources */,
 				18099B9A1B2FF65E002932F3 /* kz_egypt_walls.tps in Resources */,
+				18614DBA1B45360700E108C3 /* jump_02.wav in Resources */,
 				18099B951B2FF65E002932F3 /* egypt_items_medium.1.png in Resources */,
 				18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */,
 				18099B461B2AB8B7002932F3 /* small-map-test.tmx in Resources */,
@@ -585,12 +604,14 @@
 				18614DA81B43C30400E108C3 /* kz_wonderland_trees.1.png in Resources */,
 				189A49071B37188500B3578C /* kz_cave_tiles.atlasc in Resources */,
 				189A48CD1B329EEE00B3578C /* bokeh.png in Resources */,
+				18614DB81B45355300E108C3 /* jump_01.wav in Resources */,
 				18099B301B296BDC002932F3 /* 1kz_egypt_3.tmx in Resources */,
 				18614DA41B43C28700E108C3 /* kz_wonderland_2.json in Resources */,
 				18099B981B2FF65E002932F3 /* egypt_statues_medium.1.png in Resources */,
 				18F760761B253C6C0086E776 /* Rain.sks in Resources */,
 				18099B321B296C60002932F3 /* kz_egypt_3.json in Resources */,
 				18149C6B1B19709F00522024 /* Main.storyboard in Resources */,
+				18614DBC1B45367800E108C3 /* jump_03.wav in Resources */,
 				18099B4A1B2ABF31002932F3 /* small-map-test-0.tmx in Resources */,
 				189A48D51B33EC1C00B3578C /* GemGreenIdle.atlas in Resources */,
 				189A49211B3AA87500B3578C /* castle_lighting.atlas in Resources */,
@@ -599,7 +620,7 @@
 				18149CB71B197C6E00522024 /* tmx-rpg-bigpack.atlasc in Resources */,
 				189A48CC1B329EEE00B3578C /* BehindTheMap.sks in Resources */,
 				189A49111B3A728400B3578C /* kz_castle.json in Resources */,
-				18614DB11B44DC9B00E108C3 /* cat_player.atlasc in Resources */,
+				18614DB31B44F04E00E108C3 /* cat_player.atlasc in Resources */,
 				184D00071B269F35001D722E /* egypt_statues_medium.atlasc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

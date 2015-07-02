@@ -7,7 +7,7 @@
             <key>generator</key>
             <string>TexturePacker 3.9.0 - http://www.codeandweb.com/texturepacker</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:751f95776364748b0d93ab86ef79feb3:41097a55a1919c2fb874d403cfb1f185:c2d224c1742ec47214bee40321b299f1$</string>
+            <string>$TexturePacker:SmartUpdate:5ddf5f31f3c20342747505c813b62924:9d505c728214608ddbaea505c626a351:c2d224c1742ec47214bee40321b299f1$</string>
         </dict>
         <key>format</key>
         <string>APPL</string>
@@ -17,7 +17,7 @@
                 <key>path</key>
                 <string>cat_player.1.png</string>
                 <key>size</key>
-                <string>{2040,1133}</string>
+                <string>{2038,1257}</string>
                 <key>subimages</key>
                 <array>
                     <dict>
@@ -970,15 +970,15 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>run_20.png</string>
+                        <string>idle_51.png</string>
                         <key>spriteOffset</key>
-                        <string>{21,15}</string>
+                        <string>{0,0}</string>
                         <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
+                        <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{1,1039},{133,93}}</string>
+                        <string>{{1,1039},{90,144}}</string>
                         <key>textureRotated</key>
-                        <true/>
+                        <false/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -986,15 +986,15 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>idle_51.png</string>
+                        <string>flip_6.png</string>
                         <key>spriteOffset</key>
-                        <string>{0,0}</string>
+                        <string>{52,10}</string>
                         <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
+                        <string>{170,175}</string>
                         <key>textureRect</key>
-                        <string>{{93,747},{90,144}}</string>
+                        <string>{{1,1185},{109,71}}</string>
                         <key>textureRotated</key>
-                        <false/>
+                        <true/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -1008,25 +1008,9 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{93,893},{90,144}}</string>
+                        <string>{{93,747},{90,144}}</string>
                         <key>textureRotated</key>
                         <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>run_3.png</string>
-                        <key>spriteOffset</key>
-                        <string>{19,4}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
-                        <key>textureRect</key>
-                        <string>{{136,1039},{143,92}}</string>
-                        <key>textureRotated</key>
-                        <true/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -1056,7 +1040,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{185,742},{90,144}}</string>
+                        <string>{{93,893},{90,144}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1072,7 +1056,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{214,596},{90,144}}</string>
+                        <string>{{93,1039},{90,144}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1088,7 +1072,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{236,445},{118,143}}</string>
+                        <string>{{185,742},{118,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1104,7 +1088,23 @@
                         <key>spriteSourceSize</key>
                         <string>{126,152}</string>
                         <key>textureRect</key>
-                        <string>{{348,294},{116,143}}</string>
+                        <string>{{214,596},{116,143}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_3.png</string>
+                        <key>spriteOffset</key>
+                        <string>{19,4}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{236,445},{92,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1120,7 +1120,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{418,147},{90,143}}</string>
+                        <string>{{330,445},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1136,7 +1136,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{435,1},{90,143}}</string>
+                        <string>{{348,294},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1152,7 +1152,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{185,888},{90,143}}</string>
+                        <string>{{418,147},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1168,7 +1168,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{277,742},{90,143}}</string>
+                        <string>{{435,1},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1184,7 +1184,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{306,590},{90,143}}</string>
+                        <string>{{185,887},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1200,9 +1200,25 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{356,439},{90,143}}</string>
+                        <string>{{185,1032},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_8.png</string>
+                        <key>spriteOffset</key>
+                        <string>{36,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{185,1177},{113,79}}</string>
+                        <key>textureRotated</key>
+                        <true/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -1226,15 +1242,15 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>run_25.png</string>
+                        <string>idle_30.png</string>
                         <key>spriteOffset</key>
-                        <string>{16,6}</string>
+                        <string>{0,0}</string>
                         <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
+                        <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{281,1032},{134,100}}</string>
+                        <string>{{277,1032},{90,143}}</string>
                         <key>textureRotated</key>
-                        <true/>
+                        <false/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -1242,13 +1258,13 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>idle_30.png</string>
+                        <string>flip_4.png</string>
                         <key>spriteOffset</key>
-                        <string>{0,0}</string>
+                        <string>{57,31}</string>
                         <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
+                        <string>{170,175}</string>
                         <key>textureRect</key>
-                        <string>{{369,735},{90,143}}</string>
+                        <string>{{300,1177},{113,78}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1264,7 +1280,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{398,584},{90,143}}</string>
+                        <string>{{305,741},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1280,7 +1296,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{448,439},{90,143}}</string>
+                        <string>{{332,590},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1296,7 +1312,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{466,292},{90,143}}</string>
+                        <string>{{422,439},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1312,7 +1328,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{510,146},{90,143}}</string>
+                        <string>{{440,292},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1328,7 +1344,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{527,1},{90,143}}</string>
+                        <string>{{510,146},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1344,25 +1360,9 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{369,880},{90,143}}</string>
+                        <string>{{527,1},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>run_11.png</string>
-                        <key>spriteOffset</key>
-                        <string>{8,5}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
-                        <key>textureRect</key>
-                        <string>{{417,1025},{138,106}}</string>
-                        <key>textureRotated</key>
-                        <true/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -1376,7 +1376,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{461,729},{90,143}}</string>
+                        <string>{{369,886},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -1392,1223 +1392,7 @@
                         <key>spriteSourceSize</key>
                         <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{490,584},{90,143}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_90.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{540,437},{90,143}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_91.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{558,291},{90,143}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_92.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{602,146},{90,143}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_93.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{619,1},{90,143}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>fall_start_4.png</string>
-                        <key>spriteOffset</key>
-                        <string>{4,3}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{125,149}</string>
-                        <key>textureRect</key>
-                        <string>{{461,874},{117,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>jump_mid_8.png</string>
-                        <key>spriteOffset</key>
-                        <string>{10,8}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,152}</string>
-                        <key>textureRect</key>
-                        <string>{{557,1018},{139,114}}</string>
-                        <key>textureRotated</key>
-                        <true/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>run_4.png</string>
-                        <key>spriteOffset</key>
-                        <string>{17,4}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
-                        <key>textureRect</key>
-                        <string>{{553,729},{95,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_0.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{580,873},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_1.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{582,582},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_118.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{632,436},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_119.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{650,291},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_120.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{694,146},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_2.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{711,1},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_23.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{650,726},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_24.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{674,580},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_25.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{724,435},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_26.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{742,290},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_27.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{786,145},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_3.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{803,1},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_4.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{672,870},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>jump_start_5.png</string>
-                        <key>spriteOffset</key>
-                        <string>{7,4}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
-                        <key>textureRect</key>
-                        <string>{{698,1014},{141,118}}</string>
-                        <key>textureRotated</key>
-                        <true/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_5.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{742,724},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_57.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{766,579},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_58.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{816,434},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_59.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{834,289},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_60.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{878,145},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_61.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{895,1},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_62.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{764,868},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_63.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{834,723},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_64.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{858,578},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_65.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{908,433},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_83.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{926,289},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_84.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{970,145},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_85.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{987,1},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>jump_mid_3.png</string>
-                        <key>spriteOffset</key>
-                        <string>{6,5}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,152}</string>
-                        <key>textureRect</key>
-                        <string>{{841,1012},{140,117}}</string>
-                        <key>textureRotated</key>
-                        <true/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_86.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{856,867},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_87.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{926,722},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_88.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{950,577},{90,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>run_2.png</string>
-                        <key>spriteOffset</key>
-                        <string>{22,3}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
-                        <key>textureRect</key>
-                        <string>{{1000,433},{87,142}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_10.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_11.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_12.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_13.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_14.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_15.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_16.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_17.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_18.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_19.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_20.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_21.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_6.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_7.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_8.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_9.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,289},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_22.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1062,145},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_66.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1079,1},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_67.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{948,866},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_68.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1018,721},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_69.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1042,577},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_70.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1089,432},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_71.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1110,288},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_72.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1154,144},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_73.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1171,1},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>jump_loop_15.png</string>
-                        <key>spriteOffset</key>
-                        <string>{2,2}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{120,131}</string>
-                        <key>textureRect</key>
-                        <string>{{983,1009},{128,117}}</string>
-                        <key>textureRotated</key>
-                        <true/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_74.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1040,864},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_75.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1110,720},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_76.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1134,575},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_77.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1181,431},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_78.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1202,287},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_79.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1246,144},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_80.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1263,1},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>jump_loop_3.png</string>
-                        <key>spriteOffset</key>
-                        <string>{2,2}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{120,131}</string>
-                        <key>textureRect</key>
-                        <string>{{1113,1007},{128,117}}</string>
-                        <key>textureRotated</key>
-                        <true/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_81.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1132,863},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>idle_82.png</string>
-                        <key>spriteOffset</key>
-                        <string>{0,0}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{90,144}</string>
-                        <key>textureRect</key>
-                        <string>{{1202,718},{90,141}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>run_15.png</string>
-                        <key>spriteOffset</key>
-                        <string>{22,6}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
-                        <key>textureRect</key>
-                        <string>{{1226,574},{85,141}}</string>
+                        <string>{{369,1031},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2624,9 +1408,9 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1273,430},{80,141}}</string>
+                        <string>{{415,1176},{141,80}}</string>
                         <key>textureRotated</key>
-                        <false/>
+                        <true/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -2634,13 +1418,13 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>run_5.png</string>
+                        <string>idle_90.png</string>
                         <key>spriteOffset</key>
-                        <string>{15,5}</string>
+                        <string>{0,0}</string>
                         <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
+                        <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{1294,287},{98,140}}</string>
+                        <string>{{397,735},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2650,13 +1434,13 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>run_14.png</string>
+                        <string>idle_91.png</string>
                         <key>spriteOffset</key>
-                        <string>{18,6}</string>
+                        <string>{0,0}</string>
                         <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
+                        <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{1338,144},{90,140}}</string>
+                        <string>{{424,584},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2666,13 +1450,13 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>run_17.png</string>
+                        <string>idle_92.png</string>
                         <key>spriteOffset</key>
-                        <string>{27,6}</string>
+                        <string>{0,0}</string>
                         <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
+                        <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{1355,1},{83,140}}</string>
+                        <string>{{514,437},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2682,13 +1466,13 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>run_1.png</string>
+                        <string>idle_93.png</string>
                         <key>spriteOffset</key>
-                        <string>{26,3}</string>
+                        <string>{0,0}</string>
                         <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
+                        <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{1224,861},{81,140}}</string>
+                        <string>{{532,291},{90,143}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2698,45 +1482,13 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>jump_mid_5.png</string>
+                        <string>fall_start_4.png</string>
                         <key>spriteOffset</key>
-                        <string>{10,16}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,152}</string>
-                        <key>textureRect</key>
-                        <string>{{1243,1003},{114,129}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>jump_start_0.png</string>
-                        <key>spriteOffset</key>
-                        <string>{31,7}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
-                        <key>textureRect</key>
-                        <string>{{1294,717},{72,140}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>fall_start_3.png</string>
-                        <key>spriteOffset</key>
-                        <string>{6,5}</string>
+                        <string>{4,3}</string>
                         <key>spriteSourceSize</key>
                         <string>{125,149}</string>
                         <key>textureRect</key>
-                        <string>{{1313,573},{116,139}}</string>
+                        <string>{{602,146},{117,142}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2746,13 +1498,29 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>jump_start_6.png</string>
+                        <string>flip_0.png</string>
                         <key>spriteOffset</key>
-                        <string>{9,6}</string>
+                        <string>{33,23}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{619,1},{110,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_4.png</string>
+                        <key>spriteOffset</key>
+                        <string>{17,4}</string>
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1355,429},{116,139}}</string>
+                        <string>{{461,880},{95,142}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2762,13 +1530,13 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>jump_mid_1.png</string>
+                        <string>idle_0.png</string>
                         <key>spriteOffset</key>
-                        <string>{11,6}</string>
+                        <string>{0,0}</string>
                         <key>spriteSourceSize</key>
-                        <string>{126,152}</string>
+                        <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{1394,286},{103,139}}</string>
+                        <string>{{489,729},{90,142}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2778,13 +1546,13 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>jump_start_2.png</string>
+                        <string>idle_1.png</string>
                         <key>spriteOffset</key>
-                        <string>{12,6}</string>
+                        <string>{0,0}</string>
                         <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
+                        <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{1430,143},{103,139}}</string>
+                        <string>{{516,582},{90,142}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2794,13 +1562,13 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>run_12.png</string>
+                        <string>idle_118.png</string>
                         <key>spriteOffset</key>
-                        <string>{13,5}</string>
+                        <string>{0,0}</string>
                         <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
+                        <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{1440,1},{98,139}}</string>
+                        <string>{{606,436},{90,142}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2810,13 +1578,13 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>run_13.png</string>
+                        <string>idle_119.png</string>
                         <key>spriteOffset</key>
-                        <string>{16,6}</string>
+                        <string>{0,0}</string>
                         <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
+                        <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{1307,859},{94,139}}</string>
+                        <string>{{624,290},{90,142}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2826,13 +1594,29 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>fall_start_1.png</string>
+                        <string>idle_120.png</string>
                         <key>spriteOffset</key>
-                        <string>{7,11}</string>
+                        <string>{0,0}</string>
                         <key>spriteSourceSize</key>
-                        <string>{125,149}</string>
+                        <string>{90,144}</string>
                         <key>textureRect</key>
-                        <string>{{1359,1000},{116,132}}</string>
+                        <string>{{461,1024},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_2.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{553,1024},{90,142}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2848,7 +1632,1255 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1368,714},{88,139}}</string>
+                        <string>{{558,1168},{139,88}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_23.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{558,873},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_24.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{581,726},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_25.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{608,580},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_26.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{698,434},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_27.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{716,290},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_3.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{721,145},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_4.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{731,1},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_5.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{645,1017},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_5.png</string>
+                        <key>spriteOffset</key>
+                        <string>{57,18}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{699,1161},{90,95}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_57.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{650,870},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_58.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{673,724},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_59.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{700,578},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_60.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{790,434},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_61.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{808,289},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_62.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{813,145},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_63.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{823,1},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_64.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{737,1014},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_5.png</string>
+                        <key>spriteOffset</key>
+                        <string>{15,5}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{791,1158},{140,98}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_65.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{742,868},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_83.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{829,1012},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_84.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{765,722},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_85.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{792,578},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_86.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{882,433},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_87.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{900,289},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_88.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{905,145},{90,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_2.png</string>
+                        <key>spriteOffset</key>
+                        <string>{22,3}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{915,1},{87,142}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_21.png</string>
+                        <key>spriteOffset</key>
+                        <string>{20,29}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{834,866},{118,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>jump_start_5.png</string>
+                        <key>spriteOffset</key>
+                        <string>{7,4}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{857,722},{118,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_10.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_11.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_12.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_13.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_14.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_15.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_16.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_17.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_18.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_19.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_20.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_21.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_6.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_7.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_8.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_9.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{884,577},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_22.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{974,433},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_66.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{992,289},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_67.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{997,145},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_68.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{1004,1},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_69.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{976,576},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_70.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{1066,432},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_71.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{1084,288},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_72.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{1089,144},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_73.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{1096,1},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_74.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{921,1009},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>jump_mid_1.png</string>
+                        <key>spriteOffset</key>
+                        <string>{11,6}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,152}</string>
+                        <key>textureRect</key>
+                        <string>{{933,1152},{139,103}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_75.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{954,865},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_76.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{1013,1008},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_3.png</string>
+                        <key>spriteOffset</key>
+                        <string>{50,45}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1074,1151},{75,105}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_77.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{977,719},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_78.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{1068,575},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_79.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{1158,431},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_80.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{1176,287},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_81.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{1181,144},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>idle_82.png</string>
+                        <key>spriteOffset</key>
+                        <string>{0,0}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{90,144}</string>
+                        <key>textureRect</key>
+                        <string>{{1188,1},{90,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_15.png</string>
+                        <key>spriteOffset</key>
+                        <string>{22,6}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1046,862},{85,141}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_20.png</string>
+                        <key>spriteOffset</key>
+                        <string>{15,29}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1069,718},{118,140}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>jump_mid_3.png</string>
+                        <key>spriteOffset</key>
+                        <string>{6,5}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,152}</string>
+                        <key>textureRect</key>
+                        <string>{{1160,574},{117,140}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_14.png</string>
+                        <key>spriteOffset</key>
+                        <string>{18,6}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1250,430},{90,140}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_17.png</string>
+                        <key>spriteOffset</key>
+                        <string>{27,6}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1268,287},{83,140}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_1.png</string>
+                        <key>spriteOffset</key>
+                        <string>{26,3}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1273,144},{81,140}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>jump_start_0.png</string>
+                        <key>spriteOffset</key>
+                        <string>{31,7}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1280,1},{72,140}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>fall_start_3.png</string>
+                        <key>spriteOffset</key>
+                        <string>{6,5}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{125,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1354,1},{116,139}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>jump_start_6.png</string>
+                        <key>spriteOffset</key>
+                        <string>{9,6}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1105,1005},{116,139}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_19.png</string>
+                        <key>spriteOffset</key>
+                        <string>{18,31}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1151,1146},{139,110}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>jump_mid_8.png</string>
+                        <key>spriteOffset</key>
+                        <string>{10,8}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,152}</string>
+                        <key>textureRect</key>
+                        <string>{{1133,860},{114,139}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>jump_start_2.png</string>
+                        <key>spriteOffset</key>
+                        <string>{12,6}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1189,716},{103,139}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_12.png</string>
+                        <key>spriteOffset</key>
+                        <string>{13,5}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1279,572},{98,139}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_13.png</string>
+                        <key>spriteOffset</key>
+                        <string>{16,6}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1342,429},{94,139}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2864,7 +2896,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1431,570},{87,139}}</string>
+                        <string>{{1353,286},{87,139}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2880,7 +2912,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1473,427},{81,139}}</string>
+                        <string>{{1356,142},{81,139}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2896,7 +2928,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,152}</string>
                         <key>textureRect</key>
-                        <string>{{1499,284},{72,139}}</string>
+                        <string>{{1439,142},{72,139}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2906,13 +2938,13 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>run_28.png</string>
+                        <string>flip_1.png</string>
                         <key>spriteOffset</key>
-                        <string>{19,2}</string>
+                        <string>{34,27}</string>
                         <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
+                        <string>{170,175}</string>
                         <key>textureRect</key>
-                        <string>{{1535,142},{91,138}}</string>
+                        <string>{{1472,1},{123,138}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2922,61 +2954,13 @@
                         <key>isFullyOpaque</key>
                         <false/>
                         <key>name</key>
-                        <string>run_18.png</string>
+                        <string>run_11.png</string>
                         <key>spriteOffset</key>
-                        <string>{24,8}</string>
+                        <string>{8,5}</string>
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1540,1},{87,138}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>run_6.png</string>
-                        <key>spriteOffset</key>
-                        <string>{13,8}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
-                        <key>textureRect</key>
-                        <string>{{1403,855},{101,137}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>run_27.png</string>
-                        <key>spriteOffset</key>
-                        <string>{18,3}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
-                        <key>textureRect</key>
-                        <string>{{1477,994},{94,137}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>jump_start_7.png</string>
-                        <key>spriteOffset</key>
-                        <string>{10,9}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
-                        <key>textureRect</key>
-                        <string>{{1458,711},{116,136}}</string>
+                        <string>{{1223,1001},{106,138}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -2992,7 +2976,87 @@
                         <key>spriteSourceSize</key>
                         <string>{125,149}</string>
                         <key>textureRect</key>
-                        <string>{{1520,568},{115,136}}</string>
+                        <string>{{1292,1141},{136,115}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_28.png</string>
+                        <key>spriteOffset</key>
+                        <string>{19,2}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1249,857},{91,138}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_18.png</string>
+                        <key>spriteOffset</key>
+                        <string>{24,8}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1331,997},{87,138}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_6.png</string>
+                        <key>spriteOffset</key>
+                        <string>{13,8}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1294,713},{101,137}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_27.png</string>
+                        <key>spriteOffset</key>
+                        <string>{18,3}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1379,570},{94,137}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>jump_start_7.png</string>
+                        <key>spriteOffset</key>
+                        <string>{10,9}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1438,427},{116,136}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3008,7 +3072,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,152}</string>
                         <key>textureRect</key>
-                        <string>{{1556,425},{114,136}}</string>
+                        <string>{{1442,283},{114,136}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3024,7 +3088,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1573,282},{114,136}}</string>
+                        <string>{{1513,141},{114,136}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3040,7 +3104,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1628,141},{112,136}}</string>
+                        <string>{{1597,1},{112,136}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3056,7 +3120,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1629,1},{90,136}}</string>
+                        <string>{{1342,852},{90,136}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3072,7 +3136,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,152}</string>
                         <key>textureRect</key>
-                        <string>{{1721,1},{115,135}}</string>
+                        <string>{{1397,709},{115,135}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3088,7 +3152,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1506,849},{115,135}}</string>
+                        <string>{{1475,565},{115,135}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3104,7 +3168,23 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1576,706},{97,135}}</string>
+                        <string>{{1556,421},{97,135}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_25.png</string>
+                        <key>spriteOffset</key>
+                        <string>{16,6}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1558,279},{100,134}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3120,7 +3200,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,152}</string>
                         <key>textureRect</key>
-                        <string>{{1637,563},{115,133}}</string>
+                        <string>{{1629,139},{115,133}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3136,7 +3216,55 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1672,420},{103,133}}</string>
+                        <string>{{1711,1},{103,133}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_20.png</string>
+                        <key>spriteOffset</key>
+                        <string>{21,15}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1420,990},{93,133}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>jump_mid_5.png</string>
+                        <key>spriteOffset</key>
+                        <string>{10,16}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,152}</string>
+                        <key>textureRect</key>
+                        <string>{{1430,1125},{114,129}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>fall_start_1.png</string>
+                        <key>spriteOffset</key>
+                        <string>{7,11}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{125,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1434,846},{116,132}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3152,7 +3280,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1689,279},{114,132}}</string>
+                        <string>{{1514,702},{114,132}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3168,7 +3296,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1742,138},{109,132}}</string>
+                        <string>{{1592,558},{109,132}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3184,23 +3312,7 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1838,1},{103,132}}</string>
-                        <key>textureRotated</key>
-                        <false/>
-                    </dict>
-                    <dict>
-                        <key>aliases</key>
-                        <array/>
-                        <key>isFullyOpaque</key>
-                        <false/>
-                        <key>name</key>
-                        <string>run_21.png</string>
-                        <key>spriteOffset</key>
-                        <string>{20,19}</string>
-                        <key>spriteSourceSize</key>
-                        <string>{126,149}</string>
-                        <key>textureRect</key>
-                        <string>{{1943,1},{96,129}}</string>
+                        <string>{{1655,415},{103,132}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3216,9 +3328,233 @@
                         <key>spriteSourceSize</key>
                         <string>{126,149}</string>
                         <key>textureRect</key>
-                        <string>{{1573,986},{99,129}}</string>
+                        <string>{{1660,274},{99,129}}</string>
                         <key>textureRotated</key>
                         <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>run_21.png</string>
+                        <key>spriteOffset</key>
+                        <string>{20,19}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{126,149}</string>
+                        <key>textureRect</key>
+                        <string>{{1746,136},{96,129}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>jump_loop_15.png</string>
+                        <key>spriteOffset</key>
+                        <string>{2,2}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{120,131}</string>
+                        <key>textureRect</key>
+                        <string>{{1816,1},{117,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_10.png</string>
+                        <key>spriteOffset</key>
+                        <string>{25,13}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1935,1},{98,89}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_16.png</string>
+                        <key>spriteOffset</key>
+                        <string>{8,48}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1935,92},{96,114}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_15.png</string>
+                        <key>spriteOffset</key>
+                        <string>{9,46}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1844,131},{87,108}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_11.png</string>
+                        <key>spriteOffset</key>
+                        <string>{21,25}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1933,208},{93,84}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_9.png</string>
+                        <key>spriteOffset</key>
+                        <string>{29,4}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1844,241},{85,108}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_17.png</string>
+                        <key>spriteOffset</key>
+                        <string>{10,49}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1931,294},{106,116}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_14.png</string>
+                        <key>spriteOffset</key>
+                        <string>{2,43}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1761,267},{80,113}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_12.png</string>
+                        <key>spriteOffset</key>
+                        <string>{8,33}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1843,351},{74,106}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>jump_loop_3.png</string>
+                        <key>spriteOffset</key>
+                        <string>{2,2}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{120,131}</string>
+                        <key>textureRect</key>
+                        <string>{{1919,412},{117,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_7.png</string>
+                        <key>spriteOffset</key>
+                        <string>{45,2}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1761,382},{73,114}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_13.png</string>
+                        <key>spriteOffset</key>
+                        <string>{1,39}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1836,459},{72,114}}</string>
+                        <key>textureRotated</key>
+                        <true/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_18.png</string>
+                        <key>spriteOffset</key>
+                        <string>{19,38}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1910,542},{127,108}}</string>
+                        <key>textureRotated</key>
+                        <true/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -3232,9 +3568,9 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1623,843},{117,128}}</string>
+                        <string>{{1703,549},{128,117}}</string>
                         <key>textureRotated</key>
-                        <false/>
+                        <true/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -3248,7 +3584,7 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1675,698},{116,128}}</string>
+                        <string>{{1515,980},{116,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3264,7 +3600,7 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1754,555},{116,128}}</string>
+                        <string>{{1552,836},{116,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3280,7 +3616,7 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1777,413},{116,128}}</string>
+                        <string>{{1630,692},{116,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3296,7 +3632,7 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1805,272},{116,128}}</string>
+                        <string>{{1546,1110},{116,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3312,7 +3648,7 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1923,135},{116,128}}</string>
+                        <string>{{1633,966},{116,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3328,7 +3664,7 @@
                         <key>spriteSourceSize</key>
                         <string>{125,149}</string>
                         <key>textureRect</key>
-                        <string>{{1923,265},{115,128}}</string>
+                        <string>{{1670,822},{115,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3344,7 +3680,7 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1923,395},{115,128}}</string>
+                        <string>{{1748,668},{115,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3360,9 +3696,9 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1895,525},{128,115}}</string>
+                        <string>{{1664,1096},{115,128}}</string>
                         <key>textureRotated</key>
-                        <true/>
+                        <false/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -3376,7 +3712,7 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1674,973},{115,128}}</string>
+                        <string>{{1751,952},{115,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3392,7 +3728,7 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1742,828},{115,128}}</string>
+                        <string>{{1787,798},{115,128}}</string>
                         <key>textureRotated</key>
                         <false/>
                     </dict>
@@ -3408,9 +3744,9 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1793,685},{115,128}}</string>
+                        <string>{{1904,652},{128,115}}</string>
                         <key>textureRotated</key>
-                        <false/>
+                        <true/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -3424,7 +3760,7 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1910,642},{128,115}}</string>
+                        <string>{{1904,769},{128,115}}</string>
                         <key>textureRotated</key>
                         <true/>
                     </dict>
@@ -3440,7 +3776,7 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1910,759},{128,115}}</string>
+                        <string>{{1904,886},{128,115}}</string>
                         <key>textureRotated</key>
                         <true/>
                     </dict>
@@ -3456,9 +3792,9 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1791,958},{115,128}}</string>
+                        <string>{{1868,1003},{128,115}}</string>
                         <key>textureRotated</key>
-                        <false/>
+                        <true/>
                     </dict>
                     <dict>
                         <key>aliases</key>
@@ -3472,7 +3808,23 @@
                         <key>spriteSourceSize</key>
                         <string>{120,131}</string>
                         <key>textureRect</key>
-                        <string>{{1908,876},{128,115}}</string>
+                        <string>{{1781,1120},{115,128}}</string>
+                        <key>textureRotated</key>
+                        <false/>
+                    </dict>
+                    <dict>
+                        <key>aliases</key>
+                        <array/>
+                        <key>isFullyOpaque</key>
+                        <false/>
+                        <key>name</key>
+                        <string>flip_2.png</string>
+                        <key>spriteOffset</key>
+                        <string>{44,35}</string>
+                        <key>spriteSourceSize</key>
+                        <string>{170,175}</string>
+                        <key>textureRect</key>
+                        <string>{{1898,1120},{110,116}}</string>
                         <key>textureRotated</key>
                         <true/>
                     </dict>

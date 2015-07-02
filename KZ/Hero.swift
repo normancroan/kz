@@ -11,6 +11,7 @@ import SpriteKit
 
 class Hero: SKSpriteNode {
     
+    //MARK: Properties
     //setup the variables to be modified by actionName
     var atlasName = ""
     var animationPrefix = ""
@@ -34,7 +35,10 @@ class Hero: SKSpriteNode {
     var idleAction:SKAction?
     var attackAction:SKAction?
     var jumpAction:SKAction?
+    var jumpSound:SKAction?
     var jumpAttackAction:SKAction?
+    var fallAction:SKAction?
+    var flipAction:SKAction?
     
     var maxSpeed:CGFloat = 9
     
@@ -44,8 +48,9 @@ class Hero: SKSpriteNode {
     var doubleJumpAlreadyUsed:Bool = false
     var walkingSlow:Bool = false
     var isFalling:Bool = false
+    var isRising:Bool = false
     
-    
+    //MARK: Init
     required init(coder aDecoder: NSCoder) {
         fatalError("NScoding not supported")
     }
@@ -71,7 +76,13 @@ class Hero: SKSpriteNode {
         
         var bodyFrontFoot:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().height / 6, center: CGPointMake(0, -45))
         
-        var body:SKPhysicsBody = SKPhysicsBody(bodies: [bodyFrontFoot, bodyRectangle])
+        //var body:SKPhysicsBody = SKPhysicsBody(bodies: [bodyFrontFoot, bodyRectangle])
+        
+        //just rectangle body
+        var fullBodyRectangle = CGRectMake(position.x, position.y, imageTexture.size().width / 1.7, imageTexture.size().height / 1.25)
+        
+        var body:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: fullBodyRectangle.size, center: CGPointMake(0, -13))
+        
         
         //dynamic required for gravity to work
         body.dynamic = true
@@ -98,12 +109,14 @@ class Hero: SKSpriteNode {
         //setupAction("walk", characterName: "cat")
         setupAction("run", characterName: "cat")
         setupAction("jump", characterName: "cat")
+        setupAction("fall", characterName: "cat")
+        setupAction("flip", characterName: "cat")
         //setupAction("jump attack", characterName: "cat")
         
         self.runAction(idleAction)
     }
     
-    
+    //MARK: Loop
     func update(dt: CGFloat) {
         
         
@@ -139,38 +152,7 @@ class Hero: SKSpriteNode {
         // println(physicsBody?.velocity.dx)
     }
     
-    
-    func setUpWalkAnimation() {
-        
-        let atlas = SKTextureAtlas (named: "Walk")
-        
-        var array = [String]()
-        
-        //or setup an array with exactly the sequential frames start from 0 and going to 23
-        for var i=0; i <= 23; i++ {
-            
-            let nameString = String(format: "Walk%i", i)
-            array.append(nameString)
-            
-        }
-        
-        //create another array this time with SKTexture as the type (textures being the .png images)
-        var atlasTextures:[SKTexture] = []
-        
-        for (var i = 0; i < array.count; i++ ) {
-            
-            let texture:SKTexture = atlas.textureNamed( array[i] )
-            atlasTextures.insert(texture, atIndex:i)
-            
-        }
-        
-        let atlasAnimation = SKAction.animateWithTextures(atlasTextures, timePerFrame: 1.0/60, resize: true , restore:false )
-        walkAction =  SKAction.repeatActionForever(atlasAnimation)
-        
-        let atlasAnimation2 = SKAction.animateWithTextures(atlasTextures, timePerFrame: 1.0/20, resize: true , restore:false )
-        slowWalkAction =  SKAction.repeatActionForever(atlasAnimation2)
-        
-    }
+    //MARK: Methods
     func setupAction(actionName: String, characterName: String) {
         
         //choose atlas based on character name
@@ -207,7 +189,18 @@ class Hero: SKSpriteNode {
             animationStart = 0
             animationStop = 15
             frameSpeed = 60
+        } else if actionName == "fall" {
+            animationPrefix = "jump_loop_"
+            animationStart = 0
+            animationStop = 16
+            frameSpeed = 30
+        } else if actionName == "flip" {
+            animationPrefix = "flip_"
+            animationStart = 0
+            animationStop = 21
+            frameSpeed = 30
         }
+
         
         //setup the animation
         let atlas = SKTextureAtlas (named: atlasName)
@@ -242,110 +235,18 @@ class Hero: SKSpriteNode {
         } else if actionName == "jump" {
             let performSelector:SKAction = SKAction.runBlock(self.walkOrStop)
             jumpAction =  SKAction.sequence([atlasAnimation, performSelector])
+            jumpSound = SKAction.playSoundFileNamed("jump_03.wav", waitForCompletion: false)
         } else if actionName == "jump attack" {
             jumpAttackAction = SKAction.repeatActionForever(atlasAnimation)
         } else if actionName == "walk" {
             walkAction = SKAction.repeatActionForever(atlasAnimation)
+        } else if actionName == "fall" {
+            fallAction = SKAction.repeatActionForever(atlasAnimation)
+        } else if actionName == "flip" {
+            let performSelector:SKAction = SKAction.runBlock(self.walkOrStop)
+            flipAction =  SKAction.sequence([atlasAnimation, performSelector])
         }
-        
     }
-    
-    func setUpIdleAction() {
-        
-        let atlas = SKTextureAtlas (named: "Idle")
-
-        
-        var array = [String]()
-        
-
-        for var i=0; i <= 23; i++ {
-            
-            let nameString = String(format: "Idle%i", i)
-            array.append(nameString)
-            
-        }
-        
-        //create another array this time with SKTexture as the type (textures being the .png images)
-        var atlasTextures:[SKTexture] = []
-        
-        for (var i = 0; i < array.count; i++ ) {
-            
-            let texture:SKTexture = atlas.textureNamed( array[i] )
-            atlasTextures.insert(texture, atIndex:i)
-            
-        }
-        
-        let atlasAnimation = SKAction.animateWithTextures(atlasTextures, timePerFrame: 1.0/15, resize: true , restore:false )
-        idleAction =  SKAction.repeatActionForever(atlasAnimation)
-        
-    }
-    
-    func setUpAttackAction() {
-        
-        let atlas = SKTextureAtlas (named: "Attack")
-        
-        // setup an array with frames in any order you want.
-        //let array:[String] = ["Ship1", "Ship2", "Ship3", "Ship4", "Ship5", "Ship6"]
-        
-        var array = [String]()
-        
-        //or setup an array with exactly the sequential frames start from 1 and going to 12
-        for var i=0; i <= 15; i++ {
-            
-            let nameString = String(format: "Attack%i", i)
-            array.append(nameString)
-            
-        }
-        
-        //create another array this time with SKTexture as the type (textures being the .png images)
-        var atlasTextures:[SKTexture] = []
-        
-        for (var i = 0; i < array.count; i++ ) {
-            
-            let texture:SKTexture = atlas.textureNamed( array[i] )
-            atlasTextures.insert(texture, atIndex:i)
-            
-        }
-        
-        let atlasAnimation = SKAction.animateWithTextures(atlasTextures, timePerFrame: 1.0/60, resize: true  , restore:false )
-        let performSelector:SKAction = SKAction.runBlock(self.walkOrStop)
-        attackAction =  SKAction.sequence([atlasAnimation, performSelector])
-        
-    }
-    
-    func setUpJumpAction() {
-        
-        let atlas = SKTextureAtlas (named: "Jump")
-        
-        // setup an array with frames in any order you want.
-        //let array:[String] = ["Ship1", "Ship2", "Ship3", "Ship4", "Ship5", "Ship6"]
-        
-        var array = [String]()
-        
-        //or setup an array with exactly the sequential frames start from 1 and going to 12
-        for var i=0; i <= 23; i++ {
-            
-            let nameString = String(format: "Jump%i", i)
-            array.append(nameString)
-            
-        }
-        
-        //create another array this time with SKTexture as the type (textures being the .png images)
-        var atlasTextures:[SKTexture] = []
-        
-        for (var i = 0; i < array.count; i++ ) {
-            
-            let texture:SKTexture = atlas.textureNamed( array[i] )
-            atlasTextures.insert(texture, atIndex:i)
-            
-        }
-        
-        let atlasAnimation = SKAction.animateWithTextures(atlasTextures, timePerFrame: 1.0/60, resize: true  , restore:false )
-        let performSelector:SKAction = SKAction.runBlock(self.walkOrStop)
-        jumpAction =  SKAction.sequence([atlasAnimation, performSelector])
-        
-    }
-    
     
     func adjustXSpeedAndScale () {
         
@@ -432,7 +333,7 @@ class Hero: SKSpriteNode {
         } else {
             walkingSlow = false
             self.runAction(runAction!, withKey: "walk")
-            println("should be running")
+            //println("should be running")
             isRunning = true
         }
     }
@@ -446,6 +347,7 @@ class Hero: SKSpriteNode {
         self.runAction(idleAction!, withKey: "idle")
         removeActionForKey("walk")
         removeActionForKey("jump")
+        removeActionForKey("fall")
         //println("idling")
         isRunning = false
         
@@ -499,13 +401,35 @@ class Hero: SKSpriteNode {
         
     }
     
+    func setRising(rising: Bool) {
+        if rising {
+            isRising = true
+        } else {
+            isRising = false
+        }
+    }
+    
     func setFalling(falling: Bool) {
         if falling {
             isFalling = true
+            fall()
             //println("falling")
         } else {
             isFalling = false
+            fall()
             //println("not falling")
+        }
+    }
+    
+    func fall() {
+        if isFalling {
+            if actionForKey("fall") != nil {
+                removeActionForKey("fall")
+            }
+            self.runAction(fallAction!, withKey: "fall")
+            println("falling")
+        } else if !isFalling {
+            removeActionForKey("fall")
         }
     }
     
@@ -518,7 +442,9 @@ class Hero: SKSpriteNode {
                     removeActionForKey("jump")
                 }
                 
+                //add arc4random to select jump or flip here
                 self.runAction(jumpAction!, withKey: "jump")
+                self.runAction(jumpSound)
                 
                 
                 isJumping = true

@@ -361,7 +361,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(currentTime: CFTimeInterval) {
-        
+        if player.physicsBody?.velocity != CGVector.zeroVector{
+        println(player.physicsBody?.velocity.dy)
+        }
         //used 50 and 25 before
         let playerIndex = tileMap.indexForPoint(player.position)
         tileMap.cullAroundIndexX(Int(playerIndex.x), indexY: Int(playerIndex.y), columnWidth: 50, rowHeight: 25)
@@ -371,12 +373,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         scaleBackground(player.position.y)
         
-        if player.physicsBody?.velocity.dy >= -75.0 || (player.physicsBody?.velocity.dy <= 30.0) && (player.physicsBody?.velocity.dy >= -20.0){//!= 0.0 {
+        if player.physicsBody?.velocity.dy >= -100.0 || (player.physicsBody?.velocity.dy <= 50.0) && (player.physicsBody?.velocity.dy >= -20.0){//!= 0.0 {
             player.setFalling(false)
-            if player.physicsBody?.velocity.dy != 0.0 {
-            }
+            //println("player is not falling")
+//            if player.physicsBody?.velocity.dy != 0.0 {
+//            }
         } else {
             player.setFalling(true)
+            //println("player is falling")
+            //println(player.physicsBody?.velocity.dy)
         }
         
         player.update(CGFloat(dt))
@@ -590,7 +595,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //println("touch ended on right button")
                 player.stopWalk()
                 player.playerSpeedX = 0
-                player.physicsBody?.applyImpulse(CGVectorMake(10,0))
+                //player.physicsBody?.applyImpulse(CGVectorMake(10,0))
                 //playerIdleSpeed(checkTileType(), direction: "right")
                 moveButtonIsPressed = false
                 buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
@@ -602,7 +607,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //println("touch ended on left button")
                 player.stopWalk()
                 player.playerSpeedX = 0
-                player.physicsBody?.applyImpulse(CGVectorMake(-10,0))
+                //player.physicsBody?.applyImpulse(CGVectorMake(-10,0))
                 //playerIdleSpeed(checkTileType(), direction: "left")
                 moveButtonIsPressed = false
                 buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
