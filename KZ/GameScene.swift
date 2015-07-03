@@ -403,7 +403,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //            //println("player is falling")
 //            //println(player.physicsBody?.velocity.dy)
 //        }
-        println(player.jumpLockOverride)
+        //println(player.jumpLockOverride)
         if !player.jumpLockOverride {
             if player.physicsBody?.velocity.dy < -100 || player.physicsBody?.velocity.dy > 50 {
                 player.setFalling(true)
@@ -716,13 +716,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        }
         
         if collision == PhysicsCategory.Sensor | SKACategoryFloor {
-            println("sensor hit")
+            //println("sensor hit")
             if groundSensor.parent != nil {
                 groundSensor.removeFromParent()
                 if !player.jumpLockOverride {
                     player.isJumping = false
                     player.setFalling(false)
-                    println("removed sensor")
+                    //println("removed sensor")
                     player.jumpLockOverride = true
                 }
             }

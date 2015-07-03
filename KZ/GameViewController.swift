@@ -35,7 +35,7 @@ class GameViewController: UIViewController {
         skView.showsFPS = true
         skView.frameInterval = 2
         skView.showsNodeCount = true
-        skView.showsPhysics = true
+        //skView.showsPhysics = true
         //skView.showsDrawCount = true
         skView.ignoresSiblingOrder = true
         //skView.showsQuadCount = true

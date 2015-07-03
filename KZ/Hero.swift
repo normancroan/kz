@@ -265,7 +265,7 @@ class Hero: SKSpriteNode {
             animationPrefix = "flip_"
             animationStart = 0
             animationStop = 21
-            frameSpeed = 30
+            frameSpeed = 80
         }
 
         
@@ -311,7 +311,18 @@ class Hero: SKSpriteNode {
             fallAction = SKAction.repeatActionForever(atlasAnimation)
         } else if actionName == "flip" {
             let performSelector:SKAction = SKAction.runBlock(self.walkOrStop)
-            flipAction =  SKAction.sequence([atlasAnimation, performSelector])
+            let killAnimation:SKAction = SKAction.runBlock( endAnimation )
+            let resumeFall:SKAction = SKAction.runBlock( fall )
+            flipAction =  SKAction.sequence([atlasAnimation, killAnimation, resumeFall, performSelector])
+        }
+    }
+    
+    func endAnimation(){
+        if actionForKey("flip") != nil {
+            removeActionForKey("flip")
+        }
+        if actionForKey("jump") != nil {
+            removeActionForKey("jump")
         }
     }
     
@@ -491,29 +502,23 @@ class Hero: SKSpriteNode {
     }
     
     func fall() {
+        
         if isFalling {
-            if actionForKey("fall") != nil {
-                removeActionForKey("fall")
+            if actionForKey("jump") == nil
+                && actionForKey("flip") == nil
+                    && actionForKey("fall") == nil{
+                self.runAction(fallAction!, withKey: "fall")
             }
-            self.runAction(fallAction!, withKey: "fall")
-            removeActionForKey("jump")
-            //println("falling")
         } else if !isFalling {
+            if actionForKey("fall") != nil {
             removeActionForKey("fall")
+            }
         }
     }
     
     func jump() {
         if jumpLockOverride {
-            let downForce = self.physicsBody?.velocity.dy
-            let upForce = Int(downForce!)
-            let posUpForce:CGFloat = CGFloat(-upForce)
-            
-            println(downForce)
-            println(posUpForce)
-            
             self.physicsBody?.velocity.dy = 0
-            //self.physicsBody?.applyImpulse(CGVectorMake(0, posUpForce))
         }
         if !isFalling {
             if !isJumping {
@@ -528,6 +533,7 @@ class Hero: SKSpriteNode {
                 }
                 
                 //add arc4random to select jump or flip here
+                //self.runAction(flipAction!, withKey: "flip")
                 self.runAction(jumpAction!, withKey: "jump")
                 self.runAction(jumpSound)
                 
