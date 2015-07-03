@@ -50,6 +50,8 @@ class Hero: SKSpriteNode {
     var isFalling:Bool = false
     var isRising:Bool = false
     
+    var jumpLockOverride = false
+    
     //MARK: Init
     required init(coder aDecoder: NSCoder) {
         fatalError("NScoding not supported")
@@ -416,6 +418,7 @@ class Hero: SKSpriteNode {
         //println("idling")
         isRunning = false
         isFalling = false
+        jumpLockOverride = false
         
     }
     func attack() {
@@ -501,6 +504,17 @@ class Hero: SKSpriteNode {
     }
     
     func jump() {
+        if jumpLockOverride {
+            let downForce = self.physicsBody?.velocity.dy
+            let upForce = Int(downForce!)
+            let posUpForce:CGFloat = CGFloat(-upForce)
+            
+            println(downForce)
+            println(posUpForce)
+            
+            self.physicsBody?.velocity.dy = 0
+            //self.physicsBody?.applyImpulse(CGVectorMake(0, posUpForce))
+        }
         if !isFalling {
             if !isJumping {
                 
@@ -519,6 +533,7 @@ class Hero: SKSpriteNode {
                 
                 
                 isJumping = true
+                jumpLockOverride = false
                 
                 
                 

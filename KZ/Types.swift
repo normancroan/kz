@@ -15,4 +15,5 @@ struct PhysicsCategory {
     static let Floor    : UInt32 = 0b100 // 4
     static let Bounce   : UInt32 = 0b10000 // 8
     static let Item     : UInt32 = 0b100000000 // 16
+    static let Sensor   : UInt32 = 0b10000000000000000 // 32
 }

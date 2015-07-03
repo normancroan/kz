@@ -30,6 +30,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var tileMapFrame: CGRect!
     var moveButtonIsPressed = false
     var jumpButtonIsPressed = false
+    var jumpLockOverride = false
 
     
     //checkpoint variables
@@ -99,14 +100,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setupGroundSensor() {
         
         //property is called groundSensor
-        groundSensor.size = CGSizeMake(player.frame.width, 20)
+        groundSensor.size = CGSizeMake(player.frame.width / 10, 40)
 //        groundSensor.position = getCenterPointWithTarget(player.position)
         groundSensor.position = CGPointMake(player.position.x, player.position.y - player.frame.height)
         groundSensor.zPosition = 500
+        groundSensor.alpha = 0
         
         //setup the physics
         var body:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: groundSensor.size)
         body.affectedByGravity = false
+        body.allowsRotation = false
+        body.categoryBitMask = PhysicsCategory.Sensor
+        body.contactTestBitMask = SKACategoryFloor
+        body.collisionBitMask = PhysicsCategory.None
+        
         
         groundSensor.physicsBody = body
         
@@ -396,23 +403,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //            //println("player is falling")
 //            //println(player.physicsBody?.velocity.dy)
 //        }
-        
-        if player.physicsBody?.velocity.dy < -100 || player.physicsBody?.velocity.dy > 50 {
-            player.setFalling(true)
-            //println("falling at \(player.physicsBody?.velocity.dy)")
+        println(player.jumpLockOverride)
+        if !player.jumpLockOverride {
+            if player.physicsBody?.velocity.dy < -100 || player.physicsBody?.velocity.dy > 50 {
+                player.setFalling(true)
+                if groundSensor.parent == nil {
+                    setupGroundSensor()
+                }
+                //println("falling at \(player.physicsBody?.velocity.dy)")
+                
+            } else {
+                player.setFalling(false)
+                //println("stopped falling at \(player.physicsBody?.velocity.dy)")
+            }
 
-        } else {
-            player.setFalling(false)
-            //println("stopped falling at \(player.physicsBody?.velocity.dy)")
         }
-        
         
         player.update(CGFloat(dt))
         //update the sensor
-        if groundSensor.position != CGPointMake(player.position.x, player.position.y - player.frame.height){
-            groundSensor.position = CGPointMake(player.position.x, player.position.y - player.frame.height)
+        if groundSensor.parent != nil {
+            if groundSensor.position != CGPointMake(player.position.x, player.position.y - player.frame.height){
+                groundSensor.position = CGPointMake(player.position.x, player.position.y - player.frame.height)
+            }
         }
-        
         
         //dead yet?
         if player.position.y < -300 {
@@ -548,7 +561,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 //player.resizePhysics(player.frame.size)
                 player.jump()
-                
             }
         }
     }
@@ -703,6 +715,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //            player.physicsBody?.applyImpulse(CGVectorMake(0,75))
 //        }
         
+        if collision == PhysicsCategory.Sensor | SKACategoryFloor {
+            println("sensor hit")
+            if groundSensor.parent != nil {
+                groundSensor.removeFromParent()
+                if !player.jumpLockOverride {
+                    player.isJumping = false
+                    player.setFalling(false)
+                    println("removed sensor")
+                    player.jumpLockOverride = true
+                }
+            }
+        }
+        
         if collision == SKACategoryPlayer | PhysicsCategory.Item {
             let b = contact.bodyB.node?.name
             if b == "greenGem" {
@@ -713,13 +738,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 redGem.removeFromParent()
             }
         } else if collision == SKACategoryPlayer | SKACategoryFloor {
-//            contact.bodyA.restitution = 0
-//            contact.bodyB.restitution = 0
-//            println(contact.bodyA.restitution)
-//            println(contact.bodyB.restitution)
             //remember its the floorSprite that needs to be set on, NOT SPRITE
             player.isJumping = false
-            //player.jumpAmount = 0
+            player.jumpLockOverride = false
         }
 
     }
