@@ -52,6 +52,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let currentMap: String
     //let player = Player(imageNamed: "Walk13")
     let player = Hero(imageNamed: "idle_0")
+
+    
     let greenGem = Item(imageNamed: "gem_green_1", objectNamed: "greenGem")
     let redGem = Item(imageNamed: "gem_green_1", objectNamed: "redGem")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
@@ -60,6 +62,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let menuButton = SKSpriteNode(imageNamed: "Key")
     let savePointButton = SKSpriteNode(imageNamed: "crystal")
     let teleportButton = SKSpriteNode(imageNamed: "crystal")
+    
+    let groundSensor = SKSpriteNode(imageNamed: "Directional_Button")
     
     //these are used for the scaleBackground method and setupBackground
 //    let background = SKSpriteNode(imageNamed: "kz_egypt_3_background")
@@ -94,6 +98,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func setupGroundSensor() {
         
+        //property is called groundSensor
+        groundSensor.size = CGSizeMake(player.frame.width, 20)
+//        groundSensor.position = getCenterPointWithTarget(player.position)
+        groundSensor.position = CGPointMake(player.position.x, player.position.y - player.frame.height)
+        groundSensor.zPosition = 500
+        
+        //setup the physics
+        var body:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: groundSensor.size)
+        body.affectedByGravity = false
+        
+        groundSensor.physicsBody = body
+        
+        worldNode.addChild(groundSensor)
+        
+        //player.addChild(playerGroundSensor)
     }
 
     func createWorld() {
@@ -169,6 +188,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 player.zPosition = 200
                 player.setScale(0.6)
                 worldNode.addChild(player)
+                setupGroundSensor()
                 centerViewOn(player.position)
             } else if obj.name == "greenGem" {
                 greenGem.position = CGPoint(x: obj.x, y: obj.y)
@@ -386,7 +406,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //println("stopped falling at \(player.physicsBody?.velocity.dy)")
         }
         
+        
         player.update(CGFloat(dt))
+        //update the sensor
+        if groundSensor.position != CGPointMake(player.position.x, player.position.y - player.frame.height){
+            groundSensor.position = CGPointMake(player.position.x, player.position.y - player.frame.height)
+        }
         
         
         //dead yet?
