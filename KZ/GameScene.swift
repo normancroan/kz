@@ -92,16 +92,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var mapOffsetX:CGFloat = 0
     var mapSectionsArray = [SKNode]()
     
-    func setupPlayer() {
-        worldNode.addChild(player)
-        player.position = CGPointMake(55,235)
-        player.zPosition = 200//-41
-        //player.position = CGPointMake(955,2235)
-        player.setScale(0.1)
-        centerViewOn(player.position)
-        player.physicsBody?.restitution = 0
-        physicsUpdateFromPoint = player.position
-        //player.setFalling(false)
+    func setupGroundSensor() {
+        
     }
 
     func createWorld() {

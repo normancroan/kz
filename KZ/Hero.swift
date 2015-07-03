@@ -163,7 +163,7 @@ class Hero: SKSpriteNode {
     
     //MARK: Loop
     func update(dt: CGFloat) {
-        
+        //println(jumpAmount)
 //        //player vaulting
 //        if isJumping {
 //            if maxSpeed != 15 {
@@ -507,6 +507,11 @@ class Hero: SKSpriteNode {
                 if actionForKey("jump") != nil {
                     removeActionForKey("jump")
                 }
+                //kill taper effect
+                if actionForKey("taper") != nil {
+                    removeActionForKey("taper")
+                    stopJump()
+                }
                 
                 //add arc4random to select jump or flip here
                 self.runAction(jumpAction!, withKey: "jump")
@@ -526,7 +531,7 @@ class Hero: SKSpriteNode {
                 let stop:SKAction = SKAction.runBlock( stopJump)
                 let seq2:SKAction = SKAction.sequence([repeat, stop])
                 
-                self.runAction(seq2)
+                self.runAction(seq2, withKey: "taper")
             }
         }
     }
