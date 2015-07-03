@@ -59,29 +59,30 @@ class Hero: SKSpriteNode {
         
         let imageTexture = SKTexture(imageNamed: imageNamed)
         super.init(texture: imageTexture, color:nil, size: imageTexture.size() )
+        setupPhysics(imageNamed, size: "full")
         
-        //resizing the physics rectangle to align with feet
-        var rect:CGRect = CGRectMake(position.x, position.y, imageTexture.size().width / 2, imageTexture.size().height - (imageTexture.size().height / 2))
-        var anchor:CGPoint = CGPointMake(position.x - 12.5, position.y)
+        setupAction("idle", characterName: "cat")
+        //setupAction("walk", characterName: "cat")
+        setupAction("run", characterName: "cat")
+        setupAction("jump", characterName: "cat")
+        setupAction("fall", characterName: "cat")
+        setupAction("flip", characterName: "cat")
+        //setupAction("jump attack", characterName: "cat")
         
-        //creating physics body with above values to align with feet
-        var frontFoot:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().height / 5, center: CGPointMake(0, -95))
-        var rectBodyThin:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: rect.size, center: CGPointMake(-12.5, -18))
-        //var body:SKPhysicsBody = SKPhysicsBody(bodies: [frontFoot, rectBodyThin])
+        self.runAction(idleAction)
+    }
+    
+    func setupPhysics(imageNamed: String, size: String) {
         
-        //lets try this again, too convoluted above
-        let bodyRectangleBase = CGRectMake(position.x, position.y, imageTexture.size().width / 2.5, imageTexture.size().height - (imageTexture.size().height / 1.5))
-            
-        var bodyRectangle:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: bodyRectangleBase.size)
-        
-        var bodyFrontFoot:SKPhysicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().height / 6, center: CGPointMake(0, -45))
-        
-        //var body:SKPhysicsBody = SKPhysicsBody(bodies: [bodyFrontFoot, bodyRectangle])
-        
+        let imageTexture = SKTexture(imageNamed: imageNamed)
         //just rectangle body
-        var fullBodyRectangle = CGRectMake(position.x, position.y, imageTexture.size().width / 1.7, imageTexture.size().height / 1.25)
+        var fullBodyRectangle = CGRectMake(position.x, position.y, imageTexture.size().width / 1.7, imageTexture.size().height / 1.5)
         
-        var body:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: fullBodyRectangle.size, center: CGPointMake(0, -13))
+        var fullBodyRectangle2 = CGRectMake(position.x, position.y, imageTexture.size().width / 1.7, imageTexture.size().height / 2)
+        
+        var body:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: fullBodyRectangle.size, center: CGPointMake(0, -20))
+        
+        var bodyJumping:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: fullBodyRectangle2.size, center: CGPointMake(0, -13))
         
         
         //dynamic required for gravity to work
@@ -97,29 +98,93 @@ class Hero: SKSpriteNode {
         body.contactTestBitMask = SKACategoryFloor
         body.usesPreciseCollisionDetection = true
         
+        //dynamic required for gravity to work
+        bodyJumping.dynamic = true
+        //body.restitution = 0
+        bodyJumping.affectedByGravity = true
+        bodyJumping.allowsRotation = false
+        //body.categoryBitMask = PhysicsCategory.Player
+        bodyJumping.categoryBitMask = SKACategoryPlayer
+        //body.collisionBitMask = PhysicsCategory.Floor | PhysicsCategory.Boundary
+        bodyJumping.collisionBitMask = SKACategoryFloor | SKACategoryWall
+        //body.contactTestBitMask = PhysicsCategory.All
+        bodyJumping.contactTestBitMask = SKACategoryFloor
+        bodyJumping.usesPreciseCollisionDetection = true
+        
+        if size == "full" {
+            self.physicsBody = body
+        } else if size == "jump" {
+            self.physicsBody = bodyJumping
+        }
+    }
+    
+    func resizePhysics(size: CGSize) {
+        if !isJumping{
+        println("resized")
+        
+        var fullBodyRectangle = CGRectMake(position.x, position.y, size.width / 1.7, size.height / 1.25)
+        
+        var fullBodyRectangle2 = CGRectMake(position.x, position.y, size.width / 1.7, size.height / 2)
+        
+        var body:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: fullBodyRectangle.size, center: CGPointMake(0, -8))
+        
+        var bodyJumping:SKPhysicsBody = SKPhysicsBody(rectangleOfSize: fullBodyRectangle2.size, center: CGPointMake(0, -13))
+        
+        
+        //dynamic required for gravity to work
+        body.dynamic = true
+        //body.restitution = 0
+        body.affectedByGravity = true
+        body.allowsRotation = false
+        //body.categoryBitMask = PhysicsCategory.Player
+        body.categoryBitMask = SKACategoryPlayer
+        //body.collisionBitMask = PhysicsCategory.Floor | PhysicsCategory.Boundary
+        body.collisionBitMask = SKACategoryFloor | SKACategoryWall
+        //body.contactTestBitMask = PhysicsCategory.All
+        body.contactTestBitMask = SKACategoryFloor
+        body.usesPreciseCollisionDetection = true
+        
+        //dynamic required for gravity to work
+        bodyJumping.dynamic = true
+        //body.restitution = 0
+        bodyJumping.affectedByGravity = true
+        bodyJumping.allowsRotation = false
+        //body.categoryBitMask = PhysicsCategory.Player
+        bodyJumping.categoryBitMask = SKACategoryPlayer
+        //body.collisionBitMask = PhysicsCategory.Floor | PhysicsCategory.Boundary
+        bodyJumping.collisionBitMask = SKACategoryFloor | SKACategoryWall
+        //body.contactTestBitMask = PhysicsCategory.All
+        bodyJumping.contactTestBitMask = SKACategoryFloor
+        bodyJumping.usesPreciseCollisionDetection = true
+        
         self.physicsBody = body
-        
-        //deprecated
-        //setUpAttackAction()
-        //setUpIdleAction()
-        //setUpJumpAction()
-        //setUpWalkAnimation()
-        
-        setupAction("idle", characterName: "cat")
-        //setupAction("walk", characterName: "cat")
-        setupAction("run", characterName: "cat")
-        setupAction("jump", characterName: "cat")
-        setupAction("fall", characterName: "cat")
-        setupAction("flip", characterName: "cat")
-        //setupAction("jump attack", characterName: "cat")
-        
-        self.runAction(idleAction)
+        }
     }
     
     //MARK: Loop
     func update(dt: CGFloat) {
         
-        
+//        //player vaulting
+//        if isJumping {
+//            if maxSpeed != 15 {
+//                maxSpeed = 15
+//                if playerSpeedX > 0 && playerSpeedX != maxSpeed {
+//                    playerSpeedX = maxSpeed
+//                } else if playerSpeedX < 0 && playerSpeedX != -maxSpeed {
+//                    playerSpeedX = -maxSpeed
+//                }
+//            }
+//        } else if !isJumping {
+//            if maxSpeed != 7.5 {
+//                maxSpeed = 7.5
+//                if playerSpeedX > 0 && playerSpeedX != maxSpeed {
+//                    playerSpeedX = maxSpeed
+//                } else if playerSpeedX < 0 && playerSpeedX != -maxSpeed {
+//                    playerSpeedX = -maxSpeed
+//                }
+//            }
+//        }
+        //println(isJumping)
         //capped the delta time to try and correct lag cheating
         var dtOpen: CGFloat = dt * 100
         if dtOpen > 2.5 {
@@ -235,7 +300,7 @@ class Hero: SKSpriteNode {
         } else if actionName == "jump" {
             let performSelector:SKAction = SKAction.runBlock(self.walkOrStop)
             jumpAction =  SKAction.sequence([atlasAnimation, performSelector])
-            jumpSound = SKAction.playSoundFileNamed("jump_03.wav", waitForCompletion: false)
+            jumpSound = SKAction.playSoundFileNamed("jump_04.wav", waitForCompletion: false)
         } else if actionName == "jump attack" {
             jumpAttackAction = SKAction.repeatActionForever(atlasAnimation)
         } else if actionName == "walk" {
@@ -282,10 +347,10 @@ class Hero: SKSpriteNode {
         
         if ( playerSpeedX > 0 ){
             
-            self.xScale = 0.7//1//0.4
+            self.xScale = 0.6//1//0.4
         } else {
             
-            self.xScale = -0.7//-1//-0.4
+            self.xScale = -0.6//-1//-0.4
         }
         
         
@@ -350,6 +415,7 @@ class Hero: SKSpriteNode {
         removeActionForKey("fall")
         //println("idling")
         isRunning = false
+        isFalling = false
         
     }
     func attack() {
@@ -427,16 +493,16 @@ class Hero: SKSpriteNode {
                 removeActionForKey("fall")
             }
             self.runAction(fallAction!, withKey: "fall")
-            println("falling")
+            removeActionForKey("jump")
+            //println("falling")
         } else if !isFalling {
             removeActionForKey("fall")
         }
     }
     
-    
     func jump() {
         if !isFalling {
-            if (isJumping == false) {
+            if !isJumping {
                 
                 if actionForKey("jump") != nil {
                     removeActionForKey("jump")
@@ -450,9 +516,10 @@ class Hero: SKSpriteNode {
                 isJumping = true
                 
                 
+                
                 jumpAmount = maxJump
                 
-                let callAgain:SKAction = SKAction.runBlock( taperJump)
+                let callAgain:SKAction = SKAction.runBlock( taperJump )
                 let wait:SKAction = SKAction.waitForDuration(2/60)
                 let seq:SKAction = SKAction.sequence([wait, callAgain])
                 let repeat:SKAction = SKAction.repeatAction(seq, count: 5)
@@ -461,30 +528,26 @@ class Hero: SKSpriteNode {
                 
                 self.runAction(seq2)
             }
-            
-            //removed double jumping
-            //        } else if ( isJumping == true && doubleJumpAlreadyUsed == false) {
-            //
-            //            doubleJumpAlreadyUsed = true
-            //            jumpAmount = maxJump * 1.5
-            //
-            //
-            //        }
-            
         }
     }
     
     func taperJump() {
         
-        jumpAmount = jumpAmount * 0.7
+        jumpAmount = jumpAmount * 0.75//0.7
+        //println(jumpAmount)
+        if isJumping {
+            isJumping = false
+            //println("not jumping")
+        }
     }
     
     func stopJump() {
         
         doubleJumpAlreadyUsed = false
-        isJumping = false
+        if !isJumping {
+            isJumping = false
+        }
         jumpAmount = 0
-        
     }
     
     func stopJumpFromPlatform() {

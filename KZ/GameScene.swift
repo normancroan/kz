@@ -175,7 +175,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 playerSpawnPoint = CGPoint(x: obj.x, y: obj.y)
                 player.physicsBody?.restitution = 0
                 player.zPosition = 200
-                player.setScale(0.7)
+                player.setScale(0.6)
                 worldNode.addChild(player)
                 centerViewOn(player.position)
             } else if obj.name == "greenGem" {
@@ -358,11 +358,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setupInterface()
         loadObjects()
         //setupPlayer()
+        playBackgroundMusic("happy_adventure.wav")
     }
     
     override func update(currentTime: CFTimeInterval) {
         if player.physicsBody?.velocity != CGVector.zeroVector{
-        println(player.physicsBody?.velocity.dy)
+        //println(player.physicsBody?.velocity.dy)
         }
         //used 50 and 25 before
         let playerIndex = tileMap.indexForPoint(player.position)
@@ -373,15 +374,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         scaleBackground(player.position.y)
         
-        if player.physicsBody?.velocity.dy >= -100.0 || (player.physicsBody?.velocity.dy <= 50.0) && (player.physicsBody?.velocity.dy >= -20.0){//!= 0.0 {
-            player.setFalling(false)
-            //println("player is not falling")
-//            if player.physicsBody?.velocity.dy != 0.0 {
-//            }
-        } else {
+//        if player.physicsBody?.velocity.dy >= -100.0 || (player.physicsBody?.velocity.dy <= 50.0) && (player.physicsBody?.velocity.dy >= -200.0){//!= 0.0 {
+//            player.setFalling(false)
+//            //println("player is not falling")
+////            if player.physicsBody?.velocity.dy != 0.0 {
+////            }
+//        } else {
+//            player.setFalling(true)
+//            //println("player is falling")
+//            //println(player.physicsBody?.velocity.dy)
+//        }
+        
+        if player.physicsBody?.velocity.dy < -100 || player.physicsBody?.velocity.dy > 50 {
             player.setFalling(true)
-            //println("player is falling")
-            //println(player.physicsBody?.velocity.dy)
+            //println("falling at \(player.physicsBody?.velocity.dy)")
+
+        } else {
+            player.setFalling(false)
+            //println("stopped falling at \(player.physicsBody?.velocity.dy)")
         }
         
         player.update(CGFloat(dt))
@@ -505,6 +515,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let mapSelectScene = MapSelectScene(size: size)
                 let reveal = SKTransition.fadeWithDuration(0.5)
                 view?.presentScene(mapSelectScene, transition: reveal)
+                self.removeFromParent()
+                backgroundMusicPlayer.stop()
                 
             }else if (CGRectContainsPoint(savePointButton.frame, location)) {
                 //println("touched save button")
@@ -516,17 +528,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 buttonNorth.texture = SKTexture(imageNamed: "Directional_Button_Lit")
                 jumpButtonIsPressed = true
-//experimenting with launching player, this gave a memory error
-//                if player.isRunning && !player.isJumping{
-//                    if player.xScale > 0 {
-//                        player.physicsBody?.applyImpulse(CGVectorMake(50, 2))
-//                        println("launch right")
-//                    } else if player.xScale < 0 {
-//                        player.physicsBody?.applyImpulse(CGVectorMake(-50, 2))
-//                        println("launch left")
-//                    }
-//                }
+                
+                //player.resizePhysics(player.frame.size)
                 player.jump()
+                
             }
         }
     }
