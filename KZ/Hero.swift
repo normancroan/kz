@@ -166,26 +166,26 @@ class Hero: SKSpriteNode {
     //MARK: Loop
     func update(dt: CGFloat) {
         //println(jumpAmount)
-//        //player vaulting
-//        if isJumping {
-//            if maxSpeed != 15 {
-//                maxSpeed = 15
-//                if playerSpeedX > 0 && playerSpeedX != maxSpeed {
-//                    playerSpeedX = maxSpeed
-//                } else if playerSpeedX < 0 && playerSpeedX != -maxSpeed {
-//                    playerSpeedX = -maxSpeed
-//                }
-//            }
-//        } else if !isJumping {
-//            if maxSpeed != 7.5 {
-//                maxSpeed = 7.5
-//                if playerSpeedX > 0 && playerSpeedX != maxSpeed {
-//                    playerSpeedX = maxSpeed
-//                } else if playerSpeedX < 0 && playerSpeedX != -maxSpeed {
-//                    playerSpeedX = -maxSpeed
-//                }
-//            }
-//        }
+        //player vaulting
+        if isJumping {
+            if maxSpeed != 4 {
+                maxSpeed = 4
+                if playerSpeedX > 0 && playerSpeedX != maxSpeed {
+                    playerSpeedX = maxSpeed
+                } else if playerSpeedX < 0 && playerSpeedX != -maxSpeed {
+                    playerSpeedX = -maxSpeed
+                }
+            }
+        } else if !isJumping {
+            if maxSpeed != 9 {
+                maxSpeed = 9
+                if playerSpeedX > 0 && playerSpeedX != maxSpeed {
+                    playerSpeedX = maxSpeed
+                } else if playerSpeedX < 0 && playerSpeedX != -maxSpeed {
+                    playerSpeedX = -maxSpeed
+                }
+            }
+        }
         //println(isJumping)
         //capped the delta time to try and correct lag cheating
         var dtOpen: CGFloat = dt * 100
@@ -312,8 +312,8 @@ class Hero: SKSpriteNode {
         } else if actionName == "flip" {
             let performSelector:SKAction = SKAction.runBlock(self.walkOrStop)
             let killAnimation:SKAction = SKAction.runBlock( endAnimation )
-            let resumeFall:SKAction = SKAction.runBlock( fall )
-            flipAction =  SKAction.sequence([atlasAnimation, killAnimation, resumeFall, performSelector])
+            //let resumeFall:SKAction = SKAction.runBlock( fall )
+            flipAction =  SKAction.sequence([atlasAnimation, killAnimation, performSelector])
         }
     }
     
@@ -410,6 +410,7 @@ class Hero: SKSpriteNode {
             
         } else {
             walkingSlow = false
+            //this is clipping the animation
             self.runAction(runAction!, withKey: "walk")
             //println("should be running")
             isRunning = true
@@ -422,7 +423,10 @@ class Hero: SKSpriteNode {
             removeActionForKey("idle")
         }
         
-        self.runAction(idleAction!, withKey: "idle")
+        if actionForKey("flip") == nil {
+            self.runAction(idleAction!, withKey: "idle")
+        }
+        
         removeActionForKey("walk")
         removeActionForKey("jump")
         removeActionForKey("fall")
@@ -518,7 +522,8 @@ class Hero: SKSpriteNode {
     
     func jump() {
         if jumpLockOverride {
-            self.physicsBody?.velocity.dy = 0
+            //moving this down into main body
+            //self.physicsBody?.velocity.dy = 0
         }
         if !isFalling {
             if !isJumping {
@@ -533,8 +538,13 @@ class Hero: SKSpriteNode {
                 }
                 
                 //add arc4random to select jump or flip here
-                //self.runAction(flipAction!, withKey: "flip")
-                self.runAction(jumpAction!, withKey: "jump")
+                let randomNumber = Int(arc4random_uniform(10))
+                if randomNumber == 5 {
+                    self.runAction(flipAction!, withKey: "flip")
+                } else {
+                    self.runAction(jumpAction!, withKey: "jump")
+                }
+    
                 self.runAction(jumpSound)
                 
                 
@@ -542,7 +552,7 @@ class Hero: SKSpriteNode {
                 jumpLockOverride = false
                 
                 
-                
+                self.physicsBody?.velocity.dy = 0
                 jumpAmount = maxJump
                 
                 let callAgain:SKAction = SKAction.runBlock( taperJump )
@@ -559,7 +569,7 @@ class Hero: SKSpriteNode {
     
     func taperJump() {
         
-        jumpAmount = jumpAmount * 0.75//0.7
+        jumpAmount = jumpAmount * 0.65//0.7
         //println(jumpAmount)
         if isJumping {
             isJumping = false

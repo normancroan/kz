@@ -35,7 +35,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //checkpoint variables
     var savePoint:CGPoint = CGPoint.zeroPoint
-    var savePointsRemaining = 50
+    var savePointsRemaining = 5
     
     //stopwatch variables
     var startTime = NSTimeInterval()
@@ -389,20 +389,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         tileMap.cullAroundIndexX(Int(playerIndex.x), indexY: Int(playerIndex.y), columnWidth: 50, rowHeight: 25)
         
         let target = getCenterPointWithTarget(player.position)
-        worldNode.position += (target - worldNode.position) * 0.8
+        worldNode.position += (target - worldNode.position) * 0.6
         
         scaleBackground(player.position.y)
         
-//        if player.physicsBody?.velocity.dy >= -100.0 || (player.physicsBody?.velocity.dy <= 50.0) && (player.physicsBody?.velocity.dy >= -200.0){//!= 0.0 {
-//            player.setFalling(false)
-//            //println("player is not falling")
-////            if player.physicsBody?.velocity.dy != 0.0 {
-////            }
-//        } else {
-//            player.setFalling(true)
-//            //println("player is falling")
-//            //println(player.physicsBody?.velocity.dy)
-//        }
         //println(player.jumpLockOverride)
         if !player.jumpLockOverride {
             if player.physicsBody?.velocity.dy < -100 || player.physicsBody?.velocity.dy > 50 {
@@ -742,7 +732,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             player.isJumping = false
             player.jumpLockOverride = false
         }
-
     }
     
     //MARK: Particles
