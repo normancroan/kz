@@ -7400,7 +7400,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":3712,
+                 "width":1664,
                  "x":384,
                  "y":8832
                 }, 
@@ -10910,6 +10910,21 @@
                  "width":0,
                  "x":192,
                  "y":16192
+                }, 
+                {
+                 "height":128,
+                 "id":761,
+                 "name":"floor",
+                 "properties":
+                    {
+                     "SKACollisionType":"SKACollisionTypeRect"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":1888,
+                 "x":2176,
+                 "y":8832
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -10918,7 +10933,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":761,
+ "nextobjectid":762,
  "orientation":"orthogonal",
  "properties":
     {

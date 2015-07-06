@@ -35,7 +35,7 @@
         }, 
         {
          "draworder":"topdown",
-         "height":256,
+         "height":0,
          "name":"collision",
          "objects":[
                 {
@@ -6508,7 +6508,7 @@
                 {
                  "ellipse":true,
                  "height":0,
-                 "id":456,
+                 "id":457,
                  "name":"redGem",
                  "properties":
                     {
@@ -6518,17 +6518,17 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":992,
-                 "y":480
+                 "x":384,
+                 "y":8000
                 }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
-         "width":64,
+         "width":0,
          "x":0,
          "y":0
         }],
- "nextobjectid":457,
+ "nextobjectid":458,
  "orientation":"orthogonal",
  "properties":
     {

@@ -19,6 +19,8 @@ class MapSelectScene: SKScene {
     
     let instructionsLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     
+    var selectSound:SKAction?
+    var changeSound:SKAction?
     var mapList = [String]()
     var mapNumber = 0
     
@@ -31,13 +33,21 @@ class MapSelectScene: SKScene {
     
     var activeMap: String = "kz_egypt_3"
     
+
+    
     func switchActiveMap(direction: String) {
             if direction == "up" {
+                if mapNumber == (mapList.count - 1){
+                    mapNumber = -1
+                }
                 if mapNumber < (mapList.count - 1) {
                     mapNumber++
                     activeMap = mapList[mapNumber]
                 }
             } else if direction == "down" {
+                if mapNumber == 0 {
+                    mapNumber = mapList.count
+                }
                 if mapNumber >= 1 {
                     mapNumber--
                     activeMap = mapList[mapNumber]
@@ -45,7 +55,15 @@ class MapSelectScene: SKScene {
             }
         }
     
+    func loadBestTimes() {
+        if let mapTime = NSUserDefaults.standardUserDefaults().stringForKey("\(activeMap)_time") {
+            //println("best time for \(activeMap) is \(mapTime)")
+        }
+
+    }
+    
     func updateLabels() {
+        loadBestTimes()
         activeMapIconLabel.text = activeMap
         let backgroundString = "\(activeMap)_background"
         activeMapIcon.texture = SKTexture(imageNamed: backgroundString)
@@ -87,6 +105,8 @@ class MapSelectScene: SKScene {
         activeMapIconLabel.verticalAlignmentMode = .Center
         activeMapIconLabel.position = CGPoint(x: widthHalf,y: heightHalf - activeMapIcon.frame.height * 0.8)
         addChild(activeMapIconLabel)
+        
+        changeSound = SKAction.playSoundFileNamed("Blip_Select.wav", waitForCompletion: false)
     }
     
     func mapEffects(){
@@ -102,28 +122,55 @@ class MapSelectScene: SKScene {
         displayLabels()
         mapEffects()
         backgroundColor = SKColor.blackColor()
+        if backgroundMusicPlayer != nil {
+            backgroundMusicPlayer.stop()
+        }
+        playBackgroundMusic("main_menu.wav")
     }
-
+    
+    func prepareToLoadTheMap() {
+        //explosion sound
+        selectSound = SKAction.playSoundFileNamed("SFX_Explosion_02.wav", waitForCompletion: false)
+        let playSound = SKAction.runBlock({
+            self.runAction(self.selectSound)
+        })
+        //changing the instructions label
+        let showLoadingLabel = SKAction.runBlock({
+        self.instructionsLabel.text = "HANG ON! Loading: \(self.activeMap)"
+        })
+        //loading the map
+        let loadMap = SKAction.runBlock({  self.loadTheMap()  })
+        
+        //wrapping it all up in a sequence
+        let seq = SKAction.sequence([showLoadingLabel, playSound, loadMap])
+        //running the sequence
+        runAction(seq)
+    }
+    
+    func loadTheMap() {
+        println("loading the map")
+        let myScene = GameScene(size: self.size, currentMap: activeMap)
+        myScene.scaleMode = self.scaleMode
+        let reveal = SKTransition.fadeWithDuration(0.5)
+        self.view?.presentScene(myScene, transition: reveal)
+        self.removeFromParent()
+    }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         for touch in (touches as! Set<UITouch>) {
             let location = touch.locationInNode(self)
             //touched activeMap
             if (CGRectContainsPoint(activeMapIcon.frame, location)) {
-                instructionsLabel.text = "Loading..."
-                let myScene = GameScene(size: self.size, currentMap: activeMap)
-                myScene.scaleMode = self.scaleMode
-                let reveal = SKTransition.fadeWithDuration(0.5)
-                self.view?.presentScene(myScene, transition: reveal)
-                self.removeFromParent()
-
-            //touched wild
+                prepareToLoadTheMap()
+            //touched left or right buttons
             } else if (CGRectContainsPoint(buttonWest.frame, location)) {
                 switchActiveMap("down")
                 updateLabels()
+                runAction(changeSound)
             } else if (CGRectContainsPoint(buttonEast.frame, location)){
                 switchActiveMap("up")
                 updateLabels()
+                runAction(changeSound)
             }
         }
     }

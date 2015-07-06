@@ -24,7 +24,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var worldNode: SKNode!
     var lastUpdateTime: NSTimeInterval = 0
     var dt: NSTimeInterval = 0
-    //var tileMap = JSTileMap(named: "I ADDED THIS CODE")
 //    var tileMap = SKATiledMap(mapName: "kz_egypt_3")
     var tileMap = SKATiledMap(mapName: "kz_caves")//"kz_caves"
     var tileMapFrame: CGRect!
@@ -87,6 +86,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //physics in tiles
     var physicsUpdateFromPoint = CGPointMake(0.0, 0.0)
+    
+    //timer variables for saving
+    var elapsedSeconds = 0
     
     //MARK: Setup Methods
     func setupMap() {
@@ -377,6 +379,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setupInterface()
         loadObjects()
         //setupPlayer()
+        if backgroundMusicPlayer != nil {
+            backgroundMusicPlayer.stop()
+        }
         playBackgroundMusic("happy_adventure.wav")
     }
     
@@ -472,6 +477,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if stopWatchLabel.actionForKey("timer") != nil {
             //println("stopping timer")
             stopWatchLabel.removeActionForKey("timer")
+            //println(elapsedSeconds)
+
+            //if mapTime != nil
         }
     }
     
@@ -484,10 +492,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var actionrun = SKAction.runBlock({
             timeMin++
             timesecond++
+            self.elapsedSeconds++
             if timesecond == 60 {timesecond = 0}
             if timeMin  / 60 <= 9 { leadingZeroMin = "0" } else { leadingZeroMin = "" }
             if timesecond <= 9 { leadingZero = "0" } else { leadingZero = "" }
-            
         self.stopWatchLabel.text = "[ \(leadingZeroMin)\(timeMin/60) : \(leadingZero)\(timesecond) ]"
         })
         self.stopWatchLabel.runAction(SKAction.repeatActionForever(SKAction.sequence([actionrun, actionwait])), withKey: "timer")
@@ -536,7 +544,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let reveal = SKTransition.fadeWithDuration(0.5)
                 view?.presentScene(mapSelectScene, transition: reveal)
                 self.removeFromParent()
-                backgroundMusicPlayer.stop()
                 
             }else if (CGRectContainsPoint(savePointButton.frame, location)) {
                 //println("touched save button")
@@ -721,10 +728,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if collision == SKACategoryPlayer | PhysicsCategory.Item {
             let b = contact.bodyB.node?.name
             if b == "greenGem" {
-                startTimer()
+                startMap()
                 greenGem.removeFromParent()
             } else if b == "redGem" {
-                stopTimer()
+                endMap()
                 redGem.removeFromParent()
             }
         } else if collision == SKACategoryPlayer | SKACategoryFloor {
@@ -732,6 +739,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             player.isJumping = false
             player.jumpLockOverride = false
         }
+    }
+    
+    //MARK: Sequences
+    
+    func startMap() {
+        startTimer()
+        if let mapTime = NSUserDefaults.standardUserDefaults().stringForKey("\(currentMap)_time") {
+         println("best time for \(currentMap) is \(mapTime)")
+        }
+    }
+    
+    func endMap() {
+        stopTimer()
+        if let mapTime = NSUserDefaults.standardUserDefaults().stringForKey("\(currentMap)_time") {
+            let mapSeconds:Int = mapTime.toInt()!
+            if elapsedSeconds < mapSeconds {
+                newBestTime()
+            }
+        }
+    }
+    
+    func newBestTime() {
+        NSUserDefaults.standardUserDefaults().setObject(elapsedSeconds, forKey: "\(currentMap)_time")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        
     }
     
     //MARK: Particles

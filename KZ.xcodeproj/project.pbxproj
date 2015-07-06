@@ -64,6 +64,10 @@
 		18614DBE1B453DFD00E108C3 /* jump_04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18614DBD1B453DFD00E108C3 /* jump_04.wav */; };
 		18614DC01B45435200E108C3 /* happy_adventure.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18614DBF1B45435200E108C3 /* happy_adventure.wav */; };
 		18614DC21B45438C00E108C3 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18614DC11B45438C00E108C3 /* Audio.swift */; };
+		18614DC41B4A4DDE00E108C3 /* kz_launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 18614DC31B4A4DDE00E108C3 /* kz_launch.png */; };
+		18614DC71B4A604D00E108C3 /* main_menu.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18614DC61B4A604D00E108C3 /* main_menu.wav */; };
+		18614DC91B4A6C1E00E108C3 /* SFX_Explosion_02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18614DC81B4A6C1E00E108C3 /* SFX_Explosion_02.wav */; };
+		18614DCD1B4A793300E108C3 /* Blip_Select.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18614DCC1B4A793300E108C3 /* Blip_Select.wav */; };
 		189A48CC1B329EEE00B3578C /* BehindTheMap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CA1B329EEE00B3578C /* BehindTheMap.sks */; };
 		189A48CD1B329EEE00B3578C /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CB1B329EEE00B3578C /* bokeh.png */; };
 		189A48CF1B330FE000B3578C /* kz_wild_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CE1B330FE000B3578C /* kz_wild_3.json */; };
@@ -181,6 +185,10 @@
 		18614DBD1B453DFD00E108C3 /* jump_04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump_04.wav; sourceTree = "<group>"; };
 		18614DBF1B45435200E108C3 /* happy_adventure.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = happy_adventure.wav; sourceTree = "<group>"; };
 		18614DC11B45438C00E108C3 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		18614DC31B4A4DDE00E108C3 /* kz_launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_launch.png; sourceTree = "<group>"; };
+		18614DC61B4A604D00E108C3 /* main_menu.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = main_menu.wav; sourceTree = "<group>"; };
+		18614DC81B4A6C1E00E108C3 /* SFX_Explosion_02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SFX_Explosion_02.wav; sourceTree = "<group>"; };
+		18614DCC1B4A793300E108C3 /* Blip_Select.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Blip_Select.wav; sourceTree = "<group>"; };
 		189A48CA1B329EEE00B3578C /* BehindTheMap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BehindTheMap.sks; sourceTree = "<group>"; };
 		189A48CB1B329EEE00B3578C /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
 		189A48CE1B330FE000B3578C /* kz_wild_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_wild_3.json; sourceTree = "<group>"; };
@@ -406,6 +414,7 @@
 		18149CB01B197C1A00522024 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				18614DC31B4A4DDE00E108C3 /* kz_launch.png */,
 				18614DA91B43C57B00E108C3 /* characters */,
 				18614DA11B43C13600E108C3 /* tmx-bg-tiles.atlasc */,
 				189A48DC1B35809700B3578C /* lava-tiles-tight.atlasc */,
@@ -478,6 +487,9 @@
 		18614DB41B4533B500E108C3 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				18614DCC1B4A793300E108C3 /* Blip_Select.wav */,
+				18614DC81B4A6C1E00E108C3 /* SFX_Explosion_02.wav */,
+				18614DC61B4A604D00E108C3 /* main_menu.wav */,
 				18614DBF1B45435200E108C3 /* happy_adventure.wav */,
 				18614DB71B45355300E108C3 /* jump_01.wav */,
 				18614DB91B45360700E108C3 /* jump_02.wav */,
@@ -590,6 +602,8 @@
 				18614DBA1B45360700E108C3 /* jump_02.wav in Resources */,
 				18099B951B2FF65E002932F3 /* egypt_items_medium.1.png in Resources */,
 				18A9FCC21B1BEF8B004C0E5D /* Idle.atlas in Resources */,
+				18614DCD1B4A793300E108C3 /* Blip_Select.wav in Resources */,
+				18614DC41B4A4DDE00E108C3 /* kz_launch.png in Resources */,
 				18099B461B2AB8B7002932F3 /* small-map-test.tmx in Resources */,
 				18149C701B19709F00522024 /* LaunchScreen.xib in Resources */,
 				18149C6D1B19709F00522024 /* Images.xcassets in Resources */,
@@ -602,6 +616,7 @@
 				18149C641B19709F00522024 /* GameScene.sks in Resources */,
 				18614DAF1B43CD3B00E108C3 /* executioner_animations.atlasc in Resources */,
 				189A48CF1B330FE000B3578C /* kz_wild_3.json in Resources */,
+				18614DC71B4A604D00E108C3 /* main_menu.wav in Resources */,
 				184DFFFA1B268C6F001D722E /* egypt_small_floors_bgra.atlasc in Resources */,
 				18F7605E1B251B2F0086E776 /* kz_abandoned.tmx in Resources */,
 				189A49051B37187900B3578C /* kz_caves.json in Resources */,
@@ -611,6 +626,7 @@
 				18614DA21B43C13600E108C3 /* tmx-bg-tiles.atlasc in Resources */,
 				18E87EA71B20512B00E4CC4E /* kz_wonderland_trees.atlasc in Resources */,
 				18614DA81B43C30400E108C3 /* kz_wonderland_trees.1.png in Resources */,
+				18614DC91B4A6C1E00E108C3 /* SFX_Explosion_02.wav in Resources */,
 				189A49071B37188500B3578C /* kz_cave_tiles.atlasc in Resources */,
 				189A48CD1B329EEE00B3578C /* bokeh.png in Resources */,
 				18614DB81B45355300E108C3 /* jump_01.wav in Resources */,
