@@ -6486,7 +6486,7 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":128,
+                 "x":64,
                  "y":8064
                 }, 
                 {
@@ -6502,8 +6502,8 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":256,
-                 "y":8032
+                 "x":128,
+                 "y":8096
                 }, 
                 {
                  "ellipse":true,
@@ -6518,8 +6518,8 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":384,
-                 "y":8000
+                 "x":192,
+                 "y":8096
                 }],
          "opacity":1,
          "type":"objectgroup",

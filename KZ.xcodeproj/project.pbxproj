@@ -68,6 +68,8 @@
 		18614DC71B4A604D00E108C3 /* main_menu.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18614DC61B4A604D00E108C3 /* main_menu.wav */; };
 		18614DC91B4A6C1E00E108C3 /* SFX_Explosion_02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18614DC81B4A6C1E00E108C3 /* SFX_Explosion_02.wav */; };
 		18614DCD1B4A793300E108C3 /* Blip_Select.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18614DCC1B4A793300E108C3 /* Blip_Select.wav */; };
+		18614DD71B4ABF5700E108C3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18614DD61B4ABF5700E108C3 /* Extensions.swift */; };
+		18614DD91B4B81FF00E108C3 /* kz_map_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 18614DD81B4B81FF00E108C3 /* kz_map_select.png */; };
 		189A48CC1B329EEE00B3578C /* BehindTheMap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CA1B329EEE00B3578C /* BehindTheMap.sks */; };
 		189A48CD1B329EEE00B3578C /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CB1B329EEE00B3578C /* bokeh.png */; };
 		189A48CF1B330FE000B3578C /* kz_wild_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 189A48CE1B330FE000B3578C /* kz_wild_3.json */; };
@@ -189,6 +191,8 @@
 		18614DC61B4A604D00E108C3 /* main_menu.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = main_menu.wav; sourceTree = "<group>"; };
 		18614DC81B4A6C1E00E108C3 /* SFX_Explosion_02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SFX_Explosion_02.wav; sourceTree = "<group>"; };
 		18614DCC1B4A793300E108C3 /* Blip_Select.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Blip_Select.wav; sourceTree = "<group>"; };
+		18614DD61B4ABF5700E108C3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		18614DD81B4B81FF00E108C3 /* kz_map_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kz_map_select.png; sourceTree = "<group>"; };
 		189A48CA1B329EEE00B3578C /* BehindTheMap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BehindTheMap.sks; sourceTree = "<group>"; };
 		189A48CB1B329EEE00B3578C /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
 		189A48CE1B330FE000B3578C /* kz_wild_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz_wild_3.json; sourceTree = "<group>"; };
@@ -340,6 +344,7 @@
 				18614DAC1B43C5D200E108C3 /* Hero.swift */,
 				189A48D21B33E84A00B3578C /* Item.swift */,
 				18149C671B19709F00522024 /* GameViewController.swift */,
+				18614DD61B4ABF5700E108C3 /* Extensions.swift */,
 				18149C691B19709F00522024 /* Main.storyboard */,
 				18149C6C1B19709F00522024 /* Images.xcassets */,
 				18149C6E1B19709F00522024 /* LaunchScreen.xib */,
@@ -415,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				18614DC31B4A4DDE00E108C3 /* kz_launch.png */,
+				18614DD81B4B81FF00E108C3 /* kz_map_select.png */,
 				18614DA91B43C57B00E108C3 /* characters */,
 				18614DA11B43C13600E108C3 /* tmx-bg-tiles.atlasc */,
 				189A48DC1B35809700B3578C /* lava-tiles-tight.atlasc */,
@@ -645,6 +651,7 @@
 				18E87EA51B20511E00E4CC4E /* kz_wonderland.tmx in Resources */,
 				183095FF1B1D604B00BBB25B /* kz_egypt.tmx in Resources */,
 				18149CB71B197C6E00522024 /* tmx-rpg-bigpack.atlasc in Resources */,
+				18614DD91B4B81FF00E108C3 /* kz_map_select.png in Resources */,
 				189A48CC1B329EEE00B3578C /* BehindTheMap.sks in Resources */,
 				189A49111B3A728400B3578C /* kz_castle.json in Resources */,
 				18614DB31B44F04E00E108C3 /* cat_player.atlasc in Resources */,
@@ -697,6 +704,7 @@
 				18149C9C1B1972BE00522024 /* CGFloat+Extensions.swift in Sources */,
 				189A48F51B363D4000B3578C /* SKASprite.m in Sources */,
 				183446781B31620700BADEBF /* CollisionDefine.m in Sources */,
+				18614DD71B4ABF5700E108C3 /* Extensions.swift in Sources */,
 				189A48F01B363D4000B3578C /* LFCGzipUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

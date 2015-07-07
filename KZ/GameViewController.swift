@@ -32,9 +32,10 @@ class GameViewController: UIViewController {
         
         let skView = self.view as! SKView
         let scene = MapSelectScene(size: CGSize(width: 2048, height: 1536))
-        skView.showsFPS = true
+
+        //skView.showsFPS = true
         skView.frameInterval = 2
-        skView.showsNodeCount = true
+        //skView.showsNodeCount = true
         //skView.showsPhysics = true
         //skView.showsDrawCount = true
         skView.ignoresSiblingOrder = true

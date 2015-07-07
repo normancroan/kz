@@ -194,7 +194,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //this spawn point is for use in the respawn method
                 playerSpawnPoint = CGPoint(x: obj.x, y: obj.y)
                 player.physicsBody?.restitution = 0
-                player.zPosition = 200
+                player.zPosition = 100
                 player.setScale(0.6)
                 worldNode.addChild(player)
                 setupGroundSensor()
@@ -264,11 +264,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         
         addChild(buttonNorth)
-        buttonNorth.position = CGPoint(x: widthHalf - (buttonNorth.size.width), y: -heightHalf + (buttonWest.size.height * 0.6))
+        buttonNorth.position = CGPoint(x: widthHalf - (buttonNorth.size.width), y: -heightHalf + (buttonWest.size.height * 0.8))
         buttonNorth.zPosition = 200
         
         addChild(buttonWest)
-        buttonWest.position = CGPoint(x: -widthHalf + buttonWest.size.width, y: -heightHalf + (buttonWest.size.height * 0.6))
+        buttonWest.position = CGPoint(x: -widthHalf + buttonWest.size.width, y: -heightHalf + (buttonWest.size.height * 0.8))
         buttonWest.zPosition = 200
         
         addChild(buttonEast)
@@ -752,19 +752,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func endMap() {
         stopTimer()
+        println("ending the map")
         if let mapTime = NSUserDefaults.standardUserDefaults().stringForKey("\(currentMap)_time") {
             let mapSeconds:Int = mapTime.toInt()!
             if elapsedSeconds < mapSeconds {
+                println("new best time recording")
                 newBestTime()
             }
+        } else {
+            newBestTime()
         }
     }
     
     func newBestTime() {
         NSUserDefaults.standardUserDefaults().setObject(elapsedSeconds, forKey: "\(currentMap)_time")
         NSUserDefaults.standardUserDefaults().synchronize()
-        
-        
+        println("new best time recorded")
     }
     
     //MARK: Particles

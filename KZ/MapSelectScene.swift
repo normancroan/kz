@@ -16,13 +16,22 @@ class MapSelectScene: SKScene {
     let activeMapIconLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
     let buttonEast = SKSpriteNode(imageNamed: "Directional_Button2")
     let buttonWest = SKSpriteNode(imageNamed: "Directional_Button2")
+    let buttonNorth = SKSpriteNode(imageNamed: "Directional_Button")
     
     let instructionsLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
+    let statsLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
+    let bestTimeLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
+    //let runCountLabel = SKLabelNode(fontNamed: "AvenirNextCondensed")
+
+
     
     var selectSound:SKAction?
     var changeSound:SKAction?
     var mapList = [String]()
     var mapNumber = 0
+    var mapBestTime = 0
+    var mapRunCount = 0
+
     
     func addMaps(){
         mapList.append("kz_egypt_3")
@@ -55,15 +64,27 @@ class MapSelectScene: SKScene {
             }
         }
     
-    func loadBestTimes() {
+    func loadMapStats() {
         if let mapTime = NSUserDefaults.standardUserDefaults().stringForKey("\(activeMap)_time") {
-            //println("best time for \(activeMap) is \(mapTime)")
+            let mapSeconds:Int = mapTime.toInt()!
+            printSecondsToHoursMinutesSeconds(mapSeconds)
+        } else {
+            bestTimeLabel.text = "Not Completed"
         }
-
+    }
+    
+    func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
+        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+    }
+    
+    func printSecondsToHoursMinutesSeconds (seconds: Int) -> () {
+        let (h, m, s) = secondsToHoursMinutesSeconds (seconds)
+        println ("\(h) Hours, \(m) Minutes, \(s) Seconds")
+        bestTimeLabel.text = "Best Time: \(h)h \(m)m \(s)s"
     }
     
     func updateLabels() {
-        loadBestTimes()
+        loadMapStats()
         activeMapIconLabel.text = activeMap
         let backgroundString = "\(activeMap)_background"
         activeMapIcon.texture = SKTexture(imageNamed: backgroundString)
@@ -77,25 +98,51 @@ class MapSelectScene: SKScene {
         let heightHalf:CGFloat = self.view!.bounds.height / 2
         
         instructionsLabel.fontSize = 20
-        instructionsLabel.text = "Let's do this!"
+        instructionsLabel.text = "Jump to enter map"
         instructionsLabel.name = "instructions"
         instructionsLabel.zPosition = 200
         instructionsLabel.verticalAlignmentMode = .Center
-        instructionsLabel.position = CGPoint(x: widthHalf, y: self.view!.bounds.height - instructionsLabel.frame.height)
+        instructionsLabel.position = CGPoint(x: widthHalf, y: (heightHalf) - (heightHalf / 1.25))
         addChild(instructionsLabel)
         
-        buttonWest.position = CGPoint(x: widthHalf * 0.25, y: heightHalf)
-        addChild(buttonWest)
+        statsLabel.fontSize = 20
+        statsLabel.text = "Stats for this map"
+        statsLabel.name = "instructions"
+        statsLabel.zPosition = 200
+        statsLabel.verticalAlignmentMode = .Center
+        statsLabel.horizontalAlignmentMode = .Right
+        statsLabel.position = CGPoint(x: widthHalf - (widthHalf / 2.5), y: heightHalf)
+        addChild(statsLabel)
         
-        buttonEast.position = CGPoint(x: widthHalf * 1.75, y: heightHalf)
-        buttonEast.xScale *= -1
+        bestTimeLabel.fontSize = 15
+        bestTimeLabel.text = "Not Completed"
+        bestTimeLabel.name = "instructions"
+        bestTimeLabel.zPosition = 200
+        bestTimeLabel.verticalAlignmentMode = .Center
+        bestTimeLabel.horizontalAlignmentMode = .Right
+        bestTimeLabel.position = CGPoint(x: statsLabel.position.x, y: statsLabel.position.y - bestTimeLabel.frame.size.height)
+        addChild(bestTimeLabel)
+
+        
+        addChild(buttonWest)
+        buttonWest.position = CGPoint(x: (widthHalf - widthHalf) + buttonWest.size.width, y: (heightHalf - heightHalf) + (buttonWest.size.height * 0.8))
+        buttonWest.zPosition = 400
+        
         addChild(buttonEast)
+        buttonEast.position = CGPoint(x: buttonWest.position.x + (buttonWest.size.width * 2), y: buttonWest.position.y)
+        buttonEast.xScale = -1
+        buttonEast.zPosition = 200
+        
+        addChild(buttonNorth)
+        buttonNorth.position = CGPoint(x: (widthHalf + widthHalf) - (buttonNorth.size.width), y: buttonWest.position.y)
+        buttonNorth.zPosition = 200
+
         
         
         addChild(activeMapIcon)
-        activeMapIcon.setScale(0.3)
+        activeMapIcon.setScale(0.2)
         activeMapIcon.anchorPoint = CGPointMake(0.5, 0.5)
-        activeMapIcon.position = CGPoint(x: widthHalf,y: heightHalf)
+        activeMapIcon.position = CGPoint(x: widthHalf,y: (heightHalf - 20))
         
         
         activeMapIconLabel.fontSize = 15
@@ -120,12 +167,20 @@ class MapSelectScene: SKScene {
         addMaps()
         activeMap = mapList[0]
         displayLabels()
-        mapEffects()
-        backgroundColor = SKColor.blackColor()
+        //mapEffects()
+        let background = SKSpriteNode(imageNamed: "kz_map_select")
+        background.size = self.frame.size
+        background.position = CGPoint(x: (self.frame.size.width / 2), y: (self.frame.size.height / 2))
+        addChild(background)
+        background.zPosition = -1
+        //backgroundColor = SKColor.blackColor()
         if backgroundMusicPlayer != nil {
             backgroundMusicPlayer.stop()
         }
         playBackgroundMusic("main_menu.wav")
+        
+        //println(String("\(activeMap)","Hello","My","Old","Friend"))
+        updateLabels()
     }
     
     func prepareToLoadTheMap() {
@@ -159,18 +214,40 @@ class MapSelectScene: SKScene {
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         for touch in (touches as! Set<UITouch>) {
             let location = touch.locationInNode(self)
-            //touched activeMap
-            if (CGRectContainsPoint(activeMapIcon.frame, location)) {
-                prepareToLoadTheMap()
-            //touched left or right buttons
-            } else if (CGRectContainsPoint(buttonWest.frame, location)) {
+            if (CGRectContainsPoint(buttonWest.frame, location)) {
                 switchActiveMap("down")
                 updateLabels()
                 runAction(changeSound)
+                buttonWest.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
             } else if (CGRectContainsPoint(buttonEast.frame, location)){
                 switchActiveMap("up")
                 updateLabels()
                 runAction(changeSound)
+                buttonEast.texture = SKTexture(imageNamed: "Directional_Button2_Lit")
+            } else if (CGRectContainsPoint(buttonNorth.frame, location)){
+                prepareToLoadTheMap()
+                buttonNorth.texture = SKTexture(imageNamed: "Directional_Button_Lit")
+            }
+
+        }
+    }
+    
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        for touch in (touches as! Set<UITouch>) {
+            let location = touch.locationInNode(self)
+            //touched activeMap
+            if (CGRectContainsPoint(buttonWest.frame, location)) {
+                //unlight
+                buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
+            } else if (CGRectContainsPoint(buttonEast.frame, location)){
+                //unlight
+                buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
+            } else if (CGRectContainsPoint(buttonNorth.frame, location)){
+                buttonNorth.texture = SKTexture(imageNamed: "Directional_Button")
+            } else {
+                buttonWest.texture = SKTexture(imageNamed: "Directional_Button2")
+                buttonNorth.texture = SKTexture(imageNamed: "Directional_Button")
+                buttonEast.texture = SKTexture(imageNamed: "Directional_Button2")
             }
         }
     }
